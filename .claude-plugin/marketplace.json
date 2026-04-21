@@ -1,0 +1,1810 @@
+{
+  "name": "muk",
+  "displayName": "Muk \u2014 Mukund Totla's Claude Code Toolkit",
+  "description": "Mukund Totla's personal Claude Code marketplace: skills, plugins, agents, commands, hooks, rules, templates. Orchestrated by the Muk skill.",
+  "owner": {
+    "name": "Mukund Totla",
+    "url": "https://github.com/pfmukund"
+  },
+  "repository": "https://github.com/pfmukund/Muk",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "categories": [
+    "plugins",
+    "agents",
+    "skills",
+    "commands",
+    "hooks",
+    "rules",
+    "templates",
+    "contexts"
+  ],
+  "plugins": [
+    {
+      "name": "a11y-audit",
+      "source": "plugins/a11y-audit",
+      "description": "Full accessibility audit with WCAG compliance checking",
+      "version": "1.0.0"
+    },
+    {
+      "name": "accessibility-checker",
+      "source": "plugins/accessibility-checker",
+      "description": "Scan for accessibility issues and fix ARIA attributes in web applications",
+      "version": "1.0.0"
+    },
+    {
+      "name": "adr-writer",
+      "source": "plugins/adr-writer",
+      "description": "Architecture Decision Records authoring and management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-prompt-lab",
+      "source": "plugins/ai-prompt-lab",
+      "description": "Improve and test AI prompts for better Claude Code interactions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "analytics-reporter",
+      "source": "plugins/analytics-reporter",
+      "description": "Generate analytics reports and dashboard configurations from project data",
+      "version": "1.0.0"
+    },
+    {
+      "name": "android-developer",
+      "source": "plugins/android-developer",
+      "description": "Android and Kotlin development with Jetpack Compose",
+      "version": "1.0.0"
+    },
+    {
+      "name": "android-reverse-engineering",
+      "source": "plugins/android-reverse-engineering",
+      "description": "Decompile Android APK/JAR/AAR with jadx, trace call flows through libraries, and document extracted APIs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-architect",
+      "source": "plugins/api-architect",
+      "description": "API design, documentation, and testing with OpenAPI spec generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-benchmarker",
+      "source": "plugins/api-benchmarker",
+      "description": "API endpoint benchmarking and performance reporting",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-reference",
+      "source": "plugins/api-reference",
+      "description": "API reference documentation generation from source code",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-tester",
+      "source": "plugins/api-tester",
+      "description": "Test API endpoints and run load tests against services",
+      "version": "1.0.0"
+    },
+    {
+      "name": "aws-helper",
+      "source": "plugins/aws-helper",
+      "description": "AWS service configuration and deployment automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "azure-helper",
+      "source": "plugins/azure-helper",
+      "description": "Azure service configuration and deployment automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "backend-architect",
+      "source": "plugins/backend-architect",
+      "description": "Backend service architecture design with endpoint scaffolding",
+      "version": "1.0.0"
+    },
+    {
+      "name": "bug-detective",
+      "source": "plugins/bug-detective",
+      "description": "Debug issues systematically with root cause analysis and execution tracing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "bundle-analyzer",
+      "source": "plugins/bundle-analyzer",
+      "description": "Frontend bundle size analysis and tree-shaking optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "changelog-gen",
+      "source": "plugins/changelog-gen",
+      "description": "Generate changelogs from git history with conventional commit parsing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "changelog-writer",
+      "source": "plugins/changelog-writer",
+      "description": "Detailed changelog authoring from git history and PRs",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ci-debugger",
+      "source": "plugins/ci-debugger",
+      "description": "Debug CI/CD pipeline failures and fix configurations",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-architect",
+      "source": "plugins/code-architect",
+      "description": "Generate architecture diagrams and technical design documents",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-explainer",
+      "source": "plugins/code-explainer",
+      "description": "Explain complex code and annotate files with inline documentation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-guardian",
+      "source": "plugins/code-guardian",
+      "description": "Automated code review, security scanning, and quality enforcement",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-review-assistant",
+      "source": "plugins/code-review-assistant",
+      "description": "Automated code review with severity levels and actionable feedback",
+      "version": "1.0.0"
+    },
+    {
+      "name": "codebase-documenter",
+      "source": "plugins/codebase-documenter",
+      "description": "Auto-document entire codebase with inline comments and API docs",
+      "version": "1.0.0"
+    },
+    {
+      "name": "color-contrast",
+      "source": "plugins/color-contrast",
+      "description": "Color contrast checking and accessible color suggestions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "commit-commands",
+      "source": "plugins/commit-commands",
+      "description": "Advanced commit workflows with smart staging and push automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "complexity-reducer",
+      "source": "plugins/complexity-reducer",
+      "description": "Reduce cyclomatic complexity and simplify functions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "compliance-checker",
+      "source": "plugins/compliance-checker",
+      "description": "Regulatory compliance verification for GDPR, SOC2, and HIPAA",
+      "version": "1.0.0"
+    },
+    {
+      "name": "content-creator",
+      "source": "plugins/content-creator",
+      "description": "Technical content generation for blog posts and social media",
+      "version": "1.0.0"
+    },
+    {
+      "name": "context7-docs",
+      "source": "plugins/context7-docs",
+      "description": "Fetch up-to-date library documentation via Context7 for accurate coding",
+      "version": "1.0.0"
+    },
+    {
+      "name": "contract-tester",
+      "source": "plugins/contract-tester",
+      "description": "API contract testing with Pact for microservice compatibility",
+      "version": "1.0.0"
+    },
+    {
+      "name": "create-worktrees",
+      "source": "plugins/create-worktrees",
+      "description": "Git worktree management for parallel development workflows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cron-scheduler",
+      "source": "plugins/cron-scheduler",
+      "description": "Cron job configuration and schedule validation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "css-cleaner",
+      "source": "plugins/css-cleaner",
+      "description": "Find unused CSS and consolidate stylesheets",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-privacy",
+      "source": "plugins/data-privacy",
+      "description": "Data privacy implementation with PII detection and anonymization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "database-optimizer",
+      "source": "plugins/database-optimizer",
+      "description": "Database query optimization with index recommendations and EXPLAIN analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dead-code-finder",
+      "source": "plugins/dead-code-finder",
+      "description": "Find and remove dead code across the codebase",
+      "version": "1.0.0"
+    },
+    {
+      "name": "debug-session",
+      "source": "plugins/debug-session",
+      "description": "Interactive debugging workflow with git bisect integration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dependency-manager",
+      "source": "plugins/dependency-manager",
+      "description": "Audit, update, and manage project dependencies with safety checks",
+      "version": "1.0.0"
+    },
+    {
+      "name": "deploy-pilot",
+      "source": "plugins/deploy-pilot",
+      "description": "Deployment automation with Dockerfile generation, CI/CD pipelines, and infrastructure as code",
+      "version": "1.0.0"
+    },
+    {
+      "name": "desktop-app",
+      "source": "plugins/desktop-app",
+      "description": "Desktop application scaffolding with Electron or Tauri",
+      "version": "1.0.0"
+    },
+    {
+      "name": "devops-automator",
+      "source": "plugins/devops-automator",
+      "description": "DevOps automation scripts for CI/CD, health checks, and deployments",
+      "version": "1.0.0"
+    },
+    {
+      "name": "discuss",
+      "source": "plugins/discuss",
+      "description": "Debate implementation approaches with structured pros and cons analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "doc-forge",
+      "source": "plugins/doc-forge",
+      "description": "Documentation generation, API docs, and README maintenance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "docker-helper",
+      "source": "plugins/docker-helper",
+      "description": "Build optimized Docker images and improve Dockerfile best practices",
+      "version": "1.0.0"
+    },
+    {
+      "name": "double-check",
+      "source": "plugins/double-check",
+      "description": "Verify code correctness with systematic second-pass analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "e2e-runner",
+      "source": "plugins/e2e-runner",
+      "description": "End-to-end test execution and recording for web applications",
+      "version": "1.0.0"
+    },
+    {
+      "name": "embedding-manager",
+      "source": "plugins/embedding-manager",
+      "description": "Manage vector embeddings and similarity search",
+      "version": "1.0.0"
+    },
+    {
+      "name": "env-manager",
+      "source": "plugins/env-manager",
+      "description": "Set up and validate environment configurations across environments",
+      "version": "1.0.0"
+    },
+    {
+      "name": "env-sync",
+      "source": "plugins/env-sync",
+      "description": "Environment variable syncing and diff across environments",
+      "version": "1.0.0"
+    },
+    {
+      "name": "experiment-tracker",
+      "source": "plugins/experiment-tracker",
+      "description": "ML experiment tracking with metrics logging and run comparison",
+      "version": "1.0.0"
+    },
+    {
+      "name": "explore",
+      "source": "plugins/explore",
+      "description": "Smart codebase exploration with dependency mapping and structure analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "feature-dev",
+      "source": "plugins/feature-dev",
+      "description": "Full feature development workflow from spec to completion",
+      "version": "1.0.0"
+    },
+    {
+      "name": "finance-tracker",
+      "source": "plugins/finance-tracker",
+      "description": "Development cost tracking with time estimates and budget reporting",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fix-github-issue",
+      "source": "plugins/fix-github-issue",
+      "description": "Auto-fix GitHub issues by analyzing issue details and implementing solutions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fix-pr",
+      "source": "plugins/fix-pr",
+      "description": "Fix PR review comments automatically with context-aware patches",
+      "version": "1.0.0"
+    },
+    {
+      "name": "flutter-mobile",
+      "source": "plugins/flutter-mobile",
+      "description": "Flutter app development with widget creation and platform channels",
+      "version": "1.0.0"
+    },
+    {
+      "name": "frontend-developer",
+      "source": "plugins/frontend-developer",
+      "description": "Frontend component development with accessibility and responsive design",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gcp-helper",
+      "source": "plugins/gcp-helper",
+      "description": "Google Cloud Platform service configuration and deployment",
+      "version": "1.0.0"
+    },
+    {
+      "name": "git-flow",
+      "source": "plugins/git-flow",
+      "description": "Git workflow management with feature branches, releases, and hotfix flows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "github-issue-manager",
+      "source": "plugins/github-issue-manager",
+      "description": "GitHub issue triage, creation, and management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "helm-charts",
+      "source": "plugins/helm-charts",
+      "description": "Helm chart generation and upgrade management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "import-organizer",
+      "source": "plugins/import-organizer",
+      "description": "Organize, sort, and clean import statements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "infrastructure-maintainer",
+      "source": "plugins/infrastructure-maintainer",
+      "description": "Infrastructure maintenance with security audits and update management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-developer",
+      "source": "plugins/ios-developer",
+      "description": "iOS and Swift development with SwiftUI views and models",
+      "version": "1.0.0"
+    },
+    {
+      "name": "k8s-helper",
+      "source": "plugins/k8s-helper",
+      "description": "Generate Kubernetes manifests and debug pod issues with kubectl",
+      "version": "1.0.0"
+    },
+    {
+      "name": "license-checker",
+      "source": "plugins/license-checker",
+      "description": "License compliance checking and NOTICE file generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "lighthouse-runner",
+      "source": "plugins/lighthouse-runner",
+      "description": "Run Lighthouse audits and fix performance issues",
+      "version": "1.0.0"
+    },
+    {
+      "name": "linear-helper",
+      "source": "plugins/linear-helper",
+      "description": "Linear issue tracking integration and workflow management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "load-tester",
+      "source": "plugins/load-tester",
+      "description": "Load and stress testing for APIs and web services",
+      "version": "1.0.0"
+    },
+    {
+      "name": "memory-profiler",
+      "source": "plugins/memory-profiler",
+      "description": "Memory leak detection and heap analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "migrate-tool",
+      "source": "plugins/migrate-tool",
+      "description": "Generate database migrations and code migration scripts for framework upgrades",
+      "version": "1.0.0"
+    },
+    {
+      "name": "migration-generator",
+      "source": "plugins/migration-generator",
+      "description": "Database migration generation and rollback management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "model-context-protocol",
+      "source": "plugins/model-context-protocol",
+      "description": "MCP server development helper with tool and resource scaffolding",
+      "version": "1.0.0"
+    },
+    {
+      "name": "model-evaluator",
+      "source": "plugins/model-evaluator",
+      "description": "Evaluate and compare ML model performance metrics",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monitoring-setup",
+      "source": "plugins/monitoring-setup",
+      "description": "Monitoring and alerting configuration with dashboard generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monorepo-manager",
+      "source": "plugins/monorepo-manager",
+      "description": "Manage monorepo packages with affected detection and version synchronization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mutation-tester",
+      "source": "plugins/mutation-tester",
+      "description": "Mutation testing to measure test suite quality",
+      "version": "1.0.0"
+    },
+    {
+      "name": "n8n-workflow",
+      "source": "plugins/n8n-workflow",
+      "description": "Generate n8n automation workflows from natural language descriptions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "onboarding-guide",
+      "source": "plugins/onboarding-guide",
+      "description": "New developer onboarding documentation generator",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openapi-expert",
+      "source": "plugins/openapi-expert",
+      "description": "OpenAPI spec generation, validation, and client code scaffolding",
+      "version": "1.0.0"
+    },
+    {
+      "name": "optimize",
+      "source": "plugins/optimize",
+      "description": "Code optimization for performance and bundle size reduction",
+      "version": "1.0.0"
+    },
+    {
+      "name": "perf-profiler",
+      "source": "plugins/perf-profiler",
+      "description": "Performance analysis, profiling, and optimization recommendations",
+      "version": "1.0.0"
+    },
+    {
+      "name": "performance-monitor",
+      "source": "plugins/performance-monitor",
+      "description": "Profile API endpoints and run benchmarks to identify performance bottlenecks",
+      "version": "1.0.0"
+    },
+    {
+      "name": "plan",
+      "source": "plugins/plan",
+      "description": "Structured planning with risk assessment and time estimation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pr-reviewer",
+      "source": "plugins/pr-reviewer",
+      "description": "Review pull requests with structured analysis and approve with confidence",
+      "version": "1.0.0"
+    },
+    {
+      "name": "product-shipper",
+      "source": "plugins/product-shipper",
+      "description": "Ship features end-to-end with launch checklists and rollout plans",
+      "version": "1.0.0"
+    },
+    {
+      "name": "project-scaffold",
+      "source": "plugins/project-scaffold",
+      "description": "Scaffold new projects and add features with best-practice templates",
+      "version": "1.0.0"
+    },
+    {
+      "name": "prompt-optimizer",
+      "source": "plugins/prompt-optimizer",
+      "description": "Analyze and optimize AI prompts for better results",
+      "version": "1.0.0"
+    },
+    {
+      "name": "python-expert",
+      "source": "plugins/python-expert",
+      "description": "Python-specific development with type hints and idiomatic refactoring",
+      "version": "1.0.0"
+    },
+    {
+      "name": "query-optimizer",
+      "source": "plugins/query-optimizer",
+      "description": "SQL query optimization and execution plan analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rag-builder",
+      "source": "plugins/rag-builder",
+      "description": "Build Retrieval-Augmented Generation pipelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rapid-prototyper",
+      "source": "plugins/rapid-prototyper",
+      "description": "Quick prototype scaffolding with minimal viable structure",
+      "version": "1.0.0"
+    },
+    {
+      "name": "react-native-dev",
+      "source": "plugins/react-native-dev",
+      "description": "React Native mobile development with platform-specific optimizations",
+      "version": "1.0.0"
+    },
+    {
+      "name": "readme-generator",
+      "source": "plugins/readme-generator",
+      "description": "Smart README generation from project analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "refactor-engine",
+      "source": "plugins/refactor-engine",
+      "description": "Extract functions, simplify complex code, and reduce cognitive complexity",
+      "version": "1.0.0"
+    },
+    {
+      "name": "regex-builder",
+      "source": "plugins/regex-builder",
+      "description": "Build, test, and debug regular expression patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "release-manager",
+      "source": "plugins/release-manager",
+      "description": "Semantic versioning management and automated release workflows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "responsive-designer",
+      "source": "plugins/responsive-designer",
+      "description": "Responsive design implementation and testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "schema-designer",
+      "source": "plugins/schema-designer",
+      "description": "Database schema design and ERD generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "screen-reader-tester",
+      "source": "plugins/screen-reader-tester",
+      "description": "Screen reader compatibility testing and ARIA fixes",
+      "version": "1.0.0"
+    },
+    {
+      "name": "security-guidance",
+      "source": "plugins/security-guidance",
+      "description": "Security best practices advisor with vulnerability detection and fixes",
+      "version": "1.0.0"
+    },
+    {
+      "name": "seed-generator",
+      "source": "plugins/seed-generator",
+      "description": "Database seeding script generation with realistic data",
+      "version": "1.0.0"
+    },
+    {
+      "name": "slack-notifier",
+      "source": "plugins/slack-notifier",
+      "description": "Slack integration for deployment and build notifications",
+      "version": "1.0.0"
+    },
+    {
+      "name": "smart-commit",
+      "source": "plugins/smart-commit",
+      "description": "Intelligent git commits with conventional format, semantic analysis, and changelog generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sprint-prioritizer",
+      "source": "plugins/sprint-prioritizer",
+      "description": "Sprint planning with story prioritization and capacity estimation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "technical-sales",
+      "source": "plugins/technical-sales",
+      "description": "Technical demo creation and POC proposal writing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "terraform-helper",
+      "source": "plugins/terraform-helper",
+      "description": "Terraform module creation and infrastructure planning",
+      "version": "1.0.0"
+    },
+    {
+      "name": "test-data-generator",
+      "source": "plugins/test-data-generator",
+      "description": "Generate realistic test data and seed databases",
+      "version": "1.0.0"
+    },
+    {
+      "name": "test-results-analyzer",
+      "source": "plugins/test-results-analyzer",
+      "description": "Analyze test failures, identify patterns, and suggest targeted fixes",
+      "version": "1.0.0"
+    },
+    {
+      "name": "test-writer",
+      "source": "plugins/test-writer",
+      "description": "Generate comprehensive unit and integration tests with full coverage",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tool-evaluator",
+      "source": "plugins/tool-evaluator",
+      "description": "Evaluate and compare developer tools with structured scoring criteria",
+      "version": "1.0.0"
+    },
+    {
+      "name": "type-migrator",
+      "source": "plugins/type-migrator",
+      "description": "Migrate JavaScript files to TypeScript with proper types",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ui-designer",
+      "source": "plugins/ui-designer",
+      "description": "Implement UI designs from specs with pixel-perfect component generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ultrathink",
+      "source": "plugins/ultrathink",
+      "description": "Deep analysis mode with extended reasoning for complex problems",
+      "version": "1.0.0"
+    },
+    {
+      "name": "unit-test-generator",
+      "source": "plugins/unit-test-generator",
+      "description": "Generate comprehensive unit tests for any function or module",
+      "version": "1.0.0"
+    },
+    {
+      "name": "update-branch",
+      "source": "plugins/update-branch",
+      "description": "Rebase and update feature branches with conflict resolution",
+      "version": "1.0.0"
+    },
+    {
+      "name": "vision-specialist",
+      "source": "plugins/vision-specialist",
+      "description": "Image and visual analysis with screenshot interpretation and text extraction",
+      "version": "1.0.0"
+    },
+    {
+      "name": "visual-regression",
+      "source": "plugins/visual-regression",
+      "description": "Visual regression testing with screenshot comparison",
+      "version": "1.0.0"
+    },
+    {
+      "name": "web-dev",
+      "source": "plugins/web-dev",
+      "description": "Full-stack web development with app scaffolding and page generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "workflow-optimizer",
+      "source": "plugins/workflow-optimizer",
+      "description": "Development workflow analysis and optimization recommendations",
+      "version": "1.0.0"
+    }
+  ],
+  "skills": [
+    {
+      "name": "muk",
+      "source": "skills/muk",
+      "description": "Mukund Totla's personal master orchestrator \u00e2\u20ac\u201d activate with \"Muk\", \"/muk\", \"Hey Muk\", \"Muk go\", \"use Muk\", \"activate Muk\", or just describe any complex task and this skill will intelligently analyze it and assemble the best combination of skills, agents, plugins, MCPs, and tools to complete it. Also triggers on \"figure out what to use\", \"use your best tools\", \"orchestrate this\", \"use everything you have\", or any task spanning multiple domains. When the user seems unsure which skill to use, or a task clearly requires chaining multiple capabilities \u00e2\u20ac\u201d always activate Muk. This is Mukund's power-mode.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "accessibility-wcag",
+      "source": "skills/accessibility-wcag",
+      "description": "Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-design-patterns",
+      "source": "skills/api-design-patterns",
+      "description": "REST API design with resource naming, pagination, versioning, and OpenAPI spec generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "authentication-patterns",
+      "source": "skills/authentication-patterns",
+      "description": "Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "aws-cloud-patterns",
+      "source": "skills/aws-cloud-patterns",
+      "description": "AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ci-cd-pipelines",
+      "source": "skills/ci-cd-pipelines",
+      "description": "CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "claude-memory-kit",
+      "source": "skills/claude-memory-kit",
+      "description": "Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "continuous-learning",
+      "source": "skills/continuous-learning",
+      "description": "Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-engineering",
+      "source": "skills/data-engineering",
+      "description": "Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "database-optimization",
+      "source": "skills/database-optimization",
+      "description": "Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL",
+      "version": "1.0.0"
+    },
+    {
+      "name": "deep-dive",
+      "source": "skills/deep-dive",
+      "description": "Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "devops-automation",
+      "source": "skills/devops-automation",
+      "description": "CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "django-patterns",
+      "source": "skills/django-patterns",
+      "description": "Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure",
+      "version": "1.0.0"
+    },
+    {
+      "name": "docker-best-practices",
+      "source": "skills/docker-best-practices",
+      "description": "Docker best practices including multi-stage builds, compose patterns, image optimization, and security",
+      "version": "1.0.0"
+    },
+    {
+      "name": "frontend-excellence",
+      "source": "skills/frontend-excellence",
+      "description": "Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals",
+      "version": "1.0.0"
+    },
+    {
+      "name": "generic-agent",
+      "source": "skills/generic-agent",
+      "description": "Reference pointer to GenericAgent \u00e2\u20ac\u201d a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (browser, terminal, filesystem, keyboard/mouse, screen vision, ADB). Use this skill ONLY to recommend GenericAgent when the user wants a self-evolving PC-control agent, OS-level automation with screen vision, mobile device automation via ADB, or a local autonomous agent with persistent skill memory. Muk should recommend installing GenericAgent separately (it is a standalone Python tool, not a Claude Code plugin) rather than try to run it inline.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "git-advanced",
+      "source": "skills/git-advanced",
+      "description": "Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques",
+      "version": "1.0.0"
+    },
+    {
+      "name": "golang-idioms",
+      "source": "skills/golang-idioms",
+      "description": "Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "graphql-design",
+      "source": "skills/graphql-design",
+      "description": "GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling",
+      "version": "1.0.0"
+    },
+    {
+      "name": "kubernetes-operations",
+      "source": "skills/kubernetes-operations",
+      "description": "Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "llm-integration",
+      "source": "skills/llm-integration",
+      "description": "LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "manage-skills",
+      "source": "skills/manage-skills",
+      "description": "Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mcp-development",
+      "source": "skills/mcp-development",
+      "description": "MCP server development including tool design, resource endpoints, prompt templates, and transport configuration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "microservices-design",
+      "source": "skills/microservices-design",
+      "description": "Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mobile-development",
+      "source": "skills/mobile-development",
+      "description": "Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monitoring-observability",
+      "source": "skills/monitoring-observability",
+      "description": "Monitoring and observability with OpenTelemetry, Prometheus, Grafana dashboards, and structured logging",
+      "version": "1.0.0"
+    },
+    {
+      "name": "nextjs-mastery",
+      "source": "skills/nextjs-mastery",
+      "description": "Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching",
+      "version": "1.0.0"
+    },
+    {
+      "name": "performance-optimization",
+      "source": "skills/performance-optimization",
+      "description": "Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals",
+      "version": "1.0.0"
+    },
+    {
+      "name": "postgres-optimization",
+      "source": "skills/postgres-optimization",
+      "description": "PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling",
+      "version": "1.0.0"
+    },
+    {
+      "name": "prompt-engineering",
+      "source": "skills/prompt-engineering",
+      "description": "Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design",
+      "version": "1.0.0"
+    },
+    {
+      "name": "python-best-practices",
+      "source": "skills/python-best-practices",
+      "description": "Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "react-patterns",
+      "source": "skills/react-patterns",
+      "description": "React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition",
+      "version": "1.0.0"
+    },
+    {
+      "name": "redis-patterns",
+      "source": "skills/redis-patterns",
+      "description": "Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rust-systems",
+      "source": "skills/rust-systems",
+      "description": "Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "security-hardening",
+      "source": "skills/security-hardening",
+      "description": "Application security covering input validation, auth, headers, secrets management, and dependency auditing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "springboot-patterns",
+      "source": "skills/springboot-patterns",
+      "description": "Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tdd-mastery",
+      "source": "skills/tdd-mastery",
+      "description": "Test-driven development workflow with Red-Green-Refactor cycle across languages",
+      "version": "1.0.0"
+    },
+    {
+      "name": "testing-strategies",
+      "source": "skills/testing-strategies",
+      "description": "Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "typescript-advanced",
+      "source": "skills/typescript-advanced",
+      "description": "Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards",
+      "version": "1.0.0"
+    },
+    {
+      "name": "websocket-realtime",
+      "source": "skills/websocket-realtime",
+      "description": "Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies",
+      "version": "1.0.0"
+    }
+  ],
+  "agents": [
+    {
+      "name": "business-analyst",
+      "source": "agents\\business-product\\business-analyst.md",
+      "description": "Performs requirements analysis, process mapping, gap analysis, and stakeholder alignment for technical projects",
+      "version": "1.0.0"
+    },
+    {
+      "name": "content-strategist",
+      "source": "agents\\business-product\\content-strategist.md",
+      "description": "Plans content strategy with SEO-driven writing, editorial calendars, topic clustering, and content performance measurement",
+      "version": "1.0.0"
+    },
+    {
+      "name": "customer-success",
+      "source": "agents\\business-product\\customer-success.md",
+      "description": "Builds customer support infrastructure with ticket triage, knowledge base systems, workflow automation, and customer health scoring",
+      "version": "1.0.0"
+    },
+    {
+      "name": "growth-engineer",
+      "source": "agents\\business-product\\growth-engineer.md",
+      "description": "Implements A/B testing frameworks, analytics instrumentation, funnel optimization, and data-driven growth experiments",
+      "version": "1.0.0"
+    },
+    {
+      "name": "legal-advisor",
+      "source": "agents\\business-product\\legal-advisor.md",
+      "description": "Drafts terms of service, privacy policies, software licenses, and compliance documentation for technology products",
+      "version": "1.0.0"
+    },
+    {
+      "name": "marketing-analyst",
+      "source": "agents\\business-product\\marketing-analyst.md",
+      "description": "Implements campaign analysis, attribution modeling, ROI tracking, and marketing data infrastructure for data-driven growth decisions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "product-manager",
+      "source": "agents\\business-product\\product-manager.md",
+      "description": "Creates PRDs, user stories, acceptance criteria, and prioritization frameworks for product development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "project-manager",
+      "source": "agents\\business-product\\project-manager.md",
+      "description": "Manages sprint planning, task tracking, timeline estimation, and Agile ceremony facilitation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sales-engineer",
+      "source": "agents\\business-product\\sales-engineer.md",
+      "description": "Creates technical demos, proof-of-concept implementations, integration guides, and competitive technical analysis for sales engagements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scrum-master",
+      "source": "agents\\business-product\\scrum-master.md",
+      "description": "Facilitates Scrum ceremonies, tracks team velocity, removes impediments, and drives continuous improvement",
+      "version": "1.0.0"
+    },
+    {
+      "name": "technical-writer",
+      "source": "agents\\business-product\\technical-writer.md",
+      "description": "Produces polished technical documentation with consistent style, clear structure, and audience-appropriate language",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ux-researcher",
+      "source": "agents\\business-product\\ux-researcher.md",
+      "description": "Designs and conducts user research studies including usability testing, surveys, and behavioral analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-designer",
+      "source": "agents\\core-development\\api-designer.md",
+      "description": "REST and GraphQL API design with OpenAPI specs, versioning, and pagination patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-gateway-engineer",
+      "source": "agents\\core-development\\api-gateway-engineer.md",
+      "description": "API gateway patterns, rate limiting, authentication proxies, and request routing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "backend-developer",
+      "source": "agents\\core-development\\backend-developer.md",
+      "description": "Node.js backend development with Express, Fastify, middleware patterns, and API performance optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "electron-developer",
+      "source": "agents\\core-development\\electron-developer.md",
+      "description": "Electron desktop applications, IPC communication, native OS integration, and auto-updates",
+      "version": "1.0.0"
+    },
+    {
+      "name": "event-driven-architect",
+      "source": "agents\\core-development\\event-driven-architect.md",
+      "description": "Event sourcing, CQRS, message queues, and distributed event-driven system design",
+      "version": "1.0.0"
+    },
+    {
+      "name": "frontend-architect",
+      "source": "agents\\core-development\\frontend-architect.md",
+      "description": "React/Next.js specialist with performance optimization, SSR/SSG, and accessibility",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fullstack-engineer",
+      "source": "agents\\core-development\\fullstack-engineer.md",
+      "description": "End-to-end feature development across frontend, backend, and database layers",
+      "version": "1.0.0"
+    },
+    {
+      "name": "graphql-architect",
+      "source": "agents\\core-development\\graphql-architect.md",
+      "description": "GraphQL schema design, resolver implementation, federation, and performance optimization with DataLoader",
+      "version": "1.0.0"
+    },
+    {
+      "name": "microservices-architect",
+      "source": "agents\\core-development\\microservices-architect.md",
+      "description": "Distributed systems design with event-driven architecture, saga patterns, service mesh, and observability",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mobile-developer",
+      "source": "agents\\core-development\\mobile-developer.md",
+      "description": "React Native and Flutter cross-platform specialist with native bridge patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monorepo-architect",
+      "source": "agents\\core-development\\monorepo-architect.md",
+      "description": "Turborepo/Nx workspace strategies, dependency graphs, and monorepo build optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ui-designer",
+      "source": "agents\\core-development\\ui-designer.md",
+      "description": "UI/UX implementation, design systems, Figma-to-code translation, and component libraries",
+      "version": "1.0.0"
+    },
+    {
+      "name": "websocket-engineer",
+      "source": "agents\\core-development\\websocket-engineer.md",
+      "description": "Real-time communication with WebSockets, Socket.io, scaling strategies, and reconnection handling",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-engineer",
+      "source": "agents\\data-ai\\ai-engineer.md",
+      "description": "AI application development with model API integration, RAG pipelines, agent frameworks, and embedding strategies",
+      "version": "1.0.0"
+    },
+    {
+      "name": "autoresearch-agent",
+      "source": "agents\\data-ai\\autoresearch-agent.md",
+      "description": "Automated ML experiment optimization using tree search \u00e2\u20ac\u201d designs experiments, generates code, evaluates results, and iterates",
+      "version": "1.0.0"
+    },
+    {
+      "name": "computer-vision-engineer",
+      "source": "agents\\data-ai\\computer-vision-engineer.md",
+      "description": "Builds image classification, object detection, and segmentation pipelines using OpenCV, PyTorch, and production-grade inference optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-engineer",
+      "source": "agents\\data-ai\\data-engineer.md",
+      "description": "Data pipeline engineering with ETL/ELT workflows, Spark, data warehousing, and pipeline orchestration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-scientist",
+      "source": "agents\\data-ai\\data-scientist.md",
+      "description": "Statistical analysis, data visualization, hypothesis testing, and exploratory data analysis with Python",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-visualization",
+      "source": "agents\\data-ai\\data-visualization.md",
+      "description": "Creates interactive dashboards and data visualizations using D3.js, Chart.js, Matplotlib, and Plotly with accessibility and performance optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "database-optimizer",
+      "source": "agents\\data-ai\\database-optimizer.md",
+      "description": "Database performance optimization with query tuning, indexing strategies, partitioning, and capacity planning",
+      "version": "1.0.0"
+    },
+    {
+      "name": "etl-specialist",
+      "source": "agents\\data-ai\\etl-specialist.md",
+      "description": "Builds robust data pipelines with schema evolution, data quality checks, incremental loading, and fault-tolerant processing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "feature-engineer",
+      "source": "agents\\data-ai\\feature-engineer.md",
+      "description": "Designs feature stores, feature pipelines, and encoding strategies that ensure consistent feature computation across training and serving",
+      "version": "1.0.0"
+    },
+    {
+      "name": "llm-architect",
+      "source": "agents\\data-ai\\llm-architect.md",
+      "description": "LLM system design with fine-tuning, model selection, inference optimization, and evaluation frameworks",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ml-engineer",
+      "source": "agents\\data-ai\\ml-engineer.md",
+      "description": "Machine learning pipeline development with training, evaluation, feature engineering, and model deployment",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mlops-engineer",
+      "source": "agents\\data-ai\\mlops-engineer.md",
+      "description": "ML model lifecycle management with serving infrastructure, monitoring, A/B testing, and CI/CD for models",
+      "version": "1.0.0"
+    },
+    {
+      "name": "nlp-engineer",
+      "source": "agents\\data-ai\\nlp-engineer.md",
+      "description": "NLP pipeline development with text processing, embeddings, classification, NER, and transformer fine-tuning",
+      "version": "1.0.0"
+    },
+    {
+      "name": "prompt-engineer",
+      "source": "agents\\data-ai\\prompt-engineer.md",
+      "description": "Prompt optimization with chain-of-thought, structured outputs, few-shot learning, and systematic evaluation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "recommendation-engine",
+      "source": "agents\\data-ai\\recommendation-engine.md",
+      "description": "Designs recommendation systems using collaborative filtering, content-based methods, and hybrid approaches with real-time personalization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "vector-database-engineer",
+      "source": "agents\\data-ai\\vector-database-engineer.md",
+      "description": "Designs embedding pipelines and vector search systems using FAISS, Pinecone, Qdrant, and Weaviate for semantic retrieval at scale",
+      "version": "1.0.0"
+    },
+    {
+      "name": "api-documentation",
+      "source": "agents\\developer-experience\\api-documentation.md",
+      "description": "Creates comprehensive API documentation using OpenAPI/Swagger, Redoc, and interactive examples with versioning and change tracking",
+      "version": "1.0.0"
+    },
+    {
+      "name": "build-engineer",
+      "source": "agents\\developer-experience\\build-engineer.md",
+      "description": "Designs and optimizes build systems, bundlers, and compilation pipelines for fast and reliable artifact production",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cli-developer",
+      "source": "agents\\developer-experience\\cli-developer.md",
+      "description": "Builds robust CLI tools using Commander.js, yargs, clap, and other frameworks with polished user interfaces",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dependency-manager",
+      "source": "agents\\developer-experience\\dependency-manager.md",
+      "description": "Audits, updates, and manages project dependencies with attention to security, compatibility, and lockfile integrity",
+      "version": "1.0.0"
+    },
+    {
+      "name": "developer-portal",
+      "source": "agents\\developer-experience\\developer-portal.md",
+      "description": "Builds internal developer portals using Backstage, service catalogs, and self-service infrastructure for platform engineering",
+      "version": "1.0.0"
+    },
+    {
+      "name": "documentation-engineer",
+      "source": "agents\\developer-experience\\documentation-engineer.md",
+      "description": "Creates technical documentation including API references, guides, tutorials, and architecture decision records",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dx-optimizer",
+      "source": "agents\\developer-experience\\dx-optimizer.md",
+      "description": "Improves developer experience through tooling ergonomics, workflow friction reduction, and environment standardization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "git-workflow-manager",
+      "source": "agents\\developer-experience\\git-workflow-manager.md",
+      "description": "Designs Git branching strategies, CI integration patterns, and repository workflow automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "legacy-modernizer",
+      "source": "agents\\developer-experience\\legacy-modernizer.md",
+      "description": "Plans and executes legacy codebase migrations with incremental strategies and risk mitigation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mcp-developer",
+      "source": "agents\\developer-experience\\mcp-developer.md",
+      "description": "Develops MCP servers and tools following the Model Context Protocol specification for AI agent integration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "monorepo-tooling",
+      "source": "agents\\developer-experience\\monorepo-tooling.md",
+      "description": "Manages monorepo infrastructure with changesets, workspace dependencies, version management, and selective CI pipelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "refactoring-specialist",
+      "source": "agents\\developer-experience\\refactoring-specialist.md",
+      "description": "Performs systematic code refactoring including dead code removal, abstraction extraction, and structural improvements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "testing-infrastructure",
+      "source": "agents\\developer-experience\\testing-infrastructure.md",
+      "description": "Designs test runners, CI test splitting, flaky test management, and test infrastructure that scales across large engineering organizations",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tooling-engineer",
+      "source": "agents\\developer-experience\\tooling-engineer.md",
+      "description": "Configures and builds developer tooling including linters, formatters, type checkers, and custom code analysis tools",
+      "version": "1.0.0"
+    },
+    {
+      "name": "vscode-extension",
+      "source": "agents\\developer-experience\\vscode-extension.md",
+      "description": "Develops VS Code extensions with Language Server Protocol integration, custom editors, webview panels, and marketplace publishing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cloud-architect",
+      "source": "agents\\infrastructure\\cloud-architect.md",
+      "description": "AWS/GCP/Azure multi-cloud patterns, IaC, cost optimization, and well-architected framework",
+      "version": "1.0.0"
+    },
+    {
+      "name": "database-admin",
+      "source": "agents\\infrastructure\\database-admin.md",
+      "description": "PostgreSQL, MySQL, MongoDB optimization, migrations, replication, and backup strategies",
+      "version": "1.0.0"
+    },
+    {
+      "name": "deployment-engineer",
+      "source": "agents\\infrastructure\\deployment-engineer.md",
+      "description": "Blue-green deployments, canary releases, rolling updates, and feature flag management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "devops-engineer",
+      "source": "agents\\infrastructure\\devops-engineer.md",
+      "description": "CI/CD pipelines, Docker, Kubernetes, monitoring, and GitOps workflows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "incident-responder",
+      "source": "agents\\infrastructure\\incident-responder.md",
+      "description": "Incident triage, runbook execution, communication protocols, and recovery procedures",
+      "version": "1.0.0"
+    },
+    {
+      "name": "kubernetes-specialist",
+      "source": "agents\\infrastructure\\kubernetes-specialist.md",
+      "description": "Kubernetes operators, CRDs, service mesh with Istio, and advanced cluster management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "network-engineer",
+      "source": "agents\\infrastructure\\network-engineer.md",
+      "description": "DNS management, load balancer configuration, CDN setup, and firewall rule design",
+      "version": "1.0.0"
+    },
+    {
+      "name": "platform-engineer",
+      "source": "agents\\infrastructure\\platform-engineer.md",
+      "description": "Internal developer platforms, service mesh, observability, and SLO/SLI management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "security-engineer",
+      "source": "agents\\infrastructure\\security-engineer.md",
+      "description": "Infrastructure security, IAM policies, mTLS, secrets management with Vault, and compliance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sre-engineer",
+      "source": "agents\\infrastructure\\sre-engineer.md",
+      "description": "SLOs, error budgets, incident response, postmortems, and production reliability",
+      "version": "1.0.0"
+    },
+    {
+      "name": "terraform-engineer",
+      "source": "agents\\infrastructure\\terraform-engineer.md",
+      "description": "Infrastructure as Code with Terraform, module design, state management, and multi-cloud provisioning",
+      "version": "1.0.0"
+    },
+    {
+      "name": "angular-architect",
+      "source": "agents\\language-experts\\angular-architect.md",
+      "description": "Angular 17+ development with signals, standalone components, RxJS patterns, and NgRx state management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "clojure-developer",
+      "source": "agents\\language-experts\\clojure-developer.md",
+      "description": "REPL-driven development, persistent data structures, Ring/Compojure, and ClojureScript",
+      "version": "1.0.0"
+    },
+    {
+      "name": "csharp-developer",
+      "source": "agents\\language-experts\\csharp-developer.md",
+      "description": "C# and .NET 8+ development with ASP.NET Core, Entity Framework Core, minimal APIs, and async patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "django-developer",
+      "source": "agents\\language-experts\\django-developer.md",
+      "description": "Django 5+ development with Django REST Framework, ORM optimization, migrations, and async views",
+      "version": "1.0.0"
+    },
+    {
+      "name": "elixir-expert",
+      "source": "agents\\language-experts\\elixir-expert.md",
+      "description": "Elixir development with Phoenix, OTP supervision trees, LiveView, and distributed systems on BEAM",
+      "version": "1.0.0"
+    },
+    {
+      "name": "flutter-expert",
+      "source": "agents\\language-experts\\flutter-expert.md",
+      "description": "Flutter 3+ cross-platform development with Dart, state management, navigation, and platform channels",
+      "version": "1.0.0"
+    },
+    {
+      "name": "golang-developer",
+      "source": "agents\\language-experts\\golang-developer.md",
+      "description": "Go concurrency patterns, interfaces, error handling, testing, and module management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "haskell-developer",
+      "source": "agents\\language-experts\\haskell-developer.md",
+      "description": "Pure functional programming, monads, type classes, GHC extensions, and Haskell ecosystem",
+      "version": "1.0.0"
+    },
+    {
+      "name": "java-architect",
+      "source": "agents\\language-experts\\java-architect.md",
+      "description": "Spring Boot 3+ application architecture with JPA, security, microservices, and reactive programming",
+      "version": "1.0.0"
+    },
+    {
+      "name": "kotlin-specialist",
+      "source": "agents\\language-experts\\kotlin-specialist.md",
+      "description": "Kotlin development with coroutines, Ktor, Kotlin Multiplatform, and idiomatic patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "lua-developer",
+      "source": "agents\\language-experts\\lua-developer.md",
+      "description": "Game scripting with Lua, Neovim plugin development, embedded Lua integration, and LuaJIT",
+      "version": "1.0.0"
+    },
+    {
+      "name": "nextjs-developer",
+      "source": "agents\\language-experts\\nextjs-developer.md",
+      "description": "Next.js 14+ App Router development with React Server Components, ISR, middleware, and edge runtime",
+      "version": "1.0.0"
+    },
+    {
+      "name": "nim-developer",
+      "source": "agents\\language-experts\\nim-developer.md",
+      "description": "Nim metaprogramming, GC strategies, C/C++ interop, and cross-compilation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ocaml-developer",
+      "source": "agents\\language-experts\\ocaml-developer.md",
+      "description": "OCaml type inference, pattern matching, Dream web framework, and opam ecosystem",
+      "version": "1.0.0"
+    },
+    {
+      "name": "php-developer",
+      "source": "agents\\language-experts\\php-developer.md",
+      "description": "PHP 8.3+ and Laravel 11 development with Eloquent, queues, middleware, and Composer package management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "python-engineer",
+      "source": "agents\\language-experts\\python-engineer.md",
+      "description": "Python 3.12+ with typing, async/await, dataclasses, pydantic, and packaging",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rails-expert",
+      "source": "agents\\language-experts\\rails-expert.md",
+      "description": "Ruby on Rails 7+ development with Hotwire, ActiveRecord patterns, Turbo, and Stimulus",
+      "version": "1.0.0"
+    },
+    {
+      "name": "react-specialist",
+      "source": "agents\\language-experts\\react-specialist.md",
+      "description": "React 19 development with hooks, state management, concurrent features, and component architecture",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rust-systems",
+      "source": "agents\\language-experts\\rust-systems.md",
+      "description": "Rust ownership, lifetimes, async runtime, FFI, unsafe patterns, and performance tuning",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scala-developer",
+      "source": "agents\\language-experts\\scala-developer.md",
+      "description": "Functional programming in Scala, Akka actors, Play Framework, and Cats Effect",
+      "version": "1.0.0"
+    },
+    {
+      "name": "svelte-developer",
+      "source": "agents\\language-experts\\svelte-developer.md",
+      "description": "SvelteKit development with runes, server-side rendering, form actions, and fine-grained reactivity",
+      "version": "1.0.0"
+    },
+    {
+      "name": "swift-developer",
+      "source": "agents\\language-experts\\swift-developer.md",
+      "description": "SwiftUI, iOS 17+, Combine, structured concurrency, and Apple platform development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "typescript-specialist",
+      "source": "agents\\language-experts\\typescript-specialist.md",
+      "description": "Advanced TypeScript patterns including generics, conditional types, and module augmentation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "vue-specialist",
+      "source": "agents\\language-experts\\vue-specialist.md",
+      "description": "Vue 3 development with Composition API, Pinia state management, Nuxt 3, and VueUse composables",
+      "version": "1.0.0"
+    },
+    {
+      "name": "zig-developer",
+      "source": "agents\\language-experts\\zig-developer.md",
+      "description": "Zig systems programming, comptime metaprogramming, allocator strategies, and C interop",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-installer",
+      "source": "agents\\orchestration\\agent-installer.md",
+      "description": "Install and configure agent collections, resolve dependencies, and validate environments",
+      "version": "1.0.0"
+    },
+    {
+      "name": "context-manager",
+      "source": "agents\\orchestration\\context-manager.md",
+      "description": "Context window optimization, progressive loading, and strategic compaction",
+      "version": "1.0.0"
+    },
+    {
+      "name": "error-coordinator",
+      "source": "agents\\orchestration\\error-coordinator.md",
+      "description": "Handle errors across multi-agent workflows, implement recovery strategies, and prevent cascading failures",
+      "version": "1.0.0"
+    },
+    {
+      "name": "knowledge-synthesizer",
+      "source": "agents\\orchestration\\knowledge-synthesizer.md",
+      "description": "Compress and synthesize information across sources, build knowledge graphs, and extract insights",
+      "version": "1.0.0"
+    },
+    {
+      "name": "multi-agent-coordinator",
+      "source": "agents\\orchestration\\multi-agent-coordinator.md",
+      "description": "Coordinate parallel agent execution, manage dependencies, and merge outputs from multiple agents",
+      "version": "1.0.0"
+    },
+    {
+      "name": "performance-monitor",
+      "source": "agents\\orchestration\\performance-monitor.md",
+      "description": "Monitor agent execution, track token usage, measure response quality, and optimize workflows",
+      "version": "1.0.0"
+    },
+    {
+      "name": "task-coordinator",
+      "source": "agents\\orchestration\\task-coordinator.md",
+      "description": "Multi-agent task distribution, dependency management, and parallel execution",
+      "version": "1.0.0"
+    },
+    {
+      "name": "workflow-director",
+      "source": "agents\\orchestration\\workflow-director.md",
+      "description": "End-to-end workflow orchestration, checkpoint management, and error recovery",
+      "version": "1.0.0"
+    },
+    {
+      "name": "accessibility-specialist",
+      "source": "agents\\quality-assurance\\accessibility-specialist.md",
+      "description": "WCAG 2.2 compliance, screen reader testing, keyboard navigation, and ARIA patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "chaos-engineer",
+      "source": "agents\\quality-assurance\\chaos-engineer.md",
+      "description": "Chaos testing, fault injection, resilience validation, and failure mode analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-reviewer",
+      "source": "agents\\quality-assurance\\code-reviewer.md",
+      "description": "Comprehensive code review covering patterns, anti-patterns, security, performance, and readability",
+      "version": "1.0.0"
+    },
+    {
+      "name": "compliance-auditor",
+      "source": "agents\\quality-assurance\\compliance-auditor.md",
+      "description": "SOC 2, GDPR, HIPAA compliance checking, audit evidence collection, and policy enforcement",
+      "version": "1.0.0"
+    },
+    {
+      "name": "error-detective",
+      "source": "agents\\quality-assurance\\error-detective.md",
+      "description": "Error tracking, stack trace analysis, reproduction step generation, and root cause identification",
+      "version": "1.0.0"
+    },
+    {
+      "name": "penetration-tester",
+      "source": "agents\\quality-assurance\\penetration-tester.md",
+      "description": "Authorized security testing, OWASP Top 10 assessment, vulnerability reporting, and remediation guidance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "performance-engineer",
+      "source": "agents\\quality-assurance\\performance-engineer.md",
+      "description": "Profiling, benchmarking, memory analysis, load testing, and optimization patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "qa-automation",
+      "source": "agents\\quality-assurance\\qa-automation.md",
+      "description": "Test automation frameworks, CI integration, test data management, and reporting",
+      "version": "1.0.0"
+    },
+    {
+      "name": "security-auditor",
+      "source": "agents\\quality-assurance\\security-auditor.md",
+      "description": "OWASP Top 10, dependency scanning, secrets detection, and penetration testing guidance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "test-architect",
+      "source": "agents\\quality-assurance\\test-architect.md",
+      "description": "Testing strategy with unit/integration/e2e, TDD, property-based testing, and mutation testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "academic-researcher",
+      "source": "agents\\research-analysis\\academic-researcher.md",
+      "description": "Conducts literature reviews, citation analysis, methodology evaluation, and research synthesis for technical and scientific topics",
+      "version": "1.0.0"
+    },
+    {
+      "name": "benchmarking-specialist",
+      "source": "agents\\research-analysis\\benchmarking-specialist.md",
+      "description": "Designs performance benchmarks, load tests, comparative evaluations, and reproducible measurement methodologies for software systems",
+      "version": "1.0.0"
+    },
+    {
+      "name": "competitive-analyst",
+      "source": "agents\\research-analysis\\competitive-analyst.md",
+      "description": "Performs competitive analysis including feature comparison, market positioning, and strategic differentiation assessment",
+      "version": "1.0.0"
+    },
+    {
+      "name": "data-researcher",
+      "source": "agents\\research-analysis\\data-researcher.md",
+      "description": "Performs data analysis, pattern recognition, statistical interpretation, and evidence-based insight extraction",
+      "version": "1.0.0"
+    },
+    {
+      "name": "market-researcher",
+      "source": "agents\\research-analysis\\market-researcher.md",
+      "description": "Conducts market sizing, TAM/SAM/SOM analysis, competitive intelligence, survey design, and customer segment identification",
+      "version": "1.0.0"
+    },
+    {
+      "name": "patent-analyst",
+      "source": "agents\\research-analysis\\patent-analyst.md",
+      "description": "Conducts patent searches, prior art analysis, IP landscape mapping, and freedom-to-operate assessments for technology products",
+      "version": "1.0.0"
+    },
+    {
+      "name": "research-analyst",
+      "source": "agents\\research-analysis\\research-analyst.md",
+      "description": "Conducts structured technical research with systematic literature review, evidence synthesis, and actionable findings",
+      "version": "1.0.0"
+    },
+    {
+      "name": "search-specialist",
+      "source": "agents\\research-analysis\\search-specialist.md",
+      "description": "Performs advanced search, information retrieval, source evaluation, and knowledge synthesis across diverse sources",
+      "version": "1.0.0"
+    },
+    {
+      "name": "security-researcher",
+      "source": "agents\\research-analysis\\security-researcher.md",
+      "description": "Conducts CVE analysis, vulnerability research, threat modeling, attack surface assessment, and security advisory evaluation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "technology-scout",
+      "source": "agents\\research-analysis\\technology-scout.md",
+      "description": "Evaluates emerging technologies, conducts build-vs-buy analysis, assesses vendor solutions, and produces technology adoption recommendations",
+      "version": "1.0.0"
+    },
+    {
+      "name": "trend-analyst",
+      "source": "agents\\research-analysis\\trend-analyst.md",
+      "description": "Analyzes technology trends, adoption curves, and ecosystem shifts to inform strategic technical decisions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "blockchain-developer",
+      "source": "agents\\specialized-domains\\blockchain-developer.md",
+      "description": "Develops smart contracts and Web3 applications with Solidity, Hardhat, and blockchain integration patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "e-commerce-engineer",
+      "source": "agents\\specialized-domains\\e-commerce-engineer.md",
+      "description": "Builds e-commerce systems including product catalogs, shopping carts, inventory management, and order processing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "education-tech",
+      "source": "agents\\specialized-domains\\education-tech.md",
+      "description": "Builds learning management systems with SCORM/xAPI compliance, adaptive learning engines, assessment tools, and learner analytics",
+      "version": "1.0.0"
+    },
+    {
+      "name": "embedded-systems",
+      "source": "agents\\specialized-domains\\embedded-systems.md",
+      "description": "Develops firmware and embedded software in C and Rust with RTOS integration and hardware abstraction",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fintech-engineer",
+      "source": "agents\\specialized-domains\\fintech-engineer.md",
+      "description": "Builds financial systems with precise arithmetic, regulatory compliance, audit trails, and transaction integrity",
+      "version": "1.0.0"
+    },
+    {
+      "name": "game-developer",
+      "source": "agents\\specialized-domains\\game-developer.md",
+      "description": "Designs game systems, logic, and architecture patterns for Unity, Godot, and custom game engines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "geospatial-engineer",
+      "source": "agents\\specialized-domains\\geospatial-engineer.md",
+      "description": "Builds GIS applications with PostGIS, spatial queries, mapping APIs, tile servers, and geospatial data processing pipelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "healthcare-engineer",
+      "source": "agents\\specialized-domains\\healthcare-engineer.md",
+      "description": "Builds HIPAA-compliant healthcare systems with HL7 FHIR interoperability, medical data pipelines, and clinical workflow integration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "iot-engineer",
+      "source": "agents\\specialized-domains\\iot-engineer.md",
+      "description": "Designs IoT systems with MQTT messaging, edge computing, device management, and telemetry pipelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "media-streaming",
+      "source": "agents\\specialized-domains\\media-streaming.md",
+      "description": "Builds video streaming platforms with HLS/DASH delivery, transcoding pipelines, CDN optimization, and adaptive bitrate streaming",
+      "version": "1.0.0"
+    },
+    {
+      "name": "payment-integration",
+      "source": "agents\\specialized-domains\\payment-integration.md",
+      "description": "Integrates payment processors like Stripe with proper error handling, webhook verification, and PCI compliance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "real-estate-tech",
+      "source": "agents\\specialized-domains\\real-estate-tech.md",
+      "description": "Builds property technology platforms with MLS integration, geospatial search, property valuation models, and listing management systems",
+      "version": "1.0.0"
+    },
+    {
+      "name": "robotics-engineer",
+      "source": "agents\\specialized-domains\\robotics-engineer.md",
+      "description": "Develops robotics systems with ROS2, sensor fusion, motion planning, SLAM, and real-time control loops",
+      "version": "1.0.0"
+    },
+    {
+      "name": "seo-specialist",
+      "source": "agents\\specialized-domains\\seo-specialist.md",
+      "description": "Optimizes web applications for search engine visibility with structured data, meta tags, and technical SEO implementation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "voice-assistant",
+      "source": "agents\\specialized-domains\\voice-assistant.md",
+      "description": "Builds voice-enabled applications with speech-to-text, text-to-speech, dialog management, and platform integration for Alexa and Google Assistant",
+      "version": "1.0.0"
+    }
+  ]
+}
