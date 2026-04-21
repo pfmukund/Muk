@@ -1,11 +1,11 @@
 # Muk — Mukund Totla's Claude Code Marketplace
 
-**One install, every device.** Mukund Totla's personal Claude Code marketplace — **45 skills, 121 plugins, 136 agents, 42 commands, 21 hooks, 15 rules, 8 templates, 14 MCP configs.** Orchestrated by the `muk` skill.
+**One install, every device.** Mukund Totla's personal Claude Code marketplace — **82 skills, 129 plugins, 136 agents, 42 commands, 21 hooks, 15 rules, 8 templates, 14 MCP configs.** Orchestrated by the `muk` skill.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/badge/Claude%20Code-Marketplace-8a63d2.svg)](#quick-install)
-[![Skills](https://img.shields.io/badge/Skills-45-brightgreen.svg)](#skills)
-[![Plugins](https://img.shields.io/badge/Plugins-121-orange.svg)](#plugins)
+[![Skills](https://img.shields.io/badge/Skills-82-brightgreen.svg)](#skills)
+[![Plugins](https://img.shields.io/badge/Plugins-129-orange.svg)](#plugins)
 [![Agents](https://img.shields.io/badge/Agents-136-blueviolet.svg)](#agents)
 
 ---
@@ -20,6 +20,69 @@ Skills and plugins that live **only in this fork**. Everything else in this repo
 | [**generic-agent**](skills/generic-agent/SKILL.md) | Skill (reference) | Pointer to [GenericAgent](https://github.com/lsdefine/GenericAgent) — a self-evolving autonomous agent framework with direct control over browser, terminal, filesystem, keyboard/mouse, screen vision, and ADB. Standalone Python tool, installed separately. |
 | [**android-reverse-engineering**](plugins/android-reverse-engineering/) | Plugin | Decompile Android APK / JAR / AAR with `jadx`, trace call flows through libraries, and document extracted APIs. Ships slash commands and a full skill. Source: [SimoneAvogadro](https://github.com/SimoneAvogadro/android-reverse-engineering-skill). |
 | [**caveman** + **caveman-commit** + **caveman-help** + **caveman-review** + **compress**](skills/caveman/SKILL.md) | Skill pack | Caveman-style terse AI output — ~75% token reduction while preserving full technical accuracy. Five related skills for commit messages, help text, reviews, and generic text compression. Source: [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman). |
+
+---
+
+## Newly Added
+
+Latest additions to the pack. Muk orchestrates these alongside everything else — no manual wiring needed.
+
+### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (8 bundles)
+
+Each bundle ships a cluster of related skills plus slash commands.
+
+| Plugin | Description |
+|--------|-------------|
+| [`design-ops`](plugins/design-ops/) | Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows. |
+| [`design-research`](plugins/design-research/) | User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting. |
+| [`design-systems`](plugins/design-systems/) | Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming. |
+| [`designer-toolkit`](plugins/designer-toolkit/) | Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption. |
+| [`interaction-design`](plugins/interaction-design/) | Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns. |
+| [`prototyping-testing`](plugins/prototyping-testing/) | Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
+| [`ui-design`](plugins/ui-design/) | Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy. |
+| [`ux-strategy`](plugins/ux-strategy/) | Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment. |
+
+### Skills from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills) (37 skills)
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| asr-transcribe-to-text | [`skills/asr-transcribe-to-text/`](skills/asr-transcribe-to-text/) | Transcribes audio and video files to text using Qwen3-ASR. Supports two modes — local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/Op… |
+| capture-screen | [`skills/capture-screen/`](skills/capture-screen/) | Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture wi… |
+| cli-demo-generator | [`skills/cli-demo-generator/`](skills/cli-demo-generator/) | Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, po… |
+| cloudflare-troubleshooting | [`skills/cloudflare-troubleshooting/`](skills/cloudflare-troubleshooting/) | Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudf… |
+| competitors-analysis | [`skills/competitors-analysis/`](skills/competitors-analysis/) | Analyze competitor repositories with evidence-based approach. Use when tracking competitors, creating competitor profiles, or generating competitive analysis. CRITICAL - all analy… |
+| deep-research | [`skills/deep-research/`](skills/deep-research/) | \| |
+| douban-skill | [`skills/douban-skill/`](skills/douban-skill/) | > |
+| excel-automation | [`skills/excel-automation/`](skills/excel-automation/) | Create, parse, and control Excel files on macOS. Professional formatting with openpyxl, complex xlsm parsing with stdlib zipfile+xml for investment bank financial models, and Exce… |
+| fact-checker | [`skills/fact-checker/`](skills/fact-checker/) | Verifies factual claims in documents using web search and official sources, then proposes corrections with user confirmation. Use when the user asks to fact-check, verify informat… |
+| financial-data-collector | [`skills/financial-data-collector/`](skills/financial-data-collector/) | Collect real financial data for any US publicly traded company from free public sources (yfinance). Output structured JSON consumable by downstream financial skills (DCF modeling,… |
+| gangtise-copilot | [`skills/gangtise-copilot/`](skills/gangtise-copilot/) | One-stop installer and companion for the full Gangtise (岗底斯投研) OpenAPI skill suite — 19 official skills covering data retrieval (OHLC 行情, 财务, 估值, 研报, 首席观点, 会议纪要, 调研纪要), research w… |
+| github-contributor | [`skills/github-contributor/`](skills/github-contributor/) | Strategic guide for becoming an effective GitHub contributor. Covers opportunity discovery, project selection, high-quality PR creation, and reputation building. Use when looking… |
+| github-ops | [`skills/github-ops/`](skills/github-ops/) | Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations includin… |
+| i18n-expert | [`skills/i18n-expert/`](skills/i18n-expert/) | This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including install… |
+| iOS-APP-developer | [`skills/iOS-APP-developer/`](skills/iOS-APP-developer/) | Develops iOS/macOS applications with XcodeGen, SwiftUI, and SPM. Handles Apple Developer signing, notarization, and CI/CD pipelines. Triggers on XcodeGen project.yml, SPM dependen… |
+| ima-copilot | [`skills/ima-copilot/`](skills/ima-copilot/) | One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw via `npx skills add`,… |
+| llm-icon-finder | [`skills/llm-icon-finder/`](skills/llm-icon-finder/) | Finding and accessing AI/LLM model brand icons from lobe-icons library. Use when users need icon URLs, want to download brand logos for AI models/providers/applications (Claude, G… |
+| macos-cleaner | [`skills/macos-cleaner/`](skills/macos-cleaner/) | Analyze and reclaim macOS disk space through intelligent cleanup recommendations. This skill should be used when users report disk space issues, need to clean up their Mac, or wan… |
+| product-analysis | [`skills/product-analysis/`](skills/product-analysis/) | Multi-path parallel product analysis with cross-model test-time compute scaling. Spawns parallel agents (Claude Code agent teams + Codex CLI) to explore product from multiple pers… |
+| prompt-optimizer | [`skills/prompt-optimizer/`](skills/prompt-optimizer/) | Transform vague prompts into precise, well-structured specifications using EARS (Easy Approach to Requirements Syntax) methodology. This skill should be used when users provide lo… |
+| promptfoo-evaluation | [`skills/promptfoo-evaluation/`](skills/promptfoo-evaluation/) | Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom asserti… |
+| qa-expert | [`skills/qa-expert/`](skills/qa-expert/) | This skill should be used when establishing comprehensive QA testing processes for any software project. Use when creating test strategies, writing test cases following Google Tes… |
+| repomix-safe-mixer | [`skills/repomix-safe-mixer/`](skills/repomix-safe-mixer/) | Safely package codebases with repomix by automatically detecting and removing hardcoded credentials before packing. Use when packaging code for distribution, creating reference pa… |
+| repomix-unmixer | [`skills/repomix-unmixer/`](skills/repomix-unmixer/) | Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract… |
+| scrapling-skill | [`skills/scrapling-skill/`](skills/scrapling-skill/) | Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `s… |
+| skill-creator | [`skills/skill-creator/`](skills/skill-creator/) | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run… |
+| skill-reviewer | [`skills/skill-reviewer/`](skills/skill-reviewer/) | Reviews and improves Claude Code skills against official best practices. Supports three modes - self-review (validate your own skills), external review (evaluate others' skills),… |
+| skills-search | [`skills/skills-search/`](skills/skills-search/) | This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF",… |
+| teams-channel-post-writer | [`skills/teams-channel-post-writer/`](skills/teams-channel-post-writer/) | Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documen… |
+| terraform-skill | [`skills/terraform-skill/`](skills/terraform-skill/) | Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS recor… |
+| transcript-fixer | [`skills/transcript-fixer/`](skills/transcript-fixer/) | Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix. Triggers when worki… |
+| tunnel-doctor | [`skills/tunnel-doctor/`](skills/tunnel-doctor/) | Diagnoses and fixes conflicts between Tailscale and proxy/VPN tools (Shadowrocket, Clash, Surge) on macOS. Covers five conflict layers - (1) route hijacking, (2) HTTP proxy env va… |
+| twitter-reader | [`skills/twitter-reader/`](skills/twitter-reader/) | Fetch Twitter/X post content including long-form Articles with full images and metadata. Use when Claude needs to retrieve tweet/article content, author info, engagement metrics,… |
+| ui-designer | [`skills/ui-designer/`](skills/ui-designer/) | Extract design systems from reference UI images and generate implementation-ready UI design prompts. Use when users provide UI screenshots/mockups and want to create consistent de… |
+| video-comparer | [`skills/video-comparer/`](skills/video-comparer/) | This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and… |
+| windows-remote-desktop-connection-doctor | [`skills/windows-remote-desktop-connection-doctor/`](skills/windows-remote-desktop-connection-doctor/) | Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket… |
+| youtube-downloader | [`skills/youtube-downloader/`](skills/youtube-downloader/) | Download YouTube videos and HLS streams (m3u8) from platforms like Mux, Vimeo, etc. using yt-dlp and ffmpeg. Use this skill when users request downloading videos, extracting audio… |
 
 ---
 
@@ -51,9 +114,10 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 ## Table of Contents
 
 - [Muk Exclusives](#muk-exclusives)
-- [Plugins](#plugins) (121)
+- [Newly Added](#newly-added)
+- [Plugins](#plugins) (129)
 - [Agents](#agents) (136)
-- [Skills](#skills) (45)
+- [Skills](#skills) (82)
 - [Commands](#commands) (42)
 - [Hooks](#hooks) (21)
 - [Rules](#rules) (15)
@@ -68,7 +132,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 
 ## Plugins
 
-121 plugins extending Claude Code with domain-specific capabilities.
+129 plugins extending Claude Code with domain-specific capabilities.
 
 | Plugin | Description |
 |--------|-------------|
@@ -112,6 +176,10 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 | [`debug-session`](plugins/debug-session/) | Interactive debugging workflow with git bisect integration |
 | [`dependency-manager`](plugins/dependency-manager/) | Audit, update, and manage project dependencies with safety checks |
 | [`deploy-pilot`](plugins/deploy-pilot/) | Deployment automation with Dockerfile generation, CI/CD pipelines, and infrastructure as code |
+| [`design-ops`](plugins/design-ops/) | Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows. |
+| [`design-research`](plugins/design-research/) | User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting. |
+| [`design-systems`](plugins/design-systems/) | Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming. |
+| [`designer-toolkit`](plugins/designer-toolkit/) | Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption. |
 | [`desktop-app`](plugins/desktop-app/) | Desktop application scaffolding with Electron or Tauri |
 | [`devops-automator`](plugins/devops-automator/) | DevOps automation scripts for CI/CD, health checks, and deployments |
 | [`discuss`](plugins/discuss/) | Debate implementation approaches with structured pros and cons analysis |
@@ -136,6 +204,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 | [`helm-charts`](plugins/helm-charts/) | Helm chart generation and upgrade management |
 | [`import-organizer`](plugins/import-organizer/) | Organize, sort, and clean import statements |
 | [`infrastructure-maintainer`](plugins/infrastructure-maintainer/) | Infrastructure maintenance with security audits and update management |
+| [`interaction-design`](plugins/interaction-design/) | Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns. |
 | [`ios-developer`](plugins/ios-developer/) | iOS and Swift development with SwiftUI views and models |
 | [`k8s-helper`](plugins/k8s-helper/) | Generate Kubernetes manifests and debug pod issues with kubectl |
 | [`license-checker`](plugins/license-checker/) | License compliance checking and NOTICE file generation |
@@ -161,6 +230,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 | [`product-shipper`](plugins/product-shipper/) | Ship features end-to-end with launch checklists and rollout plans |
 | [`project-scaffold`](plugins/project-scaffold/) | Scaffold new projects and add features with best-practice templates |
 | [`prompt-optimizer`](plugins/prompt-optimizer/) | Analyze and optimize AI prompts for better results |
+| [`prototyping-testing`](plugins/prototyping-testing/) | Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | [`python-expert`](plugins/python-expert/) | Python-specific development with type hints and idiomatic refactoring |
 | [`query-optimizer`](plugins/query-optimizer/) | SQL query optimization and execution plan analysis |
 | [`rag-builder`](plugins/rag-builder/) | Build Retrieval-Augmented Generation pipelines |
@@ -185,10 +255,12 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 | [`test-writer`](plugins/test-writer/) | Generate comprehensive unit and integration tests with full coverage |
 | [`tool-evaluator`](plugins/tool-evaluator/) | Evaluate and compare developer tools with structured scoring criteria |
 | [`type-migrator`](plugins/type-migrator/) | Migrate JavaScript files to TypeScript with proper types |
+| [`ui-design`](plugins/ui-design/) | Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy. |
 | [`ui-designer`](plugins/ui-designer/) | Implement UI designs from specs with pixel-perfect component generation |
 | [`ultrathink`](plugins/ultrathink/) | Deep analysis mode with extended reasoning for complex problems |
 | [`unit-test-generator`](plugins/unit-test-generator/) | Generate comprehensive unit tests for any function or module |
 | [`update-branch`](plugins/update-branch/) | Rebase and update feature branches with conflict resolution |
+| [`ux-strategy`](plugins/ux-strategy/) | Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment. |
 | [`vision-specialist`](plugins/vision-specialist/) | Image and visual analysis with screenshot interpretation and text extraction |
 | [`visual-regression`](plugins/visual-regression/) | Visual regression testing with screenshot comparison |
 | [`web-dev`](plugins/web-dev/) | Full-stack web development with app scaffolding and page generation |
@@ -406,35 +478,53 @@ Reference an agent in your `CLAUDE.md`:
 
 ## Skills
 
-45 skills teaching Claude domain-specific patterns. The `muk`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
+82 skills teaching Claude domain-specific patterns. The `muk`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
 
 | Skill | Directory | What It Teaches |
 |-------|-----------|-----------------|
 | accessibility-wcag | [`skills/accessibility-wcag/`](skills/accessibility-wcag/) | Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing |
 | api-design-patterns | [`skills/api-design-patterns/`](skills/api-design-patterns/) | REST API design with resource naming, pagination, versioning, and OpenAPI spec generation |
+| asr-transcribe-to-text | [`skills/asr-transcribe-to-text/`](skills/asr-transcribe-to-text/) | Transcribes audio and video files to text using Qwen3-ASR. Supports two modes — local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/Op… |
 | authentication-patterns | [`skills/authentication-patterns/`](skills/authentication-patterns/) | Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows |
 | aws-cloud-patterns | [`skills/aws-cloud-patterns/`](skills/aws-cloud-patterns/) | AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform |
+| capture-screen | [`skills/capture-screen/`](skills/capture-screen/) | Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture wi… |
 | caveman | [`skills/caveman/`](skills/caveman/) | > |
 | caveman-commit | [`skills/caveman-commit/`](skills/caveman-commit/) | > |
 | caveman-help | [`skills/caveman-help/`](skills/caveman-help/) | > |
 | caveman-review | [`skills/caveman-review/`](skills/caveman-review/) | > |
 | ci-cd-pipelines | [`skills/ci-cd-pipelines/`](skills/ci-cd-pipelines/) | CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation |
 | claude-memory-kit | [`skills/claude-memory-kit/`](skills/claude-memory-kit/) | Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies. |
+| cli-demo-generator | [`skills/cli-demo-generator/`](skills/cli-demo-generator/) | Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, po… |
+| cloudflare-troubleshooting | [`skills/cloudflare-troubleshooting/`](skills/cloudflare-troubleshooting/) | Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudf… |
+| competitors-analysis | [`skills/competitors-analysis/`](skills/competitors-analysis/) | Analyze competitor repositories with evidence-based approach. Use when tracking competitors, creating competitor profiles, or generating competitive analysis. CRITICAL - all analy… |
 | compress | [`skills/compress/`](skills/compress/) | > |
 | continuous-learning | [`skills/continuous-learning/`](skills/continuous-learning/) | Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring |
 | data-engineering | [`skills/data-engineering/`](skills/data-engineering/) | Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation |
 | database-optimization | [`skills/database-optimization/`](skills/database-optimization/) | Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL |
 | deep-dive | [`skills/deep-dive/`](skills/deep-dive/) | Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed. |
+| deep-research | [`skills/deep-research/`](skills/deep-research/) | \| |
 | devops-automation | [`skills/devops-automation/`](skills/devops-automation/) | CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns |
 | django-patterns | [`skills/django-patterns/`](skills/django-patterns/) | Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure |
 | docker-best-practices | [`skills/docker-best-practices/`](skills/docker-best-practices/) | Docker best practices including multi-stage builds, compose patterns, image optimization, and security |
+| douban-skill | [`skills/douban-skill/`](skills/douban-skill/) | > |
+| excel-automation | [`skills/excel-automation/`](skills/excel-automation/) | Create, parse, and control Excel files on macOS. Professional formatting with openpyxl, complex xlsm parsing with stdlib zipfile+xml for investment bank financial models, and Exce… |
+| fact-checker | [`skills/fact-checker/`](skills/fact-checker/) | Verifies factual claims in documents using web search and official sources, then proposes corrections with user confirmation. Use when the user asks to fact-check, verify informat… |
+| financial-data-collector | [`skills/financial-data-collector/`](skills/financial-data-collector/) | Collect real financial data for any US publicly traded company from free public sources (yfinance). Output structured JSON consumable by downstream financial skills (DCF modeling,… |
 | frontend-excellence | [`skills/frontend-excellence/`](skills/frontend-excellence/) | Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals |
+| gangtise-copilot | [`skills/gangtise-copilot/`](skills/gangtise-copilot/) | One-stop installer and companion for the full Gangtise (岗底斯投研) OpenAPI skill suite — 19 official skills covering data retrieval (OHLC 行情, 财务, 估值, 研报, 首席观点, 会议纪要, 调研纪要), research w… |
 | generic-agent | [`skills/generic-agent/`](skills/generic-agent/) | Reference pointer to GenericAgent — a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (b… |
 | git-advanced | [`skills/git-advanced/`](skills/git-advanced/) | Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques |
+| github-contributor | [`skills/github-contributor/`](skills/github-contributor/) | Strategic guide for becoming an effective GitHub contributor. Covers opportunity discovery, project selection, high-quality PR creation, and reputation building. Use when looking… |
+| github-ops | [`skills/github-ops/`](skills/github-ops/) | Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations includin… |
 | golang-idioms | [`skills/golang-idioms/`](skills/golang-idioms/) | Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management |
 | graphql-design | [`skills/graphql-design/`](skills/graphql-design/) | GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling |
+| i18n-expert | [`skills/i18n-expert/`](skills/i18n-expert/) | This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including install… |
+| iOS-APP-developer | [`skills/iOS-APP-developer/`](skills/iOS-APP-developer/) | Develops iOS/macOS applications with XcodeGen, SwiftUI, and SPM. Handles Apple Developer signing, notarization, and CI/CD pipelines. Triggers on XcodeGen project.yml, SPM dependen… |
+| ima-copilot | [`skills/ima-copilot/`](skills/ima-copilot/) | One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw via `npx skills add`,… |
 | kubernetes-operations | [`skills/kubernetes-operations/`](skills/kubernetes-operations/) | Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management |
+| llm-icon-finder | [`skills/llm-icon-finder/`](skills/llm-icon-finder/) | Finding and accessing AI/LLM model brand icons from lobe-icons library. Use when users need icon URLs, want to download brand logos for AI models/providers/applications (Claude, G… |
 | llm-integration | [`skills/llm-integration/`](skills/llm-integration/) | LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization |
+| macos-cleaner | [`skills/macos-cleaner/`](skills/macos-cleaner/) | Analyze and reclaim macOS disk space through intelligent cleanup recommendations. This skill should be used when users report disk space issues, need to clean up their Mac, or wan… |
 | manage-skills | [`skills/manage-skills/`](skills/manage-skills/) | Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, A… |
 | mcp-development | [`skills/mcp-development/`](skills/mcp-development/) | MCP server development including tool design, resource endpoints, prompt templates, and transport configuration |
 | microservices-design | [`skills/microservices-design/`](skills/microservices-design/) | Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway |
@@ -444,17 +534,36 @@ Reference an agent in your `CLAUDE.md`:
 | nextjs-mastery | [`skills/nextjs-mastery/`](skills/nextjs-mastery/) | Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching |
 | performance-optimization | [`skills/performance-optimization/`](skills/performance-optimization/) | Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals |
 | postgres-optimization | [`skills/postgres-optimization/`](skills/postgres-optimization/) | PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling |
+| product-analysis | [`skills/product-analysis/`](skills/product-analysis/) | Multi-path parallel product analysis with cross-model test-time compute scaling. Spawns parallel agents (Claude Code agent teams + Codex CLI) to explore product from multiple pers… |
 | prompt-engineering | [`skills/prompt-engineering/`](skills/prompt-engineering/) | Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design |
+| prompt-optimizer | [`skills/prompt-optimizer/`](skills/prompt-optimizer/) | Transform vague prompts into precise, well-structured specifications using EARS (Easy Approach to Requirements Syntax) methodology. This skill should be used when users provide lo… |
+| promptfoo-evaluation | [`skills/promptfoo-evaluation/`](skills/promptfoo-evaluation/) | Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom asserti… |
 | python-best-practices | [`skills/python-best-practices/`](skills/python-best-practices/) | Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing |
+| qa-expert | [`skills/qa-expert/`](skills/qa-expert/) | This skill should be used when establishing comprehensive QA testing processes for any software project. Use when creating test strategies, writing test cases following Google Tes… |
 | react-patterns | [`skills/react-patterns/`](skills/react-patterns/) | React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition |
 | redis-patterns | [`skills/redis-patterns/`](skills/redis-patterns/) | Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures |
+| repomix-safe-mixer | [`skills/repomix-safe-mixer/`](skills/repomix-safe-mixer/) | Safely package codebases with repomix by automatically detecting and removing hardcoded credentials before packing. Use when packaging code for distribution, creating reference pa… |
+| repomix-unmixer | [`skills/repomix-unmixer/`](skills/repomix-unmixer/) | Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract… |
 | rust-systems | [`skills/rust-systems/`](skills/rust-systems/) | Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines |
+| scrapling-skill | [`skills/scrapling-skill/`](skills/scrapling-skill/) | Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `s… |
 | security-hardening | [`skills/security-hardening/`](skills/security-hardening/) | Application security covering input validation, auth, headers, secrets management, and dependency auditing |
+| skill-creator | [`skills/skill-creator/`](skills/skill-creator/) | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run… |
+| skill-reviewer | [`skills/skill-reviewer/`](skills/skill-reviewer/) | Reviews and improves Claude Code skills against official best practices. Supports three modes - self-review (validate your own skills), external review (evaluate others' skills),… |
+| skills-search | [`skills/skills-search/`](skills/skills-search/) | This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF",… |
 | springboot-patterns | [`skills/springboot-patterns/`](skills/springboot-patterns/) | Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration |
 | tdd-mastery | [`skills/tdd-mastery/`](skills/tdd-mastery/) | Test-driven development workflow with Red-Green-Refactor cycle across languages |
+| teams-channel-post-writer | [`skills/teams-channel-post-writer/`](skills/teams-channel-post-writer/) | Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documen… |
+| terraform-skill | [`skills/terraform-skill/`](skills/terraform-skill/) | Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS recor… |
 | testing-strategies | [`skills/testing-strategies/`](skills/testing-strategies/) | Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization |
+| transcript-fixer | [`skills/transcript-fixer/`](skills/transcript-fixer/) | Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix. Triggers when worki… |
+| tunnel-doctor | [`skills/tunnel-doctor/`](skills/tunnel-doctor/) | Diagnoses and fixes conflicts between Tailscale and proxy/VPN tools (Shadowrocket, Clash, Surge) on macOS. Covers five conflict layers - (1) route hijacking, (2) HTTP proxy env va… |
+| twitter-reader | [`skills/twitter-reader/`](skills/twitter-reader/) | Fetch Twitter/X post content including long-form Articles with full images and metadata. Use when Claude needs to retrieve tweet/article content, author info, engagement metrics,… |
 | typescript-advanced | [`skills/typescript-advanced/`](skills/typescript-advanced/) | Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards |
+| ui-designer | [`skills/ui-designer/`](skills/ui-designer/) | Extract design systems from reference UI images and generate implementation-ready UI design prompts. Use when users provide UI screenshots/mockups and want to create consistent de… |
+| video-comparer | [`skills/video-comparer/`](skills/video-comparer/) | This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and… |
 | websocket-realtime | [`skills/websocket-realtime/`](skills/websocket-realtime/) | Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies |
+| windows-remote-desktop-connection-doctor | [`skills/windows-remote-desktop-connection-doctor/`](skills/windows-remote-desktop-connection-doctor/) | Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket… |
+| youtube-downloader | [`skills/youtube-downloader/`](skills/youtube-downloader/) | Download YouTube videos and HLS streams (m3u8) from platforms like Mux, Vimeo, etc. using yt-dlp and ffmpeg. Use this skill when users request downloading videos, extracting audio… |
 
 ---
 
@@ -538,12 +647,14 @@ The authoritative index is [`.claude-plugin/marketplace.json`](.claude-plugin/ma
 
 ## Attribution
 
-This marketplace is forked and personalized from [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0). The Muk-exclusive additions:
+This marketplace is forked and personalized from [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0). Third-party additions:
 
 - **`muk`** skill — written for this pack
 - **`generic-agent`** skill — reference pointer to [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent)
 - **`android-reverse-engineering`** plugin — from [SimoneAvogadro/android-reverse-engineering-skill](https://github.com/SimoneAvogadro/android-reverse-engineering-skill)
 - **`caveman` / `caveman-commit` / `caveman-help` / `caveman-review` / `compress`** skills — from [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman)
+- **8 design plugins** (`design-ops`, `design-research`, `design-systems`, `designer-toolkit`, `interaction-design`, `prototyping-testing`, `ui-design`, `ux-strategy`) — from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (MIT)
+- **37 skills** (asr-transcribe-to-text, capture-screen, github-ops, deep-research, qa-expert, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
 - **`scripts/sync_marketplace.py`** and **`scripts/gen_readme.py`** — written for this pack
 
 All upstream authorship and licensing is preserved.

@@ -261,6 +261,30 @@
       "version": "1.0.0"
     },
     {
+      "name": "design-ops",
+      "source": "plugins/design-ops",
+      "description": "Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "design-research",
+      "source": "plugins/design-research",
+      "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "design-systems",
+      "source": "plugins/design-systems",
+      "description": "Build, document, and maintain scalable design systems \u2014 from tokens and components to accessibility and theming.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "designer-toolkit",
+      "source": "plugins/designer-toolkit",
+      "description": "Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.",
+      "version": "1.0.0"
+    },
+    {
       "name": "desktop-app",
       "source": "plugins/desktop-app",
       "description": "Desktop application scaffolding with Electron or Tauri",
@@ -402,6 +426,12 @@
       "name": "infrastructure-maintainer",
       "source": "plugins/infrastructure-maintainer",
       "description": "Infrastructure maintenance with security audits and update management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "interaction-design",
+      "source": "plugins/interaction-design",
+      "description": "Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.",
       "version": "1.0.0"
     },
     {
@@ -555,6 +585,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "prototyping-testing",
+      "source": "plugins/prototyping-testing",
+      "description": "Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments.",
+      "version": "1.0.0"
+    },
+    {
       "name": "python-expert",
       "source": "plugins/python-expert",
       "description": "Python-specific development with type hints and idiomatic refactoring",
@@ -699,6 +735,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "ui-design",
+      "source": "plugins/ui-design",
+      "description": "Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.",
+      "version": "1.0.0"
+    },
+    {
       "name": "ui-designer",
       "source": "plugins/ui-designer",
       "description": "Implement UI designs from specs with pixel-perfect component generation",
@@ -720,6 +762,12 @@
       "name": "update-branch",
       "source": "plugins/update-branch",
       "description": "Rebase and update feature branches with conflict resolution",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ux-strategy",
+      "source": "plugins/ux-strategy",
+      "description": "Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment.",
       "version": "1.0.0"
     },
     {
@@ -767,6 +815,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "asr-transcribe-to-text",
+      "source": "skills/asr-transcribe-to-text",
+      "description": "Transcribes audio and video files to text using Qwen3-ASR. Supports two modes \u00e2\u20ac\u201d local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/OpenAI-compatible endpoints. Auto-detects platform and recommends the best path. Triggers when the user wants to transcribe recordings, convert audio/video to text, do speech-to-text, or mentions ASR, Qwen ASR, \u00e8\u00bd\u00ac\u00e5\u00bd\u2022, \u00e8\u00af\u00ad\u00e9\u0178\u00b3\u00e8\u00bd\u00ac\u00e6\u2013\u2021\u00e5\u00ad\u2014, \u00e5\u00bd\u2022\u00e9\u0178\u00b3\u00e8\u00bd\u00ac\u00e6\u2013\u2021\u00e5\u00ad\u2014. Also triggers for meeting recordings, lectures, interviews, podcasts, screen recordings, or any audio/video file the user wants converted to text.",
+      "version": "1.0.0"
+    },
+    {
       "name": "authentication-patterns",
       "source": "skills/authentication-patterns",
       "description": "Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows",
@@ -776,6 +830,12 @@
       "name": "aws-cloud-patterns",
       "source": "skills/aws-cloud-patterns",
       "description": "AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform",
+      "version": "1.0.0"
+    },
+    {
+      "name": "capture-screen",
+      "source": "skills/capture-screen",
+      "description": "Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture with screencapture. Use when automating screenshots, capturing application windows for documentation, or building multi-shot visual workflows.",
       "version": "1.0.0"
     },
     {
@@ -815,6 +875,24 @@
       "version": "1.0.0"
     },
     {
+      "name": "cli-demo-generator",
+      "source": "skills/cli-demo-generator",
+      "description": "Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, post-processing speed-up, and frame-level verification. Use when users want to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or need to showcase any command-line tool visually. Also triggers on \"record terminal\", \"VHS tape\", \"demo GIF\", \"animate my CLI\", or any request to visually demonstrate shell commands.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cloudflare-troubleshooting",
+      "source": "skills/cloudflare-troubleshooting",
+      "description": "Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudflare-related problems. Focus on systematic investigation using Cloudflare API to examine actual configuration rather than making assumptions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "competitors-analysis",
+      "source": "skills/competitors-analysis",
+      "description": "Skill: competitors-analysis",
+      "version": "1.0.0"
+    },
+    {
       "name": "compress",
       "source": "skills/compress",
       "description": ">",
@@ -845,6 +923,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "deep-research",
+      "source": "skills/deep-research",
+      "description": "Skill: deep-research",
+      "version": "1.0.0"
+    },
+    {
       "name": "devops-automation",
       "source": "skills/devops-automation",
       "description": "CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns",
@@ -863,9 +947,39 @@
       "version": "1.0.0"
     },
     {
+      "name": "douban-skill",
+      "source": "skills/douban-skill",
+      "description": "Skill: douban-skill",
+      "version": "1.0.0"
+    },
+    {
+      "name": "excel-automation",
+      "source": "skills/excel-automation",
+      "description": "Skill: excel-automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "fact-checker",
+      "source": "skills/fact-checker",
+      "description": "Skill: fact-checker",
+      "version": "1.0.0"
+    },
+    {
+      "name": "financial-data-collector",
+      "source": "skills/financial-data-collector",
+      "description": "Skill: financial-data-collector",
+      "version": "1.0.0"
+    },
+    {
       "name": "frontend-excellence",
       "source": "skills/frontend-excellence",
       "description": "Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gangtise-copilot",
+      "source": "skills/gangtise-copilot",
+      "description": "Skill: gangtise-copilot",
       "version": "1.0.0"
     },
     {
@@ -881,6 +995,18 @@
       "version": "1.0.0"
     },
     {
+      "name": "github-contributor",
+      "source": "skills/github-contributor",
+      "description": "Skill: github-contributor",
+      "version": "1.0.0"
+    },
+    {
+      "name": "github-ops",
+      "source": "skills/github-ops",
+      "description": "Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations including creating/viewing/merging PRs, managing issues, querying API endpoints, and handling GitHub workflows in enterprise or public GitHub environments.",
+      "version": "1.0.0"
+    },
+    {
       "name": "golang-idioms",
       "source": "skills/golang-idioms",
       "description": "Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management",
@@ -893,15 +1019,45 @@
       "version": "1.0.0"
     },
     {
+      "name": "i18n-expert",
+      "source": "skills/i18n-expert",
+      "description": "This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including installing/configuring the i18n framework, replacing hard-coded strings, ensuring en-US/zh-CN coverage, mapping error codes to localized messages, and validating key parity, pluralization, and formatting.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "iOS-APP-developer",
+      "source": "skills/iOS-APP-developer",
+      "description": "Skill: iOS-APP-developer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ima-copilot",
+      "source": "skills/ima-copilot",
+      "description": "Skill: ima-copilot",
+      "version": "1.0.0"
+    },
+    {
       "name": "kubernetes-operations",
       "source": "skills/kubernetes-operations",
       "description": "Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management",
       "version": "1.0.0"
     },
     {
+      "name": "llm-icon-finder",
+      "source": "skills/llm-icon-finder",
+      "description": "Skill: llm-icon-finder",
+      "version": "1.0.0"
+    },
+    {
       "name": "llm-integration",
       "source": "skills/llm-integration",
       "description": "LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "macos-cleaner",
+      "source": "skills/macos-cleaner",
+      "description": "Skill: macos-cleaner",
       "version": "1.0.0"
     },
     {
@@ -953,15 +1109,39 @@
       "version": "1.0.0"
     },
     {
+      "name": "product-analysis",
+      "source": "skills/product-analysis",
+      "description": "Skill: product-analysis",
+      "version": "1.0.0"
+    },
+    {
       "name": "prompt-engineering",
       "source": "skills/prompt-engineering",
       "description": "Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design",
       "version": "1.0.0"
     },
     {
+      "name": "prompt-optimizer",
+      "source": "skills/prompt-optimizer",
+      "description": "Skill: prompt-optimizer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "promptfoo-evaluation",
+      "source": "skills/promptfoo-evaluation",
+      "description": "Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom assertions, implementing llm-rubric for LLM-as-judge, or managing few-shot examples in prompts. Triggers on keywords like \"promptfoo\", \"eval\", \"LLM evaluation\", \"prompt testing\", or \"model comparison\".",
+      "version": "1.0.0"
+    },
+    {
       "name": "python-best-practices",
       "source": "skills/python-best-practices",
       "description": "Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "qa-expert",
+      "source": "skills/qa-expert",
+      "description": "Skill: qa-expert",
       "version": "1.0.0"
     },
     {
@@ -977,15 +1157,51 @@
       "version": "1.0.0"
     },
     {
+      "name": "repomix-safe-mixer",
+      "source": "skills/repomix-safe-mixer",
+      "description": "Skill: repomix-safe-mixer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "repomix-unmixer",
+      "source": "skills/repomix-unmixer",
+      "description": "Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract packed repositories, restore file structures from repomix output, or reverse the repomix packing process.",
+      "version": "1.0.0"
+    },
+    {
       "name": "rust-systems",
       "source": "skills/rust-systems",
       "description": "Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines",
       "version": "1.0.0"
     },
     {
+      "name": "scrapling-skill",
+      "source": "skills/scrapling-skill",
+      "description": "Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `scrapling extract`, WeChat/mp.weixin articles, browser-backed page fetching, or needs help deciding between static and dynamic extraction.",
+      "version": "1.0.0"
+    },
+    {
       "name": "security-hardening",
       "source": "skills/security-hardening",
       "description": "Application security covering input validation, auth, headers, secrets management, and dependency auditing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skill-creator",
+      "source": "skills/skill-creator",
+      "description": "Skill: skill-creator",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skill-reviewer",
+      "source": "skills/skill-reviewer",
+      "description": "Skill: skill-reviewer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skills-search",
+      "source": "skills/skills-search",
+      "description": "This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like \"find skills for PDF\", \"search for code review skills\", \"install cloudflare-troubleshooting\", \"list my installed skills\", \"what does skill-creator do\", or any mention of finding/installing/managing Claude Code skills or plugins.",
       "version": "1.0.0"
     },
     {
@@ -1001,9 +1217,39 @@
       "version": "1.0.0"
     },
     {
+      "name": "teams-channel-post-writer",
+      "source": "skills/teams-channel-post-writer",
+      "description": "Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documentation to teach colleagues effective Claude Code usage, announce new features, share productivity tips, or document lessons learned. Provides templates, writing guidelines, and structured approaches emphasizing concrete examples, underlying principles, and connections to best practices like context engineering. Activates for content involving Teams posts, channel announcements, feature documentation, or tip sharing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "terraform-skill",
+      "source": "skills/terraform-skill",
+      "description": "Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS record duplication, volume permissions, database bootstrap gaps, snapshot cross-contamination, Cloudflare credential format errors, hardcoded domains in Caddyfiles/compose, and init-data-only-on-first-boot pitfalls. Activate when writing null_resource provisioners, creating multi-environment Terraform setups, debugging containers that are Restarting/unhealthy after terraform apply, setting up fresh instances with cloud-init, or any IaC code that SSHs into remote hosts. Also activate when the user mentions terraform plan/apply errors, provisioner failures, infrastructure drift, TLS certificate errors, or Caddy/gateway configuration.",
+      "version": "1.0.0"
+    },
+    {
       "name": "testing-strategies",
       "source": "skills/testing-strategies",
       "description": "Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "transcript-fixer",
+      "source": "skills/transcript-fixer",
+      "description": "Skill: transcript-fixer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tunnel-doctor",
+      "source": "skills/tunnel-doctor",
+      "description": "Skill: tunnel-doctor",
+      "version": "1.0.0"
+    },
+    {
+      "name": "twitter-reader",
+      "source": "skills/twitter-reader",
+      "description": "Skill: twitter-reader",
       "version": "1.0.0"
     },
     {
@@ -1013,9 +1259,33 @@
       "version": "1.0.0"
     },
     {
+      "name": "ui-designer",
+      "source": "skills/ui-designer",
+      "description": "Skill: ui-designer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "video-comparer",
+      "source": "skills/video-comparer",
+      "description": "This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and frame-by-frame visual comparisons. Triggers when users mention \"compare videos\", \"video quality\", \"compression analysis\", \"before/after compression\", or request quality assessment of compressed videos.",
+      "version": "1.0.0"
+    },
+    {
       "name": "websocket-realtime",
       "source": "skills/websocket-realtime",
       "description": "Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies",
+      "version": "1.0.0"
+    },
+    {
+      "name": "windows-remote-desktop-connection-doctor",
+      "source": "skills/windows-remote-desktop-connection-doctor",
+      "description": "Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket), detect VPN/proxy interference with STUN/TURN negotiation, and parse Windows App logs for Shortpath failures. This skill should be used when VDI connections are slow, when transport shows WebSocket instead of UDP, when RDP Shortpath fails to establish, or when RTT is unexpectedly high.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "youtube-downloader",
+      "source": "skills/youtube-downloader",
+      "description": "Skill: youtube-downloader",
       "version": "1.0.0"
     }
   ],

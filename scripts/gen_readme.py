@@ -117,6 +117,54 @@ Skills and plugins that live **only in this fork**. Everything else in this repo
 | [**caveman** + **caveman-commit** + **caveman-help** + **caveman-review** + **compress**](skills/caveman/SKILL.md) | Skill pack | Caveman-style terse AI output — ~75% token reduction while preserving full technical accuracy. Five related skills for commit messages, help text, reviews, and generic text compression. Source: [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman). |
 """
 
+# Manually maintained set — bump when adding from new sources.
+NEWLY_ADDED_DESIGNER = ["design-ops", "design-research", "design-systems",
+                        "designer-toolkit", "interaction-design",
+                        "prototyping-testing", "ui-design", "ux-strategy"]
+NEWLY_ADDED_DAYMADE = [
+    "asr-transcribe-to-text", "capture-screen", "cli-demo-generator",
+    "cloudflare-troubleshooting", "competitors-analysis", "deep-research",
+    "douban-skill", "excel-automation", "fact-checker",
+    "financial-data-collector", "gangtise-copilot", "github-contributor",
+    "github-ops", "i18n-expert", "iOS-APP-developer", "ima-copilot",
+    "llm-icon-finder", "macos-cleaner", "product-analysis",
+    "prompt-optimizer", "promptfoo-evaluation", "qa-expert",
+    "repomix-safe-mixer", "repomix-unmixer", "scrapling-skill",
+    "skill-creator", "skill-reviewer", "skills-search",
+    "teams-channel-post-writer", "terraform-skill", "transcript-fixer",
+    "tunnel-doctor", "twitter-reader", "ui-designer", "video-comparer",
+    "windows-remote-desktop-connection-doctor", "youtube-downloader",
+]
+
+
+def _newly_added_block():
+    plugin_lookup = dict(plugins)
+    skill_lookup = dict(skills)
+    out = ["## Newly Added", "",
+           "Latest additions to the pack. Muk orchestrates these alongside everything else — no manual wiring needed.",
+           ""]
+
+    out += [f"### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) ({len(NEWLY_ADDED_DESIGNER)} bundles)",
+            "",
+            "Each bundle ships a cluster of related skills plus slash commands.",
+            "",
+            "| Plugin | Description |",
+            "|--------|-------------|"]
+    for n in NEWLY_ADDED_DESIGNER:
+        d = plugin_lookup.get(n, "")
+        out.append(f"| [`{n}`](plugins/{n}/) | {clip(d)} |")
+
+    out += ["",
+            f"### Skills from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills) ({len(NEWLY_ADDED_DAYMADE)} skills)",
+            "",
+            "| Skill | Directory | What It Teaches |",
+            "|-------|-----------|-----------------|"]
+    for n in NEWLY_ADDED_DAYMADE:
+        d = skill_lookup.get(n, "")
+        out.append(f"| {n} | [`skills/{n}/`](skills/{n}/) | {clip(d)} |")
+
+    return "\n".join(out) + "\n"
+
 parts = []
 
 # Header
@@ -136,6 +184,10 @@ parts.append(f"""# Muk — Mukund Totla's Claude Code Marketplace
 
 # Exclusives — on top, as requested (before Quick Install)
 parts.append(EXCLUSIVES)
+parts.append("\n---\n\n")
+
+# Newly Added — right after Exclusives
+parts.append(_newly_added_block())
 parts.append("\n---\n\n")
 
 parts.append("""## Quick Install
@@ -169,6 +221,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 parts.append(f"""## Table of Contents
 
 - [Muk Exclusives](#muk-exclusives)
+- [Newly Added](#newly-added)
 - [Plugins](#plugins) ({len(plugins)})
 - [Agents](#agents) ({n_agents})
 - [Skills](#skills) ({len(skills)})
@@ -303,12 +356,14 @@ The authoritative index is [`.claude-plugin/marketplace.json`](.claude-plugin/ma
 
 ## Attribution
 
-This marketplace is forked and personalized from [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0). The Muk-exclusive additions:
+This marketplace is forked and personalized from [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0). Third-party additions:
 
 - **`muk`** skill — written for this pack
 - **`generic-agent`** skill — reference pointer to [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent)
 - **`android-reverse-engineering`** plugin — from [SimoneAvogadro/android-reverse-engineering-skill](https://github.com/SimoneAvogadro/android-reverse-engineering-skill)
 - **`caveman` / `caveman-commit` / `caveman-help` / `caveman-review` / `compress`** skills — from [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman)
+- **8 design plugins** (`design-ops`, `design-research`, `design-systems`, `designer-toolkit`, `interaction-design`, `prototyping-testing`, `ui-design`, `ux-strategy`) — from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (MIT)
+- **37 skills** (asr-transcribe-to-text, capture-screen, github-ops, deep-research, qa-expert, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
 - **`scripts/sync_marketplace.py`** and **`scripts/gen_readme.py`** — written for this pack
 
 All upstream authorship and licensing is preserved.

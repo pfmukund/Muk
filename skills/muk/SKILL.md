@@ -37,36 +37,54 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 
 ## Pack inventory (auto-generated)
 
-**Summary:** 45 skills · 121 plugins · 136 agents.
+**Summary:** 82 skills · 129 plugins · 136 agents.
 
 ### Skills
 
 - **muk** — Mukund Totla's personal master orchestrator â€” activate with "Muk", "/muk", "Hey Muk", "Muk go", "use Muk", "activate Muk", or just describe any complex task and this skill will intelligently analyze it and assemble the best combination of skills, agents, plugins, MCPs, and tools to complete it. Also triggers on "figure out what to use", "use your best tools", "orchestrate this", "use everything you have", or any task spanning multiple domains. When the user seems unsure which skill to use, or a task clearly requires chaining multiple capabilities â€” always activate Muk. This is Mukund's power-mode.
 - **accessibility-wcag** — Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing
 - **api-design-patterns** — REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
+- **asr-transcribe-to-text** — Transcribes audio and video files to text using Qwen3-ASR. Supports two modes â€” local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/OpenAI-compatible endpoints. Auto-detects platform and recommends the best path. Triggers when the user wants to transcribe recordings, convert audio/video to text, do speech-to-text, or mentions ASR, Qwen ASR, è½¬å½•, è¯­éŸ³è½¬æ–‡å­—, å½•éŸ³è½¬æ–‡å­—. Also triggers for meeting recordings, lectures, interviews, podcasts, screen recordings, or any audio/video file the user wants converted to text.
 - **authentication-patterns** — Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows
 - **aws-cloud-patterns** — AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform
+- **capture-screen** — Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture with screencapture. Use when automating screenshots, capturing application windows for documentation, or building multi-shot visual workflows.
 - **caveman** — Skill: caveman
 - **caveman-commit** — Skill: caveman-commit
 - **caveman-help** — >
 - **caveman-review** — Skill: caveman-review
 - **ci-cd-pipelines** — CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation
 - **claude-memory-kit** — Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies.
+- **cli-demo-generator** — Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, post-processing speed-up, and frame-level verification. Use when users want to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or need to showcase any command-line tool visually. Also triggers on "record terminal", "VHS tape", "demo GIF", "animate my CLI", or any request to visually demonstrate shell commands.
+- **cloudflare-troubleshooting** — Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudflare-related problems. Focus on systematic investigation using Cloudflare API to examine actual configuration rather than making assumptions.
+- **competitors-analysis** — Skill: competitors-analysis
 - **compress** — >
 - **continuous-learning** — Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring
 - **data-engineering** — Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
 - **database-optimization** — Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL
 - **deep-dive** — Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed.
+- **deep-research** — Skill: deep-research
 - **devops-automation** — CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns
 - **django-patterns** — Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure
 - **docker-best-practices** — Docker best practices including multi-stage builds, compose patterns, image optimization, and security
+- **douban-skill** — Skill: douban-skill
+- **excel-automation** — Skill: excel-automation
+- **fact-checker** — Skill: fact-checker
+- **financial-data-collector** — Skill: financial-data-collector
 - **frontend-excellence** — Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals
+- **gangtise-copilot** — Skill: gangtise-copilot
 - **generic-agent** — Reference pointer to GenericAgent â€” a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (browser, terminal, filesystem, keyboard/mouse, screen vision, ADB). Use this skill ONLY to recommend GenericAgent when the user wants a self-evolving PC-control agent, OS-level automation with screen vision, mobile device automation via ADB, or a local autonomous agent with persistent skill memory. Muk should recommend installing GenericAgent separately (it is a standalone Python tool, not a Claude Code plugin) rather than try to run it inline.
 - **git-advanced** — Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques
+- **github-contributor** — Skill: github-contributor
+- **github-ops** — Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations including creating/viewing/merging PRs, managing issues, querying API endpoints, and handling GitHub workflows in enterprise or public GitHub environments.
 - **golang-idioms** — Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management
 - **graphql-design** — GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling
+- **i18n-expert** — This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including installing/configuring the i18n framework, replacing hard-coded strings, ensuring en-US/zh-CN coverage, mapping error codes to localized messages, and validating key parity, pluralization, and formatting.
+- **iOS-APP-developer** — Skill: iOS-APP-developer
+- **ima-copilot** — Skill: ima-copilot
 - **kubernetes-operations** — Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management
+- **llm-icon-finder** — Skill: llm-icon-finder
 - **llm-integration** — LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization
+- **macos-cleaner** — Skill: macos-cleaner
 - **manage-skills** — Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)
 - **mcp-development** — MCP server development including tool design, resource endpoints, prompt templates, and transport configuration
 - **microservices-design** — Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway
@@ -75,17 +93,36 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **nextjs-mastery** — Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching
 - **performance-optimization** — Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals
 - **postgres-optimization** — PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling
+- **product-analysis** — Skill: product-analysis
 - **prompt-engineering** — Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design
+- **prompt-optimizer** — Skill: prompt-optimizer
+- **promptfoo-evaluation** — Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom assertions, implementing llm-rubric for LLM-as-judge, or managing few-shot examples in prompts. Triggers on keywords like "promptfoo", "eval", "LLM evaluation", "prompt testing", or "model comparison".
 - **python-best-practices** — Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing
+- **qa-expert** — Skill: qa-expert
 - **react-patterns** — React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition
 - **redis-patterns** — Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures
+- **repomix-safe-mixer** — Skill: repomix-safe-mixer
+- **repomix-unmixer** — Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract packed repositories, restore file structures from repomix output, or reverse the repomix packing process.
 - **rust-systems** — Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines
+- **scrapling-skill** — Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `scrapling extract`, WeChat/mp.weixin articles, browser-backed page fetching, or needs help deciding between static and dynamic extraction.
 - **security-hardening** — Application security covering input validation, auth, headers, secrets management, and dependency auditing
+- **skill-creator** — Skill: skill-creator
+- **skill-reviewer** — Skill: skill-reviewer
+- **skills-search** — This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF", "search for code review skills", "install cloudflare-troubleshooting", "list my installed skills", "what does skill-creator do", or any mention of finding/installing/managing Claude Code skills or plugins.
 - **springboot-patterns** — Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration
 - **tdd-mastery** — Test-driven development workflow with Red-Green-Refactor cycle across languages
+- **teams-channel-post-writer** — Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documentation to teach colleagues effective Claude Code usage, announce new features, share productivity tips, or document lessons learned. Provides templates, writing guidelines, and structured approaches emphasizing concrete examples, underlying principles, and connections to best practices like context engineering. Activates for content involving Teams posts, channel announcements, feature documentation, or tip sharing.
+- **terraform-skill** — Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS record duplication, volume permissions, database bootstrap gaps, snapshot cross-contamination, Cloudflare credential format errors, hardcoded domains in Caddyfiles/compose, and init-data-only-on-first-boot pitfalls. Activate when writing null_resource provisioners, creating multi-environment Terraform setups, debugging containers that are Restarting/unhealthy after terraform apply, setting up fresh instances with cloud-init, or any IaC code that SSHs into remote hosts. Also activate when the user mentions terraform plan/apply errors, provisioner failures, infrastructure drift, TLS certificate errors, or Caddy/gateway configuration.
 - **testing-strategies** — Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization
+- **transcript-fixer** — Skill: transcript-fixer
+- **tunnel-doctor** — Skill: tunnel-doctor
+- **twitter-reader** — Skill: twitter-reader
 - **typescript-advanced** — Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards
+- **ui-designer** — Skill: ui-designer
+- **video-comparer** — This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and frame-by-frame visual comparisons. Triggers when users mention "compare videos", "video quality", "compression analysis", "before/after compression", or request quality assessment of compressed videos.
 - **websocket-realtime** — Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies
+- **windows-remote-desktop-connection-doctor** — Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket), detect VPN/proxy interference with STUN/TURN negotiation, and parse Windows App logs for Shortpath failures. This skill should be used when VDI connections are slow, when transport shows WebSocket instead of UDP, when RDP Shortpath fails to establish, or when RTT is unexpectedly high.
+- **youtube-downloader** — Skill: youtube-downloader
 
 ### Plugins
 
@@ -129,6 +166,10 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **debug-session** — Interactive debugging workflow with git bisect integration
 - **dependency-manager** — Audit, update, and manage project dependencies with safety checks
 - **deploy-pilot** — Deployment automation with Dockerfile generation, CI/CD pipelines, and infrastructure as code
+- **design-ops** — Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows.
+- **design-research** — User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.
+- **design-systems** — Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming.
+- **designer-toolkit** — Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.
 - **desktop-app** — Desktop application scaffolding with Electron or Tauri
 - **devops-automator** — DevOps automation scripts for CI/CD, health checks, and deployments
 - **discuss** — Debate implementation approaches with structured pros and cons analysis
@@ -153,6 +194,7 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **helm-charts** — Helm chart generation and upgrade management
 - **import-organizer** — Organize, sort, and clean import statements
 - **infrastructure-maintainer** — Infrastructure maintenance with security audits and update management
+- **interaction-design** — Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.
 - **ios-developer** — iOS and Swift development with SwiftUI views and models
 - **k8s-helper** — Generate Kubernetes manifests and debug pod issues with kubectl
 - **license-checker** — License compliance checking and NOTICE file generation
@@ -178,6 +220,7 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **product-shipper** — Ship features end-to-end with launch checklists and rollout plans
 - **project-scaffold** — Scaffold new projects and add features with best-practice templates
 - **prompt-optimizer** — Analyze and optimize AI prompts for better results
+- **prototyping-testing** — Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments.
 - **python-expert** — Python-specific development with type hints and idiomatic refactoring
 - **query-optimizer** — SQL query optimization and execution plan analysis
 - **rag-builder** — Build Retrieval-Augmented Generation pipelines
@@ -202,10 +245,12 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **test-writer** — Generate comprehensive unit and integration tests with full coverage
 - **tool-evaluator** — Evaluate and compare developer tools with structured scoring criteria
 - **type-migrator** — Migrate JavaScript files to TypeScript with proper types
+- **ui-design** — Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
 - **ui-designer** — Implement UI designs from specs with pixel-perfect component generation
 - **ultrathink** — Deep analysis mode with extended reasoning for complex problems
 - **unit-test-generator** — Generate comprehensive unit tests for any function or module
 - **update-branch** — Rebase and update feature branches with conflict resolution
+- **ux-strategy** — Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment.
 - **vision-specialist** — Image and visual analysis with screenshot interpretation and text extraction
 - **visual-regression** — Visual regression testing with screenshot comparison
 - **web-dev** — Full-stack web development with app scaffolding and page generation
