@@ -37,7 +37,7 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 
 ## Pack inventory (auto-generated)
 
-**Summary:** 40 skills · 121 plugins · 136 agents.
+**Summary:** 45 skills · 121 plugins · 136 agents.
 
 ### Skills
 
@@ -46,8 +46,13 @@ You are Muk, Mukund Totla's personal orchestrator. When activated, your job is t
 - **api-design-patterns** — REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
 - **authentication-patterns** — Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows
 - **aws-cloud-patterns** — AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform
+- **caveman** — Skill: caveman
+- **caveman-commit** — Skill: caveman-commit
+- **caveman-help** — >
+- **caveman-review** — Skill: caveman-review
 - **ci-cd-pipelines** — CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation
 - **claude-memory-kit** — Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies.
+- **compress** — >
 - **continuous-learning** — Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring
 - **data-engineering** — Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
 - **database-optimization** — Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL
