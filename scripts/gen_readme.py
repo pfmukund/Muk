@@ -117,7 +117,7 @@ Skills and plugins that live **only in this fork**. Everything else in this repo
 | [**caveman** + **caveman-commit** + **caveman-help** + **caveman-review** + **compress**](skills/caveman/SKILL.md) | Skill pack | Caveman-style terse AI output — ~75% token reduction while preserving full technical accuracy. Five related skills for commit messages, help text, reviews, and generic text compression. Source: [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman). |
 """
 
-# Manually maintained set — bump when adding from new sources.
+# Manually maintained per source — bump when adding from new repos.
 NEWLY_ADDED_DESIGNER = ["design-ops", "design-research", "design-systems",
                         "designer-toolkit", "interaction-design",
                         "prototyping-testing", "ui-design", "ux-strategy"]
@@ -135,35 +135,129 @@ NEWLY_ADDED_DAYMADE = [
     "tunnel-doctor", "twitter-reader", "ui-designer", "video-comparer",
     "windows-remote-desktop-connection-doctor", "youtube-downloader",
 ]
+NEWLY_ADDED_ANTHROPICS = [
+    "algorithmic-art", "brand-guidelines", "canvas-design", "claude-api",
+    "doc-coauthoring", "docx", "frontend-design", "internal-comms",
+    "mcp-builder", "pdf", "pptx", "slack-gif-creator", "theme-factory",
+    "web-artifacts-builder", "webapp-testing", "xlsx",
+]
+NEWLY_ADDED_COMPOSIOHQ = ["composio", "artifacts-builder",
+                          "changelog-generator", "competitive-ads-extractor"]
+NEWLY_ADDED_COREYHAINES = [
+    "ab-test-setup", "ad-creative", "ai-seo", "analytics-tracking",
+    "aso-audit", "churn-prevention", "cold-email", "community-marketing",
+    "competitor-alternatives", "content-strategy", "copy-editing",
+    "copywriting", "customer-research", "email-sequence", "form-cro",
+    "free-tool-strategy", "launch-strategy", "lead-magnets",
+    "marketing-ideas", "marketing-psychology", "onboarding-cro",
+    "page-cro", "paid-ads", "paywall-upgrade-cro", "popup-cro",
+    "pricing-strategy", "product-marketing-context", "programmatic-seo",
+    "referral-program", "revops", "sales-enablement", "schema-markup",
+    "seo-audit", "signup-flow-cro", "site-architecture", "social-content",
+]
+NEWLY_ADDED_DISLER = ["agent-sandboxes"]
+NEWLY_ADDED_OBRA = [
+    "brainstorming", "dispatching-parallel-agents", "executing-plans",
+    "finishing-a-development-branch", "receiving-code-review",
+    "requesting-code-review", "subagent-driven-development",
+    "systematic-debugging", "test-driven-development", "using-git-worktrees",
+    "using-superpowers", "verification-before-completion", "writing-plans",
+    "writing-skills",
+]
+NEWLY_ADDED_REMOTION = ["remotion"]
+NEWLY_ADDED_SUPERMEMORY = ["supermemory"]
+NEWLY_ADDED_VERCEL_BROWSER = [
+    "agent-browser", "agent-browser-agentcore", "agent-browser-core",
+    "agent-browser-dogfood", "agent-browser-electron", "agent-browser-slack",
+    "agent-browser-vercel-sandbox",
+]
+NEWLY_ADDED_VERCEL_AGENTS = [
+    "composition-patterns", "deploy-to-vercel", "react-best-practices",
+    "react-native-skills", "react-view-transitions", "vercel-cli-with-tokens",
+    "web-design-guidelines",
+]
 
 
 def _newly_added_block():
     plugin_lookup = dict(plugins)
     skill_lookup = dict(skills)
+
+    total = (len(NEWLY_ADDED_DESIGNER) + len(NEWLY_ADDED_DAYMADE)
+             + len(NEWLY_ADDED_ANTHROPICS) + len(NEWLY_ADDED_COMPOSIOHQ)
+             + len(NEWLY_ADDED_COREYHAINES) + len(NEWLY_ADDED_DISLER)
+             + len(NEWLY_ADDED_OBRA) + len(NEWLY_ADDED_REMOTION)
+             + len(NEWLY_ADDED_SUPERMEMORY) + len(NEWLY_ADDED_VERCEL_BROWSER)
+             + len(NEWLY_ADDED_VERCEL_AGENTS))
+
     out = ["## Newly Added", "",
-           "Latest additions to the pack. Muk orchestrates these alongside everything else — no manual wiring needed.",
+           f"Latest additions to the pack — {total} skills and plugins across 12 sources. Muk orchestrates these alongside everything else; no manual wiring needed.",
            ""]
 
-    out += [f"### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) ({len(NEWLY_ADDED_DESIGNER)} bundles)",
-            "",
-            "Each bundle ships a cluster of related skills plus slash commands.",
-            "",
-            "| Plugin | Description |",
-            "|--------|-------------|"]
-    for n in NEWLY_ADDED_DESIGNER:
-        d = plugin_lookup.get(n, "")
-        out.append(f"| [`{n}`](plugins/{n}/) | {clip(d)} |")
+    def plugin_table(title, names):
+        out.append(title)
+        out.append("")
+        out.append("| Plugin | Description |")
+        out.append("|--------|-------------|")
+        for n in names:
+            d = plugin_lookup.get(n, "")
+            out.append(f"| [`{n}`](plugins/{n}/) | {clip(d)} |")
+        out.append("")
 
-    out += ["",
-            f"### Skills from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills) ({len(NEWLY_ADDED_DAYMADE)} skills)",
-            "",
-            "| Skill | Directory | What It Teaches |",
-            "|-------|-----------|-----------------|"]
-    for n in NEWLY_ADDED_DAYMADE:
-        d = skill_lookup.get(n, "")
-        out.append(f"| {n} | [`skills/{n}/`](skills/{n}/) | {clip(d)} |")
+    def skill_table(title, names):
+        out.append(title)
+        out.append("")
+        out.append("| Skill | Directory | What It Teaches |")
+        out.append("|-------|-----------|-----------------|")
+        for n in names:
+            d = skill_lookup.get(n, "")
+            out.append(f"| {n} | [`skills/{n}/`](skills/{n}/) | {clip(d)} |")
+        out.append("")
 
-    return "\n".join(out) + "\n"
+    plugin_table(
+        f"### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) ({len(NEWLY_ADDED_DESIGNER)} bundles)\n\nEach bundle ships a cluster of related skills plus slash commands.",
+        NEWLY_ADDED_DESIGNER)
+
+    skill_table(
+        f"### Skills from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills) ({len(NEWLY_ADDED_DAYMADE)} skills)",
+        NEWLY_ADDED_DAYMADE)
+
+    skill_table(
+        f"### Official Anthropic skills from [anthropics/skills](https://github.com/anthropics/skills) ({len(NEWLY_ADDED_ANTHROPICS)} skills)\n\nIncluding `frontend-design` (recommended in the composio.dev roundup) plus document-processing (`pdf`, `docx`, `pptx`, `xlsx`) and design-system skills.",
+        NEWLY_ADDED_ANTHROPICS)
+
+    skill_table(
+        f"### Composio skills from [ComposioHQ/skills](https://github.com/ComposioHQ/skills) and [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) ({len(NEWLY_ADDED_COMPOSIOHQ)} skills)\n\nComposio's toolkit wrappers for 1,000+ external APIs are available via `composio`. The `awesome-claude-skills` repo also ships 850+ auto-generated SaaS-specific automation skills (Ably, Abstract, Accelo, …) — not bundled here, but clone upstream when needed.",
+        NEWLY_ADDED_COMPOSIOHQ)
+
+    skill_table(
+        f"### Marketing skills from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) ({len(NEWLY_ADDED_COREYHAINES)} skills)\n\nFull marketing operating system: CRO, SEO, paid ads, copywriting, launch strategy, email sequences, pricing, community, and more.",
+        NEWLY_ADDED_COREYHAINES)
+
+    skill_table(
+        f"### Sandbox skill from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill) ({len(NEWLY_ADDED_DISLER)} skill)",
+        NEWLY_ADDED_DISLER)
+
+    skill_table(
+        f"### Superpowers from [obra/superpowers](https://github.com/obra/superpowers) ({len(NEWLY_ADDED_OBRA)} skills)\n\nStructured multi-agent workflows: brainstorm → spec → plan → execute → review → merge. `systematic-debugging`, `verification-before-completion`, `subagent-driven-development`, and more.",
+        NEWLY_ADDED_OBRA)
+
+    skill_table(
+        f"### Remotion skill from [remotion-dev/skills](https://github.com/remotion-dev/skills) ({len(NEWLY_ADDED_REMOTION)} skill)",
+        NEWLY_ADDED_REMOTION)
+
+    skill_table(
+        f"### Supermemory skill from [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) ({len(NEWLY_ADDED_SUPERMEMORY)} skill)\n\nPersistent memory layer — tracks facts about users over time, resolves contradictions, auto-forgets expired info.",
+        NEWLY_ADDED_SUPERMEMORY)
+
+    skill_table(
+        f"### Agent-browser from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) ({len(NEWLY_ADDED_VERCEL_BROWSER)} skills)\n\nDeterministic ref-based control of web UIs. Includes the core `agent-browser` skill plus six integration-specific skill-data packs (AgentCore, Core, Dogfood, Electron, Slack, Vercel Sandbox) renamed to `agent-browser-*` to avoid generic name collisions.",
+        NEWLY_ADDED_VERCEL_BROWSER)
+
+    skill_table(
+        f"### Agent-skills from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) ({len(NEWLY_ADDED_VERCEL_AGENTS)} skills)\n\nIncluding `web-design-guidelines` (from the composio.dev roundup), `deploy-to-vercel`, `react-best-practices`, and `react-view-transitions`.",
+        NEWLY_ADDED_VERCEL_AGENTS)
+
+    return "\n".join(out)
 
 parts = []
 
@@ -363,7 +457,16 @@ This marketplace is forked and personalized from [rohitg00/awesome-claude-code-t
 - **`android-reverse-engineering`** plugin — from [SimoneAvogadro/android-reverse-engineering-skill](https://github.com/SimoneAvogadro/android-reverse-engineering-skill)
 - **`caveman` / `caveman-commit` / `caveman-help` / `caveman-review` / `compress`** skills — from [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman)
 - **8 design plugins** (`design-ops`, `design-research`, `design-systems`, `designer-toolkit`, `interaction-design`, `prototyping-testing`, `ui-design`, `ux-strategy`) — from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (MIT)
-- **37 skills** (asr-transcribe-to-text, capture-screen, github-ops, deep-research, qa-expert, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
+- **37 skills** (asr-transcribe-to-text, github-ops, deep-research, qa-expert, excel-automation, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
+- **16 official Anthropic skills** (`frontend-design`, `pdf`, `docx`, `pptx`, `xlsx`, `claude-api`, `mcp-builder`, `algorithmic-art`, `brand-guidelines`, `canvas-design`, `theme-factory`, `web-artifacts-builder`, `webapp-testing`, `slack-gif-creator`, `internal-comms`, `doc-coauthoring`) — from [anthropics/skills](https://github.com/anthropics/skills)
+- **4 Composio skills** (`composio`, `artifacts-builder`, `changelog-generator`, `competitive-ads-extractor`) — from [ComposioHQ/skills](https://github.com/ComposioHQ/skills) and [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+- **36 marketing skills** (CRO, SEO, paid ads, email, copywriting, pricing, launch, …) — from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+- **14 Superpowers skills** (structured multi-agent workflows: brainstorm → plan → execute → review) — from [obra/superpowers](https://github.com/obra/superpowers)
+- **7 agent-browser skills** (deterministic browser control + 6 integration packs) — from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+- **7 Vercel agent-skills** (`web-design-guidelines`, `deploy-to-vercel`, `react-best-practices`, `react-view-transitions`, …) — from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
+- **`agent-sandboxes`** skill — from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill)
+- **`remotion`** skill — from [remotion-dev/skills](https://github.com/remotion-dev/skills)
+- **`supermemory`** skill — from [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory)
 - **`scripts/sync_marketplace.py`** and **`scripts/gen_readme.py`** — written for this pack
 
 All upstream authorship and licensing is preserved.

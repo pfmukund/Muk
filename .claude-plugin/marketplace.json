@@ -803,15 +803,105 @@
       "version": "1.0.0"
     },
     {
+      "name": "ab-test-setup",
+      "source": "skills/ab-test-setup",
+      "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"should I test this,\" \"which version is better,\" \"test two versions,\" \"statistical significance,\" \"how long should I run this test,\" \"growth experiments,\" \"experiment velocity,\" \"experiment backlog,\" \"ICE score,\" \"experimentation program,\" or \"experiment playbook.\" Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro.",
+      "version": "1.0.0"
+    },
+    {
       "name": "accessibility-wcag",
       "source": "skills/accessibility-wcag",
       "description": "Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing",
       "version": "1.0.0"
     },
     {
+      "name": "ad-creative",
+      "source": "skills/ad-creative",
+      "description": "When the user wants to generate, iterate, or scale ad creative \u00e2\u20ac\u201d headlines, descriptions, primary text, or full ad variations \u00e2\u20ac\u201d for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser",
+      "source": "skills/agent-browser",
+      "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-agentcore",
+      "source": "skills/agent-browser-agentcore",
+      "description": "Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser session backed by AWS infrastructure. Triggers include \"use agentcore\", \"run on AWS\", \"cloud browser with AWS\", \"bedrock browser\", \"agentcore session\", or any task requiring AWS-hosted browser automation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-core",
+      "source": "skills/agent-browser-core",
+      "description": "Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-dogfood",
+      "source": "skills/agent-browser-dogfood",
+      "description": "Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to \"dogfood\", \"QA\", \"exploratory test\", \"find issues\", \"bug hunt\", \"test this app/site/platform\", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-electron",
+      "source": "skills/agent-browser-electron",
+      "description": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include \"automate Slack app\", \"control VS Code\", \"interact with Discord app\", \"test this Electron app\", \"connect to desktop app\", or any task requiring automation of a native Electron application.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-slack",
+      "source": "skills/agent-browser-slack",
+      "description": "Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task. Triggers include \"check my Slack\", \"what channels have unreads\", \"send a message to\", \"search Slack for\", \"extract from Slack\", \"find who said\", or any task requiring programmatic Slack interaction.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-browser-vercel-sandbox",
+      "source": "skills/agent-browser-vercel-sandbox",
+      "description": "Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js, SvelteKit, Nuxt, Remix, Astro, etc.), wants to run headless Chrome without binary size limits, needs persistent browser sessions across commands, or wants ephemeral isolated browser environments. Triggers include \"Vercel Sandbox browser\", \"microVM Chrome\", \"agent-browser in sandbox\", \"browser automation on Vercel\", or any task requiring Chrome in a Vercel Sandbox.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "agent-sandboxes",
+      "source": "skills/agent-sandboxes",
+      "description": "Operate E2B agent sandboxes using the CLI. Use when user needs to run code in isolation, test packages, execute commands safely, or work with binary files in a sandbox environment. Keywords: sandbox, e2b, isolated environment, run code, test code, safe execution.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-seo",
+      "source": "skills/ai-seo",
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "algorithmic-art",
+      "source": "skills/algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "analytics-tracking",
+      "source": "skills/analytics-tracking",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"tracking plan,\" \"how do I measure this,\" \"track conversions,\" \"attribution,\" \"Mixpanel,\" \"Segment,\" \"are my events firing,\" or \"analytics isn't working.\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.",
+      "version": "1.0.0"
+    },
+    {
       "name": "api-design-patterns",
       "source": "skills/api-design-patterns",
       "description": "REST API design with resource naming, pagination, versioning, and OpenAPI spec generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "artifacts-builder",
+      "source": "skills/artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "aso-audit",
+      "source": "skills/aso-audit",
+      "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.",
       "version": "1.0.0"
     },
     {
@@ -830,6 +920,24 @@
       "name": "aws-cloud-patterns",
       "source": "skills/aws-cloud-patterns",
       "description": "AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform",
+      "version": "1.0.0"
+    },
+    {
+      "name": "brainstorming",
+      "source": "skills/brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "brand-guidelines",
+      "source": "skills/brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "canvas-design",
+      "source": "skills/canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
       "version": "1.0.0"
     },
     {
@@ -863,9 +971,27 @@
       "version": "1.0.0"
     },
     {
+      "name": "changelog-generator",
+      "source": "skills/changelog-generator",
+      "description": "Skill: changelog-generator",
+      "version": "1.0.0"
+    },
+    {
+      "name": "churn-prevention",
+      "source": "skills/churn-prevention",
+      "description": "Skill: churn-prevention",
+      "version": "1.0.0"
+    },
+    {
       "name": "ci-cd-pipelines",
       "source": "skills/ci-cd-pipelines",
       "description": "CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "claude-api",
+      "source": "skills/claude-api",
+      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 \u00e2\u2020\u2019 4.6, 4.6 \u00e2\u2020\u2019 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.",
       "version": "1.0.0"
     },
     {
@@ -887,9 +1013,45 @@
       "version": "1.0.0"
     },
     {
+      "name": "cold-email",
+      "source": "skills/cold-email",
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to leads,\" \"reach out to prospects,\" \"sales email,\" \"follow-up email sequence,\" \"nobody's replying to my emails,\" or \"how do I write a cold email.\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "community-marketing",
+      "source": "skills/community-marketing",
+      "description": "Skill: community-marketing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "competitive-ads-extractor",
+      "source": "skills/competitive-ads-extractor",
+      "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "competitor-alternatives",
+      "source": "skills/competitor-alternatives",
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.",
+      "version": "1.0.0"
+    },
+    {
       "name": "competitors-analysis",
       "source": "skills/competitors-analysis",
       "description": "Skill: competitors-analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "composio",
+      "source": "skills/composio",
+      "description": "Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK",
+      "version": "1.0.0"
+    },
+    {
+      "name": "composition-patterns",
+      "source": "skills/composition-patterns",
+      "description": "Skill: composition-patterns",
       "version": "1.0.0"
     },
     {
@@ -899,9 +1061,33 @@
       "version": "1.0.0"
     },
     {
+      "name": "content-strategy",
+      "source": "skills/content-strategy",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.",
+      "version": "1.0.0"
+    },
+    {
       "name": "continuous-learning",
       "source": "skills/continuous-learning",
       "description": "Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring",
+      "version": "1.0.0"
+    },
+    {
+      "name": "copy-editing",
+      "source": "skills/copy-editing",
+      "description": "Skill: copy-editing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "copywriting",
+      "source": "skills/copywriting",
+      "description": "Skill: copywriting",
+      "version": "1.0.0"
+    },
+    {
+      "name": "customer-research",
+      "source": "skills/customer-research",
+      "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,\" \"build personas,\" \"customer personas,\" \"jobs to be done,\" \"JTBD,\" \"what do customers say,\" \"what are customers struggling with,\" \"Reddit mining,\" \"G2 reviews,\" \"review mining,\" \"digital watering holes,\" \"community research,\" \"forum research,\" \"competitor reviews,\" \"customer sentiment,\" or \"find out why customers churn/convert/buy.\" Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.",
       "version": "1.0.0"
     },
     {
@@ -929,9 +1115,21 @@
       "version": "1.0.0"
     },
     {
+      "name": "deploy-to-vercel",
+      "source": "skills/deploy-to-vercel",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "version": "1.0.0"
+    },
+    {
       "name": "devops-automation",
       "source": "skills/devops-automation",
       "description": "CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "source": "skills/dispatching-parallel-agents",
+      "description": "Skill: dispatching-parallel-agents",
       "version": "1.0.0"
     },
     {
@@ -941,9 +1139,21 @@
       "version": "1.0.0"
     },
     {
+      "name": "doc-coauthoring",
+      "source": "skills/doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+      "version": "1.0.0"
+    },
+    {
       "name": "docker-best-practices",
       "source": "skills/docker-best-practices",
       "description": "Docker best practices including multi-stage builds, compose patterns, image optimization, and security",
+      "version": "1.0.0"
+    },
+    {
+      "name": "docx",
+      "source": "skills/docx",
+      "description": "Skill: docx",
       "version": "1.0.0"
     },
     {
@@ -953,9 +1163,21 @@
       "version": "1.0.0"
     },
     {
+      "name": "email-sequence",
+      "source": "skills/email-sequence",
+      "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"lifecycle emails,\" \"trigger-based emails,\" \"email funnel,\" \"email workflow,\" \"what emails should I send,\" \"welcome series,\" or \"email cadence.\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.",
+      "version": "1.0.0"
+    },
+    {
       "name": "excel-automation",
       "source": "skills/excel-automation",
       "description": "Skill: excel-automation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "executing-plans",
+      "source": "skills/executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
       "version": "1.0.0"
     },
     {
@@ -968,6 +1190,30 @@
       "name": "financial-data-collector",
       "source": "skills/financial-data-collector",
       "description": "Skill: financial-data-collector",
+      "version": "1.0.0"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "source": "skills/finishing-a-development-branch",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+      "version": "1.0.0"
+    },
+    {
+      "name": "form-cro",
+      "source": "skills/form-cro",
+      "description": "Skill: form-cro",
+      "version": "1.0.0"
+    },
+    {
+      "name": "free-tool-strategy",
+      "source": "skills/free-tool-strategy",
+      "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes \u00e2\u20ac\u201d lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing tool,\" \"calculator,\" \"generator,\" \"interactive tool,\" \"lead gen tool,\" \"build a tool for leads,\" \"free resource,\" \"ROI calculator,\" \"grader tool,\" \"audit tool,\" \"should I build a free tool,\" or \"tools for lead gen.\" Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "frontend-design",
+      "source": "skills/frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
       "version": "1.0.0"
     },
     {
@@ -1037,9 +1283,27 @@
       "version": "1.0.0"
     },
     {
+      "name": "internal-comms",
+      "source": "skills/internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "version": "1.0.0"
+    },
+    {
       "name": "kubernetes-operations",
       "source": "skills/kubernetes-operations",
       "description": "Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management",
+      "version": "1.0.0"
+    },
+    {
+      "name": "launch-strategy",
+      "source": "skills/launch-strategy",
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "lead-magnets",
+      "source": "skills/lead-magnets",
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.",
       "version": "1.0.0"
     },
     {
@@ -1064,6 +1328,24 @@
       "name": "manage-skills",
       "source": "skills/manage-skills",
       "description": "Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)",
+      "version": "1.0.0"
+    },
+    {
+      "name": "marketing-ideas",
+      "source": "skills/marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "marketing-psychology",
+      "source": "skills/marketing-psychology",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mcp-builder",
+      "source": "skills/mcp-builder",
+      "description": "Skill: mcp-builder",
       "version": "1.0.0"
     },
     {
@@ -1097,9 +1379,45 @@
       "version": "1.0.0"
     },
     {
+      "name": "onboarding-cro",
+      "source": "skills/onboarding-cro",
+      "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" \"new user experience,\" \"users aren't activating,\" \"nobody completes setup,\" \"low activation rate,\" \"users sign up but don't use the product,\" \"time to value,\" or \"first session experience.\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "page-cro",
+      "source": "skills/page-cro",
+      "description": "When the user wants to optimize, improve, or increase conversions on any marketing page \u00e2\u20ac\u201d including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \"CRO,\" \"conversion rate optimization,\" \"this page isn't converting,\" \"improve conversions,\" \"why isn't this page working,\" \"my landing page sucks,\" \"nobody's converting,\" \"low conversion rate,\" \"bounce rate is too high,\" \"people leave without signing up,\" or \"this page needs work.\" Use this even if the user just shares a URL and asks for feedback \u00e2\u20ac\u201d they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "paid-ads",
+      "source": "skills/paid-ads",
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "paywall-upgrade-cro",
+      "source": "skills/paywall-upgrade-cro",
+      "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reached screen,\" \"plan upgrade prompt,\" \"in-app pricing,\" \"free users won't upgrade,\" \"trial to paid conversion,\" or \"how do I get users to pay.\" Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) \u00e2\u20ac\u201d this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pdf",
+      "source": "skills/pdf",
+      "description": "Skill: pdf",
+      "version": "1.0.0"
+    },
+    {
       "name": "performance-optimization",
       "source": "skills/performance-optimization",
       "description": "Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals",
+      "version": "1.0.0"
+    },
+    {
+      "name": "popup-cro",
+      "source": "skills/popup-cro",
+      "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" \"overlay,\" \"collect emails with a popup,\" \"exit popup,\" \"scroll trigger,\" \"sticky bar,\" or \"notification bar.\" Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.",
       "version": "1.0.0"
     },
     {
@@ -1109,9 +1427,33 @@
       "version": "1.0.0"
     },
     {
+      "name": "pptx",
+      "source": "skills/pptx",
+      "description": "Skill: pptx",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pricing-strategy",
+      "source": "skills/pricing-strategy",
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.",
+      "version": "1.0.0"
+    },
+    {
       "name": "product-analysis",
       "source": "skills/product-analysis",
       "description": "Skill: product-analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "product-marketing-context",
+      "source": "skills/product-marketing-context",
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills \u00e2\u20ac\u201d it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "programmatic-seo",
+      "source": "skills/programmatic-seo",
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" \"building many pages for SEO,\" \"pSEO,\" \"generate 100 pages,\" \"data-driven pages,\" or \"templated landing pages.\" Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.",
       "version": "1.0.0"
     },
     {
@@ -1145,15 +1487,51 @@
       "version": "1.0.0"
     },
     {
+      "name": "react-best-practices",
+      "source": "skills/react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "react-native-skills",
+      "source": "skills/react-native-skills",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use",
+      "version": "1.0.0"
+    },
+    {
       "name": "react-patterns",
       "source": "skills/react-patterns",
       "description": "React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition",
       "version": "1.0.0"
     },
     {
+      "name": "react-view-transitions",
+      "source": "skills/react-view-transitions",
+      "description": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "receiving-code-review",
+      "source": "skills/receiving-code-review",
+      "description": "Skill: receiving-code-review",
+      "version": "1.0.0"
+    },
+    {
       "name": "redis-patterns",
       "source": "skills/redis-patterns",
       "description": "Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures",
+      "version": "1.0.0"
+    },
+    {
+      "name": "referral-program",
+      "source": "skills/referral-program",
+      "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "remotion",
+      "source": "skills/remotion",
+      "description": "Best practices for Remotion - Video creation in React",
       "version": "1.0.0"
     },
     {
@@ -1169,9 +1547,33 @@
       "version": "1.0.0"
     },
     {
+      "name": "requesting-code-review",
+      "source": "skills/requesting-code-review",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "revops",
+      "source": "skills/revops",
+      "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.",
+      "version": "1.0.0"
+    },
+    {
       "name": "rust-systems",
       "source": "skills/rust-systems",
       "description": "Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sales-enablement",
+      "source": "skills/sales-enablement",
+      "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "schema-markup",
+      "source": "skills/schema-markup",
+      "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Google rich results,\" \"knowledge panel,\" \"star ratings in search,\" or \"add structured data.\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.",
       "version": "1.0.0"
     },
     {
@@ -1184,6 +1586,24 @@
       "name": "security-hardening",
       "source": "skills/security-hardening",
       "description": "Application security covering input validation, auth, headers, secrets management, and dependency auditing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "seo-audit",
+      "source": "skills/seo-audit",
+      "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO health check,\" \"my traffic dropped,\" \"lost rankings,\" \"not showing up in Google,\" \"site isn't ranking,\" \"Google update hit me,\" \"page speed,\" \"core web vitals,\" \"crawl errors,\" or \"indexing issues.\" Use this even if the user just says something vague like \"my SEO is bad\" or \"help with SEO\" \u00e2\u20ac\u201d start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "signup-flow-cro",
+      "source": "skills/signup-flow-cro",
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" \"people aren't signing up,\" \"signup abandonment,\" \"trial conversion rate,\" \"nobody completes registration,\" \"too many steps to sign up,\" or \"simplify our signup.\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "site-architecture",
+      "source": "skills/site-architecture",
+      "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\" \"page hierarchy,\" \"information architecture,\" \"IA,\" \"navigation design,\" \"URL structure,\" \"breadcrumbs,\" \"internal linking strategy,\" \"website planning,\" \"what pages do I need,\" \"how should I organize my site,\" or \"site navigation.\" Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO \u00e2\u20ac\u201d see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.",
       "version": "1.0.0"
     },
     {
@@ -1205,9 +1625,39 @@
       "version": "1.0.0"
     },
     {
+      "name": "slack-gif-creator",
+      "source": "skills/slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "social-content",
+      "source": "skills/social-content",
+      "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy.",
+      "version": "1.0.0"
+    },
+    {
       "name": "springboot-patterns",
       "source": "skills/springboot-patterns",
       "description": "Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "subagent-driven-development",
+      "source": "skills/subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "version": "1.0.0"
+    },
+    {
+      "name": "supermemory",
+      "source": "skills/supermemory",
+      "description": "Supermemory is a state-of-the-art memory and context infrastructure for AI agents. Use this skill when building applications that need persistent memory, user personalization, long-term context retention, or semantic search across knowledge bases. It provides Memory API for learned user context, User Profiles for static/dynamic facts, and RAG for semantic search. Perfect for chatbots, assistants, and knowledge-intensive applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "systematic-debugging",
+      "source": "skills/systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
       "version": "1.0.0"
     },
     {
@@ -1229,9 +1679,21 @@
       "version": "1.0.0"
     },
     {
+      "name": "test-driven-development",
+      "source": "skills/test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "version": "1.0.0"
+    },
+    {
       "name": "testing-strategies",
       "source": "skills/testing-strategies",
       "description": "Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization",
+      "version": "1.0.0"
+    },
+    {
+      "name": "theme-factory",
+      "source": "skills/theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
       "version": "1.0.0"
     },
     {
@@ -1265,9 +1727,51 @@
       "version": "1.0.0"
     },
     {
+      "name": "using-git-worktrees",
+      "source": "skills/using-git-worktrees",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification",
+      "version": "1.0.0"
+    },
+    {
+      "name": "using-superpowers",
+      "source": "skills/using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "vercel-cli-with-tokens",
+      "source": "skills/vercel-cli-with-tokens",
+      "description": "Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login \u00e2\u20ac\u201d e.g. \"deploy to vercel\", \"set up vercel\", \"add environment variables to vercel\".",
+      "version": "1.0.0"
+    },
+    {
+      "name": "verification-before-completion",
+      "source": "skills/verification-before-completion",
+      "description": "Skill: verification-before-completion",
+      "version": "1.0.0"
+    },
+    {
       "name": "video-comparer",
       "source": "skills/video-comparer",
       "description": "This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and frame-by-frame visual comparisons. Triggers when users mention \"compare videos\", \"video quality\", \"compression analysis\", \"before/after compression\", or request quality assessment of compressed videos.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "source": "skills/web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "web-design-guidelines",
+      "source": "skills/web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "version": "1.0.0"
+    },
+    {
+      "name": "webapp-testing",
+      "source": "skills/webapp-testing",
+      "description": "Skill: webapp-testing",
       "version": "1.0.0"
     },
     {
@@ -1280,6 +1784,24 @@
       "name": "windows-remote-desktop-connection-doctor",
       "source": "skills/windows-remote-desktop-connection-doctor",
       "description": "Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket), detect VPN/proxy interference with STUN/TURN negotiation, and parse Windows App logs for Shortpath failures. This skill should be used when VDI connections are slow, when transport shows WebSocket instead of UDP, when RDP Shortpath fails to establish, or when RTT is unexpectedly high.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "writing-plans",
+      "source": "skills/writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "version": "1.0.0"
+    },
+    {
+      "name": "writing-skills",
+      "source": "skills/writing-skills",
+      "description": "Skill: writing-skills",
+      "version": "1.0.0"
+    },
+    {
+      "name": "xlsx",
+      "source": "skills/xlsx",
+      "description": "Skill: xlsx",
       "version": "1.0.0"
     },
     {

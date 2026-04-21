@@ -1,10 +1,10 @@
 # Muk — Mukund Totla's Claude Code Marketplace
 
-**One install, every device.** Mukund Totla's personal Claude Code marketplace — **82 skills, 129 plugins, 136 agents, 42 commands, 21 hooks, 15 rules, 8 templates, 14 MCP configs.** Orchestrated by the `muk` skill.
+**One install, every device.** Mukund Totla's personal Claude Code marketplace — **169 skills, 129 plugins, 136 agents, 42 commands, 21 hooks, 15 rules, 8 templates, 14 MCP configs.** Orchestrated by the `muk` skill.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/badge/Claude%20Code-Marketplace-8a63d2.svg)](#quick-install)
-[![Skills](https://img.shields.io/badge/Skills-82-brightgreen.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-169-brightgreen.svg)](#skills)
 [![Plugins](https://img.shields.io/badge/Plugins-129-orange.svg)](#plugins)
 [![Agents](https://img.shields.io/badge/Agents-136-blueviolet.svg)](#agents)
 
@@ -25,7 +25,7 @@ Skills and plugins that live **only in this fork**. Everything else in this repo
 
 ## Newly Added
 
-Latest additions to the pack. Muk orchestrates these alongside everything else — no manual wiring needed.
+Latest additions to the pack — 132 skills and plugins across 12 sources. Muk orchestrates these alongside everything else; no manual wiring needed.
 
 ### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (8 bundles)
 
@@ -84,6 +84,152 @@ Each bundle ships a cluster of related skills plus slash commands.
 | windows-remote-desktop-connection-doctor | [`skills/windows-remote-desktop-connection-doctor/`](skills/windows-remote-desktop-connection-doctor/) | Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket… |
 | youtube-downloader | [`skills/youtube-downloader/`](skills/youtube-downloader/) | Download YouTube videos and HLS streams (m3u8) from platforms like Mux, Vimeo, etc. using yt-dlp and ffmpeg. Use this skill when users request downloading videos, extracting audio… |
 
+### Official Anthropic skills from [anthropics/skills](https://github.com/anthropics/skills) (16 skills)
+
+Including `frontend-design` (recommended in the composio.dev roundup) plus document-processing (`pdf`, `docx`, `pptx`, `xlsx`) and design-system skills.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| algorithmic-art | [`skills/algorithmic-art/`](skills/algorithmic-art/) | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic… |
+| brand-guidelines | [`skills/brand-guidelines/`](skills/brand-guidelines/) | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelin… |
+| canvas-design | [`skills/canvas-design/`](skills/canvas-design/) | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other sta… |
+| claude-api | [`skills/claude-api/`](skills/claude-api/) | Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claud… |
+| doc-coauthoring | [`skills/doc-coauthoring/`](skills/doc-coauthoring/) | Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structu… |
+| docx | [`skills/docx/`](skills/docx/) | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or… |
+| frontend-design | [`skills/frontend-design/`](skills/frontend-design/) | Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applica… |
+| internal-comms | [`skills/internal-comms/`](skills/internal-comms/) | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some… |
+| mcp-builder | [`skills/mcp-builder/`](skills/mcp-builder/) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers… |
+| pdf | [`skills/pdf/`](skills/pdf/) | Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, split… |
+| pptx | [`skills/pptx/`](skills/pptx/) | Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or e… |
+| slack-gif-creator | [`skills/slack-gif-creator/`](skills/slack-gif-creator/) | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Sl… |
+| theme-factory | [`skills/theme-factory/`](skills/theme-factory/) | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can ap… |
+| web-artifacts-builder | [`skills/web-artifacts-builder/`](skills/web-artifacts-builder/) | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts… |
+| webapp-testing | [`skills/webapp-testing/`](skills/webapp-testing/) | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots,… |
+| xlsx | [`skills/xlsx/`](skills/xlsx/) | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or… |
+
+### Composio skills from [ComposioHQ/skills](https://github.com/ComposioHQ/skills) and [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) (4 skills)
+
+Composio's toolkit wrappers for 1,000+ external APIs are available via `composio`. The `awesome-claude-skills` repo also ships 850+ auto-generated SaaS-specific automation skills (Ably, Abstract, Accelo, …) — not bundled here, but clone upstream when needed.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| composio | [`skills/composio/`](skills/composio/) | Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK |
+| artifacts-builder | [`skills/artifacts-builder/`](skills/artifacts-builder/) | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts… |
+| changelog-generator | [`skills/changelog-generator/`](skills/changelog-generator/) | Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly r… |
+| competitive-ads-extractor | [`skills/competitive-ads-extractor/`](skills/competitive-ads-extractor/) | Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and… |
+
+### Marketing skills from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (36 skills)
+
+Full marketing operating system: CRO, SEO, paid ads, copywriting, launch strategy, email sequences, pricing, community, and more.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| ab-test-setup | [`skills/ab-test-setup/`](skills/ab-test-setup/) | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "… |
+| ad-creative | [`skills/ad-creative/`](skills/ad-creative/) | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when th… |
+| ai-seo | [`skills/ai-seo/`](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,… |
+| analytics-tracking | [`skills/analytics-tracking/`](skills/analytics-tracking/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion trac… |
+| aso-audit | [`skills/aso-audit/`](skills/aso-audit/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'im… |
+| churn-prevention | [`skills/churn-prevention/`](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'chu… |
+| cold-email | [`skills/cold-email/`](skills/cold-email/) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development… |
+| community-marketing | [`skills/community-marketing/`](skills/community-marketing/) | Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage… |
+| competitor-alternatives | [`skills/competitor-alternatives/`](skills/competitor-alternatives/) | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor c… |
+| content-strategy | [`skills/content-strategy/`](skills/content-strategy/) | When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should… |
+| copy-editing | [`skills/copy-editing/`](skills/copy-editing/) | When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy fee… |
+| copywriting | [`skills/copywriting/`](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Als… |
+| customer-research | [`skills/customer-research/`](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts… |
+| email-sequence | [`skills/email-sequence/`](skills/email-sequence/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "dr… |
+| form-cro | [`skills/form-cro/`](skills/form-cro/) | When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or che… |
+| free-tool-strategy | [`skills/free-tool-strategy/`](skills/free-tool-strategy/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering a… |
+| launch-strategy | [`skills/launch-strategy/`](skills/launch-strategy/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement… |
+| lead-magnets | [`skills/lead-magnets/`](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgra… |
+| marketing-ideas | [`skills/marketing-ideas/`](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to mark… |
+| marketing-psychology | [`skills/marketing-psychology/`](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive… |
+| onboarding-cro | [`skills/onboarding-cro/`](skills/onboarding-cro/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rat… |
+| page-cro | [`skills/page-cro/`](skills/page-cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use… |
+| paid-ads | [`skills/paid-ads/`](skills/paid-ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC… |
+| paywall-upgrade-cro | [`skills/paywall-upgrade-cro/`](skills/paywall-upgrade-cro/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade… |
+| popup-cro | [`skills/popup-cro/`](skills/popup-cro/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversion… |
+| pricing-strategy | [`skills/pricing-strategy/`](skills/pricing-strategy/) | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packag… |
+| product-marketing-context | [`skills/product-marketing-context/`](skills/product-marketing-context/) | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positi… |
+| programmatic-seo | [`skills/programmatic-seo/`](skills/programmatic-seo/) | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "director… |
+| referral-program | [`skills/referral-program/`](skills/referral-program/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'amb… |
+| revops | [`skills/revops/`](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations… |
+| sales-enablement | [`skills/sales-enablement/`](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one… |
+| schema-markup | [`skills/schema-markup/`](skills/schema-markup/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich… |
+| seo-audit | [`skills/seo-audit/`](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on… |
+| signup-flow-cro | [`skills/signup-flow-cro/`](skills/signup-flow-cro/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "… |
+| site-architecture | [`skills/site-architecture/`](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site m… |
+| social-content | [`skills/social-content/`](skills/social-content/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user… |
+
+### Sandbox skill from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill) (1 skill)
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| agent-sandboxes | [`skills/agent-sandboxes/`](skills/agent-sandboxes/) | Operate E2B agent sandboxes using the CLI. Use when user needs to run code in isolation, test packages, execute commands safely, or work with binary files in a sandbox environment… |
+
+### Superpowers from [obra/superpowers](https://github.com/obra/superpowers) (14 skills)
+
+Structured multi-agent workflows: brainstorm → spec → plan → execute → review → merge. `systematic-debugging`, `verification-before-completion`, `subagent-driven-development`, and more.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| brainstorming | [`skills/brainstorming/`](skills/brainstorming/) | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design bef… |
+| dispatching-parallel-agents | [`skills/dispatching-parallel-agents/`](skills/dispatching-parallel-agents/) | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
+| executing-plans | [`skills/executing-plans/`](skills/executing-plans/) | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
+| finishing-a-development-branch | [`skills/finishing-a-development-branch/`](skills/finishing-a-development-branch/) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for… |
+| receiving-code-review | [`skills/receiving-code-review/`](skills/receiving-code-review/) | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verificat… |
+| requesting-code-review | [`skills/requesting-code-review/`](skills/requesting-code-review/) | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| subagent-driven-development | [`skills/subagent-driven-development/`](skills/subagent-driven-development/) | Use when executing implementation plans with independent tasks in the current session |
+| systematic-debugging | [`skills/systematic-debugging/`](skills/systematic-debugging/) | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
+| test-driven-development | [`skills/test-driven-development/`](skills/test-driven-development/) | Use when implementing any feature or bugfix, before writing implementation code |
+| using-git-worktrees | [`skills/using-git-worktrees/`](skills/using-git-worktrees/) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection… |
+| using-superpowers | [`skills/using-superpowers/`](skills/using-superpowers/) | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions |
+| verification-before-completion | [`skills/verification-before-completion/`](skills/verification-before-completion/) | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any suc… |
+| writing-plans | [`skills/writing-plans/`](skills/writing-plans/) | Use when you have a spec or requirements for a multi-step task, before touching code |
+| writing-skills | [`skills/writing-skills/`](skills/writing-skills/) | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+
+### Remotion skill from [remotion-dev/skills](https://github.com/remotion-dev/skills) (1 skill)
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| remotion | [`skills/remotion/`](skills/remotion/) | Best practices for Remotion - Video creation in React |
+
+### Supermemory skill from [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) (1 skill)
+
+Persistent memory layer — tracks facts about users over time, resolves contradictions, auto-forgets expired info.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| supermemory | [`skills/supermemory/`](skills/supermemory/) | Supermemory is a state-of-the-art memory and context infrastructure for AI agents. Use this skill when building applications that need persistent memory, user personalization, lon… |
+
+### Agent-browser from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) (7 skills)
+
+Deterministic ref-based control of web UIs. Includes the core `agent-browser` skill plus six integration-specific skill-data packs (AgentCore, Core, Dogfood, Electron, Slack, Vercel Sandbox) renamed to `agent-browser-*` to avoid generic name collisions.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| agent-browser | [`skills/agent-browser/`](skills/agent-browser/) | Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extractin… |
+| agent-browser-agentcore | [`skills/agent-browser-agentcore/`](skills/agent-browser-agentcore/) | Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or ne… |
+| agent-browser-core | [`skills/agent-browser-core/`](skills/agent-browser-core/) | Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill… |
+| agent-browser-dogfood | [`skills/agent-browser-dogfood/`](skills/agent-browser-dogfood/) | Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "t… |
+| agent-browser-electron | [`skills/agent-browser-electron/`](skills/agent-browser-electron/) | Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with a… |
+| agent-browser-slack | [`skills/agent-browser-slack/`](skills/agent-browser-slack/) | Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search co… |
+| agent-browser-vercel-sandbox | [`skills/agent-browser-vercel-sandbox/`](skills/agent-browser-vercel-sandbox/) | Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js,… |
+
+### Agent-skills from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) (7 skills)
+
+Including `web-design-guidelines` (from the composio.dev roundup), `deploy-to-vercel`, `react-best-practices`, and `react-view-transitions`.
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| composition-patterns | [`skills/composition-patterns/`](skills/composition-patterns/) | React composition patterns that scale. Use when refactoring components with |
+| deploy-to-vercel | [`skills/deploy-to-vercel/`](skills/deploy-to-vercel/) | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a previ… |
+| react-best-practices | [`skills/react-best-practices/`](skills/react-best-practices/) | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optim… |
+| react-native-skills | [`skills/react-native-skills/`](skills/react-native-skills/) | React Native and Expo best practices for building performant mobile apps. Use |
+| react-view-transitions | [`skills/react-view-transitions/`](skills/react-view-transitions/) | Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-eleme… |
+| vercel-cli-with-tokens | [`skills/vercel-cli-with-tokens/`](skills/vercel-cli-with-tokens/) | Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel"… |
+| web-design-guidelines | [`skills/web-design-guidelines/`](skills/web-design-guidelines/) | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practi… |
+
 ---
 
 ## Quick Install
@@ -117,7 +263,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 - [Newly Added](#newly-added)
 - [Plugins](#plugins) (129)
 - [Agents](#agents) (136)
-- [Skills](#skills) (82)
+- [Skills](#skills) (169)
 - [Commands](#commands) (42)
 - [Hooks](#hooks) (21)
 - [Rules](#rules) (15)
@@ -478,38 +624,79 @@ Reference an agent in your `CLAUDE.md`:
 
 ## Skills
 
-82 skills teaching Claude domain-specific patterns. The `muk`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
+169 skills teaching Claude domain-specific patterns. The `muk`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
 
 | Skill | Directory | What It Teaches |
 |-------|-----------|-----------------|
+| ab-test-setup | [`skills/ab-test-setup/`](skills/ab-test-setup/) | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "… |
 | accessibility-wcag | [`skills/accessibility-wcag/`](skills/accessibility-wcag/) | Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing |
+| ad-creative | [`skills/ad-creative/`](skills/ad-creative/) | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when th… |
+| agent-browser | [`skills/agent-browser/`](skills/agent-browser/) | Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extractin… |
+| agent-browser-agentcore | [`skills/agent-browser-agentcore/`](skills/agent-browser-agentcore/) | Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or ne… |
+| agent-browser-core | [`skills/agent-browser-core/`](skills/agent-browser-core/) | Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill… |
+| agent-browser-dogfood | [`skills/agent-browser-dogfood/`](skills/agent-browser-dogfood/) | Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "t… |
+| agent-browser-electron | [`skills/agent-browser-electron/`](skills/agent-browser-electron/) | Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with a… |
+| agent-browser-slack | [`skills/agent-browser-slack/`](skills/agent-browser-slack/) | Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search co… |
+| agent-browser-vercel-sandbox | [`skills/agent-browser-vercel-sandbox/`](skills/agent-browser-vercel-sandbox/) | Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js,… |
+| agent-sandboxes | [`skills/agent-sandboxes/`](skills/agent-sandboxes/) | Operate E2B agent sandboxes using the CLI. Use when user needs to run code in isolation, test packages, execute commands safely, or work with binary files in a sandbox environment… |
+| ai-seo | [`skills/ai-seo/`](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,… |
+| algorithmic-art | [`skills/algorithmic-art/`](skills/algorithmic-art/) | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic… |
+| analytics-tracking | [`skills/analytics-tracking/`](skills/analytics-tracking/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion trac… |
 | api-design-patterns | [`skills/api-design-patterns/`](skills/api-design-patterns/) | REST API design with resource naming, pagination, versioning, and OpenAPI spec generation |
+| artifacts-builder | [`skills/artifacts-builder/`](skills/artifacts-builder/) | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts… |
+| aso-audit | [`skills/aso-audit/`](skills/aso-audit/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'im… |
 | asr-transcribe-to-text | [`skills/asr-transcribe-to-text/`](skills/asr-transcribe-to-text/) | Transcribes audio and video files to text using Qwen3-ASR. Supports two modes — local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/Op… |
 | authentication-patterns | [`skills/authentication-patterns/`](skills/authentication-patterns/) | Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows |
 | aws-cloud-patterns | [`skills/aws-cloud-patterns/`](skills/aws-cloud-patterns/) | AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform |
+| brainstorming | [`skills/brainstorming/`](skills/brainstorming/) | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design bef… |
+| brand-guidelines | [`skills/brand-guidelines/`](skills/brand-guidelines/) | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelin… |
+| canvas-design | [`skills/canvas-design/`](skills/canvas-design/) | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other sta… |
 | capture-screen | [`skills/capture-screen/`](skills/capture-screen/) | Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture wi… |
 | caveman | [`skills/caveman/`](skills/caveman/) | > |
 | caveman-commit | [`skills/caveman-commit/`](skills/caveman-commit/) | > |
 | caveman-help | [`skills/caveman-help/`](skills/caveman-help/) | > |
 | caveman-review | [`skills/caveman-review/`](skills/caveman-review/) | > |
+| changelog-generator | [`skills/changelog-generator/`](skills/changelog-generator/) | Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly r… |
+| churn-prevention | [`skills/churn-prevention/`](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'chu… |
 | ci-cd-pipelines | [`skills/ci-cd-pipelines/`](skills/ci-cd-pipelines/) | CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation |
+| claude-api | [`skills/claude-api/`](skills/claude-api/) | Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claud… |
 | claude-memory-kit | [`skills/claude-memory-kit/`](skills/claude-memory-kit/) | Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies. |
 | cli-demo-generator | [`skills/cli-demo-generator/`](skills/cli-demo-generator/) | Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, po… |
 | cloudflare-troubleshooting | [`skills/cloudflare-troubleshooting/`](skills/cloudflare-troubleshooting/) | Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudf… |
+| cold-email | [`skills/cold-email/`](skills/cold-email/) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development… |
+| community-marketing | [`skills/community-marketing/`](skills/community-marketing/) | Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage… |
+| competitive-ads-extractor | [`skills/competitive-ads-extractor/`](skills/competitive-ads-extractor/) | Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and… |
+| competitor-alternatives | [`skills/competitor-alternatives/`](skills/competitor-alternatives/) | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor c… |
 | competitors-analysis | [`skills/competitors-analysis/`](skills/competitors-analysis/) | Analyze competitor repositories with evidence-based approach. Use when tracking competitors, creating competitor profiles, or generating competitive analysis. CRITICAL - all analy… |
+| composio | [`skills/composio/`](skills/composio/) | Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK |
+| composition-patterns | [`skills/composition-patterns/`](skills/composition-patterns/) | React composition patterns that scale. Use when refactoring components with |
 | compress | [`skills/compress/`](skills/compress/) | > |
+| content-strategy | [`skills/content-strategy/`](skills/content-strategy/) | When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should… |
 | continuous-learning | [`skills/continuous-learning/`](skills/continuous-learning/) | Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring |
+| copy-editing | [`skills/copy-editing/`](skills/copy-editing/) | When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy fee… |
+| copywriting | [`skills/copywriting/`](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Als… |
+| customer-research | [`skills/customer-research/`](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts… |
 | data-engineering | [`skills/data-engineering/`](skills/data-engineering/) | Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation |
 | database-optimization | [`skills/database-optimization/`](skills/database-optimization/) | Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL |
 | deep-dive | [`skills/deep-dive/`](skills/deep-dive/) | Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed. |
 | deep-research | [`skills/deep-research/`](skills/deep-research/) | \| |
+| deploy-to-vercel | [`skills/deploy-to-vercel/`](skills/deploy-to-vercel/) | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a previ… |
 | devops-automation | [`skills/devops-automation/`](skills/devops-automation/) | CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns |
+| dispatching-parallel-agents | [`skills/dispatching-parallel-agents/`](skills/dispatching-parallel-agents/) | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
 | django-patterns | [`skills/django-patterns/`](skills/django-patterns/) | Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure |
+| doc-coauthoring | [`skills/doc-coauthoring/`](skills/doc-coauthoring/) | Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structu… |
 | docker-best-practices | [`skills/docker-best-practices/`](skills/docker-best-practices/) | Docker best practices including multi-stage builds, compose patterns, image optimization, and security |
+| docx | [`skills/docx/`](skills/docx/) | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or… |
 | douban-skill | [`skills/douban-skill/`](skills/douban-skill/) | > |
+| email-sequence | [`skills/email-sequence/`](skills/email-sequence/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "dr… |
 | excel-automation | [`skills/excel-automation/`](skills/excel-automation/) | Create, parse, and control Excel files on macOS. Professional formatting with openpyxl, complex xlsm parsing with stdlib zipfile+xml for investment bank financial models, and Exce… |
+| executing-plans | [`skills/executing-plans/`](skills/executing-plans/) | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
 | fact-checker | [`skills/fact-checker/`](skills/fact-checker/) | Verifies factual claims in documents using web search and official sources, then proposes corrections with user confirmation. Use when the user asks to fact-check, verify informat… |
 | financial-data-collector | [`skills/financial-data-collector/`](skills/financial-data-collector/) | Collect real financial data for any US publicly traded company from free public sources (yfinance). Output structured JSON consumable by downstream financial skills (DCF modeling,… |
+| finishing-a-development-branch | [`skills/finishing-a-development-branch/`](skills/finishing-a-development-branch/) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for… |
+| form-cro | [`skills/form-cro/`](skills/form-cro/) | When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or che… |
+| free-tool-strategy | [`skills/free-tool-strategy/`](skills/free-tool-strategy/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering a… |
+| frontend-design | [`skills/frontend-design/`](skills/frontend-design/) | Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applica… |
 | frontend-excellence | [`skills/frontend-excellence/`](skills/frontend-excellence/) | Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals |
 | gangtise-copilot | [`skills/gangtise-copilot/`](skills/gangtise-copilot/) | One-stop installer and companion for the full Gangtise (岗底斯投研) OpenAPI skill suite — 19 official skills covering data retrieval (OHLC 行情, 财务, 估值, 研报, 首席观点, 会议纪要, 调研纪要), research w… |
 | generic-agent | [`skills/generic-agent/`](skills/generic-agent/) | Reference pointer to GenericAgent — a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (b… |
@@ -521,48 +708,94 @@ Reference an agent in your `CLAUDE.md`:
 | i18n-expert | [`skills/i18n-expert/`](skills/i18n-expert/) | This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including install… |
 | iOS-APP-developer | [`skills/iOS-APP-developer/`](skills/iOS-APP-developer/) | Develops iOS/macOS applications with XcodeGen, SwiftUI, and SPM. Handles Apple Developer signing, notarization, and CI/CD pipelines. Triggers on XcodeGen project.yml, SPM dependen… |
 | ima-copilot | [`skills/ima-copilot/`](skills/ima-copilot/) | One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw via `npx skills add`,… |
+| internal-comms | [`skills/internal-comms/`](skills/internal-comms/) | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some… |
 | kubernetes-operations | [`skills/kubernetes-operations/`](skills/kubernetes-operations/) | Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management |
+| launch-strategy | [`skills/launch-strategy/`](skills/launch-strategy/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement… |
+| lead-magnets | [`skills/lead-magnets/`](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgra… |
 | llm-icon-finder | [`skills/llm-icon-finder/`](skills/llm-icon-finder/) | Finding and accessing AI/LLM model brand icons from lobe-icons library. Use when users need icon URLs, want to download brand logos for AI models/providers/applications (Claude, G… |
 | llm-integration | [`skills/llm-integration/`](skills/llm-integration/) | LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization |
 | macos-cleaner | [`skills/macos-cleaner/`](skills/macos-cleaner/) | Analyze and reclaim macOS disk space through intelligent cleanup recommendations. This skill should be used when users report disk space issues, need to clean up their Mac, or wan… |
 | manage-skills | [`skills/manage-skills/`](skills/manage-skills/) | Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, A… |
+| marketing-ideas | [`skills/marketing-ideas/`](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to mark… |
+| marketing-psychology | [`skills/marketing-psychology/`](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive… |
+| mcp-builder | [`skills/mcp-builder/`](skills/mcp-builder/) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers… |
 | mcp-development | [`skills/mcp-development/`](skills/mcp-development/) | MCP server development including tool design, resource endpoints, prompt templates, and transport configuration |
 | microservices-design | [`skills/microservices-design/`](skills/microservices-design/) | Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway |
 | mobile-development | [`skills/mobile-development/`](skills/mobile-development/) | Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design |
 | monitoring-observability | [`skills/monitoring-observability/`](skills/monitoring-observability/) | Monitoring and observability with OpenTelemetry, Prometheus, Grafana dashboards, and structured logging |
 | muk | [`skills/muk/`](skills/muk/) | Mukund Totla's personal master orchestrator — activate with "Muk", "/muk", "Hey Muk", "Muk go", "use Muk", "activate Muk", or just describe any complex task and this skill will in… |
 | nextjs-mastery | [`skills/nextjs-mastery/`](skills/nextjs-mastery/) | Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching |
+| onboarding-cro | [`skills/onboarding-cro/`](skills/onboarding-cro/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rat… |
+| page-cro | [`skills/page-cro/`](skills/page-cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use… |
+| paid-ads | [`skills/paid-ads/`](skills/paid-ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC… |
+| paywall-upgrade-cro | [`skills/paywall-upgrade-cro/`](skills/paywall-upgrade-cro/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade… |
+| pdf | [`skills/pdf/`](skills/pdf/) | Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, split… |
 | performance-optimization | [`skills/performance-optimization/`](skills/performance-optimization/) | Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals |
+| popup-cro | [`skills/popup-cro/`](skills/popup-cro/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversion… |
 | postgres-optimization | [`skills/postgres-optimization/`](skills/postgres-optimization/) | PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling |
+| pptx | [`skills/pptx/`](skills/pptx/) | Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or e… |
+| pricing-strategy | [`skills/pricing-strategy/`](skills/pricing-strategy/) | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packag… |
 | product-analysis | [`skills/product-analysis/`](skills/product-analysis/) | Multi-path parallel product analysis with cross-model test-time compute scaling. Spawns parallel agents (Claude Code agent teams + Codex CLI) to explore product from multiple pers… |
+| product-marketing-context | [`skills/product-marketing-context/`](skills/product-marketing-context/) | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positi… |
+| programmatic-seo | [`skills/programmatic-seo/`](skills/programmatic-seo/) | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "director… |
 | prompt-engineering | [`skills/prompt-engineering/`](skills/prompt-engineering/) | Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design |
 | prompt-optimizer | [`skills/prompt-optimizer/`](skills/prompt-optimizer/) | Transform vague prompts into precise, well-structured specifications using EARS (Easy Approach to Requirements Syntax) methodology. This skill should be used when users provide lo… |
 | promptfoo-evaluation | [`skills/promptfoo-evaluation/`](skills/promptfoo-evaluation/) | Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom asserti… |
 | python-best-practices | [`skills/python-best-practices/`](skills/python-best-practices/) | Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing |
 | qa-expert | [`skills/qa-expert/`](skills/qa-expert/) | This skill should be used when establishing comprehensive QA testing processes for any software project. Use when creating test strategies, writing test cases following Google Tes… |
+| react-best-practices | [`skills/react-best-practices/`](skills/react-best-practices/) | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optim… |
+| react-native-skills | [`skills/react-native-skills/`](skills/react-native-skills/) | React Native and Expo best practices for building performant mobile apps. Use |
 | react-patterns | [`skills/react-patterns/`](skills/react-patterns/) | React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition |
+| react-view-transitions | [`skills/react-view-transitions/`](skills/react-view-transitions/) | Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-eleme… |
+| receiving-code-review | [`skills/receiving-code-review/`](skills/receiving-code-review/) | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verificat… |
 | redis-patterns | [`skills/redis-patterns/`](skills/redis-patterns/) | Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures |
+| referral-program | [`skills/referral-program/`](skills/referral-program/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'amb… |
+| remotion | [`skills/remotion/`](skills/remotion/) | Best practices for Remotion - Video creation in React |
 | repomix-safe-mixer | [`skills/repomix-safe-mixer/`](skills/repomix-safe-mixer/) | Safely package codebases with repomix by automatically detecting and removing hardcoded credentials before packing. Use when packaging code for distribution, creating reference pa… |
 | repomix-unmixer | [`skills/repomix-unmixer/`](skills/repomix-unmixer/) | Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract… |
+| requesting-code-review | [`skills/requesting-code-review/`](skills/requesting-code-review/) | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| revops | [`skills/revops/`](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations… |
 | rust-systems | [`skills/rust-systems/`](skills/rust-systems/) | Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines |
+| sales-enablement | [`skills/sales-enablement/`](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one… |
+| schema-markup | [`skills/schema-markup/`](skills/schema-markup/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich… |
 | scrapling-skill | [`skills/scrapling-skill/`](skills/scrapling-skill/) | Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `s… |
 | security-hardening | [`skills/security-hardening/`](skills/security-hardening/) | Application security covering input validation, auth, headers, secrets management, and dependency auditing |
+| seo-audit | [`skills/seo-audit/`](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on… |
+| signup-flow-cro | [`skills/signup-flow-cro/`](skills/signup-flow-cro/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "… |
+| site-architecture | [`skills/site-architecture/`](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site m… |
 | skill-creator | [`skills/skill-creator/`](skills/skill-creator/) | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run… |
 | skill-reviewer | [`skills/skill-reviewer/`](skills/skill-reviewer/) | Reviews and improves Claude Code skills against official best practices. Supports three modes - self-review (validate your own skills), external review (evaluate others' skills),… |
 | skills-search | [`skills/skills-search/`](skills/skills-search/) | This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF",… |
+| slack-gif-creator | [`skills/slack-gif-creator/`](skills/slack-gif-creator/) | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Sl… |
+| social-content | [`skills/social-content/`](skills/social-content/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user… |
 | springboot-patterns | [`skills/springboot-patterns/`](skills/springboot-patterns/) | Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration |
+| subagent-driven-development | [`skills/subagent-driven-development/`](skills/subagent-driven-development/) | Use when executing implementation plans with independent tasks in the current session |
+| supermemory | [`skills/supermemory/`](skills/supermemory/) | Supermemory is a state-of-the-art memory and context infrastructure for AI agents. Use this skill when building applications that need persistent memory, user personalization, lon… |
+| systematic-debugging | [`skills/systematic-debugging/`](skills/systematic-debugging/) | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | tdd-mastery | [`skills/tdd-mastery/`](skills/tdd-mastery/) | Test-driven development workflow with Red-Green-Refactor cycle across languages |
 | teams-channel-post-writer | [`skills/teams-channel-post-writer/`](skills/teams-channel-post-writer/) | Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documen… |
 | terraform-skill | [`skills/terraform-skill/`](skills/terraform-skill/) | Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS recor… |
+| test-driven-development | [`skills/test-driven-development/`](skills/test-driven-development/) | Use when implementing any feature or bugfix, before writing implementation code |
 | testing-strategies | [`skills/testing-strategies/`](skills/testing-strategies/) | Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization |
+| theme-factory | [`skills/theme-factory/`](skills/theme-factory/) | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can ap… |
 | transcript-fixer | [`skills/transcript-fixer/`](skills/transcript-fixer/) | Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix. Triggers when worki… |
 | tunnel-doctor | [`skills/tunnel-doctor/`](skills/tunnel-doctor/) | Diagnoses and fixes conflicts between Tailscale and proxy/VPN tools (Shadowrocket, Clash, Surge) on macOS. Covers five conflict layers - (1) route hijacking, (2) HTTP proxy env va… |
 | twitter-reader | [`skills/twitter-reader/`](skills/twitter-reader/) | Fetch Twitter/X post content including long-form Articles with full images and metadata. Use when Claude needs to retrieve tweet/article content, author info, engagement metrics,… |
 | typescript-advanced | [`skills/typescript-advanced/`](skills/typescript-advanced/) | Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards |
 | ui-designer | [`skills/ui-designer/`](skills/ui-designer/) | Extract design systems from reference UI images and generate implementation-ready UI design prompts. Use when users provide UI screenshots/mockups and want to create consistent de… |
+| using-git-worktrees | [`skills/using-git-worktrees/`](skills/using-git-worktrees/) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection… |
+| using-superpowers | [`skills/using-superpowers/`](skills/using-superpowers/) | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions |
+| vercel-cli-with-tokens | [`skills/vercel-cli-with-tokens/`](skills/vercel-cli-with-tokens/) | Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel"… |
+| verification-before-completion | [`skills/verification-before-completion/`](skills/verification-before-completion/) | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any suc… |
 | video-comparer | [`skills/video-comparer/`](skills/video-comparer/) | This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and… |
+| web-artifacts-builder | [`skills/web-artifacts-builder/`](skills/web-artifacts-builder/) | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts… |
+| web-design-guidelines | [`skills/web-design-guidelines/`](skills/web-design-guidelines/) | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practi… |
+| webapp-testing | [`skills/webapp-testing/`](skills/webapp-testing/) | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots,… |
 | websocket-realtime | [`skills/websocket-realtime/`](skills/websocket-realtime/) | Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies |
 | windows-remote-desktop-connection-doctor | [`skills/windows-remote-desktop-connection-doctor/`](skills/windows-remote-desktop-connection-doctor/) | Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket… |
+| writing-plans | [`skills/writing-plans/`](skills/writing-plans/) | Use when you have a spec or requirements for a multi-step task, before touching code |
+| writing-skills | [`skills/writing-skills/`](skills/writing-skills/) | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+| xlsx | [`skills/xlsx/`](skills/xlsx/) | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or… |
 | youtube-downloader | [`skills/youtube-downloader/`](skills/youtube-downloader/) | Download YouTube videos and HLS streams (m3u8) from platforms like Mux, Vimeo, etc. using yt-dlp and ffmpeg. Use this skill when users request downloading videos, extracting audio… |
 
 ---
@@ -654,7 +887,16 @@ This marketplace is forked and personalized from [rohitg00/awesome-claude-code-t
 - **`android-reverse-engineering`** plugin — from [SimoneAvogadro/android-reverse-engineering-skill](https://github.com/SimoneAvogadro/android-reverse-engineering-skill)
 - **`caveman` / `caveman-commit` / `caveman-help` / `caveman-review` / `compress`** skills — from [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman)
 - **8 design plugins** (`design-ops`, `design-research`, `design-systems`, `designer-toolkit`, `interaction-design`, `prototyping-testing`, `ui-design`, `ux-strategy`) — from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (MIT)
-- **37 skills** (asr-transcribe-to-text, capture-screen, github-ops, deep-research, qa-expert, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
+- **37 skills** (asr-transcribe-to-text, github-ops, deep-research, qa-expert, excel-automation, and more) — from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills)
+- **16 official Anthropic skills** (`frontend-design`, `pdf`, `docx`, `pptx`, `xlsx`, `claude-api`, `mcp-builder`, `algorithmic-art`, `brand-guidelines`, `canvas-design`, `theme-factory`, `web-artifacts-builder`, `webapp-testing`, `slack-gif-creator`, `internal-comms`, `doc-coauthoring`) — from [anthropics/skills](https://github.com/anthropics/skills)
+- **4 Composio skills** (`composio`, `artifacts-builder`, `changelog-generator`, `competitive-ads-extractor`) — from [ComposioHQ/skills](https://github.com/ComposioHQ/skills) and [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+- **36 marketing skills** (CRO, SEO, paid ads, email, copywriting, pricing, launch, …) — from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+- **14 Superpowers skills** (structured multi-agent workflows: brainstorm → plan → execute → review) — from [obra/superpowers](https://github.com/obra/superpowers)
+- **7 agent-browser skills** (deterministic browser control + 6 integration packs) — from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+- **7 Vercel agent-skills** (`web-design-guidelines`, `deploy-to-vercel`, `react-best-practices`, `react-view-transitions`, …) — from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
+- **`agent-sandboxes`** skill — from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill)
+- **`remotion`** skill — from [remotion-dev/skills](https://github.com/remotion-dev/skills)
+- **`supermemory`** skill — from [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory)
 - **`scripts/sync_marketplace.py`** and **`scripts/gen_readme.py`** — written for this pack
 
 All upstream authorship and licensing is preserved.
