@@ -1427,6 +1427,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "pow",
+      "source": "skills/pow",
+      "description": "Power-mode escalation. Layers max-leverage execution discipline on top of any task \u00e2\u20ac\u201d superpowers four-phase loop, claude-mem progressive memory, sandbox banner, parallel prefetch, autonomous loop, and curated awesome-claude-code power-ups. Activate with \"Pow\", \"/pow\", \"pow it\", \"go pow mode\", \"power mode\", \"max effort\", \"pow this\", \"ultra mode\", or any time the user wants top-tier execution with full discipline. Companion to `muk` \u00e2\u20ac\u201d Muk picks tools, Pow runs them under power-mode rules. Synthesized from obra/superpowers, thedotmack/claude-mem, anthropics/claude-code#22155, yasasbanukaofficial+codeaashu/claude-code (leaked-source patterns), and hesreallyhim/awesome-claude-code.",
+      "version": "1.0.0"
+    },
+    {
       "name": "pptx",
       "source": "skills/pptx",
       "description": "Skill: pptx",

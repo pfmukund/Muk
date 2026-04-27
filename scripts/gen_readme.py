@@ -107,14 +107,30 @@ n_mcp = count_files("mcp-configs")
 
 EXCLUSIVES = """## Muk Exclusives
 
-Skills and plugins that live **only in this fork**. Everything else in this repo is a curated slice of the upstream toolkit (attribution below) — the four entries here are what make it *Muk*.
+Skills and plugins that live **only in this fork**. Everything else in this repo is a curated slice of the upstream toolkit (attribution below) — the five entries here are what make it *Muk*.
 
 | Exclusive | Type | What It Does |
 |-----------|------|--------------|
 | [**muk**](skills/muk/SKILL.md) | Skill | Mukund's master orchestrator. Reads the full pack inventory, writes a plan, chains the right skills/agents/plugins/MCPs, verifies outputs, returns files via `computer://` links. Activate with `Muk`, `/muk`, `Hey Muk`, `orchestrate this`, or any multi-domain task. |
+| [**pow**](skills/pow/SKILL.md) | Skill | Power-mode execution discipline. Layers TDD gate, verification-before-completion, three-layer progressive memory, sandbox banner, parallel prefetch, and autonomous-loop circuit-breakers on top of any task. Companion to `muk` — Muk picks tools, Pow enforces how. Activate with `Pow`, `/pow`, `pow it`, `power mode`, `ultra mode`, `max effort`. Synthesized from 6 upstream sources (see [Pow sources](#pow-power-mode-stack-from-6-sources)). |
 | [**generic-agent**](skills/generic-agent/SKILL.md) | Skill (reference) | Pointer to [GenericAgent](https://github.com/lsdefine/GenericAgent) — a self-evolving autonomous agent framework with direct control over browser, terminal, filesystem, keyboard/mouse, screen vision, and ADB. Standalone Python tool, installed separately. |
 | [**android-reverse-engineering**](plugins/android-reverse-engineering/) | Plugin | Decompile Android APK / JAR / AAR with `jadx`, trace call flows through libraries, and document extracted APIs. Ships slash commands and a full skill. Source: [SimoneAvogadro](https://github.com/SimoneAvogadro/android-reverse-engineering-skill). |
 | [**caveman** + **caveman-commit** + **caveman-help** + **caveman-review** + **compress**](skills/caveman/SKILL.md) | Skill pack | Caveman-style terse AI output — ~75% token reduction while preserving full technical accuracy. Five related skills for commit messages, help text, reviews, and generic text compression. Source: [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman). |
+"""
+
+POW_SOURCES = """## Pow power-mode stack — from 6 sources
+
+The `pow` skill is a synthesis layer, not a fork. It unifies five reinforcing disciplines drawn from 6 upstream repos. Install any source directly if you want only one piece — use `pow` when you want the whole stack to fire as one.
+
+| Source | Contributes to Pow |
+|--------|--------------------|
+| [obra/superpowers](https://github.com/obra/superpowers) | **Spine 1** — Four-phase loop (brainstorm → plan → execute → verify), TDD gate, verification-before-completion, dispatching-parallel-agents. Already bundled as 14 individual skills under [skills/](skills/). |
+| [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | **Spine 2** — Three-layer progressive memory disclosure (index → timeline → full), six lifecycle hooks (SessionStart, UserPromptSubmit, PostToolUse, Stop, SessionEnd, Smart-Install), `<private>` opt-out tag, Dream-style consolidation. |
+| [anthropics/claude-code#22155](https://github.com/anthropics/claude-code/issues/22155) | **Spine 3** — Sandbox + permission startup banner. Surface CWD scope, allow/deny counts, and loop state at task start so the user always sees the safety perimeter. |
+| [yasasbanukaofficial/claude-code](https://github.com/yasasbanukaofficial/claude-code) + [codeaashu/claude-code](https://github.com/codeaashu/claude-code) | **Spine 4** — Leaked-source patterns: parallel prefetch on boot, KAIROS-style proactive log watch, ULTRAPLAN delegate for big planning, Dream four-stage memory consolidation (orient → gather → consolidate → prune). |
+| [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | **Spine 5** — Curated power-ups: Ralph autonomous loop with circuit breaker, Dippy AST auto-approve, `/create-pr` pipeline, `/analyze-issue` spec emitter, HUD-style statusline footer, Trail of Bits security skill set. |
+
+Pow stacks with Muk: say "Muk + Pow" and Muk produces the tool manifest while Pow wraps execution in the five spines. Both transparency mandates apply (manifest at start, narrate switches inline, list everything used at end).
 """
 
 # Manually maintained per source — bump when adding from new repos.
@@ -280,7 +296,11 @@ parts.append(f"""# Muk — Mukund Totla's Claude Code Marketplace
 parts.append(EXCLUSIVES)
 parts.append("\n---\n\n")
 
-# Newly Added — right after Exclusives
+# Pow source attribution — right after Exclusives
+parts.append(POW_SOURCES)
+parts.append("\n---\n\n")
+
+# Newly Added — right after Pow sources
 parts.append(_newly_added_block())
 parts.append("\n---\n\n")
 
@@ -315,6 +335,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 parts.append(f"""## Table of Contents
 
 - [Muk Exclusives](#muk-exclusives)
+- [Pow power-mode stack](#pow-power-mode-stack-from-6-sources)
 - [Newly Added](#newly-added)
 - [Plugins](#plugins) ({len(plugins)})
 - [Agents](#agents) ({n_agents})
@@ -363,7 +384,7 @@ Reference an agent in your `CLAUDE.md`:
 """)
 
 # Skills
-parts.append(f"## Skills\n\n{len(skills)} skills teaching Claude domain-specific patterns. The `muk`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).\n\n")
+parts.append(f"## Skills\n\n{len(skills)} skills teaching Claude domain-specific patterns. The `muk`, `pow`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).\n\n")
 parts.append("| Skill | Directory | What It Teaches |\n|-------|-----------|-----------------|\n")
 for name, desc in skills:
     parts.append(f"| {name} | [`skills/{name}/`](skills/{name}/) | {clip(desc)} |\n")
@@ -453,6 +474,7 @@ The authoritative index is [`.claude-plugin/marketplace.json`](.claude-plugin/ma
 This marketplace is forked and personalized from [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0). Third-party additions:
 
 - **`muk`** skill — written for this pack
+- **`pow`** skill — written for this pack; synthesizes patterns from [obra/superpowers](https://github.com/obra/superpowers), [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem), [anthropics/claude-code#22155](https://github.com/anthropics/claude-code/issues/22155), [yasasbanukaofficial/claude-code](https://github.com/yasasbanukaofficial/claude-code), [codeaashu/claude-code](https://github.com/codeaashu/claude-code), and [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)
 - **`generic-agent`** skill — reference pointer to [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent)
 - **`android-reverse-engineering`** plugin — from [SimoneAvogadro/android-reverse-engineering-skill](https://github.com/SimoneAvogadro/android-reverse-engineering-skill)
 - **`caveman` / `caveman-commit` / `caveman-help` / `caveman-review` / `compress`** skills — from [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman)
