@@ -77,7 +77,7 @@ No silent tool use. No vague "using Muk". Name every skill/plugin/agent/MCP/buil
 1. **Four-phase loop** (from `obra/superpowers`) â€” `brainstorming` -> `writing-plans` -> `executing-plans` + `subagent-driven-development` + `test-driven-development` -> `verification-before-completion` -> `finishing-a-development-branch`. All those skills are already installed in this pack.
 2. **Three-layer memory** (from `thedotmack/claude-mem`) â€” index -> timeline -> full body. Don't load whole memory bodies before checking the index; honor `<private>` opt-out tags.
 3. **Sandbox + permission banner** (from `anthropics/claude-code#22155`) â€” print one-line state header at task start: sandbox on/off, CWD, perm counts, loop state. Warn before any out-of-CWD write if sandbox is off.
-4. **Leaked-source patterns** (from `yasasbanukaofficial/claude-code` + `codeaashu/claude-code`) â€” parallel prefetch on boot (batch independent reads in one tool call), KAIROS-style watch on long-running commands, ULTRAPLAN delegate (spawn `Plan` subagent for big plans, don't plan inline), Dream-style end-of-session consolidation (orient -> gather -> consolidate -> prune over `~/.claude/projects/<project>/memory/`).
+4. **Leaked-source patterns** (from `yasasbanukaofficial/claude-code` + `codeaashu/claude-code`) â€” parallel prefetch on boot (batch independent reads in one tool call), KAIROS-style watch on long-running commands, ULTRAPLAN delegate (spawn `Plan` subagent for big plans, don't plan inline), Dream-style end-of-session consolidation (orient -> gather -> consolidate -> prune over `~/.claude/projects/<project>/memory/`). **Delegation pool:** ULTRAPLAN routes to the 131+ specialized subagents from [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) bundled at `agents/` (10 categories: core-development, language-experts, infrastructure, quality-assurance, data-ai, developer-experience, specialized-domains, business-product, orchestration, research-analysis).
 5. **Curated power-ups** (from `hesreallyhim/awesome-claude-code`) â€” Ralph autonomous loop via `/loop` skill with circuit breaker, Dippy-style auto-approve for safe Bash + always-confirm for destructive ops, `/create-pr` pipeline, `/analyze-issue` spec emitter, HUD-style statusline footer.
 
 **Pow stacking rule:** when both are active, Muk's manifest goes first; Pow then narrates each phase transition (`-> Phase 2: planning...`), enforces the TDD gate (no impl code before failing test exists), and refuses to claim done without verification evidence. Both transparency mandates compose: manifest at start, narrate inline, list everything used at end.
@@ -89,480 +89,480 @@ No silent tool use. No vague "using Muk". Name every skill/plugin/agent/MCP/buil
 
 ## Pack inventory (auto-generated)
 
-**Summary:** 170 skills · 129 plugins · 136 agents.
+**Summary:** 170 skills ï¿½ 129 plugins ï¿½ 136 agents.
 
 ### Skills
 
-- **muk** — Mukund Totla's personal master orchestrator â€” activate with "Muk", "/muk", "Hey Muk", "Muk go", "use Muk", "activate Muk", or just describe any complex task and this skill will intelligently analyze it and assemble the best combination of skills, agents, plugins, MCPs, and tools to complete it. Also triggers on "figure out what to use", "use your best tools", "orchestrate this", "use everything you have", or any task spanning multiple domains. When the user seems unsure which skill to use, or a task clearly requires chaining multiple capabilities â€” always activate Muk. This is Mukund's power-mode.
-- **ab-test-setup** — When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," "hypothesis," "should I test this," "which version is better," "test two versions," "statistical significance," "how long should I run this test," "growth experiments," "experiment velocity," "experiment backlog," "ICE score," "experimentation program," or "experiment playbook." Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro.
-- **accessibility-wcag** — Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing
-- **ad-creative** — When the user wants to generate, iterate, or scale ad creative â€” headlines, descriptions, primary text, or full ad variations â€” for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.
-- **agent-browser** — Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.
-- **agent-browser-agentcore** — Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser session backed by AWS infrastructure. Triggers include "use agentcore", "run on AWS", "cloud browser with AWS", "bedrock browser", "agentcore session", or any task requiring AWS-hosted browser automation.
-- **agent-browser-core** — Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task.
-- **agent-browser-dogfood** — Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "test this app/site/platform", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.
-- **agent-browser-electron** — Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include "automate Slack app", "control VS Code", "interact with Discord app", "test this Electron app", "connect to desktop app", or any task requiring automation of a native Electron application.
-- **agent-browser-slack** — Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task. Triggers include "check my Slack", "what channels have unreads", "send a message to", "search Slack for", "extract from Slack", "find who said", or any task requiring programmatic Slack interaction.
-- **agent-browser-vercel-sandbox** — Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js, SvelteKit, Nuxt, Remix, Astro, etc.), wants to run headless Chrome without binary size limits, needs persistent browser sessions across commands, or wants ephemeral isolated browser environments. Triggers include "Vercel Sandbox browser", "microVM Chrome", "agent-browser in sandbox", "browser automation on Vercel", or any task requiring Chrome in a Vercel Sandbox.
-- **agent-sandboxes** — Operate E2B agent sandboxes using the CLI. Use when user needs to run code in isolation, test packages, execute commands safely, or work with binary files in a sandbox environment. Keywords: sandbox, e2b, isolated environment, run code, test code, safe execution.
-- **ai-seo** — When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup.
-- **algorithmic-art** — Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
-- **analytics-tracking** — When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "track conversions," "attribution," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.
-- **api-design-patterns** — REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
-- **artifacts-builder** — Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
-- **aso-audit** — When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.
-- **asr-transcribe-to-text** — Transcribes audio and video files to text using Qwen3-ASR. Supports two modes â€” local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/OpenAI-compatible endpoints. Auto-detects platform and recommends the best path. Triggers when the user wants to transcribe recordings, convert audio/video to text, do speech-to-text, or mentions ASR, Qwen ASR, è½¬å½•, è¯­éŸ³è½¬æ–‡å­—, å½•éŸ³è½¬æ–‡å­—. Also triggers for meeting recordings, lectures, interviews, podcasts, screen recordings, or any audio/video file the user wants converted to text.
-- **authentication-patterns** — Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows
-- **aws-cloud-patterns** — AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform
-- **brainstorming** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
-- **brand-guidelines** — Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
-- **canvas-design** — Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.
-- **capture-screen** — Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture with screencapture. Use when automating screenshots, capturing application windows for documentation, or building multi-shot visual workflows.
-- **caveman** — Skill: caveman
-- **caveman-commit** — Skill: caveman-commit
-- **caveman-help** — >
-- **caveman-review** — Skill: caveman-review
-- **changelog-generator** — Skill: changelog-generator
-- **churn-prevention** — Skill: churn-prevention
-- **ci-cd-pipelines** — CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation
-- **claude-api** — Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 â†’ 4.6, 4.6 â†’ 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.
-- **claude-memory-kit** — Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies.
-- **cli-demo-generator** — Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, post-processing speed-up, and frame-level verification. Use when users want to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or need to showcase any command-line tool visually. Also triggers on "record terminal", "VHS tape", "demo GIF", "animate my CLI", or any request to visually demonstrate shell commands.
-- **cloudflare-troubleshooting** — Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudflare-related problems. Focus on systematic investigation using Cloudflare API to examine actual configuration rather than making assumptions.
-- **cold-email** — Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions "cold outreach," "prospecting email," "outbound email," "email to leads," "reach out to prospects," "sales email," "follow-up email sequence," "nobody's replying to my emails," or "how do I write a cold email." Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.
-- **community-marketing** — Skill: community-marketing
-- **competitive-ads-extractor** — Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.
-- **competitor-alternatives** — When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.
-- **competitors-analysis** — Skill: competitors-analysis
-- **composio** — Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK
-- **composition-patterns** — Skill: composition-patterns
-- **compress** — >
-- **content-strategy** — When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," "content marketing," "content roadmap," "what content should I create," "blog topics," "content pillars," or "I don't know what to write." Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.
-- **continuous-learning** — Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring
-- **copy-editing** — Skill: copy-editing
-- **copywriting** — Skill: copywriting
-- **customer-research** — When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.
-- **data-engineering** — Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
-- **database-optimization** — Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL
-- **deep-dive** — Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed.
-- **deep-research** — Skill: deep-research
-- **deploy-to-vercel** — Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
-- **devops-automation** — CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns
-- **dispatching-parallel-agents** — Skill: dispatching-parallel-agents
-- **django-patterns** — Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure
-- **doc-coauthoring** — Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.
-- **docker-best-practices** — Docker best practices including multi-stage builds, compose patterns, image optimization, and security
-- **docx** — Skill: docx
-- **douban-skill** — Skill: douban-skill
-- **email-sequence** — When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," "lifecycle emails," "trigger-based emails," "email funnel," "email workflow," "what emails should I send," "welcome series," or "email cadence." Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.
-- **excel-automation** — Skill: excel-automation
-- **executing-plans** — Use when you have a written implementation plan to execute in a separate session with review checkpoints
-- **fact-checker** — Skill: fact-checker
-- **financial-data-collector** — Skill: financial-data-collector
-- **finishing-a-development-branch** — Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
-- **form-cro** — Skill: form-cro
-- **free-tool-strategy** — When the user wants to plan, evaluate, or build a free tool for marketing purposes â€” lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering as marketing," "free tool," "marketing tool," "calculator," "generator," "interactive tool," "lead gen tool," "build a tool for leads," "free resource," "ROI calculator," "grader tool," "audit tool," "should I build a free tool," or "tools for lead gen." Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.
-- **frontend-design** — Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.
-- **frontend-excellence** — Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals
-- **gangtise-copilot** — Skill: gangtise-copilot
-- **generic-agent** — Reference pointer to GenericAgent â€” a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (browser, terminal, filesystem, keyboard/mouse, screen vision, ADB). Use this skill ONLY to recommend GenericAgent when the user wants a self-evolving PC-control agent, OS-level automation with screen vision, mobile device automation via ADB, or a local autonomous agent with persistent skill memory. Muk should recommend installing GenericAgent separately (it is a standalone Python tool, not a Claude Code plugin) rather than try to run it inline.
-- **git-advanced** — Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques
-- **github-contributor** — Skill: github-contributor
-- **github-ops** — Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations including creating/viewing/merging PRs, managing issues, querying API endpoints, and handling GitHub workflows in enterprise or public GitHub environments.
-- **golang-idioms** — Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management
-- **graphql-design** — GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling
-- **i18n-expert** — This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including installing/configuring the i18n framework, replacing hard-coded strings, ensuring en-US/zh-CN coverage, mapping error codes to localized messages, and validating key parity, pluralization, and formatting.
-- **iOS-APP-developer** — Skill: iOS-APP-developer
-- **ima-copilot** — Skill: ima-copilot
-- **internal-comms** — A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
-- **kubernetes-operations** — Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management
-- **launch-strategy** — When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.
-- **lead-magnets** — When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgrade," "downloadable," "ebook," "cheat sheet," "checklist," "template download," "opt-in," "freebie," "PDF download," "resource library," "content offer," "email capture content," "Notion template," "spreadsheet template," or "what should I give away for emails." Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.
-- **llm-icon-finder** — Skill: llm-icon-finder
-- **llm-integration** — LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization
-- **macos-cleaner** — Skill: macos-cleaner
-- **manage-skills** — Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)
-- **marketing-ideas** — When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).
-- **marketing-psychology** — When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.
-- **mcp-builder** — Skill: mcp-builder
-- **mcp-development** — MCP server development including tool design, resource endpoints, prompt templates, and transport configuration
-- **microservices-design** — Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway
-- **mobile-development** — Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design
-- **monitoring-observability** — Monitoring and observability with OpenTelemetry, Prometheus, Grafana dashboards, and structured logging
-- **nextjs-mastery** — Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching
-- **onboarding-cro** — When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," "new user experience," "users aren't activating," "nobody completes setup," "low activation rate," "users sign up but don't use the product," "time to value," or "first session experience." Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.
-- **page-cro** — When the user wants to optimize, improve, or increase conversions on any marketing page â€” including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback â€” they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
-- **paid-ads** — When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.
-- **paywall-upgrade-cro** — When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration screen," "limit reached screen," "plan upgrade prompt," "in-app pricing," "free users won't upgrade," "trial to paid conversion," or "how do I get users to pay." Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) â€” this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy.
-- **pdf** — Skill: pdf
-- **performance-optimization** — Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals
-- **popup-cro** — When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.
-- **postgres-optimization** — PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling
-- **pow** — Power-mode escalation. Layers max-leverage execution discipline on top of any task â€” superpowers four-phase loop, claude-mem progressive memory, sandbox banner, parallel prefetch, autonomous loop, and curated awesome-claude-code power-ups. Activate with "Pow", "/pow", "pow it", "go pow mode", "power mode", "max effort", "pow this", "ultra mode", or any time the user wants top-tier execution with full discipline. Companion to `muk` â€” Muk picks tools, Pow runs them under power-mode rules. Synthesized from obra/superpowers, thedotmack/claude-mem, anthropics/claude-code#22155, yasasbanukaofficial+codeaashu/claude-code (leaked-source patterns), and hesreallyhim/awesome-claude-code.
-- **pptx** — Skill: pptx
-- **pricing-strategy** — When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.
-- **product-analysis** — Skill: product-analysis
-- **product-marketing-context** — When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills â€” it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.
-- **programmatic-seo** — When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," "integration pages," "building many pages for SEO," "pSEO," "generate 100 pages," "data-driven pages," or "templated landing pages." Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.
-- **prompt-engineering** — Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design
-- **prompt-optimizer** — Skill: prompt-optimizer
-- **promptfoo-evaluation** — Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom assertions, implementing llm-rubric for LLM-as-judge, or managing few-shot examples in prompts. Triggers on keywords like "promptfoo", "eval", "LLM evaluation", "prompt testing", or "model comparison".
-- **python-best-practices** — Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing
-- **qa-expert** — Skill: qa-expert
-- **react-best-practices** — React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
-- **react-native-skills** — React Native and Expo best practices for building performant mobile apps. Use
-- **react-patterns** — React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition
-- **react-view-transitions** — Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.
-- **receiving-code-review** — Skill: receiving-code-review
-- **redis-patterns** — Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures
-- **referral-program** — When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.
-- **remotion** — Best practices for Remotion - Video creation in React
-- **repomix-safe-mixer** — Skill: repomix-safe-mixer
-- **repomix-unmixer** — Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract packed repositories, restore file structures from repomix output, or reverse the repomix packing process.
-- **requesting-code-review** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements
-- **revops** — When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.
-- **rust-systems** — Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines
-- **sales-enablement** — When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.
-- **schema-markup** — When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," "breadcrumb schema," "Google rich results," "knowledge panel," "star ratings in search," or "add structured data." Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.
-- **scrapling-skill** — Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `scrapling extract`, WeChat/mp.weixin articles, browser-backed page fetching, or needs help deciding between static and dynamic extraction.
-- **security-hardening** — Application security covering input validation, auth, headers, secrets management, and dependency auditing
-- **seo-audit** — When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," "SEO health check," "my traffic dropped," "lost rankings," "not showing up in Google," "site isn't ranking," "Google update hit me," "page speed," "core web vitals," "crawl errors," or "indexing issues." Use this even if the user just says something vague like "my SEO is bad" or "help with SEO" â€” start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo.
-- **signup-flow-cro** — When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "trial conversion rate," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.
-- **site-architecture** — When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL structure," "breadcrumbs," "internal linking strategy," "website planning," "what pages do I need," "how should I organize my site," or "site navigation." Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO â€” see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.
-- **skill-creator** — Skill: skill-creator
-- **skill-reviewer** — Skill: skill-reviewer
-- **skills-search** — This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF", "search for code review skills", "install cloudflare-troubleshooting", "list my installed skills", "what does skill-creator do", or any mention of finding/installing/managing Claude Code skills or plugins.
-- **slack-gif-creator** — Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack.
-- **social-content** — When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy.
-- **springboot-patterns** — Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration
-- **subagent-driven-development** — Use when executing implementation plans with independent tasks in the current session
-- **supermemory** — Supermemory is a state-of-the-art memory and context infrastructure for AI agents. Use this skill when building applications that need persistent memory, user personalization, long-term context retention, or semantic search across knowledge bases. It provides Memory API for learned user context, User Profiles for static/dynamic facts, and RAG for semantic search. Perfect for chatbots, assistants, and knowledge-intensive applications.
-- **systematic-debugging** — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
-- **tdd-mastery** — Test-driven development workflow with Red-Green-Refactor cycle across languages
-- **teams-channel-post-writer** — Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documentation to teach colleagues effective Claude Code usage, announce new features, share productivity tips, or document lessons learned. Provides templates, writing guidelines, and structured approaches emphasizing concrete examples, underlying principles, and connections to best practices like context engineering. Activates for content involving Teams posts, channel announcements, feature documentation, or tip sharing.
-- **terraform-skill** — Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS record duplication, volume permissions, database bootstrap gaps, snapshot cross-contamination, Cloudflare credential format errors, hardcoded domains in Caddyfiles/compose, and init-data-only-on-first-boot pitfalls. Activate when writing null_resource provisioners, creating multi-environment Terraform setups, debugging containers that are Restarting/unhealthy after terraform apply, setting up fresh instances with cloud-init, or any IaC code that SSHs into remote hosts. Also activate when the user mentions terraform plan/apply errors, provisioner failures, infrastructure drift, TLS certificate errors, or Caddy/gateway configuration.
-- **test-driven-development** — Use when implementing any feature or bugfix, before writing implementation code
-- **testing-strategies** — Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization
-- **theme-factory** — Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.
-- **transcript-fixer** — Skill: transcript-fixer
-- **tunnel-doctor** — Skill: tunnel-doctor
-- **twitter-reader** — Skill: twitter-reader
-- **typescript-advanced** — Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards
-- **ui-designer** — Skill: ui-designer
-- **using-git-worktrees** — Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification
-- **using-superpowers** — Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
-- **vercel-cli-with-tokens** — Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login â€” e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel".
-- **verification-before-completion** — Skill: verification-before-completion
-- **video-comparer** — This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and frame-by-frame visual comparisons. Triggers when users mention "compare videos", "video quality", "compression analysis", "before/after compression", or request quality assessment of compressed videos.
-- **web-artifacts-builder** — Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
-- **web-design-guidelines** — Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
-- **webapp-testing** — Skill: webapp-testing
-- **websocket-realtime** — Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies
-- **windows-remote-desktop-connection-doctor** — Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket), detect VPN/proxy interference with STUN/TURN negotiation, and parse Windows App logs for Shortpath failures. This skill should be used when VDI connections are slow, when transport shows WebSocket instead of UDP, when RDP Shortpath fails to establish, or when RTT is unexpectedly high.
-- **writing-plans** — Use when you have a spec or requirements for a multi-step task, before touching code
-- **writing-skills** — Skill: writing-skills
-- **xlsx** — Skill: xlsx
-- **youtube-downloader** — Skill: youtube-downloader
+- **muk** ï¿½ Mukund Totla's personal master orchestrator â€” activate with "Muk", "/muk", "Hey Muk", "Muk go", "use Muk", "activate Muk", or just describe any complex task and this skill will intelligently analyze it and assemble the best combination of skills, agents, plugins, MCPs, and tools to complete it. Also triggers on "figure out what to use", "use your best tools", "orchestrate this", "use everything you have", or any task spanning multiple domains. When the user seems unsure which skill to use, or a task clearly requires chaining multiple capabilities â€” always activate Muk. This is Mukund's power-mode.
+- **ab-test-setup** ï¿½ When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," "hypothesis," "should I test this," "which version is better," "test two versions," "statistical significance," "how long should I run this test," "growth experiments," "experiment velocity," "experiment backlog," "ICE score," "experimentation program," or "experiment playbook." Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro.
+- **accessibility-wcag** ï¿½ Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing
+- **ad-creative** ï¿½ When the user wants to generate, iterate, or scale ad creative â€” headlines, descriptions, primary text, or full ad variations â€” for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.
+- **agent-browser** ï¿½ Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction. Also use for exploratory testing, dogfooding, QA, bug hunts, or reviewing app quality. Also use for automating Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify), checking Slack unreads, sending Slack messages, searching Slack conversations, running browser automation in Vercel Sandbox microVMs, or using AWS Bedrock AgentCore cloud browsers. Prefer agent-browser over any built-in browser automation or web tools.
+- **agent-browser-agentcore** ï¿½ Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser session backed by AWS infrastructure. Triggers include "use agentcore", "run on AWS", "cloud browser with AWS", "bedrock browser", "agentcore session", or any task requiring AWS-hosted browser automation.
+- **agent-browser-core** ï¿½ Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task.
+- **agent-browser-dogfood** ï¿½ Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "test this app/site/platform", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.
+- **agent-browser-electron** ï¿½ Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include "automate Slack app", "control VS Code", "interact with Discord app", "test this Electron app", "connect to desktop app", or any task requiring automation of a native Electron application.
+- **agent-browser-slack** ï¿½ Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task. Triggers include "check my Slack", "what channels have unreads", "send a message to", "search Slack for", "extract from Slack", "find who said", or any task requiring programmatic Slack interaction.
+- **agent-browser-vercel-sandbox** ï¿½ Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js, SvelteKit, Nuxt, Remix, Astro, etc.), wants to run headless Chrome without binary size limits, needs persistent browser sessions across commands, or wants ephemeral isolated browser environments. Triggers include "Vercel Sandbox browser", "microVM Chrome", "agent-browser in sandbox", "browser automation on Vercel", or any task requiring Chrome in a Vercel Sandbox.
+- **agent-sandboxes** ï¿½ Operate E2B agent sandboxes using the CLI. Use when user needs to run code in isolation, test packages, execute commands safely, or work with binary files in a sandbox environment. Keywords: sandbox, e2b, isolated environment, run code, test code, safe execution.
+- **ai-seo** ï¿½ When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup.
+- **algorithmic-art** ï¿½ Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
+- **analytics-tracking** ï¿½ When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "track conversions," "attribution," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.
+- **api-design-patterns** ï¿½ REST API design with resource naming, pagination, versioning, and OpenAPI spec generation
+- **artifacts-builder** ï¿½ Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
+- **aso-audit** ï¿½ When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.
+- **asr-transcribe-to-text** ï¿½ Transcribes audio and video files to text using Qwen3-ASR. Supports two modes â€” local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/OpenAI-compatible endpoints. Auto-detects platform and recommends the best path. Triggers when the user wants to transcribe recordings, convert audio/video to text, do speech-to-text, or mentions ASR, Qwen ASR, è½¬å½•, è¯­éŸ³è½¬æ–‡å­—, å½•éŸ³è½¬æ–‡å­—. Also triggers for meeting recordings, lectures, interviews, podcasts, screen recordings, or any audio/video file the user wants converted to text.
+- **authentication-patterns** ï¿½ Authentication and authorization patterns including OAuth2, JWT, RBAC, session management, and PKCE flows
+- **aws-cloud-patterns** ï¿½ AWS cloud patterns for Lambda, ECS, S3, DynamoDB, and Infrastructure as Code with CDK/Terraform
+- **brainstorming** ï¿½ You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
+- **brand-guidelines** ï¿½ Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
+- **canvas-design** ï¿½ Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.
+- **capture-screen** ï¿½ Programmatic screenshot capture on macOS. Find window IDs with Swift CGWindowListCopyWindowInfo, control application windows via AppleScript (zoom, scroll, select), and capture with screencapture. Use when automating screenshots, capturing application windows for documentation, or building multi-shot visual workflows.
+- **caveman** ï¿½ Skill: caveman
+- **caveman-commit** ï¿½ Skill: caveman-commit
+- **caveman-help** ï¿½ >
+- **caveman-review** ï¿½ Skill: caveman-review
+- **changelog-generator** ï¿½ Skill: changelog-generator
+- **churn-prevention** ï¿½ Skill: churn-prevention
+- **ci-cd-pipelines** ï¿½ CI/CD pipeline patterns for GitHub Actions, GitLab CI, testing strategies, and deployment automation
+- **claude-api** ï¿½ Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 â†’ 4.6, 4.6 â†’ 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.
+- **claude-memory-kit** ï¿½ Persistent memory system for Claude Code. Two-layer architecture (hot cache + knowledge wiki), safety hooks, /close-day end-of-day synthesis. Zero external dependencies.
+- **cli-demo-generator** ï¿½ Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, post-processing speed-up, and frame-level verification. Use when users want to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or need to showcase any command-line tool visually. Also triggers on "record terminal", "VHS tape", "demo GIF", "animate my CLI", or any request to visually demonstrate shell commands.
+- **cloudflare-troubleshooting** ï¿½ Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudflare-related problems. Focus on systematic investigation using Cloudflare API to examine actual configuration rather than making assumptions.
+- **cold-email** ï¿½ Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions "cold outreach," "prospecting email," "outbound email," "email to leads," "reach out to prospects," "sales email," "follow-up email sequence," "nobody's replying to my emails," or "how do I write a cold email." Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.
+- **community-marketing** ï¿½ Skill: community-marketing
+- **competitive-ads-extractor** ï¿½ Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.
+- **competitor-alternatives** ï¿½ When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.
+- **competitors-analysis** ï¿½ Skill: competitors-analysis
+- **composio** ï¿½ Use 1000+ external apps via Composio - either directly through the CLI or by building AI agents and apps with the SDK
+- **composition-patterns** ï¿½ Skill: composition-patterns
+- **compress** ï¿½ >
+- **content-strategy** ï¿½ When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," "content marketing," "content roadmap," "what content should I create," "blog topics," "content pillars," or "I don't know what to write." Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.
+- **continuous-learning** ï¿½ Auto-extract patterns from coding sessions, track corrections, and build reusable knowledge with confidence scoring
+- **copy-editing** ï¿½ Skill: copy-editing
+- **copywriting** ï¿½ Skill: copywriting
+- **customer-research** ï¿½ When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.
+- **data-engineering** ï¿½ Data engineering patterns for ETL pipelines, data warehousing, Apache Spark, and data quality validation
+- **database-optimization** ï¿½ Query optimization, indexing strategies, and database performance tuning for PostgreSQL and MySQL
+- **deep-dive** ï¿½ Claude-native deep research using DAG-based query planning, parallel subagent execution, and gap-driven iteration. No external API needed.
+- **deep-research** ï¿½ Skill: deep-research
+- **deploy-to-vercel** ï¿½ Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+- **devops-automation** ï¿½ CI/CD pipeline design with GitHub Actions, Docker, Kubernetes, Helm, and GitOps patterns
+- **dispatching-parallel-agents** ï¿½ Skill: dispatching-parallel-agents
+- **django-patterns** ï¿½ Django architecture patterns including DRF, ORM optimization, signals, middleware, and project structure
+- **doc-coauthoring** ï¿½ Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.
+- **docker-best-practices** ï¿½ Docker best practices including multi-stage builds, compose patterns, image optimization, and security
+- **docx** ï¿½ Skill: docx
+- **douban-skill** ï¿½ Skill: douban-skill
+- **email-sequence** ï¿½ When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," "lifecycle emails," "trigger-based emails," "email funnel," "email workflow," "what emails should I send," "welcome series," or "email cadence." Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.
+- **excel-automation** ï¿½ Skill: excel-automation
+- **executing-plans** ï¿½ Use when you have a written implementation plan to execute in a separate session with review checkpoints
+- **fact-checker** ï¿½ Skill: fact-checker
+- **financial-data-collector** ï¿½ Skill: financial-data-collector
+- **finishing-a-development-branch** ï¿½ Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
+- **form-cro** ï¿½ Skill: form-cro
+- **free-tool-strategy** ï¿½ When the user wants to plan, evaluate, or build a free tool for marketing purposes â€” lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering as marketing," "free tool," "marketing tool," "calculator," "generator," "interactive tool," "lead gen tool," "build a tool for leads," "free resource," "ROI calculator," "grader tool," "audit tool," "should I build a free tool," or "tools for lead gen." Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.
+- **frontend-design** ï¿½ Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.
+- **frontend-excellence** ï¿½ Modern frontend patterns for React Server Components, performance optimization, and Core Web Vitals
+- **gangtise-copilot** ï¿½ Skill: gangtise-copilot
+- **generic-agent** ï¿½ Reference pointer to GenericAgent â€” a self-evolving autonomous agent framework (https://github.com/lsdefine/GenericAgent) that gives an LLM direct control over a local computer (browser, terminal, filesystem, keyboard/mouse, screen vision, ADB). Use this skill ONLY to recommend GenericAgent when the user wants a self-evolving PC-control agent, OS-level automation with screen vision, mobile device automation via ADB, or a local autonomous agent with persistent skill memory. Muk should recommend installing GenericAgent separately (it is a standalone Python tool, not a Claude Code plugin) rather than try to run it inline.
+- **git-advanced** ï¿½ Advanced git workflows including worktrees, bisect, interactive rebase, hooks, and recovery techniques
+- **github-contributor** ï¿½ Skill: github-contributor
+- **github-ops** ï¿½ Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations including creating/viewing/merging PRs, managing issues, querying API endpoints, and handling GitHub workflows in enterprise or public GitHub environments.
+- **golang-idioms** ï¿½ Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management
+- **graphql-design** ï¿½ GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling
+- **i18n-expert** ï¿½ This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including installing/configuring the i18n framework, replacing hard-coded strings, ensuring en-US/zh-CN coverage, mapping error codes to localized messages, and validating key parity, pluralization, and formatting.
+- **iOS-APP-developer** ï¿½ Skill: iOS-APP-developer
+- **ima-copilot** ï¿½ Skill: ima-copilot
+- **internal-comms** ï¿½ A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+- **kubernetes-operations** ï¿½ Kubernetes operations including manifests, Helm charts, operators, troubleshooting, and resource management
+- **launch-strategy** ï¿½ When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.
+- **lead-magnets** ï¿½ When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgrade," "downloadable," "ebook," "cheat sheet," "checklist," "template download," "opt-in," "freebie," "PDF download," "resource library," "content offer," "email capture content," "Notion template," "spreadsheet template," or "what should I give away for emails." Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.
+- **llm-icon-finder** ï¿½ Skill: llm-icon-finder
+- **llm-integration** ï¿½ LLM integration patterns including API usage, streaming, function calling, RAG pipelines, and cost optimization
+- **macos-cleaner** ï¿½ Skill: macos-cleaner
+- **manage-skills** ï¿½ Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)
+- **marketing-ideas** ï¿½ When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).
+- **marketing-psychology** ï¿½ When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.
+- **mcp-builder** ï¿½ Skill: mcp-builder
+- **mcp-development** ï¿½ MCP server development including tool design, resource endpoints, prompt templates, and transport configuration
+- **microservices-design** ï¿½ Microservices design patterns including service mesh, event-driven architecture, saga pattern, and API gateway
+- **mobile-development** ï¿½ Mobile development patterns for React Native and Flutter including navigation, state management, and responsive design
+- **monitoring-observability** ï¿½ Monitoring and observability with OpenTelemetry, Prometheus, Grafana dashboards, and structured logging
+- **nextjs-mastery** ï¿½ Next.js 14+ App Router patterns including RSC, ISR, middleware, parallel routes, and data fetching
+- **onboarding-cro** ï¿½ When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," "new user experience," "users aren't activating," "nobody completes setup," "low activation rate," "users sign up but don't use the product," "time to value," or "first session experience." Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.
+- **page-cro** ï¿½ When the user wants to optimize, improve, or increase conversions on any marketing page â€” including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback â€” they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.
+- **paid-ads** ï¿½ When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.
+- **paywall-upgrade-cro** ï¿½ When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration screen," "limit reached screen," "plan upgrade prompt," "in-app pricing," "free users won't upgrade," "trial to paid conversion," or "how do I get users to pay." Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) â€” this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy.
+- **pdf** ï¿½ Skill: pdf
+- **performance-optimization** ï¿½ Web performance optimization including bundle analysis, lazy loading, caching strategies, and Core Web Vitals
+- **popup-cro** ï¿½ When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.
+- **postgres-optimization** ï¿½ PostgreSQL optimization including indexes, query plans, partitioning, JSONB operations, and connection pooling
+- **pow** ï¿½ Power-mode escalation. Layers max-leverage execution discipline on top of any task â€” superpowers four-phase loop, claude-mem progressive memory, sandbox banner, parallel prefetch, autonomous loop, and curated awesome-claude-code power-ups. Activate with "Pow", "/pow", "pow it", "go pow mode", "power mode", "max effort", "pow this", "ultra mode", or any time the user wants top-tier execution with full discipline. Companion to `muk` â€” Muk picks tools, Pow runs them under power-mode rules. Synthesized from obra/superpowers, thedotmack/claude-mem, anthropics/claude-code#22155, yasasbanukaofficial+codeaashu/claude-code (leaked-source patterns), and hesreallyhim/awesome-claude-code.
+- **pptx** ï¿½ Skill: pptx
+- **pricing-strategy** ï¿½ When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.
+- **product-analysis** ï¿½ Skill: product-analysis
+- **product-marketing-context** ï¿½ When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills â€” it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.
+- **programmatic-seo** ï¿½ When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," "integration pages," "building many pages for SEO," "pSEO," "generate 100 pages," "data-driven pages," or "templated landing pages." Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.
+- **prompt-engineering** ï¿½ Prompt engineering patterns including structured prompts, chain-of-thought, few-shot learning, and system prompt design
+- **prompt-optimizer** ï¿½ Skill: prompt-optimizer
+- **promptfoo-evaluation** ï¿½ Configures and runs LLM evaluation using Promptfoo framework. Use when setting up prompt testing, creating evaluation configs (promptfooconfig.yaml), writing Python custom assertions, implementing llm-rubric for LLM-as-judge, or managing few-shot examples in prompts. Triggers on keywords like "promptfoo", "eval", "LLM evaluation", "prompt testing", or "model comparison".
+- **python-best-practices** ï¿½ Pythonic code with modern type hints, dataclasses, async patterns, packaging, and testing
+- **qa-expert** ï¿½ Skill: qa-expert
+- **react-best-practices** ï¿½ React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
+- **react-native-skills** ï¿½ React Native and Expo best practices for building performant mobile apps. Use
+- **react-patterns** ï¿½ React 19 patterns including Server Components, Actions, Suspense, hooks, and component composition
+- **react-view-transitions** ï¿½ Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.
+- **receiving-code-review** ï¿½ Skill: receiving-code-review
+- **redis-patterns** ï¿½ Redis patterns including caching strategies, pub/sub, streams for event processing, Lua scripts, and data structures
+- **referral-program** ï¿½ When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.
+- **remotion** ï¿½ Best practices for Remotion - Video creation in React
+- **repomix-safe-mixer** ï¿½ Skill: repomix-safe-mixer
+- **repomix-unmixer** ï¿½ Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract packed repositories, restore file structures from repomix output, or reverse the repomix packing process.
+- **requesting-code-review** ï¿½ Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+- **revops** ï¿½ When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.
+- **rust-systems** ï¿½ Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines
+- **sales-enablement** ï¿½ When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.
+- **schema-markup** ï¿½ When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," "breadcrumb schema," "Google rich results," "knowledge panel," "star ratings in search," or "add structured data." Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.
+- **scrapling-skill** ï¿½ Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `scrapling extract`, WeChat/mp.weixin articles, browser-backed page fetching, or needs help deciding between static and dynamic extraction.
+- **security-hardening** ï¿½ Application security covering input validation, auth, headers, secrets management, and dependency auditing
+- **seo-audit** ï¿½ When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," "SEO health check," "my traffic dropped," "lost rankings," "not showing up in Google," "site isn't ranking," "Google update hit me," "page speed," "core web vitals," "crawl errors," or "indexing issues." Use this even if the user just says something vague like "my SEO is bad" or "help with SEO" â€” start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo.
+- **signup-flow-cro** ï¿½ When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "trial conversion rate," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.
+- **site-architecture** ï¿½ When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL structure," "breadcrumbs," "internal linking strategy," "website planning," "what pages do I need," "how should I organize my site," or "site navigation." Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO â€” see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.
+- **skill-creator** ï¿½ Skill: skill-creator
+- **skill-reviewer** ï¿½ Skill: skill-reviewer
+- **skills-search** ï¿½ This skill should be used when users want to search, discover, install, or manage Claude Code skills from the CCPM registry. Triggers include requests like "find skills for PDF", "search for code review skills", "install cloudflare-troubleshooting", "list my installed skills", "what does skill-creator do", or any mention of finding/installing/managing Claude Code skills or plugins.
+- **slack-gif-creator** ï¿½ Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like "make me a GIF of X doing Y for Slack.
+- **social-content** ï¿½ When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy.
+- **springboot-patterns** ï¿½ Spring Boot patterns including JPA repositories, REST controllers, layered services, and configuration
+- **subagent-driven-development** ï¿½ Use when executing implementation plans with independent tasks in the current session
+- **supermemory** ï¿½ Supermemory is a state-of-the-art memory and context infrastructure for AI agents. Use this skill when building applications that need persistent memory, user personalization, long-term context retention, or semantic search across knowledge bases. It provides Memory API for learned user context, User Profiles for static/dynamic facts, and RAG for semantic search. Perfect for chatbots, assistants, and knowledge-intensive applications.
+- **systematic-debugging** ï¿½ Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- **tdd-mastery** ï¿½ Test-driven development workflow with Red-Green-Refactor cycle across languages
+- **teams-channel-post-writer** ï¿½ Creates educational Teams channel posts for internal knowledge sharing about Claude Code features, tools, and best practices. Applies when writing posts, announcements, or documentation to teach colleagues effective Claude Code usage, announce new features, share productivity tips, or document lessons learned. Provides templates, writing guidelines, and structured approaches emphasizing concrete examples, underlying principles, and connections to best practices like context engineering. Activates for content involving Teams posts, channel announcements, feature documentation, or tip sharing.
+- **terraform-skill** ï¿½ Operational traps for Terraform provisioners, multi-environment isolation, and zero-to-deployment reliability. Covers provisioner timing races, SSH connection conflicts, DNS record duplication, volume permissions, database bootstrap gaps, snapshot cross-contamination, Cloudflare credential format errors, hardcoded domains in Caddyfiles/compose, and init-data-only-on-first-boot pitfalls. Activate when writing null_resource provisioners, creating multi-environment Terraform setups, debugging containers that are Restarting/unhealthy after terraform apply, setting up fresh instances with cloud-init, or any IaC code that SSHs into remote hosts. Also activate when the user mentions terraform plan/apply errors, provisioner failures, infrastructure drift, TLS certificate errors, or Caddy/gateway configuration.
+- **test-driven-development** ï¿½ Use when implementing any feature or bugfix, before writing implementation code
+- **testing-strategies** ï¿½ Testing strategies including contract testing, snapshot testing, mutation testing, property-based testing, and test organization
+- **theme-factory** ï¿½ Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.
+- **transcript-fixer** ï¿½ Skill: transcript-fixer
+- **tunnel-doctor** ï¿½ Skill: tunnel-doctor
+- **twitter-reader** ï¿½ Skill: twitter-reader
+- **typescript-advanced** ï¿½ Advanced TypeScript patterns including generics, conditional types, mapped types, template literals, and type guards
+- **ui-designer** ï¿½ Skill: ui-designer
+- **using-git-worktrees** ï¿½ Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification
+- **using-superpowers** ï¿½ Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
+- **vercel-cli-with-tokens** ï¿½ Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login â€” e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel".
+- **verification-before-completion** ï¿½ Skill: verification-before-completion
+- **video-comparer** ï¿½ This skill should be used when comparing two videos to analyze compression results or quality differences. Generates interactive HTML reports with quality metrics (PSNR, SSIM) and frame-by-frame visual comparisons. Triggers when users mention "compare videos", "video quality", "compression analysis", "before/after compression", or request quality assessment of compressed videos.
+- **web-artifacts-builder** ï¿½ Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.
+- **web-design-guidelines** ï¿½ Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
+- **webapp-testing** ï¿½ Skill: webapp-testing
+- **websocket-realtime** ï¿½ Real-time communication patterns with WebSocket, Socket.io, Server-Sent Events, and scaling strategies
+- **windows-remote-desktop-connection-doctor** ï¿½ Diagnose Windows App (Microsoft Remote Desktop / Azure Virtual Desktop / W365) connection quality issues on macOS. Analyze transport protocol selection (UDP Shortpath vs WebSocket), detect VPN/proxy interference with STUN/TURN negotiation, and parse Windows App logs for Shortpath failures. This skill should be used when VDI connections are slow, when transport shows WebSocket instead of UDP, when RDP Shortpath fails to establish, or when RTT is unexpectedly high.
+- **writing-plans** ï¿½ Use when you have a spec or requirements for a multi-step task, before touching code
+- **writing-skills** ï¿½ Skill: writing-skills
+- **xlsx** ï¿½ Skill: xlsx
+- **youtube-downloader** ï¿½ Skill: youtube-downloader
 
 ### Plugins
 
-- **a11y-audit** — Full accessibility audit with WCAG compliance checking
-- **accessibility-checker** — Scan for accessibility issues and fix ARIA attributes in web applications
-- **adr-writer** — Architecture Decision Records authoring and management
-- **ai-prompt-lab** — Improve and test AI prompts for better Claude Code interactions
-- **analytics-reporter** — Generate analytics reports and dashboard configurations from project data
-- **android-developer** — Android and Kotlin development with Jetpack Compose
-- **android-reverse-engineering** — Decompile Android APK/JAR/AAR with jadx, trace call flows through libraries, and document extracted APIs.
-- **api-architect** — API design, documentation, and testing with OpenAPI spec generation
-- **api-benchmarker** — API endpoint benchmarking and performance reporting
-- **api-reference** — API reference documentation generation from source code
-- **api-tester** — Test API endpoints and run load tests against services
-- **aws-helper** — AWS service configuration and deployment automation
-- **azure-helper** — Azure service configuration and deployment automation
-- **backend-architect** — Backend service architecture design with endpoint scaffolding
-- **bug-detective** — Debug issues systematically with root cause analysis and execution tracing
-- **bundle-analyzer** — Frontend bundle size analysis and tree-shaking optimization
-- **changelog-gen** — Generate changelogs from git history with conventional commit parsing
-- **changelog-writer** — Detailed changelog authoring from git history and PRs
-- **ci-debugger** — Debug CI/CD pipeline failures and fix configurations
-- **code-architect** — Generate architecture diagrams and technical design documents
-- **code-explainer** — Explain complex code and annotate files with inline documentation
-- **code-guardian** — Automated code review, security scanning, and quality enforcement
-- **code-review-assistant** — Automated code review with severity levels and actionable feedback
-- **codebase-documenter** — Auto-document entire codebase with inline comments and API docs
-- **color-contrast** — Color contrast checking and accessible color suggestions
-- **commit-commands** — Advanced commit workflows with smart staging and push automation
-- **complexity-reducer** — Reduce cyclomatic complexity and simplify functions
-- **compliance-checker** — Regulatory compliance verification for GDPR, SOC2, and HIPAA
-- **content-creator** — Technical content generation for blog posts and social media
-- **context7-docs** — Fetch up-to-date library documentation via Context7 for accurate coding
-- **contract-tester** — API contract testing with Pact for microservice compatibility
-- **create-worktrees** — Git worktree management for parallel development workflows
-- **cron-scheduler** — Cron job configuration and schedule validation
-- **css-cleaner** — Find unused CSS and consolidate stylesheets
-- **data-privacy** — Data privacy implementation with PII detection and anonymization
-- **database-optimizer** — Database query optimization with index recommendations and EXPLAIN analysis
-- **dead-code-finder** — Find and remove dead code across the codebase
-- **debug-session** — Interactive debugging workflow with git bisect integration
-- **dependency-manager** — Audit, update, and manage project dependencies with safety checks
-- **deploy-pilot** — Deployment automation with Dockerfile generation, CI/CD pipelines, and infrastructure as code
-- **design-ops** — Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows.
-- **design-research** — User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.
-- **design-systems** — Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming.
-- **designer-toolkit** — Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.
-- **desktop-app** — Desktop application scaffolding with Electron or Tauri
-- **devops-automator** — DevOps automation scripts for CI/CD, health checks, and deployments
-- **discuss** — Debate implementation approaches with structured pros and cons analysis
-- **doc-forge** — Documentation generation, API docs, and README maintenance
-- **docker-helper** — Build optimized Docker images and improve Dockerfile best practices
-- **double-check** — Verify code correctness with systematic second-pass analysis
-- **e2e-runner** — End-to-end test execution and recording for web applications
-- **embedding-manager** — Manage vector embeddings and similarity search
-- **env-manager** — Set up and validate environment configurations across environments
-- **env-sync** — Environment variable syncing and diff across environments
-- **experiment-tracker** — ML experiment tracking with metrics logging and run comparison
-- **explore** — Smart codebase exploration with dependency mapping and structure analysis
-- **feature-dev** — Full feature development workflow from spec to completion
-- **finance-tracker** — Development cost tracking with time estimates and budget reporting
-- **fix-github-issue** — Auto-fix GitHub issues by analyzing issue details and implementing solutions
-- **fix-pr** — Fix PR review comments automatically with context-aware patches
-- **flutter-mobile** — Flutter app development with widget creation and platform channels
-- **frontend-developer** — Frontend component development with accessibility and responsive design
-- **gcp-helper** — Google Cloud Platform service configuration and deployment
-- **git-flow** — Git workflow management with feature branches, releases, and hotfix flows
-- **github-issue-manager** — GitHub issue triage, creation, and management
-- **helm-charts** — Helm chart generation and upgrade management
-- **import-organizer** — Organize, sort, and clean import statements
-- **infrastructure-maintainer** — Infrastructure maintenance with security audits and update management
-- **interaction-design** — Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.
-- **ios-developer** — iOS and Swift development with SwiftUI views and models
-- **k8s-helper** — Generate Kubernetes manifests and debug pod issues with kubectl
-- **license-checker** — License compliance checking and NOTICE file generation
-- **lighthouse-runner** — Run Lighthouse audits and fix performance issues
-- **linear-helper** — Linear issue tracking integration and workflow management
-- **load-tester** — Load and stress testing for APIs and web services
-- **memory-profiler** — Memory leak detection and heap analysis
-- **migrate-tool** — Generate database migrations and code migration scripts for framework upgrades
-- **migration-generator** — Database migration generation and rollback management
-- **model-context-protocol** — MCP server development helper with tool and resource scaffolding
-- **model-evaluator** — Evaluate and compare ML model performance metrics
-- **monitoring-setup** — Monitoring and alerting configuration with dashboard generation
-- **monorepo-manager** — Manage monorepo packages with affected detection and version synchronization
-- **mutation-tester** — Mutation testing to measure test suite quality
-- **n8n-workflow** — Generate n8n automation workflows from natural language descriptions
-- **onboarding-guide** — New developer onboarding documentation generator
-- **openapi-expert** — OpenAPI spec generation, validation, and client code scaffolding
-- **optimize** — Code optimization for performance and bundle size reduction
-- **perf-profiler** — Performance analysis, profiling, and optimization recommendations
-- **performance-monitor** — Profile API endpoints and run benchmarks to identify performance bottlenecks
-- **plan** — Structured planning with risk assessment and time estimation
-- **pr-reviewer** — Review pull requests with structured analysis and approve with confidence
-- **product-shipper** — Ship features end-to-end with launch checklists and rollout plans
-- **project-scaffold** — Scaffold new projects and add features with best-practice templates
-- **prompt-optimizer** — Analyze and optimize AI prompts for better results
-- **prototyping-testing** — Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments.
-- **python-expert** — Python-specific development with type hints and idiomatic refactoring
-- **query-optimizer** — SQL query optimization and execution plan analysis
-- **rag-builder** — Build Retrieval-Augmented Generation pipelines
-- **rapid-prototyper** — Quick prototype scaffolding with minimal viable structure
-- **react-native-dev** — React Native mobile development with platform-specific optimizations
-- **readme-generator** — Smart README generation from project analysis
-- **refactor-engine** — Extract functions, simplify complex code, and reduce cognitive complexity
-- **regex-builder** — Build, test, and debug regular expression patterns
-- **release-manager** — Semantic versioning management and automated release workflows
-- **responsive-designer** — Responsive design implementation and testing
-- **schema-designer** — Database schema design and ERD generation
-- **screen-reader-tester** — Screen reader compatibility testing and ARIA fixes
-- **security-guidance** — Security best practices advisor with vulnerability detection and fixes
-- **seed-generator** — Database seeding script generation with realistic data
-- **slack-notifier** — Slack integration for deployment and build notifications
-- **smart-commit** — Intelligent git commits with conventional format, semantic analysis, and changelog generation
-- **sprint-prioritizer** — Sprint planning with story prioritization and capacity estimation
-- **technical-sales** — Technical demo creation and POC proposal writing
-- **terraform-helper** — Terraform module creation and infrastructure planning
-- **test-data-generator** — Generate realistic test data and seed databases
-- **test-results-analyzer** — Analyze test failures, identify patterns, and suggest targeted fixes
-- **test-writer** — Generate comprehensive unit and integration tests with full coverage
-- **tool-evaluator** — Evaluate and compare developer tools with structured scoring criteria
-- **type-migrator** — Migrate JavaScript files to TypeScript with proper types
-- **ui-design** — Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
-- **ui-designer** — Implement UI designs from specs with pixel-perfect component generation
-- **ultrathink** — Deep analysis mode with extended reasoning for complex problems
-- **unit-test-generator** — Generate comprehensive unit tests for any function or module
-- **update-branch** — Rebase and update feature branches with conflict resolution
-- **ux-strategy** — Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment.
-- **vision-specialist** — Image and visual analysis with screenshot interpretation and text extraction
-- **visual-regression** — Visual regression testing with screenshot comparison
-- **web-dev** — Full-stack web development with app scaffolding and page generation
-- **workflow-optimizer** — Development workflow analysis and optimization recommendations
+- **a11y-audit** ï¿½ Full accessibility audit with WCAG compliance checking
+- **accessibility-checker** ï¿½ Scan for accessibility issues and fix ARIA attributes in web applications
+- **adr-writer** ï¿½ Architecture Decision Records authoring and management
+- **ai-prompt-lab** ï¿½ Improve and test AI prompts for better Claude Code interactions
+- **analytics-reporter** ï¿½ Generate analytics reports and dashboard configurations from project data
+- **android-developer** ï¿½ Android and Kotlin development with Jetpack Compose
+- **android-reverse-engineering** ï¿½ Decompile Android APK/JAR/AAR with jadx, trace call flows through libraries, and document extracted APIs.
+- **api-architect** ï¿½ API design, documentation, and testing with OpenAPI spec generation
+- **api-benchmarker** ï¿½ API endpoint benchmarking and performance reporting
+- **api-reference** ï¿½ API reference documentation generation from source code
+- **api-tester** ï¿½ Test API endpoints and run load tests against services
+- **aws-helper** ï¿½ AWS service configuration and deployment automation
+- **azure-helper** ï¿½ Azure service configuration and deployment automation
+- **backend-architect** ï¿½ Backend service architecture design with endpoint scaffolding
+- **bug-detective** ï¿½ Debug issues systematically with root cause analysis and execution tracing
+- **bundle-analyzer** ï¿½ Frontend bundle size analysis and tree-shaking optimization
+- **changelog-gen** ï¿½ Generate changelogs from git history with conventional commit parsing
+- **changelog-writer** ï¿½ Detailed changelog authoring from git history and PRs
+- **ci-debugger** ï¿½ Debug CI/CD pipeline failures and fix configurations
+- **code-architect** ï¿½ Generate architecture diagrams and technical design documents
+- **code-explainer** ï¿½ Explain complex code and annotate files with inline documentation
+- **code-guardian** ï¿½ Automated code review, security scanning, and quality enforcement
+- **code-review-assistant** ï¿½ Automated code review with severity levels and actionable feedback
+- **codebase-documenter** ï¿½ Auto-document entire codebase with inline comments and API docs
+- **color-contrast** ï¿½ Color contrast checking and accessible color suggestions
+- **commit-commands** ï¿½ Advanced commit workflows with smart staging and push automation
+- **complexity-reducer** ï¿½ Reduce cyclomatic complexity and simplify functions
+- **compliance-checker** ï¿½ Regulatory compliance verification for GDPR, SOC2, and HIPAA
+- **content-creator** ï¿½ Technical content generation for blog posts and social media
+- **context7-docs** ï¿½ Fetch up-to-date library documentation via Context7 for accurate coding
+- **contract-tester** ï¿½ API contract testing with Pact for microservice compatibility
+- **create-worktrees** ï¿½ Git worktree management for parallel development workflows
+- **cron-scheduler** ï¿½ Cron job configuration and schedule validation
+- **css-cleaner** ï¿½ Find unused CSS and consolidate stylesheets
+- **data-privacy** ï¿½ Data privacy implementation with PII detection and anonymization
+- **database-optimizer** ï¿½ Database query optimization with index recommendations and EXPLAIN analysis
+- **dead-code-finder** ï¿½ Find and remove dead code across the codebase
+- **debug-session** ï¿½ Interactive debugging workflow with git bisect integration
+- **dependency-manager** ï¿½ Audit, update, and manage project dependencies with safety checks
+- **deploy-pilot** ï¿½ Deployment automation with Dockerfile generation, CI/CD pipelines, and infrastructure as code
+- **design-ops** ï¿½ Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows.
+- **design-research** ï¿½ User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.
+- **design-systems** ï¿½ Build, document, and maintain scalable design systems ï¿½ from tokens and components to accessibility and theming.
+- **designer-toolkit** ï¿½ Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.
+- **desktop-app** ï¿½ Desktop application scaffolding with Electron or Tauri
+- **devops-automator** ï¿½ DevOps automation scripts for CI/CD, health checks, and deployments
+- **discuss** ï¿½ Debate implementation approaches with structured pros and cons analysis
+- **doc-forge** ï¿½ Documentation generation, API docs, and README maintenance
+- **docker-helper** ï¿½ Build optimized Docker images and improve Dockerfile best practices
+- **double-check** ï¿½ Verify code correctness with systematic second-pass analysis
+- **e2e-runner** ï¿½ End-to-end test execution and recording for web applications
+- **embedding-manager** ï¿½ Manage vector embeddings and similarity search
+- **env-manager** ï¿½ Set up and validate environment configurations across environments
+- **env-sync** ï¿½ Environment variable syncing and diff across environments
+- **experiment-tracker** ï¿½ ML experiment tracking with metrics logging and run comparison
+- **explore** ï¿½ Smart codebase exploration with dependency mapping and structure analysis
+- **feature-dev** ï¿½ Full feature development workflow from spec to completion
+- **finance-tracker** ï¿½ Development cost tracking with time estimates and budget reporting
+- **fix-github-issue** ï¿½ Auto-fix GitHub issues by analyzing issue details and implementing solutions
+- **fix-pr** ï¿½ Fix PR review comments automatically with context-aware patches
+- **flutter-mobile** ï¿½ Flutter app development with widget creation and platform channels
+- **frontend-developer** ï¿½ Frontend component development with accessibility and responsive design
+- **gcp-helper** ï¿½ Google Cloud Platform service configuration and deployment
+- **git-flow** ï¿½ Git workflow management with feature branches, releases, and hotfix flows
+- **github-issue-manager** ï¿½ GitHub issue triage, creation, and management
+- **helm-charts** ï¿½ Helm chart generation and upgrade management
+- **import-organizer** ï¿½ Organize, sort, and clean import statements
+- **infrastructure-maintainer** ï¿½ Infrastructure maintenance with security audits and update management
+- **interaction-design** ï¿½ Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.
+- **ios-developer** ï¿½ iOS and Swift development with SwiftUI views and models
+- **k8s-helper** ï¿½ Generate Kubernetes manifests and debug pod issues with kubectl
+- **license-checker** ï¿½ License compliance checking and NOTICE file generation
+- **lighthouse-runner** ï¿½ Run Lighthouse audits and fix performance issues
+- **linear-helper** ï¿½ Linear issue tracking integration and workflow management
+- **load-tester** ï¿½ Load and stress testing for APIs and web services
+- **memory-profiler** ï¿½ Memory leak detection and heap analysis
+- **migrate-tool** ï¿½ Generate database migrations and code migration scripts for framework upgrades
+- **migration-generator** ï¿½ Database migration generation and rollback management
+- **model-context-protocol** ï¿½ MCP server development helper with tool and resource scaffolding
+- **model-evaluator** ï¿½ Evaluate and compare ML model performance metrics
+- **monitoring-setup** ï¿½ Monitoring and alerting configuration with dashboard generation
+- **monorepo-manager** ï¿½ Manage monorepo packages with affected detection and version synchronization
+- **mutation-tester** ï¿½ Mutation testing to measure test suite quality
+- **n8n-workflow** ï¿½ Generate n8n automation workflows from natural language descriptions
+- **onboarding-guide** ï¿½ New developer onboarding documentation generator
+- **openapi-expert** ï¿½ OpenAPI spec generation, validation, and client code scaffolding
+- **optimize** ï¿½ Code optimization for performance and bundle size reduction
+- **perf-profiler** ï¿½ Performance analysis, profiling, and optimization recommendations
+- **performance-monitor** ï¿½ Profile API endpoints and run benchmarks to identify performance bottlenecks
+- **plan** ï¿½ Structured planning with risk assessment and time estimation
+- **pr-reviewer** ï¿½ Review pull requests with structured analysis and approve with confidence
+- **product-shipper** ï¿½ Ship features end-to-end with launch checklists and rollout plans
+- **project-scaffold** ï¿½ Scaffold new projects and add features with best-practice templates
+- **prompt-optimizer** ï¿½ Analyze and optimize AI prompts for better results
+- **prototyping-testing** ï¿½ Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments.
+- **python-expert** ï¿½ Python-specific development with type hints and idiomatic refactoring
+- **query-optimizer** ï¿½ SQL query optimization and execution plan analysis
+- **rag-builder** ï¿½ Build Retrieval-Augmented Generation pipelines
+- **rapid-prototyper** ï¿½ Quick prototype scaffolding with minimal viable structure
+- **react-native-dev** ï¿½ React Native mobile development with platform-specific optimizations
+- **readme-generator** ï¿½ Smart README generation from project analysis
+- **refactor-engine** ï¿½ Extract functions, simplify complex code, and reduce cognitive complexity
+- **regex-builder** ï¿½ Build, test, and debug regular expression patterns
+- **release-manager** ï¿½ Semantic versioning management and automated release workflows
+- **responsive-designer** ï¿½ Responsive design implementation and testing
+- **schema-designer** ï¿½ Database schema design and ERD generation
+- **screen-reader-tester** ï¿½ Screen reader compatibility testing and ARIA fixes
+- **security-guidance** ï¿½ Security best practices advisor with vulnerability detection and fixes
+- **seed-generator** ï¿½ Database seeding script generation with realistic data
+- **slack-notifier** ï¿½ Slack integration for deployment and build notifications
+- **smart-commit** ï¿½ Intelligent git commits with conventional format, semantic analysis, and changelog generation
+- **sprint-prioritizer** ï¿½ Sprint planning with story prioritization and capacity estimation
+- **technical-sales** ï¿½ Technical demo creation and POC proposal writing
+- **terraform-helper** ï¿½ Terraform module creation and infrastructure planning
+- **test-data-generator** ï¿½ Generate realistic test data and seed databases
+- **test-results-analyzer** ï¿½ Analyze test failures, identify patterns, and suggest targeted fixes
+- **test-writer** ï¿½ Generate comprehensive unit and integration tests with full coverage
+- **tool-evaluator** ï¿½ Evaluate and compare developer tools with structured scoring criteria
+- **type-migrator** ï¿½ Migrate JavaScript files to TypeScript with proper types
+- **ui-design** ï¿½ Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
+- **ui-designer** ï¿½ Implement UI designs from specs with pixel-perfect component generation
+- **ultrathink** ï¿½ Deep analysis mode with extended reasoning for complex problems
+- **unit-test-generator** ï¿½ Generate comprehensive unit tests for any function or module
+- **update-branch** ï¿½ Rebase and update feature branches with conflict resolution
+- **ux-strategy** ï¿½ Shape product direction through competitive analysis, design principles, experience mapping, and strategic alignment.
+- **vision-specialist** ï¿½ Image and visual analysis with screenshot interpretation and text extraction
+- **visual-regression** ï¿½ Visual regression testing with screenshot comparison
+- **web-dev** ï¿½ Full-stack web development with app scaffolding and page generation
+- **workflow-optimizer** ï¿½ Development workflow analysis and optimization recommendations
 
 ### Agents (by category)
 
 #### business-product
 
-- **business-analyst** — Performs requirements analysis, process mapping, gap analysis, and stakeholder alignment for technical projects
-- **content-strategist** — Plans content strategy with SEO-driven writing, editorial calendars, topic clustering, and content performance measurement
-- **customer-success** — Builds customer support infrastructure with ticket triage, knowledge base systems, workflow automation, and customer health scoring
-- **growth-engineer** — Implements A/B testing frameworks, analytics instrumentation, funnel optimization, and data-driven growth experiments
-- **legal-advisor** — Drafts terms of service, privacy policies, software licenses, and compliance documentation for technology products
-- **marketing-analyst** — Implements campaign analysis, attribution modeling, ROI tracking, and marketing data infrastructure for data-driven growth decisions
-- **product-manager** — Creates PRDs, user stories, acceptance criteria, and prioritization frameworks for product development
-- **project-manager** — Manages sprint planning, task tracking, timeline estimation, and Agile ceremony facilitation
-- **sales-engineer** — Creates technical demos, proof-of-concept implementations, integration guides, and competitive technical analysis for sales engagements
-- **scrum-master** — Facilitates Scrum ceremonies, tracks team velocity, removes impediments, and drives continuous improvement
-- **technical-writer** — Produces polished technical documentation with consistent style, clear structure, and audience-appropriate language
-- **ux-researcher** — Designs and conducts user research studies including usability testing, surveys, and behavioral analysis
+- **business-analyst** ï¿½ Performs requirements analysis, process mapping, gap analysis, and stakeholder alignment for technical projects
+- **content-strategist** ï¿½ Plans content strategy with SEO-driven writing, editorial calendars, topic clustering, and content performance measurement
+- **customer-success** ï¿½ Builds customer support infrastructure with ticket triage, knowledge base systems, workflow automation, and customer health scoring
+- **growth-engineer** ï¿½ Implements A/B testing frameworks, analytics instrumentation, funnel optimization, and data-driven growth experiments
+- **legal-advisor** ï¿½ Drafts terms of service, privacy policies, software licenses, and compliance documentation for technology products
+- **marketing-analyst** ï¿½ Implements campaign analysis, attribution modeling, ROI tracking, and marketing data infrastructure for data-driven growth decisions
+- **product-manager** ï¿½ Creates PRDs, user stories, acceptance criteria, and prioritization frameworks for product development
+- **project-manager** ï¿½ Manages sprint planning, task tracking, timeline estimation, and Agile ceremony facilitation
+- **sales-engineer** ï¿½ Creates technical demos, proof-of-concept implementations, integration guides, and competitive technical analysis for sales engagements
+- **scrum-master** ï¿½ Facilitates Scrum ceremonies, tracks team velocity, removes impediments, and drives continuous improvement
+- **technical-writer** ï¿½ Produces polished technical documentation with consistent style, clear structure, and audience-appropriate language
+- **ux-researcher** ï¿½ Designs and conducts user research studies including usability testing, surveys, and behavioral analysis
 
 #### core-development
 
-- **api-designer** — REST and GraphQL API design with OpenAPI specs, versioning, and pagination patterns
-- **api-gateway-engineer** — API gateway patterns, rate limiting, authentication proxies, and request routing
-- **backend-developer** — Node.js backend development with Express, Fastify, middleware patterns, and API performance optimization
-- **electron-developer** — Electron desktop applications, IPC communication, native OS integration, and auto-updates
-- **event-driven-architect** — Event sourcing, CQRS, message queues, and distributed event-driven system design
-- **frontend-architect** — React/Next.js specialist with performance optimization, SSR/SSG, and accessibility
-- **fullstack-engineer** — End-to-end feature development across frontend, backend, and database layers
-- **graphql-architect** — GraphQL schema design, resolver implementation, federation, and performance optimization with DataLoader
-- **microservices-architect** — Distributed systems design with event-driven architecture, saga patterns, service mesh, and observability
-- **mobile-developer** — React Native and Flutter cross-platform specialist with native bridge patterns
-- **monorepo-architect** — Turborepo/Nx workspace strategies, dependency graphs, and monorepo build optimization
-- **ui-designer** — UI/UX implementation, design systems, Figma-to-code translation, and component libraries
-- **websocket-engineer** — Real-time communication with WebSockets, Socket.io, scaling strategies, and reconnection handling
+- **api-designer** ï¿½ REST and GraphQL API design with OpenAPI specs, versioning, and pagination patterns
+- **api-gateway-engineer** ï¿½ API gateway patterns, rate limiting, authentication proxies, and request routing
+- **backend-developer** ï¿½ Node.js backend development with Express, Fastify, middleware patterns, and API performance optimization
+- **electron-developer** ï¿½ Electron desktop applications, IPC communication, native OS integration, and auto-updates
+- **event-driven-architect** ï¿½ Event sourcing, CQRS, message queues, and distributed event-driven system design
+- **frontend-architect** ï¿½ React/Next.js specialist with performance optimization, SSR/SSG, and accessibility
+- **fullstack-engineer** ï¿½ End-to-end feature development across frontend, backend, and database layers
+- **graphql-architect** ï¿½ GraphQL schema design, resolver implementation, federation, and performance optimization with DataLoader
+- **microservices-architect** ï¿½ Distributed systems design with event-driven architecture, saga patterns, service mesh, and observability
+- **mobile-developer** ï¿½ React Native and Flutter cross-platform specialist with native bridge patterns
+- **monorepo-architect** ï¿½ Turborepo/Nx workspace strategies, dependency graphs, and monorepo build optimization
+- **ui-designer** ï¿½ UI/UX implementation, design systems, Figma-to-code translation, and component libraries
+- **websocket-engineer** ï¿½ Real-time communication with WebSockets, Socket.io, scaling strategies, and reconnection handling
 
 #### data-ai
 
-- **ai-engineer** — AI application development with model API integration, RAG pipelines, agent frameworks, and embedding strategies
-- **autoresearch-agent** — Automated ML experiment optimization using tree search â€” designs experiments, generates code, evaluates results, and iterates
-- **computer-vision-engineer** — Builds image classification, object detection, and segmentation pipelines using OpenCV, PyTorch, and production-grade inference optimization
-- **data-engineer** — Data pipeline engineering with ETL/ELT workflows, Spark, data warehousing, and pipeline orchestration
-- **data-scientist** — Statistical analysis, data visualization, hypothesis testing, and exploratory data analysis with Python
-- **data-visualization** — Creates interactive dashboards and data visualizations using D3.js, Chart.js, Matplotlib, and Plotly with accessibility and performance optimization
-- **database-optimizer** — Database performance optimization with query tuning, indexing strategies, partitioning, and capacity planning
-- **etl-specialist** — Builds robust data pipelines with schema evolution, data quality checks, incremental loading, and fault-tolerant processing
-- **feature-engineer** — Designs feature stores, feature pipelines, and encoding strategies that ensure consistent feature computation across training and serving
-- **llm-architect** — LLM system design with fine-tuning, model selection, inference optimization, and evaluation frameworks
-- **ml-engineer** — Machine learning pipeline development with training, evaluation, feature engineering, and model deployment
-- **mlops-engineer** — ML model lifecycle management with serving infrastructure, monitoring, A/B testing, and CI/CD for models
-- **nlp-engineer** — NLP pipeline development with text processing, embeddings, classification, NER, and transformer fine-tuning
-- **prompt-engineer** — Prompt optimization with chain-of-thought, structured outputs, few-shot learning, and systematic evaluation
-- **recommendation-engine** — Designs recommendation systems using collaborative filtering, content-based methods, and hybrid approaches with real-time personalization
-- **vector-database-engineer** — Designs embedding pipelines and vector search systems using FAISS, Pinecone, Qdrant, and Weaviate for semantic retrieval at scale
+- **ai-engineer** ï¿½ AI application development with model API integration, RAG pipelines, agent frameworks, and embedding strategies
+- **autoresearch-agent** ï¿½ Automated ML experiment optimization using tree search â€” designs experiments, generates code, evaluates results, and iterates
+- **computer-vision-engineer** ï¿½ Builds image classification, object detection, and segmentation pipelines using OpenCV, PyTorch, and production-grade inference optimization
+- **data-engineer** ï¿½ Data pipeline engineering with ETL/ELT workflows, Spark, data warehousing, and pipeline orchestration
+- **data-scientist** ï¿½ Statistical analysis, data visualization, hypothesis testing, and exploratory data analysis with Python
+- **data-visualization** ï¿½ Creates interactive dashboards and data visualizations using D3.js, Chart.js, Matplotlib, and Plotly with accessibility and performance optimization
+- **database-optimizer** ï¿½ Database performance optimization with query tuning, indexing strategies, partitioning, and capacity planning
+- **etl-specialist** ï¿½ Builds robust data pipelines with schema evolution, data quality checks, incremental loading, and fault-tolerant processing
+- **feature-engineer** ï¿½ Designs feature stores, feature pipelines, and encoding strategies that ensure consistent feature computation across training and serving
+- **llm-architect** ï¿½ LLM system design with fine-tuning, model selection, inference optimization, and evaluation frameworks
+- **ml-engineer** ï¿½ Machine learning pipeline development with training, evaluation, feature engineering, and model deployment
+- **mlops-engineer** ï¿½ ML model lifecycle management with serving infrastructure, monitoring, A/B testing, and CI/CD for models
+- **nlp-engineer** ï¿½ NLP pipeline development with text processing, embeddings, classification, NER, and transformer fine-tuning
+- **prompt-engineer** ï¿½ Prompt optimization with chain-of-thought, structured outputs, few-shot learning, and systematic evaluation
+- **recommendation-engine** ï¿½ Designs recommendation systems using collaborative filtering, content-based methods, and hybrid approaches with real-time personalization
+- **vector-database-engineer** ï¿½ Designs embedding pipelines and vector search systems using FAISS, Pinecone, Qdrant, and Weaviate for semantic retrieval at scale
 
 #### developer-experience
 
-- **api-documentation** — Creates comprehensive API documentation using OpenAPI/Swagger, Redoc, and interactive examples with versioning and change tracking
-- **build-engineer** — Designs and optimizes build systems, bundlers, and compilation pipelines for fast and reliable artifact production
-- **cli-developer** — Builds robust CLI tools using Commander.js, yargs, clap, and other frameworks with polished user interfaces
-- **dependency-manager** — Audits, updates, and manages project dependencies with attention to security, compatibility, and lockfile integrity
-- **developer-portal** — Builds internal developer portals using Backstage, service catalogs, and self-service infrastructure for platform engineering
-- **documentation-engineer** — Creates technical documentation including API references, guides, tutorials, and architecture decision records
-- **dx-optimizer** — Improves developer experience through tooling ergonomics, workflow friction reduction, and environment standardization
-- **git-workflow-manager** — Designs Git branching strategies, CI integration patterns, and repository workflow automation
-- **legacy-modernizer** — Plans and executes legacy codebase migrations with incremental strategies and risk mitigation
-- **mcp-developer** — Develops MCP servers and tools following the Model Context Protocol specification for AI agent integration
-- **monorepo-tooling** — Manages monorepo infrastructure with changesets, workspace dependencies, version management, and selective CI pipelines
-- **refactoring-specialist** — Performs systematic code refactoring including dead code removal, abstraction extraction, and structural improvements
-- **testing-infrastructure** — Designs test runners, CI test splitting, flaky test management, and test infrastructure that scales across large engineering organizations
-- **tooling-engineer** — Configures and builds developer tooling including linters, formatters, type checkers, and custom code analysis tools
-- **vscode-extension** — Develops VS Code extensions with Language Server Protocol integration, custom editors, webview panels, and marketplace publishing
+- **api-documentation** ï¿½ Creates comprehensive API documentation using OpenAPI/Swagger, Redoc, and interactive examples with versioning and change tracking
+- **build-engineer** ï¿½ Designs and optimizes build systems, bundlers, and compilation pipelines for fast and reliable artifact production
+- **cli-developer** ï¿½ Builds robust CLI tools using Commander.js, yargs, clap, and other frameworks with polished user interfaces
+- **dependency-manager** ï¿½ Audits, updates, and manages project dependencies with attention to security, compatibility, and lockfile integrity
+- **developer-portal** ï¿½ Builds internal developer portals using Backstage, service catalogs, and self-service infrastructure for platform engineering
+- **documentation-engineer** ï¿½ Creates technical documentation including API references, guides, tutorials, and architecture decision records
+- **dx-optimizer** ï¿½ Improves developer experience through tooling ergonomics, workflow friction reduction, and environment standardization
+- **git-workflow-manager** ï¿½ Designs Git branching strategies, CI integration patterns, and repository workflow automation
+- **legacy-modernizer** ï¿½ Plans and executes legacy codebase migrations with incremental strategies and risk mitigation
+- **mcp-developer** ï¿½ Develops MCP servers and tools following the Model Context Protocol specification for AI agent integration
+- **monorepo-tooling** ï¿½ Manages monorepo infrastructure with changesets, workspace dependencies, version management, and selective CI pipelines
+- **refactoring-specialist** ï¿½ Performs systematic code refactoring including dead code removal, abstraction extraction, and structural improvements
+- **testing-infrastructure** ï¿½ Designs test runners, CI test splitting, flaky test management, and test infrastructure that scales across large engineering organizations
+- **tooling-engineer** ï¿½ Configures and builds developer tooling including linters, formatters, type checkers, and custom code analysis tools
+- **vscode-extension** ï¿½ Develops VS Code extensions with Language Server Protocol integration, custom editors, webview panels, and marketplace publishing
 
 #### infrastructure
 
-- **cloud-architect** — AWS/GCP/Azure multi-cloud patterns, IaC, cost optimization, and well-architected framework
-- **database-admin** — PostgreSQL, MySQL, MongoDB optimization, migrations, replication, and backup strategies
-- **deployment-engineer** — Blue-green deployments, canary releases, rolling updates, and feature flag management
-- **devops-engineer** — CI/CD pipelines, Docker, Kubernetes, monitoring, and GitOps workflows
-- **incident-responder** — Incident triage, runbook execution, communication protocols, and recovery procedures
-- **kubernetes-specialist** — Kubernetes operators, CRDs, service mesh with Istio, and advanced cluster management
-- **network-engineer** — DNS management, load balancer configuration, CDN setup, and firewall rule design
-- **platform-engineer** — Internal developer platforms, service mesh, observability, and SLO/SLI management
-- **security-engineer** — Infrastructure security, IAM policies, mTLS, secrets management with Vault, and compliance
-- **sre-engineer** — SLOs, error budgets, incident response, postmortems, and production reliability
-- **terraform-engineer** — Infrastructure as Code with Terraform, module design, state management, and multi-cloud provisioning
+- **cloud-architect** ï¿½ AWS/GCP/Azure multi-cloud patterns, IaC, cost optimization, and well-architected framework
+- **database-admin** ï¿½ PostgreSQL, MySQL, MongoDB optimization, migrations, replication, and backup strategies
+- **deployment-engineer** ï¿½ Blue-green deployments, canary releases, rolling updates, and feature flag management
+- **devops-engineer** ï¿½ CI/CD pipelines, Docker, Kubernetes, monitoring, and GitOps workflows
+- **incident-responder** ï¿½ Incident triage, runbook execution, communication protocols, and recovery procedures
+- **kubernetes-specialist** ï¿½ Kubernetes operators, CRDs, service mesh with Istio, and advanced cluster management
+- **network-engineer** ï¿½ DNS management, load balancer configuration, CDN setup, and firewall rule design
+- **platform-engineer** ï¿½ Internal developer platforms, service mesh, observability, and SLO/SLI management
+- **security-engineer** ï¿½ Infrastructure security, IAM policies, mTLS, secrets management with Vault, and compliance
+- **sre-engineer** ï¿½ SLOs, error budgets, incident response, postmortems, and production reliability
+- **terraform-engineer** ï¿½ Infrastructure as Code with Terraform, module design, state management, and multi-cloud provisioning
 
 #### language-experts
 
-- **angular-architect** — Angular 17+ development with signals, standalone components, RxJS patterns, and NgRx state management
-- **clojure-developer** — REPL-driven development, persistent data structures, Ring/Compojure, and ClojureScript
-- **csharp-developer** — C# and .NET 8+ development with ASP.NET Core, Entity Framework Core, minimal APIs, and async patterns
-- **django-developer** — Django 5+ development with Django REST Framework, ORM optimization, migrations, and async views
-- **elixir-expert** — Elixir development with Phoenix, OTP supervision trees, LiveView, and distributed systems on BEAM
-- **flutter-expert** — Flutter 3+ cross-platform development with Dart, state management, navigation, and platform channels
-- **golang-developer** — Go concurrency patterns, interfaces, error handling, testing, and module management
-- **haskell-developer** — Pure functional programming, monads, type classes, GHC extensions, and Haskell ecosystem
-- **java-architect** — Spring Boot 3+ application architecture with JPA, security, microservices, and reactive programming
-- **kotlin-specialist** — Kotlin development with coroutines, Ktor, Kotlin Multiplatform, and idiomatic patterns
-- **lua-developer** — Game scripting with Lua, Neovim plugin development, embedded Lua integration, and LuaJIT
-- **nextjs-developer** — Next.js 14+ App Router development with React Server Components, ISR, middleware, and edge runtime
-- **nim-developer** — Nim metaprogramming, GC strategies, C/C++ interop, and cross-compilation
-- **ocaml-developer** — OCaml type inference, pattern matching, Dream web framework, and opam ecosystem
-- **php-developer** — PHP 8.3+ and Laravel 11 development with Eloquent, queues, middleware, and Composer package management
-- **python-engineer** — Python 3.12+ with typing, async/await, dataclasses, pydantic, and packaging
-- **rails-expert** — Ruby on Rails 7+ development with Hotwire, ActiveRecord patterns, Turbo, and Stimulus
-- **react-specialist** — React 19 development with hooks, state management, concurrent features, and component architecture
-- **rust-systems** — Rust ownership, lifetimes, async runtime, FFI, unsafe patterns, and performance tuning
-- **scala-developer** — Functional programming in Scala, Akka actors, Play Framework, and Cats Effect
-- **svelte-developer** — SvelteKit development with runes, server-side rendering, form actions, and fine-grained reactivity
-- **swift-developer** — SwiftUI, iOS 17+, Combine, structured concurrency, and Apple platform development
-- **typescript-specialist** — Advanced TypeScript patterns including generics, conditional types, and module augmentation
-- **vue-specialist** — Vue 3 development with Composition API, Pinia state management, Nuxt 3, and VueUse composables
-- **zig-developer** — Zig systems programming, comptime metaprogramming, allocator strategies, and C interop
+- **angular-architect** ï¿½ Angular 17+ development with signals, standalone components, RxJS patterns, and NgRx state management
+- **clojure-developer** ï¿½ REPL-driven development, persistent data structures, Ring/Compojure, and ClojureScript
+- **csharp-developer** ï¿½ C# and .NET 8+ development with ASP.NET Core, Entity Framework Core, minimal APIs, and async patterns
+- **django-developer** ï¿½ Django 5+ development with Django REST Framework, ORM optimization, migrations, and async views
+- **elixir-expert** ï¿½ Elixir development with Phoenix, OTP supervision trees, LiveView, and distributed systems on BEAM
+- **flutter-expert** ï¿½ Flutter 3+ cross-platform development with Dart, state management, navigation, and platform channels
+- **golang-developer** ï¿½ Go concurrency patterns, interfaces, error handling, testing, and module management
+- **haskell-developer** ï¿½ Pure functional programming, monads, type classes, GHC extensions, and Haskell ecosystem
+- **java-architect** ï¿½ Spring Boot 3+ application architecture with JPA, security, microservices, and reactive programming
+- **kotlin-specialist** ï¿½ Kotlin development with coroutines, Ktor, Kotlin Multiplatform, and idiomatic patterns
+- **lua-developer** ï¿½ Game scripting with Lua, Neovim plugin development, embedded Lua integration, and LuaJIT
+- **nextjs-developer** ï¿½ Next.js 14+ App Router development with React Server Components, ISR, middleware, and edge runtime
+- **nim-developer** ï¿½ Nim metaprogramming, GC strategies, C/C++ interop, and cross-compilation
+- **ocaml-developer** ï¿½ OCaml type inference, pattern matching, Dream web framework, and opam ecosystem
+- **php-developer** ï¿½ PHP 8.3+ and Laravel 11 development with Eloquent, queues, middleware, and Composer package management
+- **python-engineer** ï¿½ Python 3.12+ with typing, async/await, dataclasses, pydantic, and packaging
+- **rails-expert** ï¿½ Ruby on Rails 7+ development with Hotwire, ActiveRecord patterns, Turbo, and Stimulus
+- **react-specialist** ï¿½ React 19 development with hooks, state management, concurrent features, and component architecture
+- **rust-systems** ï¿½ Rust ownership, lifetimes, async runtime, FFI, unsafe patterns, and performance tuning
+- **scala-developer** ï¿½ Functional programming in Scala, Akka actors, Play Framework, and Cats Effect
+- **svelte-developer** ï¿½ SvelteKit development with runes, server-side rendering, form actions, and fine-grained reactivity
+- **swift-developer** ï¿½ SwiftUI, iOS 17+, Combine, structured concurrency, and Apple platform development
+- **typescript-specialist** ï¿½ Advanced TypeScript patterns including generics, conditional types, and module augmentation
+- **vue-specialist** ï¿½ Vue 3 development with Composition API, Pinia state management, Nuxt 3, and VueUse composables
+- **zig-developer** ï¿½ Zig systems programming, comptime metaprogramming, allocator strategies, and C interop
 
 #### orchestration
 
-- **agent-installer** — Install and configure agent collections, resolve dependencies, and validate environments
-- **context-manager** — Context window optimization, progressive loading, and strategic compaction
-- **error-coordinator** — Handle errors across multi-agent workflows, implement recovery strategies, and prevent cascading failures
-- **knowledge-synthesizer** — Compress and synthesize information across sources, build knowledge graphs, and extract insights
-- **multi-agent-coordinator** — Coordinate parallel agent execution, manage dependencies, and merge outputs from multiple agents
-- **performance-monitor** — Monitor agent execution, track token usage, measure response quality, and optimize workflows
-- **task-coordinator** — Multi-agent task distribution, dependency management, and parallel execution
-- **workflow-director** — End-to-end workflow orchestration, checkpoint management, and error recovery
+- **agent-installer** ï¿½ Install and configure agent collections, resolve dependencies, and validate environments
+- **context-manager** ï¿½ Context window optimization, progressive loading, and strategic compaction
+- **error-coordinator** ï¿½ Handle errors across multi-agent workflows, implement recovery strategies, and prevent cascading failures
+- **knowledge-synthesizer** ï¿½ Compress and synthesize information across sources, build knowledge graphs, and extract insights
+- **multi-agent-coordinator** ï¿½ Coordinate parallel agent execution, manage dependencies, and merge outputs from multiple agents
+- **performance-monitor** ï¿½ Monitor agent execution, track token usage, measure response quality, and optimize workflows
+- **task-coordinator** ï¿½ Multi-agent task distribution, dependency management, and parallel execution
+- **workflow-director** ï¿½ End-to-end workflow orchestration, checkpoint management, and error recovery
 
 #### quality-assurance
 
-- **accessibility-specialist** — WCAG 2.2 compliance, screen reader testing, keyboard navigation, and ARIA patterns
-- **chaos-engineer** — Chaos testing, fault injection, resilience validation, and failure mode analysis
-- **code-reviewer** — Comprehensive code review covering patterns, anti-patterns, security, performance, and readability
-- **compliance-auditor** — SOC 2, GDPR, HIPAA compliance checking, audit evidence collection, and policy enforcement
-- **error-detective** — Error tracking, stack trace analysis, reproduction step generation, and root cause identification
-- **penetration-tester** — Authorized security testing, OWASP Top 10 assessment, vulnerability reporting, and remediation guidance
-- **performance-engineer** — Profiling, benchmarking, memory analysis, load testing, and optimization patterns
-- **qa-automation** — Test automation frameworks, CI integration, test data management, and reporting
-- **security-auditor** — OWASP Top 10, dependency scanning, secrets detection, and penetration testing guidance
-- **test-architect** — Testing strategy with unit/integration/e2e, TDD, property-based testing, and mutation testing
+- **accessibility-specialist** ï¿½ WCAG 2.2 compliance, screen reader testing, keyboard navigation, and ARIA patterns
+- **chaos-engineer** ï¿½ Chaos testing, fault injection, resilience validation, and failure mode analysis
+- **code-reviewer** ï¿½ Comprehensive code review covering patterns, anti-patterns, security, performance, and readability
+- **compliance-auditor** ï¿½ SOC 2, GDPR, HIPAA compliance checking, audit evidence collection, and policy enforcement
+- **error-detective** ï¿½ Error tracking, stack trace analysis, reproduction step generation, and root cause identification
+- **penetration-tester** ï¿½ Authorized security testing, OWASP Top 10 assessment, vulnerability reporting, and remediation guidance
+- **performance-engineer** ï¿½ Profiling, benchmarking, memory analysis, load testing, and optimization patterns
+- **qa-automation** ï¿½ Test automation frameworks, CI integration, test data management, and reporting
+- **security-auditor** ï¿½ OWASP Top 10, dependency scanning, secrets detection, and penetration testing guidance
+- **test-architect** ï¿½ Testing strategy with unit/integration/e2e, TDD, property-based testing, and mutation testing
 
 #### research-analysis
 
-- **academic-researcher** — Conducts literature reviews, citation analysis, methodology evaluation, and research synthesis for technical and scientific topics
-- **benchmarking-specialist** — Designs performance benchmarks, load tests, comparative evaluations, and reproducible measurement methodologies for software systems
-- **competitive-analyst** — Performs competitive analysis including feature comparison, market positioning, and strategic differentiation assessment
-- **data-researcher** — Performs data analysis, pattern recognition, statistical interpretation, and evidence-based insight extraction
-- **market-researcher** — Conducts market sizing, TAM/SAM/SOM analysis, competitive intelligence, survey design, and customer segment identification
-- **patent-analyst** — Conducts patent searches, prior art analysis, IP landscape mapping, and freedom-to-operate assessments for technology products
-- **research-analyst** — Conducts structured technical research with systematic literature review, evidence synthesis, and actionable findings
-- **search-specialist** — Performs advanced search, information retrieval, source evaluation, and knowledge synthesis across diverse sources
-- **security-researcher** — Conducts CVE analysis, vulnerability research, threat modeling, attack surface assessment, and security advisory evaluation
-- **technology-scout** — Evaluates emerging technologies, conducts build-vs-buy analysis, assesses vendor solutions, and produces technology adoption recommendations
-- **trend-analyst** — Analyzes technology trends, adoption curves, and ecosystem shifts to inform strategic technical decisions
+- **academic-researcher** ï¿½ Conducts literature reviews, citation analysis, methodology evaluation, and research synthesis for technical and scientific topics
+- **benchmarking-specialist** ï¿½ Designs performance benchmarks, load tests, comparative evaluations, and reproducible measurement methodologies for software systems
+- **competitive-analyst** ï¿½ Performs competitive analysis including feature comparison, market positioning, and strategic differentiation assessment
+- **data-researcher** ï¿½ Performs data analysis, pattern recognition, statistical interpretation, and evidence-based insight extraction
+- **market-researcher** ï¿½ Conducts market sizing, TAM/SAM/SOM analysis, competitive intelligence, survey design, and customer segment identification
+- **patent-analyst** ï¿½ Conducts patent searches, prior art analysis, IP landscape mapping, and freedom-to-operate assessments for technology products
+- **research-analyst** ï¿½ Conducts structured technical research with systematic literature review, evidence synthesis, and actionable findings
+- **search-specialist** ï¿½ Performs advanced search, information retrieval, source evaluation, and knowledge synthesis across diverse sources
+- **security-researcher** ï¿½ Conducts CVE analysis, vulnerability research, threat modeling, attack surface assessment, and security advisory evaluation
+- **technology-scout** ï¿½ Evaluates emerging technologies, conducts build-vs-buy analysis, assesses vendor solutions, and produces technology adoption recommendations
+- **trend-analyst** ï¿½ Analyzes technology trends, adoption curves, and ecosystem shifts to inform strategic technical decisions
 
 #### specialized-domains
 
-- **blockchain-developer** — Develops smart contracts and Web3 applications with Solidity, Hardhat, and blockchain integration patterns
-- **e-commerce-engineer** — Builds e-commerce systems including product catalogs, shopping carts, inventory management, and order processing
-- **education-tech** — Builds learning management systems with SCORM/xAPI compliance, adaptive learning engines, assessment tools, and learner analytics
-- **embedded-systems** — Develops firmware and embedded software in C and Rust with RTOS integration and hardware abstraction
-- **fintech-engineer** — Builds financial systems with precise arithmetic, regulatory compliance, audit trails, and transaction integrity
-- **game-developer** — Designs game systems, logic, and architecture patterns for Unity, Godot, and custom game engines
-- **geospatial-engineer** — Builds GIS applications with PostGIS, spatial queries, mapping APIs, tile servers, and geospatial data processing pipelines
-- **healthcare-engineer** — Builds HIPAA-compliant healthcare systems with HL7 FHIR interoperability, medical data pipelines, and clinical workflow integration
-- **iot-engineer** — Designs IoT systems with MQTT messaging, edge computing, device management, and telemetry pipelines
-- **media-streaming** — Builds video streaming platforms with HLS/DASH delivery, transcoding pipelines, CDN optimization, and adaptive bitrate streaming
-- **payment-integration** — Integrates payment processors like Stripe with proper error handling, webhook verification, and PCI compliance
-- **real-estate-tech** — Builds property technology platforms with MLS integration, geospatial search, property valuation models, and listing management systems
-- **robotics-engineer** — Develops robotics systems with ROS2, sensor fusion, motion planning, SLAM, and real-time control loops
-- **seo-specialist** — Optimizes web applications for search engine visibility with structured data, meta tags, and technical SEO implementation
-- **voice-assistant** — Builds voice-enabled applications with speech-to-text, text-to-speech, dialog management, and platform integration for Alexa and Google Assistant
+- **blockchain-developer** ï¿½ Develops smart contracts and Web3 applications with Solidity, Hardhat, and blockchain integration patterns
+- **e-commerce-engineer** ï¿½ Builds e-commerce systems including product catalogs, shopping carts, inventory management, and order processing
+- **education-tech** ï¿½ Builds learning management systems with SCORM/xAPI compliance, adaptive learning engines, assessment tools, and learner analytics
+- **embedded-systems** ï¿½ Develops firmware and embedded software in C and Rust with RTOS integration and hardware abstraction
+- **fintech-engineer** ï¿½ Builds financial systems with precise arithmetic, regulatory compliance, audit trails, and transaction integrity
+- **game-developer** ï¿½ Designs game systems, logic, and architecture patterns for Unity, Godot, and custom game engines
+- **geospatial-engineer** ï¿½ Builds GIS applications with PostGIS, spatial queries, mapping APIs, tile servers, and geospatial data processing pipelines
+- **healthcare-engineer** ï¿½ Builds HIPAA-compliant healthcare systems with HL7 FHIR interoperability, medical data pipelines, and clinical workflow integration
+- **iot-engineer** ï¿½ Designs IoT systems with MQTT messaging, edge computing, device management, and telemetry pipelines
+- **media-streaming** ï¿½ Builds video streaming platforms with HLS/DASH delivery, transcoding pipelines, CDN optimization, and adaptive bitrate streaming
+- **payment-integration** ï¿½ Integrates payment processors like Stripe with proper error handling, webhook verification, and PCI compliance
+- **real-estate-tech** ï¿½ Builds property technology platforms with MLS integration, geospatial search, property valuation models, and listing management systems
+- **robotics-engineer** ï¿½ Develops robotics systems with ROS2, sensor fusion, motion planning, SLAM, and real-time control loops
+- **seo-specialist** ï¿½ Optimizes web applications for search engine visibility with structured data, meta tags, and technical SEO implementation
+- **voice-assistant** ï¿½ Builds voice-enabled applications with speech-to-text, text-to-speech, dialog management, and platform integration for Alexa and Google Assistant
 
 <!-- MUK_INVENTORY_END -->
 

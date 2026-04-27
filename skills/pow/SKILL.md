@@ -115,5 +115,6 @@ Pow synthesizes patterns from these upstream sources. Credit where due — insta
 | [anthropics/claude-code#22155](https://github.com/anthropics/claude-code/issues/22155) | Spine 3 (sandbox/permission banner) |
 | [yasasbanukaofficial/claude-code](https://github.com/yasasbanukaofficial/claude-code) + [codeaashu/claude-code](https://github.com/codeaashu/claude-code) | Spine 4 (Dream consolidation, KAIROS watch, parallel prefetch, ULTRAPLAN delegate) |
 | [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | Spine 5 (Ralph loop, Dippy auto-approve, `/create-pr`, `/analyze-issue`, HUD statusline) |
+| [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | Spine 4 delegation pool — 131+ specialized subagents across 10 categories (core-development, language-experts, infrastructure, quality-assurance, data-ai, developer-experience, specialized-domains, business-product, orchestration, research-analysis). Already bundled at `agents/` in this pack. ULTRAPLAN dispatches to these when the task fits. |
 
 Pow is the unification layer. Use the sources directly if you want only one piece — use Pow when you want the whole stack.
