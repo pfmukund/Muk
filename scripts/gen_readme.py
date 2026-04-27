@@ -193,20 +193,34 @@ NEWLY_ADDED_VERCEL_AGENTS = [
     "web-design-guidelines",
 ]
 
+# kdnuggets-10-repos sweep (Apr 2026)
+NEWLY_ADDED_GSTACK = [
+    "gstack-plan-ceo-review", "gstack-plan-eng-review",
+    "gstack-plan-design-review", "gstack-plan-devex-review",
+    "gstack-design-shotgun", "gstack-design-html", "gstack-office-hours",
+    "gstack-cso", "gstack-canary", "gstack-retro",
+]
+NEWLY_ADDED_ECC_PREFIX = "ecc-"
+NEWLY_ADDED_SCI_PREFIX = "sci-"
+
 
 def _newly_added_block():
     plugin_lookup = dict(plugins)
     skill_lookup = dict(skills)
+
+    ecc_skills = sorted(n for n, _ in skills if n.startswith(NEWLY_ADDED_ECC_PREFIX))
+    sci_skills = sorted(n for n, _ in skills if n.startswith(NEWLY_ADDED_SCI_PREFIX))
 
     total = (len(NEWLY_ADDED_DESIGNER) + len(NEWLY_ADDED_DAYMADE)
              + len(NEWLY_ADDED_ANTHROPICS) + len(NEWLY_ADDED_COMPOSIOHQ)
              + len(NEWLY_ADDED_COREYHAINES) + len(NEWLY_ADDED_DISLER)
              + len(NEWLY_ADDED_OBRA) + len(NEWLY_ADDED_REMOTION)
              + len(NEWLY_ADDED_SUPERMEMORY) + len(NEWLY_ADDED_VERCEL_BROWSER)
-             + len(NEWLY_ADDED_VERCEL_AGENTS))
+             + len(NEWLY_ADDED_VERCEL_AGENTS)
+             + len(NEWLY_ADDED_GSTACK) + len(ecc_skills) + len(sci_skills))
 
     out = ["## Newly Added", "",
-           f"Latest additions to the pack — {total} skills and plugins across 12 sources. Muk orchestrates these alongside everything else; no manual wiring needed.",
+           f"Latest additions to the pack — {total} skills and plugins across 17 sources. Muk orchestrates these alongside everything else; no manual wiring needed.",
            ""]
 
     def plugin_table(title, names):
@@ -272,6 +286,32 @@ def _newly_added_block():
     skill_table(
         f"### Agent-skills from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) ({len(NEWLY_ADDED_VERCEL_AGENTS)} skills)\n\nIncluding `web-design-guidelines` (from the composio.dev roundup), `deploy-to-vercel`, `react-best-practices`, and `react-view-transitions`.",
         NEWLY_ADDED_VERCEL_AGENTS)
+
+    out.append(f"### kdnuggets-10 sweep — 5 sources, ~{len(NEWLY_ADDED_GSTACK) + len(ecc_skills) + len(sci_skills)}+ new skills + 33 agents + 11 hooks + 86 commands + 84 MCP configs + 89 rules + 1 settings template")
+    out.append("")
+    out.append("Mined from the [kdnuggets 10 GitHub Repositories to Master Claude Code](https://www.kdnuggets.com/10-github-repositories-to-master-claude-code) roundup.")
+    out.append("")
+
+    skill_table(
+        f"#### Role-coded skills from [garrytan/gstack](https://github.com/garrytan/gstack) ({len(NEWLY_ADDED_GSTACK)} skills, `gstack-*` prefix)\n\nGarry Tan / YC-style multi-persona plan reviews + product-discipline gates: `plan-ceo-review`, `plan-eng-review`, `plan-design-review`, `plan-devex-review`, `office-hours` (six forcing questions before code), `cso` (OWASP+STRIDE), `canary` (post-deploy monitor), `retro` (weekly engineering retro), `design-shotgun` (4-6 mockup variants), `design-html` (mockup → prod HTML).",
+        NEWLY_ADDED_GSTACK)
+
+    skill_table(
+        f"#### Skills from [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) ({len(ecc_skills)} skills, `ecc-*` prefix)\n\n10+ months of daily real-world use, performance-focused. Includes harness engineering (`ecc-agent-harness-construction`, `ecc-autonomous-agent-harness`, `ecc-continuous-agent-loop`), cost-aware LLM pipelines, healthcare/PHI compliance, plus 89 language-specific rules under [`rules/ecc/`](rules/ecc/).",
+        ecc_skills[:30] + ([f"... and {len(ecc_skills) - 30} more"] if len(ecc_skills) > 30 else []))
+
+    skill_table(
+        f"#### Scientific skills from [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) ({len(sci_skills)} skills, `sci-*` prefix)\n\nK-Dense scientific stack: bio (alphafold-database, biopython, biomni, scanpy, ensembl-database), chem (rdkit, deepchem, pubchem-database), physics/quantum (qiskit, cirq, qutip, pennylane), ML (transformers, pytorch-lightning, scikit-learn, scvi-tools), clinical (clinicaltrials-database, fda-database, drugbank-database), and 100+ more domain-specific tools. Plus 84 MCP configs at [`mcp-configs/dt/`](mcp-configs/dt/).",
+        sci_skills[:30] + ([f"... and {len(sci_skills) - 30} more"] if len(sci_skills) > 30 else []))
+
+    out.append(f"#### Spec-flow agents + commands + hooks from [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) (33 agents + 86 commands + 11 hooks)")
+    out.append("")
+    out.append("Phase-system spec-driven development. Adds 33 `gsd-*` agents at [`agents/gsd-workflow/`](agents/gsd-workflow/) (Plan-Checker, Phase-Researcher, Nyquist-Auditor, Assumptions-Analyzer, Eval-Planner, etc.), 86 phase-system slash commands at [`commands/gsd/`](commands/gsd/), and 11 hooks (prompt-injection guard, context-monitor, phase-boundary, statusline) at [`hooks/scripts/`](hooks/scripts/).")
+    out.append("")
+    out.append(f"#### Settings template from [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) (1 template)")
+    out.append("")
+    out.append("Reference settings.json scaffold at [`templates/settings-ccbp.example.json`](templates/settings-ccbp.example.json).")
+    out.append("")
 
     return "\n".join(out)
 
@@ -485,6 +525,13 @@ This marketplace is forked and personalized from [rohitg00/awesome-claude-code-t
 - **36 marketing skills** (CRO, SEO, paid ads, email, copywriting, pricing, launch, …) — from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
 - **14 Superpowers skills** (structured multi-agent workflows: brainstorm → plan → execute → review) — from [obra/superpowers](https://github.com/obra/superpowers)
 - **131+ subagents** across 10 categories (`core-development`, `language-experts`, `infrastructure`, `quality-assurance`, `data-ai`, `developer-experience`, `specialized-domains`, `business-product`, `orchestration`, `research-analysis`) — from [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents). These power Muk's agent dispatch and are referenced via Pow's Spine 4 (ULTRAPLAN delegate).
+- **~328 skills + 33 agents + 86 commands + 11 hooks + 89 rules + 84 MCP configs + 1 template** from the kdnuggets-10 sweep:
+  - [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — phase-system spec-driven dev (33 `gsd-*` agents, 86 commands, 11 hooks)
+  - [`affaan-m/everything-claude-code`](https://github.com/affaan-m/everything-claude-code) — 183 `ecc-*` skills + 89 language rules under `rules/ecc/`
+  - [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — 135 `sci-*` K-Dense scientific skills + 84 MCP configs at `mcp-configs/dt/`
+  - [`garrytan/gstack`](https://github.com/garrytan/gstack) — 10 cherry-picked role-coded `gstack-*` skills (plan-*-review, office-hours, cso, canary, retro, design-shotgun, design-html)
+  - [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) — settings.json template at `templates/settings-ccbp.example.json`
+  - Pointer-only (not vendored): [`x1xhlol/system-prompts-and-models-of-ai-tools`](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) (GPL), [`Piebald-AI/claude-code-system-prompts`](https://github.com/Piebald-AI/claude-code-system-prompts), [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) — study these directly for harness internals.
 - **7 agent-browser skills** (deterministic browser control + 6 integration packs) — from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 - **7 Vercel agent-skills** (`web-design-guidelines`, `deploy-to-vercel`, `react-best-practices`, `react-view-transitions`, …) — from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
 - **`agent-sandboxes`** skill — from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill)

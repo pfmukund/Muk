@@ -1,12 +1,12 @@
 # Muk — Mukund Totla's Claude Code Marketplace
 
-**One install, every device.** Mukund Totla's personal Claude Code marketplace — **170 skills, 129 plugins, 136 agents, 42 commands, 21 hooks, 15 rules, 8 templates, 14 MCP configs.** Orchestrated by the `muk` skill.
+**One install, every device.** Mukund Totla's personal Claude Code marketplace — **498 skills, 129 plugins, 169 agents, 128 commands, 32 hooks, 104 rules, 9 templates, 98 MCP configs.** Orchestrated by the `muk` skill.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Marketplace](https://img.shields.io/badge/Claude%20Code-Marketplace-8a63d2.svg)](#quick-install)
-[![Skills](https://img.shields.io/badge/Skills-170-brightgreen.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-498-brightgreen.svg)](#skills)
 [![Plugins](https://img.shields.io/badge/Plugins-129-orange.svg)](#plugins)
-[![Agents](https://img.shields.io/badge/Agents-136-blueviolet.svg)](#agents)
+[![Agents](https://img.shields.io/badge/Agents-169-blueviolet.svg)](#agents)
 
 ---
 
@@ -42,7 +42,7 @@ Pow stacks with Muk: say "Muk + Pow" and Muk produces the tool manifest while Po
 
 ## Newly Added
 
-Latest additions to the pack — 132 skills and plugins across 12 sources. Muk orchestrates these alongside everything else; no manual wiring needed.
+Latest additions to the pack — 460 skills and plugins across 17 sources. Muk orchestrates these alongside everything else; no manual wiring needed.
 
 ### Design plugins from [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) (8 bundles)
 
@@ -247,6 +247,111 @@ Including `web-design-guidelines` (from the composio.dev roundup), `deploy-to-ve
 | vercel-cli-with-tokens | [`skills/vercel-cli-with-tokens/`](skills/vercel-cli-with-tokens/) | Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel"… |
 | web-design-guidelines | [`skills/web-design-guidelines/`](skills/web-design-guidelines/) | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practi… |
 
+### kdnuggets-10 sweep — 5 sources, ~328+ new skills + 33 agents + 11 hooks + 86 commands + 84 MCP configs + 89 rules + 1 settings template
+
+Mined from the [kdnuggets 10 GitHub Repositories to Master Claude Code](https://www.kdnuggets.com/10-github-repositories-to-master-claude-code) roundup.
+
+#### Role-coded skills from [garrytan/gstack](https://github.com/garrytan/gstack) (10 skills, `gstack-*` prefix)
+
+Garry Tan / YC-style multi-persona plan reviews + product-discipline gates: `plan-ceo-review`, `plan-eng-review`, `plan-design-review`, `plan-devex-review`, `office-hours` (six forcing questions before code), `cso` (OWASP+STRIDE), `canary` (post-deploy monitor), `retro` (weekly engineering retro), `design-shotgun` (4-6 mockup variants), `design-html` (mockup → prod HTML).
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| gstack-plan-ceo-review | [`skills/gstack-plan-ceo-review/`](skills/gstack-plan-ceo-review/) | \| |
+| gstack-plan-eng-review | [`skills/gstack-plan-eng-review/`](skills/gstack-plan-eng-review/) | \| |
+| gstack-plan-design-review | [`skills/gstack-plan-design-review/`](skills/gstack-plan-design-review/) | \| |
+| gstack-plan-devex-review | [`skills/gstack-plan-devex-review/`](skills/gstack-plan-devex-review/) | \| |
+| gstack-design-shotgun | [`skills/gstack-design-shotgun/`](skills/gstack-design-shotgun/) | \| |
+| gstack-design-html | [`skills/gstack-design-html/`](skills/gstack-design-html/) | \| |
+| gstack-office-hours | [`skills/gstack-office-hours/`](skills/gstack-office-hours/) | \| |
+| gstack-cso | [`skills/gstack-cso/`](skills/gstack-cso/) | \| |
+| gstack-canary | [`skills/gstack-canary/`](skills/gstack-canary/) | \| |
+| gstack-retro | [`skills/gstack-retro/`](skills/gstack-retro/) | \| |
+
+#### Skills from [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) (183 skills, `ecc-*` prefix)
+
+10+ months of daily real-world use, performance-focused. Includes harness engineering (`ecc-agent-harness-construction`, `ecc-autonomous-agent-harness`, `ecc-continuous-agent-loop`), cost-aware LLM pipelines, healthcare/PHI compliance, plus 89 language-specific rules under [`rules/ecc/`](rules/ecc/).
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| ecc-accessibility | [`skills/ecc-accessibility/`](skills/ecc-accessibility/) | Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA |
+| ecc-agent-eval | [`skills/ecc-agent-eval/`](skills/ecc-agent-eval/) | Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics |
+| ecc-agent-harness-construction | [`skills/ecc-agent-harness-construction/`](skills/ecc-agent-harness-construction/) | Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. |
+| ecc-agent-introspection-debugging | [`skills/ecc-agent-introspection-debugging/`](skills/ecc-agent-introspection-debugging/) | Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. |
+| ecc-agent-payment-x402 | [`skills/ecc-agent-payment-x402/`](skills/ecc-agent-payment-x402/) | Add x402 payment execution to AI agents — per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other ag… |
+| ecc-agent-sort | [`skills/ecc-agent-sort/`](skills/ecc-agent-sort/) | Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review… |
+| ecc-agentic-engineering | [`skills/ecc-agentic-engineering/`](skills/ecc-agentic-engineering/) | Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. |
+| ecc-ai-first-engineering | [`skills/ecc-ai-first-engineering/`](skills/ecc-ai-first-engineering/) | Engineering operating model for teams where AI agents generate a large share of implementation output. |
+| ecc-ai-regression-testing | [`skills/ecc-ai-regression-testing/`](skills/ecc-ai-regression-testing/) | Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind sp… |
+| ecc-android-clean-architecture | [`skills/ecc-android-clean-architecture/`](skills/ecc-android-clean-architecture/) | Clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure, dependency rules, UseCases, Repositories, and data layer patterns. |
+| ecc-api-connector-builder | [`skills/ecc-api-connector-builder/`](skills/ecc-api-connector-builder/) | Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architect… |
+| ecc-api-design | [`skills/ecc-api-design/`](skills/ecc-api-design/) | REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs. |
+| ecc-architecture-decision-records | [`skills/ecc-architecture-decision-records/`](skills/ecc-architecture-decision-records/) | Capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Mainta… |
+| ecc-article-writing | [`skills/ecc-article-writing/`](skills/ecc-article-writing/) | Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the… |
+| ecc-automation-audit-ops | [`skills/ecc-automation-audit-ops/`](skills/ecc-automation-audit-ops/) | Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, r… |
+| ecc-autonomous-agent-harness | [`skills/ecc-autonomous-agent-harness/`](skills/ecc-autonomous-agent-harness/) | Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Herm… |
+| ecc-autonomous-loops | [`skills/ecc-autonomous-loops/`](skills/ecc-autonomous-loops/) | Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems. |
+| ecc-backend-patterns | [`skills/ecc-backend-patterns/`](skills/ecc-backend-patterns/) | Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. |
+| ecc-benchmark | [`skills/ecc-benchmark/`](skills/ecc-benchmark/) | Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives. |
+| ecc-blueprint | [`skills/ecc-blueprint/`](skills/ecc-blueprint/) | >- |
+| ecc-brand-voice | [`skills/ecc-brand-voice/`](skills/ecc-brand-voice/) | Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use… |
+| ecc-browser-qa | [`skills/ecc-browser-qa/`](skills/ecc-browser-qa/) | Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features. |
+| ecc-bun-runtime | [`skills/ecc-bun-runtime/`](skills/ecc-bun-runtime/) | Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support. |
+| ecc-canary-watch | [`skills/ecc-canary-watch/`](skills/ecc-canary-watch/) | Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades. |
+| ecc-carrier-relationship-management | [`skills/ecc-carrier-relationship-management/`](skills/ecc-carrier-relationship-management/) | > |
+| ecc-ck | [`skills/ecc-ck/`](skills/ecc-ck/) | Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run determinis… |
+| ecc-claude-api | [`skills/ecc-claude-api/`](skills/ecc-claude-api/) | Anthropic Claude API patterns for Python and TypeScript. Covers Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, and Claude Agent SDK. Use wh… |
+| ecc-claude-devfleet | [`skills/ecc-claude-devfleet/`](skills/ecc-claude-devfleet/) | Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports. |
+| ecc-click-path-audit | [`skills/ecc-click-path-audit/`](skills/ecc-click-path-audit/) | Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final stat… |
+| ecc-clickhouse-io | [`skills/ecc-clickhouse-io/`](skills/ecc-clickhouse-io/) | ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads. |
+| ... and 153 more | [`skills/... and 153 more/`](skills/... and 153 more/) |  |
+
+#### Scientific skills from [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) (135 skills, `sci-*` prefix)
+
+K-Dense scientific stack: bio (alphafold-database, biopython, biomni, scanpy, ensembl-database), chem (rdkit, deepchem, pubchem-database), physics/quantum (qiskit, cirq, qutip, pennylane), ML (transformers, pytorch-lightning, scikit-learn, scvi-tools), clinical (clinicaltrials-database, fda-database, drugbank-database), and 100+ more domain-specific tools. Plus 84 MCP configs at [`mcp-configs/dt/`](mcp-configs/dt/).
+
+| Skill | Directory | What It Teaches |
+|-------|-----------|-----------------|
+| sci-adaptyv | [`skills/sci-adaptyv/`](skills/sci-adaptyv/) | Cloud laboratory platform for automated protein testing and validation. Use when designing proteins and needing experimental validation including binding assays, expression testin… |
+| sci-aeon | [`skills/sci-aeon/`](skills/sci-aeon/) | This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity sea… |
+| sci-alphafold-database | [`skills/sci-alphafold-database/`](skills/sci-alphafold-database/) | Access AlphaFold's 200M+ AI-predicted protein structures. Retrieve structures by UniProt ID, download PDB/mmCIF files, analyze confidence metrics (pLDDT, PAE), for drug discovery… |
+| sci-anndata | [`skills/sci-anndata/`](skills/sci-anndata/) | This skill should be used when working with annotated data matrices in Python, particularly for single-cell genomics analysis, managing experimental measurements with metadata, or… |
+| sci-arboreto | [`skills/sci-arboreto/`](skills/sci-arboreto/) | Infer gene regulatory networks (GRNs) from gene expression data using scalable algorithms (GRNBoost2, GENIE3). Use when analyzing transcriptomics data (bulk RNA-seq, single-cell R… |
+| sci-astropy | [`skills/sci-astropy/`](skills/sci-astropy/) | Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS fi… |
+| sci-benchling-integration | [`skills/sci-benchling-integration/`](skills/sci-benchling-integration/) | Benchling R&D platform integration. Access registry (DNA, proteins), inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse, for lab data management… |
+| sci-biomni | [`skills/sci-biomni/`](skills/sci-biomni/) | Autonomous biomedical AI agent framework for executing complex research tasks across genomics, drug discovery, molecular biology, and clinical analysis. Use this skill when conduc… |
+| sci-biopython | [`skills/sci-biopython/`](skills/sci-biopython/) | Primary Python toolkit for molecular biology. Preferred for Python-based PubMed/NCBI queries (Bio.Entrez), sequence manipulation, file parsing (FASTA, GenBank, FASTQ, PDB), advanc… |
+| sci-biorxiv-database | [`skills/sci-biorxiv-database/`](skills/sci-biorxiv-database/) | Efficient database search tool for bioRxiv preprint server. Use this skill when searching for life sciences preprints by keywords, authors, date ranges, or categories, retrieving… |
+| sci-bioservices | [`skills/sci-bioservices/`](skills/sci-bioservices/) | Primary Python tool for 40+ bioinformatics services. Preferred for multi-database workflows: UniProt, KEGG, ChEMBL, PubChem, Reactome, QuickGO. Unified API for queries, ID mapping… |
+| sci-brenda-database | [`skills/sci-brenda-database/`](skills/sci-brenda-database/) | Access BRENDA enzyme database via SOAP API. Retrieve kinetic parameters (Km, kcat), reaction equations, organism data, and substrate-specific enzyme information for biochemical re… |
+| sci-cellxgene-census | [`skills/sci-cellxgene-census/`](skills/sci-cellxgene-census/) | Query CZ CELLxGENE Census (61M+ cells). Filter by cell type/tissue/disease, retrieve expression data, integrate with scanpy/PyTorch, for population-scale single-cell analysis. |
+| sci-chembl-database | [`skills/sci-chembl-database/`](skills/sci-chembl-database/) | Query ChEMBL's bioactive molecules and drug discovery data. Search compounds by structure/properties, retrieve bioactivity data (IC50, Ki), find inhibitors, perform SAR studies, f… |
+| sci-cirq | [`skills/sci-cirq/`](skills/sci-cirq/) | Quantum computing framework for building, simulating, optimizing, and executing quantum circuits. Use this skill when working with quantum algorithms, quantum circuit design, quan… |
+| sci-citation-management | [`skills/sci-citation-management/`](skills/sci-citation-management/) | Comprehensive citation management for academic research. Search Google Scholar and PubMed for papers, extract accurate metadata, validate citations, and generate properly formatte… |
+| sci-clinical-decision-support | [`skills/sci-clinical-decision-support/`](skills/sci-clinical-decision-support/) | Generate professional clinical decision support (CDS) documents for pharmaceutical and clinical research settings, including patient cohort analyses (biomarker-stratified with out… |
+| sci-clinical-reports | [`skills/sci-clinical-reports/`](skills/sci-clinical-reports/) | Write comprehensive clinical reports including case reports (CARE guidelines), diagnostic reports (radiology/pathology/lab), clinical trial reports (ICH-E3, SAE, CSR), and patient… |
+| sci-clinicaltrials-database | [`skills/sci-clinicaltrials-database/`](skills/sci-clinicaltrials-database/) | Query ClinicalTrials.gov via API v2. Search trials by condition, drug, location, status, or phase. Retrieve trial details by NCT ID, export data, for clinical research and patient… |
+| sci-clinpgx-database | [`skills/sci-clinpgx-database/`](skills/sci-clinpgx-database/) | Access ClinPGx pharmacogenomics data (successor to PharmGKB). Query gene-drug interactions, CPIC guidelines, allele functions, for precision medicine and genotype-guided dosing de… |
+| sci-clinvar-database | [`skills/sci-clinvar-database/`](skills/sci-clinvar-database/) | Query NCBI ClinVar for variant clinical significance. Search by gene/position, interpret pathogenicity classifications, access via E-utilities API or FTP, annotate VCFs, for genom… |
+| sci-cobrapy | [`skills/sci-cobrapy/`](skills/sci-cobrapy/) | Constraint-based metabolic modeling (COBRA). FBA, FVA, gene knockouts, flux sampling, SBML models, for systems biology and metabolic engineering analysis. |
+| sci-cosmic-database | [`skills/sci-cosmic-database/`](skills/sci-cosmic-database/) | Access COSMIC cancer mutation database. Query somatic mutations, Cancer Gene Census, mutational signatures, gene fusions, for cancer research and precision oncology. Requires auth… |
+| sci-dask | [`skills/sci-dask/`](skills/sci-dask/) | Parallel/distributed computing. Scale pandas/NumPy beyond memory, parallel DataFrames/Arrays, multi-file processing, task graphs, for larger-than-RAM datasets and parallel workflo… |
+| sci-datacommons-client | [`skills/sci-datacommons-client/`](skills/sci-datacommons-client/) | Work with Data Commons, a platform providing programmatic access to public statistical data from global sources. Use this skill when working with demographic data, economic indica… |
+| sci-datamol | [`skills/sci-datamol/`](skills/sci-datamol/) | Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, c… |
+| sci-deepchem | [`skills/sci-deepchem/`](skills/sci-deepchem/) | Molecular machine learning toolkit. Property prediction (ADMET, toxicity), GNNs (GCN, MPNN), MoleculeNet benchmarks, pretrained models, featurization, for drug discovery ML. |
+| sci-deeptools | [`skills/sci-deeptools/`](skills/sci-deeptools/) | NGS analysis toolkit. BAM to bigWig conversion, QC (correlation, PCA, fingerprints), heatmaps/profiles (TSS, peaks), for ChIP-seq, RNA-seq, ATAC-seq visualization. |
+| sci-denario | [`skills/sci-denario/`](skills/sci-denario/) | Multiagent AI system for scientific research assistance that automates research workflows from data analysis to publication. This skill should be used when generating research ide… |
+| sci-diffdock | [`skills/sci-diffdock/`](skills/sci-diffdock/) | Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity pr… |
+| ... and 105 more | [`skills/... and 105 more/`](skills/... and 105 more/) |  |
+
+#### Spec-flow agents + commands + hooks from [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) (33 agents + 86 commands + 11 hooks)
+
+Phase-system spec-driven development. Adds 33 `gsd-*` agents at [`agents/gsd-workflow/`](agents/gsd-workflow/) (Plan-Checker, Phase-Researcher, Nyquist-Auditor, Assumptions-Analyzer, Eval-Planner, etc.), 86 phase-system slash commands at [`commands/gsd/`](commands/gsd/), and 11 hooks (prompt-injection guard, context-monitor, phase-boundary, statusline) at [`hooks/scripts/`](hooks/scripts/).
+
+#### Settings template from [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) (1 template)
+
+Reference settings.json scaffold at [`templates/settings-ccbp.example.json`](templates/settings-ccbp.example.json).
+
 ---
 
 ## Quick Install
@@ -280,13 +385,13 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 - [Pow power-mode stack](#pow-power-mode-stack-from-6-sources)
 - [Newly Added](#newly-added)
 - [Plugins](#plugins) (129)
-- [Agents](#agents) (136)
-- [Skills](#skills) (170)
-- [Commands](#commands) (42)
-- [Hooks](#hooks) (21)
-- [Rules](#rules) (15)
-- [Templates](#templates) (8)
-- [MCP Configs](#mcp-configs) (14)
+- [Agents](#agents) (169)
+- [Skills](#skills) (498)
+- [Commands](#commands) (128)
+- [Hooks](#hooks) (32)
+- [Rules](#rules) (104)
+- [Templates](#templates) (9)
+- [MCP Configs](#mcp-configs) (98)
 - [How Muk Works](#how-muk-works)
 - [Adding Skills Later](#adding-skills-later)
 - [Attribution](#attribution)
@@ -440,7 +545,7 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 
 ## Agents
 
-136 specialized agents across 10 categories.
+169 specialized agents across 11 categories.
 
 ### Business Product (12 agents)
 
@@ -517,6 +622,44 @@ git clone https://github.com/pfmukund/Muk.git ~/.claude/plugins/muk
 | testing-infrastructure | [`testing-infrastructure.md`](agents/developer-experience/testing-infrastructure.md) | Designs test runners, CI test splitting, flaky test management, and test infrastructure that scales across large engineering organizations |
 | tooling-engineer | [`tooling-engineer.md`](agents/developer-experience/tooling-engineer.md) | Configures and builds developer tooling including linters, formatters, type checkers, and custom code analysis tools |
 | vscode-extension | [`vscode-extension.md`](agents/developer-experience/vscode-extension.md) | Develops VS Code extensions with Language Server Protocol integration, custom editors, webview panels, and marketplace publishing |
+
+### Gsd Workflow (33 agents)
+
+| Agent | File | Purpose |
+|-------|------|---------|
+| gsd-advisor-researcher | [`gsd-advisor-researcher.md`](agents/gsd-workflow/gsd-advisor-researcher.md) | Researches a single gray area decision and returns a structured comparison table with rationale. Spawned by discuss-phase advisor mode. |
+| gsd-ai-researcher | [`gsd-ai-researcher.md`](agents/gsd-workflow/gsd-ai-researcher.md) | Researches a chosen AI framework's official docs to produce implementation-ready guidance — best practices, syntax, core patterns, and pitfalls distilled for the specific use case… |
+| gsd-assumptions-analyzer | [`gsd-assumptions-analyzer.md`](agents/gsd-workflow/gsd-assumptions-analyzer.md) | Deeply analyzes codebase for a phase and returns structured assumptions with evidence. Spawned by discuss-phase assumptions mode. |
+| gsd-code-fixer | [`gsd-code-fixer.md`](agents/gsd-workflow/gsd-code-fixer.md) | Applies fixes to code review findings from REVIEW.md. Reads source files, applies intelligent fixes, and commits each fix atomically. Spawned by /gsd-code-review-fix. |
+| gsd-code-reviewer | [`gsd-code-reviewer.md`](agents/gsd-workflow/gsd-code-reviewer.md) | Reviews source files for bugs, security issues, and code quality problems. Produces structured REVIEW.md with severity-classified findings. Spawned by /gsd-code-review. |
+| gsd-codebase-mapper | [`gsd-codebase-mapper.md`](agents/gsd-workflow/gsd-codebase-mapper.md) | Explores codebase and writes structured analysis documents. Spawned by map-codebase with a focus area (tech, arch, quality, concerns). Writes documents directly to reduce orchestr… |
+| gsd-debug-session-manager | [`gsd-debug-session-manager.md`](agents/gsd-workflow/gsd-debug-session-manager.md) | Manages multi-cycle /gsd-debug checkpoint and continuation loop in isolated context. Spawns gsd-debugger agents, handles checkpoints via AskUserQuestion, dispatches specialist ski… |
+| gsd-debugger | [`gsd-debugger.md`](agents/gsd-workflow/gsd-debugger.md) | Investigates bugs using scientific method, manages debug sessions, handles checkpoints. Spawned by /gsd-debug orchestrator. |
+| gsd-doc-classifier | [`gsd-doc-classifier.md`](agents/gsd-workflow/gsd-doc-classifier.md) | Classifies a single planning document as ADR, PRD, SPEC, DOC, or UNKNOWN. Extracts title, scope summary, and cross-references. Spawned in parallel by /gsd-ingest-docs. Writes a JS… |
+| gsd-doc-synthesizer | [`gsd-doc-synthesizer.md`](agents/gsd-workflow/gsd-doc-synthesizer.md) | Synthesizes classified planning docs into a single consolidated context. Applies precedence rules, detects cross-ref cycles, enforces LOCKED-vs-LOCKED hard-blocks, and writes INGE… |
+| gsd-doc-verifier | [`gsd-doc-verifier.md`](agents/gsd-workflow/gsd-doc-verifier.md) | Verifies factual claims in generated docs against the live codebase. Returns structured JSON per doc. |
+| gsd-doc-writer | [`gsd-doc-writer.md`](agents/gsd-workflow/gsd-doc-writer.md) | Writes and updates project documentation. Spawned with a doc_assignment block specifying doc type, mode (create/update/supplement), and project context. |
+| gsd-domain-researcher | [`gsd-domain-researcher.md`](agents/gsd-workflow/gsd-domain-researcher.md) | Researches the business domain and real-world application context of the AI system being built. Surfaces domain expert evaluation criteria, industry-specific failure modes, regula… |
+| gsd-eval-auditor | [`gsd-eval-auditor.md`](agents/gsd-workflow/gsd-eval-auditor.md) | Retroactive audit of an implemented AI phase's evaluation coverage. Checks implementation against the AI-SPEC.md evaluation plan. Scores each eval dimension as COVERED/PARTIAL/MIS… |
+| gsd-eval-planner | [`gsd-eval-planner.md`](agents/gsd-workflow/gsd-eval-planner.md) | Designs a structured evaluation strategy for an AI phase. Identifies critical failure modes, selects eval dimensions with rubrics, recommends tooling, and specifies the reference… |
+| gsd-executor | [`gsd-executor.md`](agents/gsd-workflow/gsd-executor.md) | Executes GSD plans with atomic commits, deviation handling, checkpoint protocols, and state management. Spawned by execute-phase orchestrator or execute-plan command. |
+| gsd-framework-selector | [`gsd-framework-selector.md`](agents/gsd-workflow/gsd-framework-selector.md) | Presents an interactive decision matrix to surface the right AI/LLM framework for the user's specific use case. Produces a scored recommendation with rationale. Spawned by /gsd-ai… |
+| gsd-integration-checker | [`gsd-integration-checker.md`](agents/gsd-workflow/gsd-integration-checker.md) | Verifies cross-phase integration and E2E flows. Checks that phases connect properly and user workflows complete end-to-end. |
+| gsd-intel-updater | [`gsd-intel-updater.md`](agents/gsd-workflow/gsd-intel-updater.md) | Analyzes codebase and writes structured intel files to .planning/intel/. |
+| gsd-nyquist-auditor | [`gsd-nyquist-auditor.md`](agents/gsd-workflow/gsd-nyquist-auditor.md) | Fills Nyquist validation gaps by generating tests and verifying coverage for phase requirements |
+| gsd-pattern-mapper | [`gsd-pattern-mapper.md`](agents/gsd-workflow/gsd-pattern-mapper.md) | Analyzes codebase for existing patterns and produces PATTERNS.md mapping new files to closest analogs. Read-only codebase analysis spawned by /gsd-plan-phase orchestrator before p… |
+| gsd-phase-researcher | [`gsd-phase-researcher.md`](agents/gsd-workflow/gsd-phase-researcher.md) | Researches how to implement a phase before planning. Produces RESEARCH.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator. |
+| gsd-plan-checker | [`gsd-plan-checker.md`](agents/gsd-workflow/gsd-plan-checker.md) | Verifies plans will achieve phase goal before execution. Goal-backward analysis of plan quality. Spawned by /gsd-plan-phase orchestrator. |
+| gsd-planner | [`gsd-planner.md`](agents/gsd-workflow/gsd-planner.md) | Creates executable phase plans with task breakdown, dependency analysis, and goal-backward verification. Spawned by /gsd-plan-phase orchestrator. |
+| gsd-project-researcher | [`gsd-project-researcher.md`](agents/gsd-workflow/gsd-project-researcher.md) | Researches domain ecosystem before roadmap creation. Produces files in .planning/research/ consumed during roadmap creation. Spawned by /gsd-new-project or /gsd-new-milestone orch… |
+| gsd-research-synthesizer | [`gsd-research-synthesizer.md`](agents/gsd-workflow/gsd-research-synthesizer.md) | Synthesizes research outputs from parallel researcher agents into SUMMARY.md. Spawned by /gsd-new-project after 4 researcher agents complete. |
+| gsd-roadmapper | [`gsd-roadmapper.md`](agents/gsd-workflow/gsd-roadmapper.md) | Creates project roadmaps with phase breakdown, requirement mapping, success criteria derivation, and coverage validation. Spawned by /gsd-new-project orchestrator. |
+| gsd-security-auditor | [`gsd-security-auditor.md`](agents/gsd-workflow/gsd-security-auditor.md) | Verifies threat mitigations from PLAN.md threat model exist in implemented code. Produces SECURITY.md. Spawned by /gsd-secure-phase. |
+| gsd-ui-auditor | [`gsd-ui-auditor.md`](agents/gsd-workflow/gsd-ui-auditor.md) | Retroactive 6-pillar visual audit of implemented frontend code. Produces scored UI-REVIEW.md. Spawned by /gsd-ui-review orchestrator. |
+| gsd-ui-checker | [`gsd-ui-checker.md`](agents/gsd-workflow/gsd-ui-checker.md) | Validates UI-SPEC.md design contracts against 6 quality dimensions. Produces BLOCK/FLAG/PASS verdicts. Spawned by /gsd-ui-phase orchestrator. |
+| gsd-ui-researcher | [`gsd-ui-researcher.md`](agents/gsd-workflow/gsd-ui-researcher.md) | Produces UI-SPEC.md design contract for frontend phases. Reads upstream artifacts, detects design system state, asks only unanswered questions. Spawned by /gsd-ui-phase orchestrat… |
+| gsd-user-profiler | [`gsd-user-profiler.md`](agents/gsd-workflow/gsd-user-profiler.md) | Analyzes extracted session messages across 8 behavioral dimensions to produce a scored developer profile with confidence levels and evidence. Spawned by profile orchestration work… |
+| gsd-verifier | [`gsd-verifier.md`](agents/gsd-workflow/gsd-verifier.md) | Verifies phase goal achievement through goal-backward analysis. Checks codebase delivers what phase promised, not just that tasks completed. Creates VERIFICATION.md report. |
 
 ### Infrastructure (11 agents)
 
@@ -642,7 +785,7 @@ Reference an agent in your `CLAUDE.md`:
 
 ## Skills
 
-170 skills teaching Claude domain-specific patterns. The `muk`, `pow`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
+498 skills teaching Claude domain-specific patterns. The `muk`, `pow`, `generic-agent`, `caveman`, `caveman-commit`, `caveman-help`, `caveman-review`, and `compress` skills are Muk-exclusive (see [Exclusives](#muk-exclusives)).
 
 | Skill | Directory | What It Teaches |
 |-------|-----------|-----------------|
@@ -706,6 +849,189 @@ Reference an agent in your `CLAUDE.md`:
 | docker-best-practices | [`skills/docker-best-practices/`](skills/docker-best-practices/) | Docker best practices including multi-stage builds, compose patterns, image optimization, and security |
 | docx | [`skills/docx/`](skills/docx/) | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or… |
 | douban-skill | [`skills/douban-skill/`](skills/douban-skill/) | > |
+| ecc-accessibility | [`skills/ecc-accessibility/`](skills/ecc-accessibility/) | Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA |
+| ecc-agent-eval | [`skills/ecc-agent-eval/`](skills/ecc-agent-eval/) | Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics |
+| ecc-agent-harness-construction | [`skills/ecc-agent-harness-construction/`](skills/ecc-agent-harness-construction/) | Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. |
+| ecc-agent-introspection-debugging | [`skills/ecc-agent-introspection-debugging/`](skills/ecc-agent-introspection-debugging/) | Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. |
+| ecc-agent-payment-x402 | [`skills/ecc-agent-payment-x402/`](skills/ecc-agent-payment-x402/) | Add x402 payment execution to AI agents — per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other ag… |
+| ecc-agent-sort | [`skills/ecc-agent-sort/`](skills/ecc-agent-sort/) | Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review… |
+| ecc-agentic-engineering | [`skills/ecc-agentic-engineering/`](skills/ecc-agentic-engineering/) | Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. |
+| ecc-ai-first-engineering | [`skills/ecc-ai-first-engineering/`](skills/ecc-ai-first-engineering/) | Engineering operating model for teams where AI agents generate a large share of implementation output. |
+| ecc-ai-regression-testing | [`skills/ecc-ai-regression-testing/`](skills/ecc-ai-regression-testing/) | Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind sp… |
+| ecc-android-clean-architecture | [`skills/ecc-android-clean-architecture/`](skills/ecc-android-clean-architecture/) | Clean Architecture patterns for Android and Kotlin Multiplatform projects — module structure, dependency rules, UseCases, Repositories, and data layer patterns. |
+| ecc-api-connector-builder | [`skills/ecc-api-connector-builder/`](skills/ecc-api-connector-builder/) | Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architect… |
+| ecc-api-design | [`skills/ecc-api-design/`](skills/ecc-api-design/) | REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs. |
+| ecc-architecture-decision-records | [`skills/ecc-architecture-decision-records/`](skills/ecc-architecture-decision-records/) | Capture architectural decisions made during Claude Code sessions as structured ADRs. Auto-detects decision moments, records context, alternatives considered, and rationale. Mainta… |
+| ecc-article-writing | [`skills/ecc-article-writing/`](skills/ecc-article-writing/) | Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the… |
+| ecc-automation-audit-ops | [`skills/ecc-automation-audit-ops/`](skills/ecc-automation-audit-ops/) | Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, r… |
+| ecc-autonomous-agent-harness | [`skills/ecc-autonomous-agent-harness/`](skills/ecc-autonomous-agent-harness/) | Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Herm… |
+| ecc-autonomous-loops | [`skills/ecc-autonomous-loops/`](skills/ecc-autonomous-loops/) | Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems. |
+| ecc-backend-patterns | [`skills/ecc-backend-patterns/`](skills/ecc-backend-patterns/) | Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. |
+| ecc-benchmark | [`skills/ecc-benchmark/`](skills/ecc-benchmark/) | Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives. |
+| ecc-blueprint | [`skills/ecc-blueprint/`](skills/ecc-blueprint/) | >- |
+| ecc-brand-voice | [`skills/ecc-brand-voice/`](skills/ecc-brand-voice/) | Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use… |
+| ecc-browser-qa | [`skills/ecc-browser-qa/`](skills/ecc-browser-qa/) | Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features. |
+| ecc-bun-runtime | [`skills/ecc-bun-runtime/`](skills/ecc-bun-runtime/) | Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support. |
+| ecc-canary-watch | [`skills/ecc-canary-watch/`](skills/ecc-canary-watch/) | Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades. |
+| ecc-carrier-relationship-management | [`skills/ecc-carrier-relationship-management/`](skills/ecc-carrier-relationship-management/) | > |
+| ecc-ck | [`skills/ecc-ck/`](skills/ecc-ck/) | Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run determinis… |
+| ecc-claude-api | [`skills/ecc-claude-api/`](skills/ecc-claude-api/) | Anthropic Claude API patterns for Python and TypeScript. Covers Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, and Claude Agent SDK. Use wh… |
+| ecc-claude-devfleet | [`skills/ecc-claude-devfleet/`](skills/ecc-claude-devfleet/) | Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports. |
+| ecc-click-path-audit | [`skills/ecc-click-path-audit/`](skills/ecc-click-path-audit/) | Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final stat… |
+| ecc-clickhouse-io | [`skills/ecc-clickhouse-io/`](skills/ecc-clickhouse-io/) | ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads. |
+| ecc-code-tour | [`skills/ecc-code-tour/`](skills/ecc-code-tour/) | Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tou… |
+| ecc-codebase-onboarding | [`skills/ecc-codebase-onboarding/`](skills/ecc-codebase-onboarding/) | Analyze an unfamiliar codebase and generate a structured onboarding guide with architecture map, key entry points, conventions, and a starter CLAUDE.md. Use when joining a new pro… |
+| ecc-coding-standards | [`skills/ecc-coding-standards/`](skills/ecc-coding-standards/) | Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns. |
+| ecc-compose-multiplatform-patterns | [`skills/ecc-compose-multiplatform-patterns/`](skills/ecc-compose-multiplatform-patterns/) | Compose Multiplatform and Jetpack Compose patterns for KMP projects — state management, navigation, theming, performance, and platform-specific UI. |
+| ecc-configure-ecc | [`skills/ecc-configure-ecc/`](skills/ecc-configure-ecc/) | Interactive installer for Everything Claude Code — guides users through selecting and installing skills and rules to user-level or project-level directories, verifies paths, and o… |
+| ecc-connections-optimizer | [`skills/ecc-connections-optimizer/`](skills/ecc-connections-optimizer/) | Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-specific warm outreach drafted in the user's real voice. Use when t… |
+| ecc-content-engine | [`skills/ecc-content-engine/`](skills/ecc-content-engine/) | Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scrip… |
+| ecc-content-hash-cache-pattern | [`skills/ecc-content-hash-cache-pattern/`](skills/ecc-content-hash-cache-pattern/) | Cache expensive file processing results using SHA-256 content hashes — path-independent, auto-invalidating, with service layer separation. |
+| ecc-context-budget | [`skills/ecc-context-budget/`](skills/ecc-context-budget/) | Audits Claude Code context window consumption across agents, skills, MCP servers, and rules. Identifies bloat, redundant components, and produces prioritized token-savings recomme… |
+| ecc-continuous-agent-loop | [`skills/ecc-continuous-agent-loop/`](skills/ecc-continuous-agent-loop/) | Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls. |
+| ecc-continuous-learning | [`skills/ecc-continuous-learning/`](skills/ecc-continuous-learning/) | Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use. |
+| ecc-continuous-learning-v2 | [`skills/ecc-continuous-learning-v2/`](skills/ecc-continuous-learning-v2/) | Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-… |
+| ecc-cost-aware-llm-pipeline | [`skills/ecc-cost-aware-llm-pipeline/`](skills/ecc-cost-aware-llm-pipeline/) | Cost optimization patterns for LLM API usage — model routing by task complexity, budget tracking, retry logic, and prompt caching. |
+| ecc-council | [`skills/ecc-council/`](skills/ecc-council/) | Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing. |
+| ecc-cpp-coding-standards | [`skills/ecc-cpp-coding-standards/`](skills/ecc-cpp-coding-standards/) | C++ coding standards based on the C++ Core Guidelines (isocpp.github.io). Use when writing, reviewing, or refactoring C++ code to enforce modern, safe, and idiomatic practices. |
+| ecc-cpp-testing | [`skills/ecc-cpp-testing/`](skills/ecc-cpp-testing/) | Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers. |
+| ecc-crosspost | [`skills/ecc-crosspost/`](skills/ecc-crosspost/) | Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platfo… |
+| ecc-csharp-testing | [`skills/ecc-csharp-testing/`](skills/ecc-csharp-testing/) | C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices. |
+| ecc-customer-billing-ops | [`skills/ecc-customer-billing-ops/`](skills/ecc-customer-billing-ops/) | Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the… |
+| ecc-customs-trade-compliance | [`skills/ecc-customs-trade-compliance/`](skills/ecc-customs-trade-compliance/) | > |
+| ecc-dart-flutter-patterns | [`skills/ecc-dart-flutter-patterns/`](skills/ecc-dart-flutter-patterns/) | Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Prov… |
+| ecc-dashboard-builder | [`skills/ecc-dashboard-builder/`](skills/ecc-dashboard-builder/) | Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity b… |
+| ecc-data-scraper-agent | [`skills/ecc-data-scraper-agent/`](skills/ecc-data-scraper-agent/) | Build a fully automated AI-powered data collection agent for any public source — job boards, prices, news, GitHub, sports, anything. Scrapes on a schedule, enriches data with a fr… |
+| ecc-database-migrations | [`skills/ecc-database-migrations/`](skills/ecc-database-migrations/) | Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely,… |
+| ecc-deep-research | [`skills/ecc-deep-research/`](skills/ecc-deep-research/) | Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorou… |
+| ecc-defi-amm-security | [`skills/ecc-defi-amm-security/`](skills/ecc-defi-amm-security/) | Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admi… |
+| ecc-deployment-patterns | [`skills/ecc-deployment-patterns/`](skills/ecc-deployment-patterns/) | Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications. |
+| ecc-design-system | [`skills/ecc-design-system/`](skills/ecc-design-system/) | Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling. |
+| ecc-django-patterns | [`skills/ecc-django-patterns/`](skills/ecc-django-patterns/) | Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps. |
+| ecc-django-security | [`skills/ecc-django-security/`](skills/ecc-django-security/) | Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. |
+| ecc-django-tdd | [`skills/ecc-django-tdd/`](skills/ecc-django-tdd/) | Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs. |
+| ecc-django-verification | [`skills/ecc-django-verification/`](skills/ecc-django-verification/) | Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR. |
+| ecc-dmux-workflows | [`skills/ecc-dmux-workflows/`](skills/ecc-dmux-workflows/) | Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when ru… |
+| ecc-docker-patterns | [`skills/ecc-docker-patterns/`](skills/ecc-docker-patterns/) | Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration. |
+| ecc-documentation-lookup | [`skills/ecc-documentation-lookup/`](skills/ecc-documentation-lookup/) | Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framewo… |
+| ecc-dotnet-patterns | [`skills/ecc-dotnet-patterns/`](skills/ecc-dotnet-patterns/) | Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications. |
+| ecc-e2e-testing | [`skills/ecc-e2e-testing/`](skills/ecc-e2e-testing/) | Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies. |
+| ecc-ecc-tools-cost-audit | [`skills/ecc-ecc-tools-cost-audit/`](skills/ecc-ecc-tools-cost-audit/) | Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spike… |
+| ecc-email-ops | [`skills/ecc-email-ops/`](skills/ecc-email-ops/) | Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC. Use when the user wants to organize email, draft or send through the rea… |
+| ecc-energy-procurement | [`skills/ecc-energy-procurement/`](skills/ecc-energy-procurement/) | > |
+| ecc-enterprise-agent-ops | [`skills/ecc-enterprise-agent-ops/`](skills/ecc-enterprise-agent-ops/) | Operate long-lived agent workloads with observability, security boundaries, and lifecycle management. |
+| ecc-eval-harness | [`skills/ecc-eval-harness/`](skills/ecc-eval-harness/) | Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles |
+| ecc-evm-token-decimals | [`skills/ecc-evm-token-decimals/`](skills/ecc-evm-token-decimals/) | Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboa… |
+| ecc-exa-search | [`skills/ecc-exa-search/`](skills/ecc-exa-search/) | Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Ex… |
+| ecc-fal-ai-media | [`skills/ecc-fal-ai-media/`](skills/ecc-fal-ai-media/) | Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and v… |
+| ecc-finance-billing-ops | [`skills/ecc-finance-billing-ops/`](skills/ecc-finance-billing-ops/) | Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge di… |
+| ecc-flutter-dart-code-review | [`skills/ecc-flutter-dart-code-review/`](skills/ecc-flutter-dart-code-review/) | Library-agnostic Flutter/Dart code review checklist covering widget best practices, state management patterns (BLoC, Riverpod, Provider, GetX, MobX, Signals), Dart idioms, perform… |
+| ecc-foundation-models-on-device | [`skills/ecc-foundation-models-on-device/`](skills/ecc-foundation-models-on-device/) | Apple FoundationModels framework for on-device LLM — text generation, guided generation with @Generable, tool calling, and snapshot streaming in iOS 26+. |
+| ecc-frontend-design | [`skills/ecc-frontend-design/`](skills/ecc-frontend-design/) | Create distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build web components, pages, or applications and the visual direction… |
+| ecc-frontend-patterns | [`skills/ecc-frontend-patterns/`](skills/ecc-frontend-patterns/) | Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices. |
+| ecc-frontend-slides | [`skills/ecc-frontend-slides/`](skills/ecc-frontend-slides/) | Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or c… |
+| ecc-gan-style-harness | [`skills/ecc-gan-style-harness/`](skills/ecc-gan-style-harness/) | GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper. |
+| ecc-gateguard | [`skills/ecc-gateguard/`](skills/ecc-gateguard/) | Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Meas… |
+| ecc-git-workflow | [`skills/ecc-git-workflow/`](skills/ecc-git-workflow/) | Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes. |
+| ecc-github-ops | [`skills/ecc-github-ops/`](skills/ecc-github-ops/) | GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the… |
+| ecc-golang-patterns | [`skills/ecc-golang-patterns/`](skills/ecc-golang-patterns/) | Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications. |
+| ecc-golang-testing | [`skills/ecc-golang-testing/`](skills/ecc-golang-testing/) | Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices. |
+| ecc-google-workspace-ops | [`skills/ecc-google-workspace-ops/`](skills/ecc-google-workspace-ops/) | Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, m… |
+| ecc-healthcare-cdss-patterns | [`skills/ecc-healthcare-cdss-patterns/`](skills/ecc-healthcare-cdss-patterns/) | Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integ… |
+| ecc-healthcare-emr-patterns | [`skills/ecc-healthcare-emr-patterns/`](skills/ecc-healthcare-emr-patterns/) | EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-f… |
+| ecc-healthcare-eval-harness | [`skills/ecc-healthcare-eval-harness/`](skills/ecc-healthcare-eval-harness/) | Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compl… |
+| ecc-healthcare-phi-compliance | [`skills/ecc-healthcare-phi-compliance/`](skills/ecc-healthcare-phi-compliance/) | Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit… |
+| ecc-hexagonal-architecture | [`skills/ecc-hexagonal-architecture/`](skills/ecc-hexagonal-architecture/) | Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, a… |
+| ecc-hipaa-compliance | [`skills/ecc-hipaa-compliance/`](skills/ecc-hipaa-compliance/) | HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US… |
+| ecc-hookify-rules | [`skills/ecc-hookify-rules/`](skills/ecc-hookify-rules/) | This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patte… |
+| ecc-inventory-demand-planning | [`skills/ecc-inventory-demand-planning/`](skills/ecc-inventory-demand-planning/) | > |
+| ecc-investor-materials | [`skills/ecc-investor-materials/`](skills/ecc-investor-materials/) | Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents… |
+| ecc-investor-outreach | [`skills/ecc-investor-outreach/`](skills/ecc-investor-outreach/) | Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors,… |
+| ecc-iterative-retrieval | [`skills/ecc-iterative-retrieval/`](skills/ecc-iterative-retrieval/) | Pattern for progressively refining context retrieval to solve the subagent context problem |
+| ecc-java-coding-standards | [`skills/ecc-java-coding-standards/`](skills/ecc-java-coding-standards/) | Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics, and project layout. |
+| ecc-jira-integration | [`skills/ecc-jira-integration/`](skills/ecc-jira-integration/) | Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct… |
+| ecc-jpa-patterns | [`skills/ecc-jpa-patterns/`](skills/ecc-jpa-patterns/) | JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot. |
+| ecc-knowledge-ops | [`skills/ecc-knowledge-ops/`](skills/ecc-knowledge-ops/) | Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, vector stores, Git repos). Use when the user wants to save, orga… |
+| ecc-kotlin-coroutines-flows | [`skills/ecc-kotlin-coroutines-flows/`](skills/ecc-kotlin-coroutines-flows/) | Kotlin Coroutines and Flow patterns for Android and KMP — structured concurrency, Flow operators, StateFlow, error handling, and testing. |
+| ecc-kotlin-exposed-patterns | [`skills/ecc-kotlin-exposed-patterns/`](skills/ecc-kotlin-exposed-patterns/) | JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway migrations, and repository pattern. |
+| ecc-kotlin-ktor-patterns | [`skills/ecc-kotlin-ktor-patterns/`](skills/ecc-kotlin-ktor-patterns/) | Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing. |
+| ecc-kotlin-patterns | [`skills/ecc-kotlin-patterns/`](skills/ecc-kotlin-patterns/) | Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders. |
+| ecc-kotlin-testing | [`skills/ecc-kotlin-testing/`](skills/ecc-kotlin-testing/) | Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage. Follows TDD methodology with idiomatic Kotlin practices. |
+| ecc-laravel-patterns | [`skills/ecc-laravel-patterns/`](skills/ecc-laravel-patterns/) | Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps. |
+| ecc-laravel-plugin-discovery | [`skills/ecc-laravel-plugin-discovery/`](skills/ecc-laravel-plugin-discovery/) | Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility. |
+| ecc-laravel-security | [`skills/ecc-laravel-security/`](skills/ecc-laravel-security/) | Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limiting, and secure deployment. |
+| ecc-laravel-tdd | [`skills/ecc-laravel-tdd/`](skills/ecc-laravel-tdd/) | Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets. |
+| ecc-laravel-verification | [`skills/ecc-laravel-verification/`](skills/ecc-laravel-verification/) | Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness. |
+| ecc-lead-intelligence | [`skills/ecc-lead-intelligence/`](skills/ecc-lead-intelligence/) | AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice… |
+| ecc-liquid-glass-design | [`skills/ecc-liquid-glass-design/`](skills/ecc-liquid-glass-design/) | iOS 26 Liquid Glass design system — dynamic glass material with blur, reflection, and interactive morphing for SwiftUI, UIKit, and WidgetKit. |
+| ecc-llm-trading-agent-security | [`skills/ecc-llm-trading-agent-security/`](skills/ecc-llm-trading-agent-security/) | Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection,… |
+| ecc-logistics-exception-management | [`skills/ecc-logistics-exception-management/`](skills/ecc-logistics-exception-management/) | > |
+| ecc-manim-video | [`skills/ecc-manim-video/`](skills/ecc-manim-video/) | Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user… |
+| ecc-market-research | [`skills/ecc-market-research/`](skills/ecc-market-research/) | Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants m… |
+| ecc-mcp-server-patterns | [`skills/ecc-mcp-server-patterns/`](skills/ecc-mcp-server-patterns/) | Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API. |
+| ecc-messages-ops | [`skills/ecc-messages-ops/`](skills/ecc-messages-ops/) | Evidence-first live messaging workflow for ECC. Use when the user wants to read texts or DMs, recover a recent one-time code, inspect a thread before replying, or prove which mess… |
+| ecc-nanoclaw-repl | [`skills/ecc-nanoclaw-repl/`](skills/ecc-nanoclaw-repl/) | Operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on claude -p. |
+| ecc-nestjs-patterns | [`skills/ecc-nestjs-patterns/`](skills/ecc-nestjs-patterns/) | NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends. |
+| ecc-nextjs-turbopack | [`skills/ecc-nextjs-turbopack/`](skills/ecc-nextjs-turbopack/) | Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack. |
+| ecc-nodejs-keccak256 | [`skills/ecc-nodejs-keccak256/`](skills/ecc-nodejs-keccak256/) | Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and ad… |
+| ecc-nutrient-document-processing | [`skills/ecc-nutrient-document-processing/`](skills/ecc-nutrient-document-processing/) | Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images. |
+| ecc-nuxt4-patterns | [`skills/ecc-nuxt4-patterns/`](skills/ecc-nuxt4-patterns/) | Nuxt 4 app patterns for hydration safety, performance, route rules, lazy loading, and SSR-safe data fetching with useFetch and useAsyncData. |
+| ecc-openclaw-persona-forge | [`skills/ecc-openclaw-persona-forge/`](skills/ecc-openclaw-persona-forge/) | \|- |
+| ecc-opensource-pipeline | [`skills/ecc-opensource-pipeline/`](skills/ecc-opensource-pipeline/) | Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source th… |
+| ecc-perl-patterns | [`skills/ecc-perl-patterns/`](skills/ecc-perl-patterns/) | Modern Perl 5.36+ idioms, best practices, and conventions for building robust, maintainable Perl applications. |
+| ecc-perl-security | [`skills/ecc-perl-security/`](skills/ecc-perl-security/) | Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries, web security (XSS/SQLi/CSRF), and perlcritic security policie… |
+| ecc-perl-testing | [`skills/ecc-perl-testing/`](skills/ecc-perl-testing/) | Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodology. |
+| ecc-plankton-code-quality | [`skills/ecc-plankton-code-quality/`](skills/ecc-plankton-code-quality/) | Write-time code quality enforcement using Plankton — auto-formatting, linting, and Claude-powered fixes on every file edit via hooks. |
+| ecc-postgres-patterns | [`skills/ecc-postgres-patterns/`](skills/ecc-postgres-patterns/) | PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices. |
+| ecc-product-capability | [`skills/ecc-product-capability/`](skills/ecc-product-capability/) | Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions… |
+| ecc-product-lens | [`skills/ecc-product-lens/`](skills/ecc-product-lens/) | Use this skill to validate the "why" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract. |
+| ecc-production-scheduling | [`skills/ecc-production-scheduling/`](skills/ecc-production-scheduling/) | > |
+| ecc-project-flow-ops | [`skills/ecc-project-flow-ops/`](skills/ecc-project-flow-ops/) | Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keeping GitHub public-facing while Linear remains the internal execu… |
+| ecc-prompt-optimizer | [`skills/ecc-prompt-optimizer/`](skills/ecc-prompt-optimizer/) | >- |
+| ecc-python-patterns | [`skills/ecc-python-patterns/`](skills/ecc-python-patterns/) | Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications. |
+| ecc-python-testing | [`skills/ecc-python-testing/`](skills/ecc-python-testing/) | Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements. |
+| ecc-pytorch-patterns | [`skills/ecc-pytorch-patterns/`](skills/ecc-pytorch-patterns/) | PyTorch deep learning patterns and best practices for building robust, efficient, and reproducible training pipelines, model architectures, and data loading. |
+| ecc-quality-nonconformance | [`skills/ecc-quality-nonconformance/`](skills/ecc-quality-nonconformance/) | > |
+| ecc-ralphinho-rfc-pipeline | [`skills/ecc-ralphinho-rfc-pipeline/`](skills/ecc-ralphinho-rfc-pipeline/) | RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration. |
+| ecc-regex-vs-llm-structured-text | [`skills/ecc-regex-vs-llm-structured-text/`](skills/ecc-regex-vs-llm-structured-text/) | Decision framework for choosing between regex and LLM when parsing structured text — start with regex, add LLM only for low-confidence edge cases. |
+| ecc-remotion-video-creation | [`skills/ecc-remotion-video-creation/`](skills/ecc-remotion-video-creation/) | Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more. |
+| ecc-repo-scan | [`skills/ecc-repo-scan/`](skills/ecc-repo-scan/) | Cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML r… |
+| ecc-research-ops | [`skills/ecc-research-ops/`](skills/ecc-research-ops/) | Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and an… |
+| ecc-returns-reverse-logistics | [`skills/ecc-returns-reverse-logistics/`](skills/ecc-returns-reverse-logistics/) | > |
+| ecc-rules-distill | [`skills/ecc-rules-distill/`](skills/ecc-rules-distill/) | Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files |
+| ecc-rust-patterns | [`skills/ecc-rust-patterns/`](skills/ecc-rust-patterns/) | Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications. |
+| ecc-rust-testing | [`skills/ecc-rust-testing/`](skills/ecc-rust-testing/) | Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology. |
+| ecc-safety-guard | [`skills/ecc-safety-guard/`](skills/ecc-safety-guard/) | Use this skill to prevent destructive operations when working on production systems or running agents autonomously. |
+| ecc-santa-method | [`skills/ecc-santa-method/`](skills/ecc-santa-method/) | Multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships. |
+| ecc-search-first | [`skills/ecc-search-first/`](skills/ecc-search-first/) | Research-before-coding workflow. Search for existing tools, libraries, and patterns before writing custom code. Invokes the researcher agent. |
+| ecc-security-bounty-hunter | [`skills/ecc-security-bounty-hunter/`](skills/ecc-security-bounty-hunter/) | Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findin… |
+| ecc-security-review | [`skills/ecc-security-review/`](skills/ecc-security-review/) | Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive se… |
+| ecc-security-scan | [`skills/ecc-security-scan/`](skills/ecc-security-scan/) | Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, M… |
+| ecc-seo | [`skills/ecc-seo/`](skills/ecc-seo/) | Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vitals, and content strategy. Use when the user wants better sear… |
+| ecc-skill-comply | [`skills/ecc-skill-comply/`](skills/ecc-skill-comply/) | Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences… |
+| ecc-skill-stocktake | [`skills/ecc-skill-stocktake/`](skills/ecc-skill-stocktake/) | Use when auditing Claude skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation. |
+| ecc-social-graph-ranker | [`skills/ecc-social-graph-ranker/`](skills/ecc-social-graph-ranker/) | Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine i… |
+| ecc-springboot-patterns | [`skills/ecc-springboot-patterns/`](skills/ecc-springboot-patterns/) | Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work. |
+| ecc-springboot-security | [`skills/ecc-springboot-security/`](skills/ecc-springboot-security/) | Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services. |
+| ecc-springboot-tdd | [`skills/ecc-springboot-tdd/`](skills/ecc-springboot-tdd/) | Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring. |
+| ecc-springboot-verification | [`skills/ecc-springboot-verification/`](skills/ecc-springboot-verification/) | Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR. |
+| ecc-strategic-compact | [`skills/ecc-strategic-compact/`](skills/ecc-strategic-compact/) | Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. |
+| ecc-swift-actor-persistence | [`skills/ecc-swift-actor-persistence/`](skills/ecc-swift-actor-persistence/) | Thread-safe data persistence in Swift using actors — in-memory cache with file-backed storage, eliminating data races by design. |
+| ecc-swift-concurrency-6-2 | [`skills/ecc-swift-concurrency-6-2/`](skills/ecc-swift-concurrency-6-2/) | Swift 6.2 Approachable Concurrency — single-threaded by default, @concurrent for explicit background offloading, isolated conformances for main actor types. |
+| ecc-swift-protocol-di-testing | [`skills/ecc-swift-protocol-di-testing/`](skills/ecc-swift-protocol-di-testing/) | Protocol-based dependency injection for testable Swift code — mock file system, network, and external APIs using focused protocols and Swift Testing. |
+| ecc-swiftui-patterns | [`skills/ecc-swiftui-patterns/`](skills/ecc-swiftui-patterns/) | SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices. |
+| ecc-tdd-workflow | [`skills/ecc-tdd-workflow/`](skills/ecc-tdd-workflow/) | Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests. |
+| ecc-team-builder | [`skills/ecc-team-builder/`](skills/ecc-team-builder/) | Interactive agent picker for composing and dispatching parallel teams |
+| ecc-terminal-ops | [`skills/ecc-terminal-ops/`](skills/ecc-terminal-ops/) | Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was e… |
+| ecc-token-budget-advisor | [`skills/ecc-token-budget-advisor/`](skills/ecc-token-budget-advisor/) | >- |
+| ecc-ui-demo | [`skills/ecc-ui-demo/`](skills/ecc-ui-demo/) | Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM vide… |
+| ecc-unified-notifications-ops | [`skills/ecc-unified-notifications-ops/`](skills/ecc-unified-notifications-ops/) | Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces. Use when the real problem is alert routing, de… |
+| ecc-verification-loop | [`skills/ecc-verification-loop/`](skills/ecc-verification-loop/) | A comprehensive verification system for Claude Code sessions. |
+| ecc-video-editing | [`skills/ecc-video-editing/`](skills/ecc-video-editing/) | AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai,… |
+| ecc-videodb | [`skills/ecc-videodb/`](skills/ecc-videodb/) | See, Understand, Act on video and audio. See- ingest from local files, URLs, RTSP/live feeds, or live record desktop; return realtime context and playable stream links. Understand… |
+| ecc-visa-doc-translate | [`skills/ecc-visa-doc-translate/`](skills/ecc-visa-doc-translate/) | Translate visa application documents (images) to English and create a bilingual PDF with original and translation |
+| ecc-workspace-surface-audit | [`skills/ecc-workspace-surface-audit/`](skills/ecc-workspace-surface-audit/) | Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows… |
+| ecc-x-api | [`skills/ecc-x-api/`](skills/ecc-x-api/) | X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use… |
 | email-sequence | [`skills/email-sequence/`](skills/email-sequence/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "dr… |
 | excel-automation | [`skills/excel-automation/`](skills/excel-automation/) | Create, parse, and control Excel files on macOS. Professional formatting with openpyxl, complex xlsm parsing with stdlib zipfile+xml for investment bank financial models, and Exce… |
 | executing-plans | [`skills/executing-plans/`](skills/executing-plans/) | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
@@ -723,6 +1049,16 @@ Reference an agent in your `CLAUDE.md`:
 | github-ops | [`skills/github-ops/`](skills/github-ops/) | Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations includin… |
 | golang-idioms | [`skills/golang-idioms/`](skills/golang-idioms/) | Idiomatic Go patterns for error handling, interfaces, concurrency, testing, and module management |
 | graphql-design | [`skills/graphql-design/`](skills/graphql-design/) | GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling |
+| gstack-canary | [`skills/gstack-canary/`](skills/gstack-canary/) | \| |
+| gstack-cso | [`skills/gstack-cso/`](skills/gstack-cso/) | \| |
+| gstack-design-html | [`skills/gstack-design-html/`](skills/gstack-design-html/) | \| |
+| gstack-design-shotgun | [`skills/gstack-design-shotgun/`](skills/gstack-design-shotgun/) | \| |
+| gstack-office-hours | [`skills/gstack-office-hours/`](skills/gstack-office-hours/) | \| |
+| gstack-plan-ceo-review | [`skills/gstack-plan-ceo-review/`](skills/gstack-plan-ceo-review/) | \| |
+| gstack-plan-design-review | [`skills/gstack-plan-design-review/`](skills/gstack-plan-design-review/) | \| |
+| gstack-plan-devex-review | [`skills/gstack-plan-devex-review/`](skills/gstack-plan-devex-review/) | \| |
+| gstack-plan-eng-review | [`skills/gstack-plan-eng-review/`](skills/gstack-plan-eng-review/) | \| |
+| gstack-retro | [`skills/gstack-retro/`](skills/gstack-retro/) | \| |
 | i18n-expert | [`skills/i18n-expert/`](skills/i18n-expert/) | This skill should be used when setting up, auditing, or enforcing internationalization/localization in UI codebases (React/TS, i18next or similar, JSON locales), including install… |
 | iOS-APP-developer | [`skills/iOS-APP-developer/`](skills/iOS-APP-developer/) | Develops iOS/macOS applications with XcodeGen, SwiftUI, and SPM. Handles Apple Developer signing, notarization, and CI/CD pipelines. Triggers on XcodeGen project.yml, SPM dependen… |
 | ima-copilot | [`skills/ima-copilot/`](skills/ima-copilot/) | One-stop companion and installer for the official Tencent IMA skill (腾讯 IMA / ima.qq.com). Handles zero-config installation to Claude Code / Codex / OpenClaw via `npx skills add`,… |
@@ -777,6 +1113,141 @@ Reference an agent in your `CLAUDE.md`:
 | rust-systems | [`skills/rust-systems/`](skills/rust-systems/) | Rust systems programming patterns including ownership, traits, async runtime, error handling, and unsafe guidelines |
 | sales-enablement | [`skills/sales-enablement/`](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one… |
 | schema-markup | [`skills/schema-markup/`](skills/schema-markup/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich… |
+| sci-adaptyv | [`skills/sci-adaptyv/`](skills/sci-adaptyv/) | Cloud laboratory platform for automated protein testing and validation. Use when designing proteins and needing experimental validation including binding assays, expression testin… |
+| sci-aeon | [`skills/sci-aeon/`](skills/sci-aeon/) | This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity sea… |
+| sci-alphafold-database | [`skills/sci-alphafold-database/`](skills/sci-alphafold-database/) | Access AlphaFold's 200M+ AI-predicted protein structures. Retrieve structures by UniProt ID, download PDB/mmCIF files, analyze confidence metrics (pLDDT, PAE), for drug discovery… |
+| sci-anndata | [`skills/sci-anndata/`](skills/sci-anndata/) | This skill should be used when working with annotated data matrices in Python, particularly for single-cell genomics analysis, managing experimental measurements with metadata, or… |
+| sci-arboreto | [`skills/sci-arboreto/`](skills/sci-arboreto/) | Infer gene regulatory networks (GRNs) from gene expression data using scalable algorithms (GRNBoost2, GENIE3). Use when analyzing transcriptomics data (bulk RNA-seq, single-cell R… |
+| sci-astropy | [`skills/sci-astropy/`](skills/sci-astropy/) | Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS fi… |
+| sci-benchling-integration | [`skills/sci-benchling-integration/`](skills/sci-benchling-integration/) | Benchling R&D platform integration. Access registry (DNA, proteins), inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse, for lab data management… |
+| sci-biomni | [`skills/sci-biomni/`](skills/sci-biomni/) | Autonomous biomedical AI agent framework for executing complex research tasks across genomics, drug discovery, molecular biology, and clinical analysis. Use this skill when conduc… |
+| sci-biopython | [`skills/sci-biopython/`](skills/sci-biopython/) | Primary Python toolkit for molecular biology. Preferred for Python-based PubMed/NCBI queries (Bio.Entrez), sequence manipulation, file parsing (FASTA, GenBank, FASTQ, PDB), advanc… |
+| sci-biorxiv-database | [`skills/sci-biorxiv-database/`](skills/sci-biorxiv-database/) | Efficient database search tool for bioRxiv preprint server. Use this skill when searching for life sciences preprints by keywords, authors, date ranges, or categories, retrieving… |
+| sci-bioservices | [`skills/sci-bioservices/`](skills/sci-bioservices/) | Primary Python tool for 40+ bioinformatics services. Preferred for multi-database workflows: UniProt, KEGG, ChEMBL, PubChem, Reactome, QuickGO. Unified API for queries, ID mapping… |
+| sci-brenda-database | [`skills/sci-brenda-database/`](skills/sci-brenda-database/) | Access BRENDA enzyme database via SOAP API. Retrieve kinetic parameters (Km, kcat), reaction equations, organism data, and substrate-specific enzyme information for biochemical re… |
+| sci-cellxgene-census | [`skills/sci-cellxgene-census/`](skills/sci-cellxgene-census/) | Query CZ CELLxGENE Census (61M+ cells). Filter by cell type/tissue/disease, retrieve expression data, integrate with scanpy/PyTorch, for population-scale single-cell analysis. |
+| sci-chembl-database | [`skills/sci-chembl-database/`](skills/sci-chembl-database/) | Query ChEMBL's bioactive molecules and drug discovery data. Search compounds by structure/properties, retrieve bioactivity data (IC50, Ki), find inhibitors, perform SAR studies, f… |
+| sci-cirq | [`skills/sci-cirq/`](skills/sci-cirq/) | Quantum computing framework for building, simulating, optimizing, and executing quantum circuits. Use this skill when working with quantum algorithms, quantum circuit design, quan… |
+| sci-citation-management | [`skills/sci-citation-management/`](skills/sci-citation-management/) | Comprehensive citation management for academic research. Search Google Scholar and PubMed for papers, extract accurate metadata, validate citations, and generate properly formatte… |
+| sci-clinical-decision-support | [`skills/sci-clinical-decision-support/`](skills/sci-clinical-decision-support/) | Generate professional clinical decision support (CDS) documents for pharmaceutical and clinical research settings, including patient cohort analyses (biomarker-stratified with out… |
+| sci-clinical-reports | [`skills/sci-clinical-reports/`](skills/sci-clinical-reports/) | Write comprehensive clinical reports including case reports (CARE guidelines), diagnostic reports (radiology/pathology/lab), clinical trial reports (ICH-E3, SAE, CSR), and patient… |
+| sci-clinicaltrials-database | [`skills/sci-clinicaltrials-database/`](skills/sci-clinicaltrials-database/) | Query ClinicalTrials.gov via API v2. Search trials by condition, drug, location, status, or phase. Retrieve trial details by NCT ID, export data, for clinical research and patient… |
+| sci-clinpgx-database | [`skills/sci-clinpgx-database/`](skills/sci-clinpgx-database/) | Access ClinPGx pharmacogenomics data (successor to PharmGKB). Query gene-drug interactions, CPIC guidelines, allele functions, for precision medicine and genotype-guided dosing de… |
+| sci-clinvar-database | [`skills/sci-clinvar-database/`](skills/sci-clinvar-database/) | Query NCBI ClinVar for variant clinical significance. Search by gene/position, interpret pathogenicity classifications, access via E-utilities API or FTP, annotate VCFs, for genom… |
+| sci-cobrapy | [`skills/sci-cobrapy/`](skills/sci-cobrapy/) | Constraint-based metabolic modeling (COBRA). FBA, FVA, gene knockouts, flux sampling, SBML models, for systems biology and metabolic engineering analysis. |
+| sci-cosmic-database | [`skills/sci-cosmic-database/`](skills/sci-cosmic-database/) | Access COSMIC cancer mutation database. Query somatic mutations, Cancer Gene Census, mutational signatures, gene fusions, for cancer research and precision oncology. Requires auth… |
+| sci-dask | [`skills/sci-dask/`](skills/sci-dask/) | Parallel/distributed computing. Scale pandas/NumPy beyond memory, parallel DataFrames/Arrays, multi-file processing, task graphs, for larger-than-RAM datasets and parallel workflo… |
+| sci-datacommons-client | [`skills/sci-datacommons-client/`](skills/sci-datacommons-client/) | Work with Data Commons, a platform providing programmatic access to public statistical data from global sources. Use this skill when working with demographic data, economic indica… |
+| sci-datamol | [`skills/sci-datamol/`](skills/sci-datamol/) | Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, c… |
+| sci-deepchem | [`skills/sci-deepchem/`](skills/sci-deepchem/) | Molecular machine learning toolkit. Property prediction (ADMET, toxicity), GNNs (GCN, MPNN), MoleculeNet benchmarks, pretrained models, featurization, for drug discovery ML. |
+| sci-deeptools | [`skills/sci-deeptools/`](skills/sci-deeptools/) | NGS analysis toolkit. BAM to bigWig conversion, QC (correlation, PCA, fingerprints), heatmaps/profiles (TSS, peaks), for ChIP-seq, RNA-seq, ATAC-seq visualization. |
+| sci-denario | [`skills/sci-denario/`](skills/sci-denario/) | Multiagent AI system for scientific research assistance that automates research workflows from data analysis to publication. This skill should be used when generating research ide… |
+| sci-diffdock | [`skills/sci-diffdock/`](skills/sci-diffdock/) | Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity pr… |
+| sci-dnanexus-integration | [`skills/sci-dnanexus-integration/`](skills/sci-dnanexus-integration/) | DNAnexus cloud genomics platform. Build apps/applets, manage data (upload/download), dxpy Python SDK, run workflows, FASTQ/BAM/VCF, for genomics pipeline development and execution. |
+| sci-drugbank-database | [`skills/sci-drugbank-database/`](skills/sci-drugbank-database/) | Access and analyze comprehensive drug information from the DrugBank database including drug properties, interactions, targets, pathways, chemical structures, and pharmacology data… |
+| sci-ena-database | [`skills/sci-ena-database/`](skills/sci-ena-database/) | Access European Nucleotide Archive via API/FTP. Retrieve DNA/RNA sequences, raw reads (FASTQ), genome assemblies by accession, for genomics and bioinformatics pipelines. Supports… |
+| sci-ensembl-database | [`skills/sci-ensembl-database/`](skills/sci-ensembl-database/) | Query Ensembl genome database REST API for 250+ species. Gene lookups, sequence retrieval, variant analysis, comparative genomics, orthologs, VEP predictions, for genomic research. |
+| sci-esm | [`skills/sci-esm/`](skills/sci-esm/) | Comprehensive toolkit for protein language models including ESM3 (generative multimodal protein design across sequence, structure, and function) and ESM C (efficient protein embed… |
+| sci-etetoolkit | [`skills/sci-etetoolkit/`](skills/sci-etetoolkit/) | Phylogenetic tree toolkit (ETE). Tree manipulation (Newick/NHX), evolutionary event detection, orthology/paralogy, NCBI taxonomy, visualization (PDF/SVG), for phylogenomics. |
+| sci-exploratory-data-analysis | [`skills/sci-exploratory-data-analysis/`](skills/sci-exploratory-data-analysis/) | Perform comprehensive exploratory data analysis on scientific data files across 200+ file formats. This skill should be used when analyzing any scientific data file to understand… |
+| sci-fda-database | [`skills/sci-fda-database/`](skills/sci-fda-database/) | Query openFDA API for drugs, devices, adverse events, recalls, regulatory submissions (510k, PMA), substance identification (UNII), for FDA regulatory data analysis and safety res… |
+| sci-flowio | [`skills/sci-flowio/`](skills/sci-flowio/) | Parse FCS (Flow Cytometry Standard) files v2.0-3.1. Extract events as NumPy arrays, read metadata/channels, convert to CSV/DataFrame, for flow cytometry data preprocessing. |
+| sci-fluidsim | [`skills/sci-fluidsim/`](skills/sci-fluidsim/) | Framework for computational fluid dynamics simulations using Python. Use when running fluid dynamics simulations including Navier-Stokes equations (2D/3D), shallow water equations… |
+| sci-gene-database | [`skills/sci-gene-database/`](skills/sci-gene-database/) | Query NCBI Gene via E-utilities/Datasets API. Search by symbol/ID, retrieve gene info (RefSeqs, GO, locations, phenotypes), batch lookups, for gene annotation and functional analy… |
+| sci-generate-image | [`skills/sci-generate-image/`](skills/sci-generate-image/) | Generate or edit images using AI models (FLUX, Gemini). Use for general-purpose image generation including photos, illustrations, artwork, visual assets, concept art, and any imag… |
+| sci-geniml | [`skills/sci-geniml/`](skills/sci-geniml/) | This skill should be used when working with genomic interval data (BED files) for machine learning tasks. Use for training region embeddings (Region2Vec, BEDspace), single-cell AT… |
+| sci-geo-database | [`skills/sci-geo-database/`](skills/sci-geo-database/) | Access NCBI GEO for gene expression/genomics data. Search/download microarray and RNA-seq datasets (GSE, GSM, GPL), retrieve SOFT/Matrix files, for transcriptomics and expression… |
+| sci-geopandas | [`skills/sci-geopandas/`](skills/sci-geopandas/) | Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric o… |
+| sci-get-available-resources | [`skills/sci-get-available-resources/`](skills/sci-get-available-resources/) | This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It c… |
+| sci-gget | [`skills/sci-gget/`](skills/sci-gget/) | CLI/Python toolkit for rapid bioinformatics queries. Preferred for quick BLAST searches. Access to 20+ databases: gene info (Ensembl/UniProt), AlphaFold, ARCHS4, Enrichr, OpenTarg… |
+| sci-gtars | [`skills/sci-gtars/`](skills/sci-gtars/) | High-performance toolkit for genomic interval analysis in Rust with Python bindings. Use when working with genomic regions, BED files, coverage tracks, overlap detection, tokeniza… |
+| sci-gwas-database | [`skills/sci-gwas-database/`](skills/sci-gwas-database/) | Query NHGRI-EBI GWAS Catalog for SNP-trait associations. Search variants by rs ID, disease/trait, gene, retrieve p-values and summary statistics, for genetic epidemiology and poly… |
+| sci-histolab | [`skills/sci-histolab/`](skills/sci-histolab/) | Digital pathology image processing toolkit for whole slide images (WSI). Use this skill when working with histopathology slides, processing H&E or IHC stained tissue images, extra… |
+| sci-hmdb-database | [`skills/sci-hmdb-database/`](skills/sci-hmdb-database/) | Access Human Metabolome Database (220K+ metabolites). Search by name/ID/structure, retrieve chemical properties, biomarker data, NMR/MS spectra, pathways, for metabolomics and ide… |
+| sci-hypogenic | [`skills/sci-hypogenic/`](skills/sci-hypogenic/) | Automated hypothesis generation and testing using large language models. Use this skill when generating scientific hypotheses from datasets, combining literature insights with emp… |
+| sci-hypothesis-generation | [`skills/sci-hypothesis-generation/`](skills/sci-hypothesis-generation/) | Generate testable hypotheses. Formulate from observations, design experiments, explore competing explanations, develop predictions, propose mechanisms, for scientific inquiry acro… |
+| sci-kegg-database | [`skills/sci-kegg-database/`](skills/sci-kegg-database/) | Direct REST API access to KEGG (academic use only). Pathway analysis, gene-pathway mapping, metabolic pathways, drug interactions, ID conversion. For Python workflows with multipl… |
+| sci-labarchive-integration | [`skills/sci-labarchive-integration/`](skills/sci-labarchive-integration/) | Electronic lab notebook API integration. Access notebooks, manage entries/attachments, backup notebooks, integrate with Protocols.io/Jupyter/REDCap, for programmatic ELN workflows. |
+| sci-lamindb | [`skills/sci-lamindb/`](skills/sci-lamindb/) | This skill should be used when working with LaminDB, an open-source data framework for biology that makes data queryable, traceable, reproducible, and FAIR. Use when managing biol… |
+| sci-latchbio-integration | [`skills/sci-latchbio-integration/`](skills/sci-latchbio-integration/) | Latch platform for bioinformatics workflows. Build pipelines with Latch SDK, @workflow/@task decorators, deploy serverless workflows, LatchFile/LatchDir, Nextflow/Snakemake integr… |
+| sci-latex-posters | [`skills/sci-latex-posters/`](skills/sci-latex-posters/) | Create professional research posters in LaTeX using beamerposter, tikzposter, or baposter. Support for conference presentations, academic posters, and scientific communication. In… |
+| sci-literature-review | [`skills/sci-literature-review/`](skills/sci-literature-review/) | Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting… |
+| sci-market-research-reports | [`skills/sci-market-research-reports/`](skills/sci-market-research-reports/) | Generate comprehensive market research reports (50+ pages) in the style of top consulting firms (McKinsey, BCG, Gartner). Features professional LaTeX formatting, extensive visual… |
+| sci-markitdown | [`skills/sci-markitdown/`](skills/sci-markitdown/) | Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs and m… |
+| sci-matchms | [`skills/sci-matchms/`](skills/sci-matchms/) | Mass spectrometry analysis. Process mzML/MGF/MSP, spectral similarity (cosine, modified cosine), metadata harmonization, compound ID, for metabolomics and MS data processing. |
+| sci-matplotlib | [`skills/sci-matplotlib/`](skills/sci-matplotlib/) | Foundational plotting library. Create line plots, scatter, bar, histograms, heatmaps, 3D, subplots, export PNG/PDF/SVG, for scientific visualization and publication figures. |
+| sci-medchem | [`skills/sci-medchem/`](skills/sci-medchem/) | Medicinal chemistry filters. Apply drug-likeness rules (Lipinski, Veber), PAINS filters, structural alerts, complexity metrics, for compound prioritization and library filtering. |
+| sci-metabolomics-workbench-database | [`skills/sci-metabolomics-workbench-database/`](skills/sci-metabolomics-workbench-database/) | Access NIH Metabolomics Workbench via REST API (4,200+ studies). Query metabolites, RefMet nomenclature, MS/NMR data, m/z searches, study metadata, for metabolomics and biomarker… |
+| sci-modal | [`skills/sci-modal/`](skills/sci-modal/) | Run Python code in the cloud with serverless containers, GPUs, and autoscaling. Use when deploying ML models, running batch processing jobs, scheduling compute-intensive tasks, or… |
+| sci-molfeat | [`skills/sci-molfeat/`](skills/sci-molfeat/) | Molecular featurization for ML (100+ featurizers). ECFP, MACCS, descriptors, pretrained models (ChemBERTa), convert SMILES to features, for QSAR and molecular ML. |
+| sci-networkx | [`skills/sci-networkx/`](skills/sci-networkx/) | Comprehensive toolkit for creating, analyzing, and visualizing complex networks and graphs in Python. Use when working with network/graph data structures, analyzing relationships… |
+| sci-neurokit2 | [`skills/sci-neurokit2/`](skills/sci-neurokit2/) | Comprehensive biosignal processing toolkit for analyzing physiological data including ECG, EEG, EDA, RSP, PPG, EMG, and EOG signals. Use this skill when processing cardiovascular… |
+| sci-neuropixels-analysis | [`skills/sci-neuropixels-analysis/`](skills/sci-neuropixels-analysis/) | Neuropixels neural recording analysis. Load SpikeGLX/OpenEphys data, preprocess, motion correction, Kilosort4 spike sorting, quality metrics, Allen/IBL curation, AI-assisted visua… |
+| sci-omero-integration | [`skills/sci-omero-integration/`](skills/sci-omero-integration/) | Microscopy data management platform. Access images via Python, retrieve datasets, analyze pixels, manage ROIs/annotations, batch processing, for high-content screening and microsc… |
+| sci-openalex-database | [`skills/sci-openalex-database/`](skills/sci-openalex-database/) | Query and analyze scholarly literature using the OpenAlex database. This skill should be used when searching for academic papers, analyzing research trends, finding works by autho… |
+| sci-opentargets-database | [`skills/sci-opentargets-database/`](skills/sci-opentargets-database/) | Query Open Targets Platform for target-disease associations, drug target discovery, tractability/safety data, genetics/omics evidence, known drugs, for therapeutic target identifi… |
+| sci-opentrons-integration | [`skills/sci-opentrons-integration/`](skills/sci-opentrons-integration/) | Lab automation platform for Flex/OT-2 robots. Write Protocol API v2 protocols, liquid handling, hardware modules (heater-shaker, thermocycler), labware management, for automated p… |
+| sci-paper-2-web | [`skills/sci-paper-2-web/`](skills/sci-paper-2-web/) | This skill should be used when converting academic papers into promotional and presentation formats including interactive websites (Paper2Web), presentation videos (Paper2Video),… |
+| sci-pathml | [`skills/sci-pathml/`](skills/sci-pathml/) | Computational pathology toolkit for analyzing whole-slide images (WSI) and multiparametric imaging data. Use this skill when working with histopathology slides, H&E stained images… |
+| sci-pdb-database | [`skills/sci-pdb-database/`](skills/sci-pdb-database/) | Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure, download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and drug dis… |
+| sci-peer-review | [`skills/sci-peer-review/`](skills/sci-peer-review/) | Systematic peer review toolkit. Evaluate methodology, statistics, design, reproducibility, ethics, figure integrity, reporting standards, for manuscript and grant review across di… |
+| sci-pennylane | [`skills/sci-pennylane/`](skills/sci-pennylane/) | Cross-platform Python library for quantum computing, quantum machine learning, and quantum chemistry. Enables building and training quantum circuits with automatic differentiation… |
+| sci-perplexity-search | [`skills/sci-perplexity-search/`](skills/sci-perplexity-search/) | Perform AI-powered web searches with real-time information using Perplexity models via LiteLLM and OpenRouter. This skill should be used when conducting web searches for current i… |
+| sci-plotly | [`skills/sci-plotly/`](skills/sci-plotly/) | Interactive scientific and statistical data visualization library for Python. Use when creating charts, plots, or visualizations including scatter plots, line charts, bar charts,… |
+| sci-polars | [`skills/sci-polars/`](skills/sci-polars/) | Fast DataFrame library (Apache Arrow). Select, filter, group_by, joins, lazy evaluation, CSV/Parquet I/O, expression API, for high-performance data analysis workflows. |
+| sci-pptx-posters | [`skills/sci-pptx-posters/`](skills/sci-pptx-posters/) | Create professional research posters in LaTeX using beamerposter, tikzposter, or baposter. Support for conference presentations, academic posters, and scientific communication. In… |
+| sci-protocolsio-integration | [`skills/sci-protocolsio-integration/`](skills/sci-protocolsio-integration/) | Integration with protocols.io API for managing scientific protocols. This skill should be used when working with protocols.io to search, create, update, or publish protocols; mana… |
+| sci-pubchem-database | [`skills/sci-pubchem-database/`](skills/sci-pubchem-database/) | Query PubChem via PUG-REST API/PubChemPy (110M+ compounds). Search by name/CID/SMILES, retrieve properties, similarity/substructure searches, bioactivity, for cheminformatics. |
+| sci-pubmed-database | [`skills/sci-pubmed-database/`](skills/sci-pubmed-database/) | Direct REST API access to PubMed. Advanced Boolean/MeSH queries, E-utilities API, batch processing, citation management. For Python workflows, prefer biopython (Bio.Entrez). Use t… |
+| sci-pufferlib | [`skills/sci-pufferlib/`](skills/sci-pufferlib/) | This skill should be used when working with reinforcement learning tasks including high-performance RL training, custom environment development, vectorized parallel simulation, mu… |
+| sci-pydeseq2 | [`skills/sci-pydeseq2/`](skills/sci-pydeseq2/) | Differential gene expression analysis (Python DESeq2). Identify DE genes from bulk RNA-seq counts, Wald tests, FDR correction, volcano/MA plots, for RNA-seq analysis. |
+| sci-pydicom | [`skills/sci-pydicom/`](skills/sci-pydicom/) | Python library for working with DICOM (Digital Imaging and Communications in Medicine) files. Use this skill when reading, writing, or modifying medical imaging data in DICOM form… |
+| sci-pyhealth | [`skills/sci-pyhealth/`](skills/sci-pyhealth/) | Comprehensive healthcare AI toolkit for developing, testing, and deploying machine learning models with clinical data. This skill should be used when working with electronic healt… |
+| sci-pylabrobot | [`skills/sci-pylabrobot/`](skills/sci-pylabrobot/) | Laboratory automation toolkit for controlling liquid handlers, plate readers, pumps, heater shakers, incubators, centrifuges, and analytical equipment. Use this skill when automat… |
+| sci-pymatgen | [`skills/sci-pymatgen/`](skills/sci-pymatgen/) | Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, band structure, DOS, Materials Project integration, format conversion, for computational materials sci… |
+| sci-pymc | [`skills/sci-pymc/`](skills/sci-pymc/) | Bayesian modeling with PyMC. Build hierarchical models, MCMC (NUTS), variational inference, LOO/WAIC comparison, posterior checks, for probabilistic programming and inference. |
+| sci-pymoo | [`skills/sci-pymoo/`](skills/sci-pymoo/) | Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto fronts, constraint handling, benchmarks (ZDT, DTLZ), for engineering design and optimization problems. |
+| sci-pyopenms | [`skills/sci-pyopenms/`](skills/sci-pyopenms/) | Python interface to OpenMS for mass spectrometry data analysis. Use for LC-MS/MS proteomics and metabolomics workflows including file handling (mzML, mzXML, mzTab, FASTA, pepXML,… |
+| sci-pysam | [`skills/sci-pysam/`](skills/sci-pysam/) | Genomic file toolkit. Read/write SAM/BAM/CRAM alignments, VCF/BCF variants, FASTA/FASTQ sequences, extract regions, calculate coverage, for NGS data processing pipelines. |
+| sci-pytdc | [`skills/sci-pytdc/`](skills/sci-pytdc/) | Therapeutics Data Commons. AI-ready drug discovery datasets (ADME, toxicity, DTI), benchmarks, scaffold splits, molecular oracles, for therapeutic ML and pharmacological predictio… |
+| sci-pytorch-lightning | [`skills/sci-pytorch-lightning/`](skills/sci-pytorch-lightning/) | Deep learning framework (PyTorch Lightning). Organize PyTorch code into LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines, callbacks, logging (W&B,… |
+| sci-qiskit | [`skills/sci-qiskit/`](skills/sci-qiskit/) | Comprehensive quantum computing toolkit for building, optimizing, and executing quantum circuits. Use when working with quantum algorithms, simulations, or quantum hardware includ… |
+| sci-qutip | [`skills/sci-qutip/`](skills/sci-qutip/) | Quantum mechanics simulations and analysis using QuTiP (Quantum Toolbox in Python). Use when working with quantum systems including: (1) quantum states (kets, bras, density matric… |
+| sci-rdkit | [`skills/sci-rdkit/`](skills/sci-rdkit/) | Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure search, 2D/3D generation, similarity, reac… |
+| sci-reactome-database | [`skills/sci-reactome-database/`](skills/sci-reactome-database/) | Query Reactome REST API for pathway analysis, enrichment, gene-pathway mapping, disease pathways, molecular interactions, expression analysis, for systems biology studies. |
+| sci-research-grants | [`skills/sci-research-grants/`](skills/sci-research-grants/) | Write competitive research proposals for NSF, NIH, DOE, and DARPA. Agency-specific formatting, review criteria, budget preparation, broader impacts, significance statements, innov… |
+| sci-research-lookup | [`skills/sci-research-lookup/`](skills/sci-research-lookup/) | Look up current research information using Perplexity's Sonar Pro Search or Sonar Reasoning Pro models through OpenRouter. Automatically selects the best model based on query comp… |
+| sci-scanpy | [`skills/sci-scanpy/`](skills/sci-scanpy/) | Single-cell RNA-seq analysis. Load .h5ad/10X data, QC, normalization, PCA/UMAP/t-SNE, Leiden clustering, marker genes, cell type annotation, trajectory, for scRNA-seq analysis. |
+| sci-scholar-evaluation | [`skills/sci-scholar-evaluation/`](skills/sci-scholar-evaluation/) | Skill: sci-scholar-evaluation |
+| sci-scientific-brainstorming | [`skills/sci-scientific-brainstorming/`](skills/sci-scientific-brainstorming/) | Research ideation partner. Generate hypotheses, explore interdisciplinary connections, challenge assumptions, develop methodologies, identify research gaps, for creative scientifi… |
+| sci-scientific-critical-thinking | [`skills/sci-scientific-critical-thinking/`](skills/sci-scientific-critical-thinking/) | Evaluate research rigor. Assess methodology, experimental design, statistical validity, biases, confounding, evidence quality (GRADE, Cochrane ROB), for critical analysis of scien… |
+| sci-scientific-schematics | [`skills/sci-scientific-schematics/`](skills/sci-scientific-schematics/) | Create publication-quality scientific diagrams using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3 Pro for quality review. Only regenerates if quality is below… |
+| sci-scientific-slides | [`skills/sci-scientific-slides/`](skills/sci-scientific-slides/) | Build slide decks and presentations for research talks. Use this for making PowerPoint slides, conference presentations, seminar talks, research presentations, thesis defense slid… |
+| sci-scientific-visualization | [`skills/sci-scientific-visualization/`](skills/sci-scientific-visualization/) | Create publication figures with matplotlib/seaborn/plotly. Multi-panel layouts, error bars, significance markers, colorblind-safe, export PDF/EPS/TIFF, for journal-ready scientifi… |
+| sci-scientific-writing | [`skills/sci-scientific-writing/`](skills/sci-scientific-writing/) | Core skill for the deep research and writing tool. Write scientific manuscripts in full paragraphs (never bullet points). Use two-stage process: (1) create section outlines with k… |
+| sci-scikit-bio | [`skills/sci-scikit-bio/`](skills/sci-scikit-bio/) | Biological data toolkit. Sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome… |
+| sci-scikit-learn | [`skills/sci-scikit-learn/`](skills/sci-scikit-learn/) | Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction),… |
+| sci-scikit-survival | [`skills/sci-scikit-survival/`](skills/sci-scikit-survival/) | Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to… |
+| sci-scvi-tools | [`skills/sci-scvi-tools/`](skills/sci-scvi-tools/) | This skill should be used when working with single-cell omics data analysis using scvi-tools, including scRNA-seq, scATAC-seq, CITE-seq, spatial transcriptomics, and other single-… |
+| sci-seaborn | [`skills/sci-seaborn/`](skills/sci-seaborn/) | Statistical visualization. Scatter, box, violin, heatmaps, pair plots, regression, correlation matrices, KDE, faceted plots, for exploratory analysis and publication figures. |
+| sci-shap | [`skills/sci-shap/`](skills/sci-shap/) | Model interpretability and explainability using SHAP (SHapley Additive exPlanations). Use this skill when explaining machine learning model predictions, computing feature importan… |
+| sci-simpy | [`skills/sci-simpy/`](skills/sci-simpy/) | Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as m… |
+| sci-stable-baselines3 | [`skills/sci-stable-baselines3/`](skills/sci-stable-baselines3/) | Use this skill for reinforcement learning tasks including training RL agents (PPO, SAC, DQN, TD3, DDPG, A2C, etc.), creating custom Gym environments, implementing callbacks for mo… |
+| sci-statistical-analysis | [`skills/sci-statistical-analysis/`](skills/sci-statistical-analysis/) | Statistical analysis toolkit. Hypothesis tests (t-test, ANOVA, chi-square), regression, correlation, Bayesian stats, power analysis, assumption checks, APA reporting, for academic… |
+| sci-statsmodels | [`skills/sci-statsmodels/`](skills/sci-statsmodels/) | Statistical modeling toolkit. OLS, GLM, logistic, ARIMA, time series, hypothesis tests, diagnostics, AIC/BIC, for rigorous statistical inference and econometric analysis. |
+| sci-string-database | [`skills/sci-string-database/`](skills/sci-string-database/) | Query STRING API for protein-protein interactions (59M proteins, 20B interactions). Network analysis, GO/KEGG enrichment, interaction discovery, 5000+ species, for systems biology. |
+| sci-sympy | [`skills/sci-sympy/`](skills/sci-sympy/) | Use this skill when working with symbolic mathematics in Python. This skill should be used for symbolic computation tasks including solving equations algebraically, performing cal… |
+| sci-torch_geometric | [`skills/sci-torch_geometric/`](skills/sci-torch_geometric/) | Graph Neural Networks (PyG). Node/graph classification, link prediction, GCN, GAT, GraphSAGE, heterogeneous graphs, molecular property prediction, for geometric deep learning. |
+| sci-torchdrug | [`skills/sci-torchdrug/`](skills/sci-torchdrug/) | Graph-based drug discovery toolkit. Molecular property prediction (ADMET), protein modeling, knowledge graph reasoning, molecular generation, retrosynthesis, GNNs (GIN, GAT, SchNe… |
+| sci-transformers | [`skills/sci-transformers/`](skills/sci-transformers/) | This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, c… |
+| sci-treatment-plans | [`skills/sci-treatment-plans/`](skills/sci-treatment-plans/) | Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format for all clinical specialties. Supports general medical treatment, rehabilitation therapy, mental h… |
+| sci-umap-learn | [`skills/sci-umap-learn/`](skills/sci-umap-learn/) | UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data. |
+| sci-uniprot-database | [`skills/sci-uniprot-database/`](skills/sci-uniprot-database/) | Direct REST API access to UniProt. Protein searches, FASTA retrieval, ID mapping, Swiss-Prot/TrEMBL. For Python workflows with multiple databases, prefer bioservices (unified inte… |
+| sci-uspto-database | [`skills/sci-uspto-database/`](skills/sci-uspto-database/) | Access USPTO APIs for patent/trademark searches, examination history (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior art searches. |
+| sci-vaex | [`skills/sci-vaex/`](skills/sci-vaex/) | Use this skill for processing and analyzing large tabular datasets (billions of rows) that exceed available RAM. Vaex excels at out-of-core DataFrame operations, lazy evaluation,… |
+| sci-venue-templates | [`skills/sci-venue-templates/`](skills/sci-venue-templates/) | Access comprehensive LaTeX templates, formatting requirements, and submission guidelines for major scientific publication venues (Nature, Science, PLOS, IEEE, ACM), academic confe… |
+| sci-zarr-python | [`skills/sci-zarr-python/`](skills/sci-zarr-python/) | Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines. |
+| sci-zinc-database | [`skills/sci-zinc-database/`](skills/sci-zinc-database/) | Access ZINC (230M+ purchasable compounds). Search by ZINC ID/SMILES, similarity searches, 3D-ready structures for docking, analog discovery, for virtual screening and drug discove… |
 | scrapling-skill | [`skills/scrapling-skill/`](skills/scrapling-skill/) | Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `s… |
 | security-hardening | [`skills/security-hardening/`](skills/security-hardening/) | Application security covering input validation, auth, headers, secrets management, and dependency auditing |
 | seo-audit | [`skills/seo-audit/`](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on… |
@@ -821,7 +1292,7 @@ Reference an agent in your `CLAUDE.md`:
 
 ## Commands
 
-42 slash commands organized by function (git, testing, architecture, documentation, security, refactoring, devops, workflow). Drop into `.claude/commands/`:
+128 slash commands organized by function (git, testing, architecture, documentation, security, refactoring, devops, workflow). Drop into `.claude/commands/`:
 
 ```bash
 cp -r commands/ .claude/commands/
@@ -833,7 +1304,7 @@ Browse: [`commands/`](commands/)
 
 ## Hooks
 
-21 hook scripts covering Claude Code lifecycle events (SessionStart, SessionEnd, PreToolUse, PostToolUse, PreCompact, Stop, Notification, UserPromptSubmit).
+32 hook scripts covering Claude Code lifecycle events (SessionStart, SessionEnd, PreToolUse, PostToolUse, PreCompact, Stop, Notification, UserPromptSubmit).
 
 ```bash
 cp hooks/hooks.json .claude/hooks.json
@@ -846,7 +1317,7 @@ Browse: [`hooks/`](hooks/)
 
 ## Rules
 
-15 coding rules enforcing consistent patterns (coding style, git workflow, testing, security, performance, docs, error handling, and more).
+104 coding rules enforcing consistent patterns (coding style, git workflow, testing, security, performance, docs, error handling, and more).
 
 Browse: [`rules/`](rules/)
 
@@ -854,7 +1325,7 @@ Browse: [`rules/`](rules/)
 
 ## Templates
 
-8 `CLAUDE.md` templates for different project types (minimal, standard, comprehensive, monorepo, enterprise, python, fullstack).
+9 `CLAUDE.md` templates for different project types (minimal, standard, comprehensive, monorepo, enterprise, python, fullstack).
 
 ```bash
 cp templates/claude-md/standard.md CLAUDE.md
@@ -866,7 +1337,7 @@ Browse: [`templates/`](templates/)
 
 ## MCP Configs
 
-14 curated Model Context Protocol server configurations (fullstack, kubernetes, data-science, and more).
+98 curated Model Context Protocol server configurations (fullstack, kubernetes, data-science, and more).
 
 Browse: [`mcp-configs/`](mcp-configs/)
 
@@ -913,6 +1384,13 @@ This marketplace is forked and personalized from [rohitg00/awesome-claude-code-t
 - **36 marketing skills** (CRO, SEO, paid ads, email, copywriting, pricing, launch, …) — from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
 - **14 Superpowers skills** (structured multi-agent workflows: brainstorm → plan → execute → review) — from [obra/superpowers](https://github.com/obra/superpowers)
 - **131+ subagents** across 10 categories (`core-development`, `language-experts`, `infrastructure`, `quality-assurance`, `data-ai`, `developer-experience`, `specialized-domains`, `business-product`, `orchestration`, `research-analysis`) — from [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents). These power Muk's agent dispatch and are referenced via Pow's Spine 4 (ULTRAPLAN delegate).
+- **~328 skills + 33 agents + 86 commands + 11 hooks + 89 rules + 84 MCP configs + 1 template** from the kdnuggets-10 sweep:
+  - [`gsd-build/get-shit-done`](https://github.com/gsd-build/get-shit-done) — phase-system spec-driven dev (33 `gsd-*` agents, 86 commands, 11 hooks)
+  - [`affaan-m/everything-claude-code`](https://github.com/affaan-m/everything-claude-code) — 183 `ecc-*` skills + 89 language rules under `rules/ecc/`
+  - [`davila7/claude-code-templates`](https://github.com/davila7/claude-code-templates) — 135 `sci-*` K-Dense scientific skills + 84 MCP configs at `mcp-configs/dt/`
+  - [`garrytan/gstack`](https://github.com/garrytan/gstack) — 10 cherry-picked role-coded `gstack-*` skills (plan-*-review, office-hours, cso, canary, retro, design-shotgun, design-html)
+  - [`shanraisshan/claude-code-best-practice`](https://github.com/shanraisshan/claude-code-best-practice) — settings.json template at `templates/settings-ccbp.example.json`
+  - Pointer-only (not vendored): [`x1xhlol/system-prompts-and-models-of-ai-tools`](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) (GPL), [`Piebald-AI/claude-code-system-prompts`](https://github.com/Piebald-AI/claude-code-system-prompts), [`shareAI-lab/learn-claude-code`](https://github.com/shareAI-lab/learn-claude-code) — study these directly for harness internals.
 - **7 agent-browser skills** (deterministic browser control + 6 integration packs) — from [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 - **7 Vercel agent-skills** (`web-design-guidelines`, `deploy-to-vercel`, `react-best-practices`, `react-view-transitions`, …) — from [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
 - **`agent-sandboxes`** skill — from [disler/agent-sandbox-skill](https://github.com/disler/agent-sandbox-skill)

@@ -1163,6 +1163,1104 @@
       "version": "1.0.0"
     },
     {
+      "name": "ecc-accessibility",
+      "source": "skills/ecc-accessibility",
+      "description": "Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agent-eval",
+      "source": "skills/ecc-agent-eval",
+      "description": "Skill: ecc-agent-eval",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agent-harness-construction",
+      "source": "skills/ecc-agent-harness-construction",
+      "description": "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agent-introspection-debugging",
+      "source": "skills/ecc-agent-introspection-debugging",
+      "description": "Skill: ecc-agent-introspection-debugging",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agent-payment-x402",
+      "source": "skills/ecc-agent-payment-x402",
+      "description": "Add x402 payment execution to AI agents \u00e2\u20ac\u201d per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other agents.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agent-sort",
+      "source": "skills/ecc-agent-sort",
+      "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-agentic-engineering",
+      "source": "skills/ecc-agentic-engineering",
+      "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ai-first-engineering",
+      "source": "skills/ecc-ai-first-engineering",
+      "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ai-regression-testing",
+      "source": "skills/ecc-ai-regression-testing",
+      "description": "Skill: ecc-ai-regression-testing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-android-clean-architecture",
+      "source": "skills/ecc-android-clean-architecture",
+      "description": "Clean Architecture patterns for Android and Kotlin Multiplatform projects \u00e2\u20ac\u201d module structure, dependency rules, UseCases, Repositories, and data layer patterns.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-api-connector-builder",
+      "source": "skills/ecc-api-connector-builder",
+      "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-api-design",
+      "source": "skills/ecc-api-design",
+      "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-architecture-decision-records",
+      "source": "skills/ecc-architecture-decision-records",
+      "description": "Skill: ecc-architecture-decision-records",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-article-writing",
+      "source": "skills/ecc-article-writing",
+      "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-automation-audit-ops",
+      "source": "skills/ecc-automation-audit-ops",
+      "description": "Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, redundant, or missing before fixing anything.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-autonomous-agent-harness",
+      "source": "skills/ecc-autonomous-agent-harness",
+      "description": "Skill: ecc-autonomous-agent-harness",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-autonomous-loops",
+      "source": "skills/ecc-autonomous-loops",
+      "description": "Skill: ecc-autonomous-loops",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-backend-patterns",
+      "source": "skills/ecc-backend-patterns",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-benchmark",
+      "source": "skills/ecc-benchmark",
+      "description": "Use this skill to measure performance baselines, detect regressions before/after PRs, and compare stack alternatives.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-blueprint",
+      "source": "skills/ecc-blueprint",
+      "description": ">-",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-brand-voice",
+      "source": "skills/ecc-brand-voice",
+      "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-browser-qa",
+      "source": "skills/ecc-browser-qa",
+      "description": "Use this skill to automate visual testing and UI interaction verification using browser automation after deploying features.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-bun-runtime",
+      "source": "skills/ecc-bun-runtime",
+      "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-canary-watch",
+      "source": "skills/ecc-canary-watch",
+      "description": "Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-carrier-relationship-management",
+      "source": "skills/ecc-carrier-relationship-management",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ck",
+      "source": "skills/ecc-ck",
+      "description": "Skill: ecc-ck",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-claude-api",
+      "source": "skills/ecc-claude-api",
+      "description": "Anthropic Claude API patterns for Python and TypeScript. Covers Messages API, streaming, tool use, vision, extended thinking, batches, prompt caching, and Claude Agent SDK. Use when building applications with the Claude API or Anthropic SDKs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-claude-devfleet",
+      "source": "skills/ecc-claude-devfleet",
+      "description": "Orchestrate multi-agent coding tasks via Claude DevFleet \u00e2\u20ac\u201d plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-click-path-audit",
+      "source": "skills/ecc-click-path-audit",
+      "description": "Skill: ecc-click-path-audit",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-clickhouse-io",
+      "source": "skills/ecc-clickhouse-io",
+      "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-code-tour",
+      "source": "skills/ecc-code-tour",
+      "description": "Create CodeTour `.tour` files \u00e2\u20ac\u201d persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-codebase-onboarding",
+      "source": "skills/ecc-codebase-onboarding",
+      "description": "Analyze an unfamiliar codebase and generate a structured onboarding guide with architecture map, key entry points, conventions, and a starter CLAUDE.md. Use when joining a new project or setting up Claude Code for the first time in a repo.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-coding-standards",
+      "source": "skills/ecc-coding-standards",
+      "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-compose-multiplatform-patterns",
+      "source": "skills/ecc-compose-multiplatform-patterns",
+      "description": "Compose Multiplatform and Jetpack Compose patterns for KMP projects \u00e2\u20ac\u201d state management, navigation, theming, performance, and platform-specific UI.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-configure-ecc",
+      "source": "skills/ecc-configure-ecc",
+      "description": "Interactive installer for Everything Claude Code \u00e2\u20ac\u201d guides users through selecting and installing skills and rules to user-level or project-level directories, verifies paths, and optionally optimizes installed files.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-connections-optimizer",
+      "source": "skills/ecc-connections-optimizer",
+      "description": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-specific warm outreach drafted in the user's real voice. Use when the user wants to clean up following lists, grow toward current priorities, or rebalance a social graph around higher-signal relationships.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-content-engine",
+      "source": "skills/ecc-content-engine",
+      "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-content-hash-cache-pattern",
+      "source": "skills/ecc-content-hash-cache-pattern",
+      "description": "Cache expensive file processing results using SHA-256 content hashes \u00e2\u20ac\u201d path-independent, auto-invalidating, with service layer separation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-context-budget",
+      "source": "skills/ecc-context-budget",
+      "description": "Skill: ecc-context-budget",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-continuous-agent-loop",
+      "source": "skills/ecc-continuous-agent-loop",
+      "description": "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-continuous-learning",
+      "source": "skills/ecc-continuous-learning",
+      "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-continuous-learning-v2",
+      "source": "skills/ecc-continuous-learning-v2",
+      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-cost-aware-llm-pipeline",
+      "source": "skills/ecc-cost-aware-llm-pipeline",
+      "description": "Cost optimization patterns for LLM API usage \u00e2\u20ac\u201d model routing by task complexity, budget tracking, retry logic, and prompt caching.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-council",
+      "source": "skills/ecc-council",
+      "description": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-cpp-coding-standards",
+      "source": "skills/ecc-cpp-coding-standards",
+      "description": "C++ coding standards based on the C++ Core Guidelines (isocpp.github.io). Use when writing, reviewing, or refactoring C++ code to enforce modern, safe, and idiomatic practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-cpp-testing",
+      "source": "skills/ecc-cpp-testing",
+      "description": "Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or adding coverage/sanitizers.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-crosspost",
+      "source": "skills/ecc-crosspost",
+      "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-csharp-testing",
+      "source": "skills/ecc-csharp-testing",
+      "description": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-customer-billing-ops",
+      "source": "skills/ecc-customer-billing-ops",
+      "description": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the user needs to help a customer, inspect subscription state, or manage revenue-impacting billing operations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-customs-trade-compliance",
+      "source": "skills/ecc-customs-trade-compliance",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-dart-flutter-patterns",
+      "source": "skills/ecc-dart-flutter-patterns",
+      "description": "Skill: ecc-dart-flutter-patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-dashboard-builder",
+      "source": "skills/ecc-dashboard-builder",
+      "description": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity board.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-data-scraper-agent",
+      "source": "skills/ecc-data-scraper-agent",
+      "description": "Build a fully automated AI-powered data collection agent for any public source \u00e2\u20ac\u201d job boards, prices, news, GitHub, sports, anything. Scrapes on a schedule, enriches data with a free LLM (Gemini Flash), stores results in Notion/Sheets/Supabase, and learns from user feedback. Runs 100% free on GitHub Actions. Use when the user wants to monitor, collect, or track any public data automatically.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-database-migrations",
+      "source": "skills/ecc-database-migrations",
+      "description": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Kysely, Django, TypeORM, golang-migrate).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-deep-research",
+      "source": "skills/ecc-deep-research",
+      "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-defi-amm-security",
+      "source": "skills/ecc-defi-amm-security",
+      "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-deployment-patterns",
+      "source": "skills/ecc-deployment-patterns",
+      "description": "Skill: ecc-deployment-patterns",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-design-system",
+      "source": "skills/ecc-design-system",
+      "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-django-patterns",
+      "source": "skills/ecc-django-patterns",
+      "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-django-security",
+      "source": "skills/ecc-django-security",
+      "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-django-tdd",
+      "source": "skills/ecc-django-tdd",
+      "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-django-verification",
+      "source": "skills/ecc-django-verification",
+      "description": "Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-dmux-workflows",
+      "source": "skills/ecc-dmux-workflows",
+      "description": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-docker-patterns",
+      "source": "skills/ecc-docker-patterns",
+      "description": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-documentation-lookup",
+      "source": "skills/ecc-documentation-lookup",
+      "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-dotnet-patterns",
+      "source": "skills/ecc-dotnet-patterns",
+      "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-e2e-testing",
+      "source": "skills/ecc-e2e-testing",
+      "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ecc-tools-cost-audit",
+      "source": "skills/ecc-ecc-tools-cost-audit",
+      "description": "Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-email-ops",
+      "source": "skills/ecc-email-ops",
+      "description": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC. Use when the user wants to organize email, draft or send through the real mail surface, or prove what landed in Sent.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-energy-procurement",
+      "source": "skills/ecc-energy-procurement",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-enterprise-agent-ops",
+      "source": "skills/ecc-enterprise-agent-ops",
+      "description": "Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-eval-harness",
+      "source": "skills/ecc-eval-harness",
+      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-evm-token-decimals",
+      "source": "skills/ecc-evm-token-decimals",
+      "description": "Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-exa-search",
+      "source": "skills/ecc-exa-search",
+      "description": "Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-fal-ai-media",
+      "source": "skills/ecc-fal-ai-media",
+      "description": "Unified media generation via fal.ai MCP \u00e2\u20ac\u201d image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-finance-billing-ops",
+      "source": "skills/ecc-finance-billing-ops",
+      "description": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge diagnosis, or code-backed billing reality instead of generic payments advice.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-flutter-dart-code-review",
+      "source": "skills/ecc-flutter-dart-code-review",
+      "description": "Library-agnostic Flutter/Dart code review checklist covering widget best practices, state management patterns (BLoC, Riverpod, Provider, GetX, MobX, Signals), Dart idioms, performance, accessibility, security, and clean architecture.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-foundation-models-on-device",
+      "source": "skills/ecc-foundation-models-on-device",
+      "description": "Apple FoundationModels framework for on-device LLM \u00e2\u20ac\u201d text generation, guided generation with @Generable, tool calling, and snapshot streaming in iOS 26+.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-frontend-design",
+      "source": "skills/ecc-frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use when the user asks to build web components, pages, or applications and the visual direction matters as much as the code quality.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-frontend-patterns",
+      "source": "skills/ecc-frontend-patterns",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-frontend-slides",
+      "source": "skills/ecc-frontend-slides",
+      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-gan-style-harness",
+      "source": "skills/ecc-gan-style-harness",
+      "description": "Skill: ecc-gan-style-harness",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-gateguard",
+      "source": "skills/ecc-gateguard",
+      "description": "Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-git-workflow",
+      "source": "skills/ecc-git-workflow",
+      "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-github-ops",
+      "source": "skills/ecc-github-ops",
+      "description": "GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub operational task beyond simple git commands.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-golang-patterns",
+      "source": "skills/ecc-golang-patterns",
+      "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-golang-testing",
+      "source": "skills/ecc-golang-testing",
+      "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-google-workspace-ops",
+      "source": "skills/ecc-google-workspace-ops",
+      "description": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, migrate, or clean up Google Workspace assets without dropping to raw tool calls.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-healthcare-cdss-patterns",
+      "source": "skills/ecc-healthcare-cdss-patterns",
+      "description": "Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-healthcare-emr-patterns",
+      "source": "skills/ecc-healthcare-emr-patterns",
+      "description": "EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-healthcare-eval-harness",
+      "source": "skills/ecc-healthcare-eval-harness",
+      "description": "Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-healthcare-phi-compliance",
+      "source": "skills/ecc-healthcare-phi-compliance",
+      "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-hexagonal-architecture",
+      "source": "skills/ecc-hexagonal-architecture",
+      "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-hipaa-compliance",
+      "source": "skills/ecc-hipaa-compliance",
+      "description": "HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US healthcare compliance requirements.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-hookify-rules",
+      "source": "skills/ecc-hookify-rules",
+      "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-inventory-demand-planning",
+      "source": "skills/ecc-inventory-demand-planning",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-investor-materials",
+      "source": "skills/ecc-investor-materials",
+      "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-investor-outreach",
+      "source": "skills/ecc-investor-outreach",
+      "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-iterative-retrieval",
+      "source": "skills/ecc-iterative-retrieval",
+      "description": "Skill: ecc-iterative-retrieval",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-java-coding-standards",
+      "source": "skills/ecc-java-coding-standards",
+      "description": "Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics, and project layout.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-jira-integration",
+      "source": "skills/ecc-jira-integration",
+      "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-jpa-patterns",
+      "source": "skills/ecc-jpa-patterns",
+      "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-knowledge-ops",
+      "source": "skills/ecc-knowledge-ops",
+      "description": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, vector stores, Git repos). Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-kotlin-coroutines-flows",
+      "source": "skills/ecc-kotlin-coroutines-flows",
+      "description": "Kotlin Coroutines and Flow patterns for Android and KMP \u00e2\u20ac\u201d structured concurrency, Flow operators, StateFlow, error handling, and testing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-kotlin-exposed-patterns",
+      "source": "skills/ecc-kotlin-exposed-patterns",
+      "description": "JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway migrations, and repository pattern.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-kotlin-ktor-patterns",
+      "source": "skills/ecc-kotlin-ktor-patterns",
+      "description": "Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.serialization, WebSockets, and testApplication testing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-kotlin-patterns",
+      "source": "skills/ecc-kotlin-patterns",
+      "description": "Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin applications with coroutines, null safety, and DSL builders.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-kotlin-testing",
+      "source": "skills/ecc-kotlin-testing",
+      "description": "Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage. Follows TDD methodology with idiomatic Kotlin practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-laravel-patterns",
+      "source": "skills/ecc-laravel-patterns",
+      "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-laravel-plugin-discovery",
+      "source": "skills/ecc-laravel-plugin-discovery",
+      "description": "Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-laravel-security",
+      "source": "skills/ecc-laravel-security",
+      "description": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limiting, and secure deployment.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-laravel-tdd",
+      "source": "skills/ecc-laravel-tdd",
+      "description": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-laravel-verification",
+      "source": "skills/ecc-laravel-verification",
+      "description": "Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-lead-intelligence",
+      "source": "skills/ecc-lead-intelligence",
+      "description": "Skill: ecc-lead-intelligence",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-liquid-glass-design",
+      "source": "skills/ecc-liquid-glass-design",
+      "description": "iOS 26 Liquid Glass design system \u00e2\u20ac\u201d dynamic glass material with blur, reflection, and interactive morphing for SwiftUI, UIKit, and WidgetKit.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-llm-trading-agent-security",
+      "source": "skills/ecc-llm-trading-agent-security",
+      "description": "Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-logistics-exception-management",
+      "source": "skills/ecc-logistics-exception-management",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-manim-video",
+      "source": "skills/ecc-manim-video",
+      "description": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user wants a clean animated explainer rather than a generic talking-head script.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-market-research",
+      "source": "skills/ecc-market-research",
+      "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-mcp-server-patterns",
+      "source": "skills/ecc-mcp-server-patterns",
+      "description": "Build MCP servers with Node/TypeScript SDK \u00e2\u20ac\u201d tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-messages-ops",
+      "source": "skills/ecc-messages-ops",
+      "description": "Evidence-first live messaging workflow for ECC. Use when the user wants to read texts or DMs, recover a recent one-time code, inspect a thread before replying, or prove which message source was actually checked.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nanoclaw-repl",
+      "source": "skills/ecc-nanoclaw-repl",
+      "description": "Operate and extend NanoClaw v2, ECC's zero-dependency session-aware REPL built on claude -p.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nestjs-patterns",
+      "source": "skills/ecc-nestjs-patterns",
+      "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nextjs-turbopack",
+      "source": "skills/ecc-nextjs-turbopack",
+      "description": "Next.js 16+ and Turbopack \u00e2\u20ac\u201d incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nodejs-keccak256",
+      "source": "skills/ecc-nodejs-keccak256",
+      "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nutrient-document-processing",
+      "source": "skills/ecc-nutrient-document-processing",
+      "description": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API. Works with PDFs, DOCX, XLSX, PPTX, HTML, and images.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-nuxt4-patterns",
+      "source": "skills/ecc-nuxt4-patterns",
+      "description": "Nuxt 4 app patterns for hydration safety, performance, route rules, lazy loading, and SSR-safe data fetching with useFetch and useAsyncData.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-openclaw-persona-forge",
+      "source": "skills/ecc-openclaw-persona-forge",
+      "description": "Skill: ecc-openclaw-persona-forge",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-opensource-pipeline",
+      "source": "skills/ecc-opensource-pipeline",
+      "description": "Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-perl-patterns",
+      "source": "skills/ecc-perl-patterns",
+      "description": "Modern Perl 5.36+ idioms, best practices, and conventions for building robust, maintainable Perl applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-perl-security",
+      "source": "skills/ecc-perl-security",
+      "description": "Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries, web security (XSS/SQLi/CSRF), and perlcritic security policies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-perl-testing",
+      "source": "skills/ecc-perl-testing",
+      "description": "Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodology.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-plankton-code-quality",
+      "source": "skills/ecc-plankton-code-quality",
+      "description": "Write-time code quality enforcement using Plankton \u00e2\u20ac\u201d auto-formatting, linting, and Claude-powered fixes on every file edit via hooks.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-postgres-patterns",
+      "source": "skills/ecc-postgres-patterns",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-product-capability",
+      "source": "skills/ecc-product-capability",
+      "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-product-lens",
+      "source": "skills/ecc-product-lens",
+      "description": "Use this skill to validate the \"why\" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-production-scheduling",
+      "source": "skills/ecc-production-scheduling",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-project-flow-ops",
+      "source": "skills/ecc-project-flow-ops",
+      "description": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keeping GitHub public-facing while Linear remains the internal execution layer. Use when the user wants backlog control, PR triage, or GitHub-to-Linear coordination.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-prompt-optimizer",
+      "source": "skills/ecc-prompt-optimizer",
+      "description": "Skill: ecc-prompt-optimizer",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-python-patterns",
+      "source": "skills/ecc-python-patterns",
+      "description": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-python-testing",
+      "source": "skills/ecc-python-testing",
+      "description": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-pytorch-patterns",
+      "source": "skills/ecc-pytorch-patterns",
+      "description": "PyTorch deep learning patterns and best practices for building robust, efficient, and reproducible training pipelines, model architectures, and data loading.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-quality-nonconformance",
+      "source": "skills/ecc-quality-nonconformance",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ralphinho-rfc-pipeline",
+      "source": "skills/ecc-ralphinho-rfc-pipeline",
+      "description": "RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-regex-vs-llm-structured-text",
+      "source": "skills/ecc-regex-vs-llm-structured-text",
+      "description": "Decision framework for choosing between regex and LLM when parsing structured text \u00e2\u20ac\u201d start with regex, add LLM only for low-confidence edge cases.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-remotion-video-creation",
+      "source": "skills/ecc-remotion-video-creation",
+      "description": "Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-repo-scan",
+      "source": "skills/ecc-repo-scan",
+      "description": "Cross-stack source code asset audit \u00e2\u20ac\u201d classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-research-ops",
+      "source": "skills/ecc-research-ops",
+      "description": "Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and any supplied local context.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-returns-reverse-logistics",
+      "source": "skills/ecc-returns-reverse-logistics",
+      "description": ">",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-rules-distill",
+      "source": "skills/ecc-rules-distill",
+      "description": "Scan skills to extract cross-cutting principles and distill them into rules \u00e2\u20ac\u201d append, revise, or create new rule files",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-rust-patterns",
+      "source": "skills/ecc-rust-patterns",
+      "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-rust-testing",
+      "source": "skills/ecc-rust-testing",
+      "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-safety-guard",
+      "source": "skills/ecc-safety-guard",
+      "description": "Use this skill to prevent destructive operations when working on production systems or running agents autonomously.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-santa-method",
+      "source": "skills/ecc-santa-method",
+      "description": "Skill: ecc-santa-method",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-search-first",
+      "source": "skills/ecc-search-first",
+      "description": "Skill: ecc-search-first",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-security-bounty-hunter",
+      "source": "skills/ecc-security-bounty-hunter",
+      "description": "Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-security-review",
+      "source": "skills/ecc-security-review",
+      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-security-scan",
+      "source": "skills/ecc-security-scan",
+      "description": "Scan your Claude Code configuration (.claude/ directory) for security vulnerabilities, misconfigurations, and injection risks using AgentShield. Checks CLAUDE.md, settings.json, MCP servers, hooks, and agent definitions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-seo",
+      "source": "skills/ecc-seo",
+      "description": "Skill: ecc-seo",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-skill-comply",
+      "source": "skills/ecc-skill-comply",
+      "description": "Visualize whether skills, rules, and agent definitions are actually followed \u00e2\u20ac\u201d auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-skill-stocktake",
+      "source": "skills/ecc-skill-stocktake",
+      "description": "Use when auditing Claude skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-social-graph-ranker",
+      "source": "skills/ecc-social-graph-ranker",
+      "description": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow layered on top of it.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-springboot-patterns",
+      "source": "skills/ecc-springboot-patterns",
+      "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-springboot-security",
+      "source": "skills/ecc-springboot-security",
+      "description": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-springboot-tdd",
+      "source": "skills/ecc-springboot-tdd",
+      "description": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-springboot-verification",
+      "source": "skills/ecc-springboot-verification",
+      "description": "Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-strategic-compact",
+      "source": "skills/ecc-strategic-compact",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-swift-actor-persistence",
+      "source": "skills/ecc-swift-actor-persistence",
+      "description": "Thread-safe data persistence in Swift using actors \u00e2\u20ac\u201d in-memory cache with file-backed storage, eliminating data races by design.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-swift-concurrency-6-2",
+      "source": "skills/ecc-swift-concurrency-6-2",
+      "description": "Swift 6.2 Approachable Concurrency \u00e2\u20ac\u201d single-threaded by default, @concurrent for explicit background offloading, isolated conformances for main actor types.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-swift-protocol-di-testing",
+      "source": "skills/ecc-swift-protocol-di-testing",
+      "description": "Protocol-based dependency injection for testable Swift code \u00e2\u20ac\u201d mock file system, network, and external APIs using focused protocols and Swift Testing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-swiftui-patterns",
+      "source": "skills/ecc-swiftui-patterns",
+      "description": "SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimization, and modern iOS/macOS UI best practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-tdd-workflow",
+      "source": "skills/ecc-tdd-workflow",
+      "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-team-builder",
+      "source": "skills/ecc-team-builder",
+      "description": "Interactive agent picker for composing and dispatching parallel teams",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-terminal-ops",
+      "source": "skills/ecc-terminal-ops",
+      "description": "Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was executed and verified.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-token-budget-advisor",
+      "source": "skills/ecc-token-budget-advisor",
+      "description": ">-",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-ui-demo",
+      "source": "skills/ecc-ui-demo",
+      "description": "Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM videos with visible cursor, natural pacing, and professional feel.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-unified-notifications-ops",
+      "source": "skills/ecc-unified-notifications-ops",
+      "description": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces. Use when the real problem is alert routing, deduplication, escalation, or inbox collapse.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-verification-loop",
+      "source": "skills/ecc-verification-loop",
+      "description": "A comprehensive verification system for Claude Code sessions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-video-editing",
+      "source": "skills/ecc-video-editing",
+      "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-videodb",
+      "source": "skills/ecc-videodb",
+      "description": "See, Understand, Act on video and audio. See- ingest from local files, URLs, RTSP/live feeds, or live record desktop; return realtime context and playable stream links. Understand- extract frames, build visual/semantic/temporal indexes, and search moments with timestamps and auto-clips. Act- transcode and normalize (codec, fps, resolution, aspect ratio), perform timeline edits (subtitles, text/image overlays, branding, audio overlays, dubbing, translation), generate media assets (image, audio, video), and create real time alerts for events from live streams or desktop capture.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-visa-doc-translate",
+      "source": "skills/ecc-visa-doc-translate",
+      "description": "Skill: ecc-visa-doc-translate",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-workspace-surface-audit",
+      "source": "skills/ecc-workspace-surface-audit",
+      "description": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ecc-x-api",
+      "source": "skills/ecc-x-api",
+      "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.",
+      "version": "1.0.0"
+    },
+    {
       "name": "email-sequence",
       "source": "skills/email-sequence",
       "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"lifecycle emails,\" \"trigger-based emails,\" \"email funnel,\" \"email workflow,\" \"what emails should I send,\" \"welcome series,\" or \"email cadence.\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.",
@@ -1262,6 +2360,66 @@
       "name": "graphql-design",
       "source": "skills/graphql-design",
       "description": "GraphQL schema design, resolver patterns, subscriptions, DataLoader for N+1 prevention, and error handling",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-canary",
+      "source": "skills/gstack-canary",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-cso",
+      "source": "skills/gstack-cso",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-design-html",
+      "source": "skills/gstack-design-html",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-design-shotgun",
+      "source": "skills/gstack-design-shotgun",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-office-hours",
+      "source": "skills/gstack-office-hours",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-plan-ceo-review",
+      "source": "skills/gstack-plan-ceo-review",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-plan-design-review",
+      "source": "skills/gstack-plan-design-review",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-plan-devex-review",
+      "source": "skills/gstack-plan-devex-review",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-plan-eng-review",
+      "source": "skills/gstack-plan-eng-review",
+      "description": "|",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-retro",
+      "source": "skills/gstack-retro",
+      "description": "|",
       "version": "1.0.0"
     },
     {
@@ -1580,6 +2738,816 @@
       "name": "schema-markup",
       "source": "skills/schema-markup",
       "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\" \"product schema,\" \"review schema,\" \"breadcrumb schema,\" \"Google rich results,\" \"knowledge panel,\" \"star ratings in search,\" or \"add structured data.\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-adaptyv",
+      "source": "skills/sci-adaptyv",
+      "description": "Cloud laboratory platform for automated protein testing and validation. Use when designing proteins and needing experimental validation including binding assays, expression testing, thermostability measurements, enzyme activity assays, or protein sequence optimization. Also use for submitting experiments via API, tracking experiment status, downloading results, optimizing protein sequences for better expression using computational tools (NetSolP, SoluProt, SolubleMPNN, ESM), or managing protein design workflows with wet-lab validation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-aeon",
+      "source": "skills/sci-aeon",
+      "description": "This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity search. Use when working with temporal data, sequential patterns, or time-indexed observations requiring specialized algorithms beyond standard ML approaches. Particularly suited for univariate and multivariate time series analysis with scikit-learn compatible APIs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-alphafold-database",
+      "source": "skills/sci-alphafold-database",
+      "description": "Access AlphaFold's 200M+ AI-predicted protein structures. Retrieve structures by UniProt ID, download PDB/mmCIF files, analyze confidence metrics (pLDDT, PAE), for drug discovery and structural biology.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-anndata",
+      "source": "skills/sci-anndata",
+      "description": "This skill should be used when working with annotated data matrices in Python, particularly for single-cell genomics analysis, managing experimental measurements with metadata, or handling large-scale biological datasets. Use when tasks involve AnnData objects, h5ad files, single-cell RNA-seq data, or integration with scanpy/scverse tools.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-arboreto",
+      "source": "skills/sci-arboreto",
+      "description": "Infer gene regulatory networks (GRNs) from gene expression data using scalable algorithms (GRNBoost2, GENIE3). Use when analyzing transcriptomics data (bulk RNA-seq, single-cell RNA-seq) to identify transcription factor-target gene relationships and regulatory interactions. Supports distributed computation for large-scale datasets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-astropy",
+      "source": "skills/sci-astropy",
+      "description": "Comprehensive Python library for astronomy and astrophysics. This skill should be used when working with astronomical data including celestial coordinates, physical units, FITS files, cosmological calculations, time systems, tables, world coordinate systems (WCS), and astronomical data analysis. Use when tasks involve coordinate transformations, unit conversions, FITS file manipulation, cosmological distance calculations, time scale conversions, or astronomical data processing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-benchling-integration",
+      "source": "skills/sci-benchling-integration",
+      "description": "Benchling R&D platform integration. Access registry (DNA, proteins), inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse, for lab data management automation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-biomni",
+      "source": "skills/sci-biomni",
+      "description": "Skill: sci-biomni",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-biopython",
+      "source": "skills/sci-biopython",
+      "description": "Primary Python toolkit for molecular biology. Preferred for Python-based PubMed/NCBI queries (Bio.Entrez), sequence manipulation, file parsing (FASTA, GenBank, FASTQ, PDB), advanced BLAST workflows, structures, phylogenetics. For quick BLAST, use gget. For direct REST API, use pubmed-database.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-biorxiv-database",
+      "source": "skills/sci-biorxiv-database",
+      "description": "Efficient database search tool for bioRxiv preprint server. Use this skill when searching for life sciences preprints by keywords, authors, date ranges, or categories, retrieving paper metadata, downloading PDFs, or conducting literature reviews.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-bioservices",
+      "source": "skills/sci-bioservices",
+      "description": "Primary Python tool for 40+ bioinformatics services. Preferred for multi-database workflows: UniProt, KEGG, ChEMBL, PubChem, Reactome, QuickGO. Unified API for queries, ID mapping, pathway analysis. For direct REST control, use individual database skills (uniprot-database, kegg-database).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-brenda-database",
+      "source": "skills/sci-brenda-database",
+      "description": "Access BRENDA enzyme database via SOAP API. Retrieve kinetic parameters (Km, kcat), reaction equations, organism data, and substrate-specific enzyme information for biochemical research and metabolic pathway analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-cellxgene-census",
+      "source": "skills/sci-cellxgene-census",
+      "description": "Query CZ CELLxGENE Census (61M+ cells). Filter by cell type/tissue/disease, retrieve expression data, integrate with scanpy/PyTorch, for population-scale single-cell analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-chembl-database",
+      "source": "skills/sci-chembl-database",
+      "description": "Query ChEMBL's bioactive molecules and drug discovery data. Search compounds by structure/properties, retrieve bioactivity data (IC50, Ki), find inhibitors, perform SAR studies, for medicinal chemistry.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-cirq",
+      "source": "skills/sci-cirq",
+      "description": "Quantum computing framework for building, simulating, optimizing, and executing quantum circuits. Use this skill when working with quantum algorithms, quantum circuit design, quantum simulation (noiseless or noisy), running on quantum hardware (Google, IonQ, AQT, Pasqal), circuit optimization and compilation, noise modeling and characterization, or quantum experiments and benchmarking (VQE, QAOA, QPE, randomized benchmarking).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-citation-management",
+      "source": "skills/sci-citation-management",
+      "description": "Comprehensive citation management for academic research. Search Google Scholar and PubMed for papers, extract accurate metadata, validate citations, and generate properly formatted BibTeX entries. This skill should be used when you need to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference accuracy in scientific writing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-clinical-decision-support",
+      "source": "skills/sci-clinical-decision-support",
+      "description": "Skill: sci-clinical-decision-support",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-clinical-reports",
+      "source": "skills/sci-clinical-reports",
+      "description": "Skill: sci-clinical-reports",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-clinicaltrials-database",
+      "source": "skills/sci-clinicaltrials-database",
+      "description": "Query ClinicalTrials.gov via API v2. Search trials by condition, drug, location, status, or phase. Retrieve trial details by NCT ID, export data, for clinical research and patient matching.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-clinpgx-database",
+      "source": "skills/sci-clinpgx-database",
+      "description": "Access ClinPGx pharmacogenomics data (successor to PharmGKB). Query gene-drug interactions, CPIC guidelines, allele functions, for precision medicine and genotype-guided dosing decisions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-clinvar-database",
+      "source": "skills/sci-clinvar-database",
+      "description": "Query NCBI ClinVar for variant clinical significance. Search by gene/position, interpret pathogenicity classifications, access via E-utilities API or FTP, annotate VCFs, for genomic medicine.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-cobrapy",
+      "source": "skills/sci-cobrapy",
+      "description": "Constraint-based metabolic modeling (COBRA). FBA, FVA, gene knockouts, flux sampling, SBML models, for systems biology and metabolic engineering analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-cosmic-database",
+      "source": "skills/sci-cosmic-database",
+      "description": "Access COSMIC cancer mutation database. Query somatic mutations, Cancer Gene Census, mutational signatures, gene fusions, for cancer research and precision oncology. Requires authentication.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-dask",
+      "source": "skills/sci-dask",
+      "description": "Parallel/distributed computing. Scale pandas/NumPy beyond memory, parallel DataFrames/Arrays, multi-file processing, task graphs, for larger-than-RAM datasets and parallel workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-datacommons-client",
+      "source": "skills/sci-datacommons-client",
+      "description": "Work with Data Commons, a platform providing programmatic access to public statistical data from global sources. Use this skill when working with demographic data, economic indicators, health statistics, environmental data, or any public datasets available through Data Commons. Applicable for querying population statistics, GDP figures, unemployment rates, disease prevalence, geographic entity resolution, and exploring relationships between statistical entities.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-datamol",
+      "source": "skills/sci-datamol",
+      "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery: SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-deepchem",
+      "source": "skills/sci-deepchem",
+      "description": "Molecular machine learning toolkit. Property prediction (ADMET, toxicity), GNNs (GCN, MPNN), MoleculeNet benchmarks, pretrained models, featurization, for drug discovery ML.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-deeptools",
+      "source": "skills/sci-deeptools",
+      "description": "NGS analysis toolkit. BAM to bigWig conversion, QC (correlation, PCA, fingerprints), heatmaps/profiles (TSS, peaks), for ChIP-seq, RNA-seq, ATAC-seq visualization.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-denario",
+      "source": "skills/sci-denario",
+      "description": "Multiagent AI system for scientific research assistance that automates research workflows from data analysis to publication. This skill should be used when generating research ideas from datasets, developing research methodologies, executing computational experiments, performing literature searches, or generating publication-ready papers in LaTeX format. Supports end-to-end research pipelines with customizable agent orchestration.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-diffdock",
+      "source": "skills/sci-diffdock",
+      "description": "Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity prediction.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-dnanexus-integration",
+      "source": "skills/sci-dnanexus-integration",
+      "description": "DNAnexus cloud genomics platform. Build apps/applets, manage data (upload/download), dxpy Python SDK, run workflows, FASTQ/BAM/VCF, for genomics pipeline development and execution.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-drugbank-database",
+      "source": "skills/sci-drugbank-database",
+      "description": "Access and analyze comprehensive drug information from the DrugBank database including drug properties, interactions, targets, pathways, chemical structures, and pharmacology data. This skill should be used when working with pharmaceutical data, drug discovery research, pharmacology studies, drug-drug interaction analysis, target identification, chemical similarity searches, ADMET predictions, or any task requiring detailed drug and drug target information from DrugBank.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-ena-database",
+      "source": "skills/sci-ena-database",
+      "description": "Access European Nucleotide Archive via API/FTP. Retrieve DNA/RNA sequences, raw reads (FASTQ), genome assemblies by accession, for genomics and bioinformatics pipelines. Supports multiple formats.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-ensembl-database",
+      "source": "skills/sci-ensembl-database",
+      "description": "Query Ensembl genome database REST API for 250+ species. Gene lookups, sequence retrieval, variant analysis, comparative genomics, orthologs, VEP predictions, for genomic research.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-esm",
+      "source": "skills/sci-esm",
+      "description": "Comprehensive toolkit for protein language models including ESM3 (generative multimodal protein design across sequence, structure, and function) and ESM C (efficient protein embeddings and representations). Use this skill when working with protein sequences, structures, or function prediction; designing novel proteins; generating protein embeddings; performing inverse folding; or conducting protein engineering tasks. Supports both local model usage and cloud-based Forge API for scalable inference.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-etetoolkit",
+      "source": "skills/sci-etetoolkit",
+      "description": "Phylogenetic tree toolkit (ETE). Tree manipulation (Newick/NHX), evolutionary event detection, orthology/paralogy, NCBI taxonomy, visualization (PDF/SVG), for phylogenomics.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-exploratory-data-analysis",
+      "source": "skills/sci-exploratory-data-analysis",
+      "description": "Perform comprehensive exploratory data analysis on scientific data files across 200+ file formats. This skill should be used when analyzing any scientific data file to understand its structure, content, quality, and characteristics. Automatically detects file type and generates detailed markdown reports with format-specific analysis, quality metrics, and downstream analysis recommendations. Covers chemistry, bioinformatics, microscopy, spectroscopy, proteomics, metabolomics, and general scientific data formats.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-fda-database",
+      "source": "skills/sci-fda-database",
+      "description": "Query openFDA API for drugs, devices, adverse events, recalls, regulatory submissions (510k, PMA), substance identification (UNII), for FDA regulatory data analysis and safety research.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-flowio",
+      "source": "skills/sci-flowio",
+      "description": "Parse FCS (Flow Cytometry Standard) files v2.0-3.1. Extract events as NumPy arrays, read metadata/channels, convert to CSV/DataFrame, for flow cytometry data preprocessing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-fluidsim",
+      "source": "skills/sci-fluidsim",
+      "description": "Framework for computational fluid dynamics simulations using Python. Use when running fluid dynamics simulations including Navier-Stokes equations (2D/3D), shallow water equations, stratified flows, or when analyzing turbulence, vortex dynamics, or geophysical flows. Provides pseudospectral methods with FFT, HPC support, and comprehensive output analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-gene-database",
+      "source": "skills/sci-gene-database",
+      "description": "Query NCBI Gene via E-utilities/Datasets API. Search by symbol/ID, retrieve gene info (RefSeqs, GO, locations, phenotypes), batch lookups, for gene annotation and functional analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-generate-image",
+      "source": "skills/sci-generate-image",
+      "description": "Generate or edit images using AI models (FLUX, Gemini). Use for general-purpose image generation including photos, illustrations, artwork, visual assets, concept art, and any image that isn't a technical diagram or schematic. For flowcharts, circuits, pathways, and technical diagrams, use the scientific-schematics skill instead.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-geniml",
+      "source": "skills/sci-geniml",
+      "description": "This skill should be used when working with genomic interval data (BED files) for machine learning tasks. Use for training region embeddings (Region2Vec, BEDspace), single-cell ATAC-seq analysis (scEmbed), building consensus peaks (universes), or any ML-based analysis of genomic regions. Applies to BED file collections, scATAC-seq data, chromatin accessibility datasets, and region-based genomic feature learning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-geo-database",
+      "source": "skills/sci-geo-database",
+      "description": "Access NCBI GEO for gene expression/genomics data. Search/download microarray and RNA-seq datasets (GSE, GSM, GPL), retrieve SOFT/Matrix files, for transcriptomics and expression analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-geopandas",
+      "source": "skills/sci-geopandas",
+      "description": "Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-get-available-resources",
+      "source": "skills/sci-get-available-resources",
+      "description": "This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-gget",
+      "source": "skills/sci-gget",
+      "description": "CLI/Python toolkit for rapid bioinformatics queries. Preferred for quick BLAST searches. Access to 20+ databases: gene info (Ensembl/UniProt), AlphaFold, ARCHS4, Enrichr, OpenTargets, COSMIC, genome downloads. For advanced BLAST/batch processing, use biopython. For multi-database integration, use bioservices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-gtars",
+      "source": "skills/sci-gtars",
+      "description": "High-performance toolkit for genomic interval analysis in Rust with Python bindings. Use when working with genomic regions, BED files, coverage tracks, overlap detection, tokenization for ML models, or fragment analysis in computational genomics and machine learning applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-gwas-database",
+      "source": "skills/sci-gwas-database",
+      "description": "Skill: sci-gwas-database",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-histolab",
+      "source": "skills/sci-histolab",
+      "description": "Digital pathology image processing toolkit for whole slide images (WSI). Use this skill when working with histopathology slides, processing H&E or IHC stained tissue images, extracting tiles from gigapixel pathology images, detecting tissue regions, segmenting tissue masks, or preparing datasets for computational pathology deep learning pipelines. Applies to WSI formats (SVS, TIFF, NDPI), tile-based analysis, and histological image preprocessing workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-hmdb-database",
+      "source": "skills/sci-hmdb-database",
+      "description": "Access Human Metabolome Database (220K+ metabolites). Search by name/ID/structure, retrieve chemical properties, biomarker data, NMR/MS spectra, pathways, for metabolomics and identification.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-hypogenic",
+      "source": "skills/sci-hypogenic",
+      "description": "Automated hypothesis generation and testing using large language models. Use this skill when generating scientific hypotheses from datasets, combining literature insights with empirical data, testing hypotheses against observational data, or conducting systematic hypothesis exploration for research discovery in domains like deception detection, AI content detection, mental health analysis, or other empirical research tasks.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-hypothesis-generation",
+      "source": "skills/sci-hypothesis-generation",
+      "description": "Skill: sci-hypothesis-generation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-kegg-database",
+      "source": "skills/sci-kegg-database",
+      "description": "Direct REST API access to KEGG (academic use only). Pathway analysis, gene-pathway mapping, metabolic pathways, drug interactions, ID conversion. For Python workflows with multiple databases, prefer bioservices. Use this for direct HTTP/REST work or KEGG-specific control.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-labarchive-integration",
+      "source": "skills/sci-labarchive-integration",
+      "description": "Electronic lab notebook API integration. Access notebooks, manage entries/attachments, backup notebooks, integrate with Protocols.io/Jupyter/REDCap, for programmatic ELN workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-lamindb",
+      "source": "skills/sci-lamindb",
+      "description": "This skill should be used when working with LaminDB, an open-source data framework for biology that makes data queryable, traceable, reproducible, and FAIR. Use when managing biological datasets (scRNA-seq, spatial, flow cytometry, etc.), tracking computational workflows, curating and validating data with biological ontologies, building data lakehouses, or ensuring data lineage and reproducibility in biological research. Covers data management, annotation, ontologies (genes, cell types, diseases, tissues), schema validation, integrations with workflow managers (Nextflow, Snakemake) and MLOps platforms (W&B, MLflow), and deployment strategies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-latchbio-integration",
+      "source": "skills/sci-latchbio-integration",
+      "description": "Latch platform for bioinformatics workflows. Build pipelines with Latch SDK, @workflow/@task decorators, deploy serverless workflows, LatchFile/LatchDir, Nextflow/Snakemake integration.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-latex-posters",
+      "source": "skills/sci-latex-posters",
+      "description": "Skill: sci-latex-posters",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-literature-review",
+      "source": "skills/sci-literature-review",
+      "description": "Skill: sci-literature-review",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-market-research-reports",
+      "source": "skills/sci-market-research-reports",
+      "description": "Generate comprehensive market research reports (50+ pages) in the style of top consulting firms (McKinsey, BCG, Gartner). Features professional LaTeX formatting, extensive visual generation with scientific-schematics and generate-image, deep integration with research-lookup for data gathering, and multi-framework strategic analysis including Porter's Five Forces, PESTLE, SWOT, TAM/SAM/SOM, and BCG Matrix.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-markitdown",
+      "source": "skills/sci-markitdown",
+      "description": "Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs and more.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-matchms",
+      "source": "skills/sci-matchms",
+      "description": "Mass spectrometry analysis. Process mzML/MGF/MSP, spectral similarity (cosine, modified cosine), metadata harmonization, compound ID, for metabolomics and MS data processing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-matplotlib",
+      "source": "skills/sci-matplotlib",
+      "description": "Foundational plotting library. Create line plots, scatter, bar, histograms, heatmaps, 3D, subplots, export PNG/PDF/SVG, for scientific visualization and publication figures.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-medchem",
+      "source": "skills/sci-medchem",
+      "description": "Medicinal chemistry filters. Apply drug-likeness rules (Lipinski, Veber), PAINS filters, structural alerts, complexity metrics, for compound prioritization and library filtering.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-metabolomics-workbench-database",
+      "source": "skills/sci-metabolomics-workbench-database",
+      "description": "Access NIH Metabolomics Workbench via REST API (4,200+ studies). Query metabolites, RefMet nomenclature, MS/NMR data, m/z searches, study metadata, for metabolomics and biomarker discovery.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-modal",
+      "source": "skills/sci-modal",
+      "description": "Run Python code in the cloud with serverless containers, GPUs, and autoscaling. Use when deploying ML models, running batch processing jobs, scheduling compute-intensive tasks, or serving APIs that require GPU acceleration or dynamic scaling.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-molfeat",
+      "source": "skills/sci-molfeat",
+      "description": "Molecular featurization for ML (100+ featurizers). ECFP, MACCS, descriptors, pretrained models (ChemBERTa), convert SMILES to features, for QSAR and molecular ML.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-networkx",
+      "source": "skills/sci-networkx",
+      "description": "Comprehensive toolkit for creating, analyzing, and visualizing complex networks and graphs in Python. Use when working with network/graph data structures, analyzing relationships between entities, computing graph algorithms (shortest paths, centrality, clustering), detecting communities, generating synthetic networks, or visualizing network topologies. Applicable to social networks, biological networks, transportation systems, citation networks, and any domain involving pairwise relationships.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-neurokit2",
+      "source": "skills/sci-neurokit2",
+      "description": "Comprehensive biosignal processing toolkit for analyzing physiological data including ECG, EEG, EDA, RSP, PPG, EMG, and EOG signals. Use this skill when processing cardiovascular signals, brain activity, electrodermal responses, respiratory patterns, muscle activity, or eye movements. Applicable for heart rate variability analysis, event-related potentials, complexity measures, autonomic nervous system assessment, psychophysiology research, and multi-modal physiological signal integration.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-neuropixels-analysis",
+      "source": "skills/sci-neuropixels-analysis",
+      "description": "Neuropixels neural recording analysis. Load SpikeGLX/OpenEphys data, preprocess, motion correction, Kilosort4 spike sorting, quality metrics, Allen/IBL curation, AI-assisted visual analysis, for Neuropixels 1.0/2.0 extracellular electrophysiology. Use when working with neural recordings, spike sorting, extracellular electrophysiology, or when the user mentions Neuropixels, SpikeGLX, Open Ephys, Kilosort, quality metrics, or unit curation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-omero-integration",
+      "source": "skills/sci-omero-integration",
+      "description": "Microscopy data management platform. Access images via Python, retrieve datasets, analyze pixels, manage ROIs/annotations, batch processing, for high-content screening and microscopy workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-openalex-database",
+      "source": "skills/sci-openalex-database",
+      "description": "Skill: sci-openalex-database",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-opentargets-database",
+      "source": "skills/sci-opentargets-database",
+      "description": "Query Open Targets Platform for target-disease associations, drug target discovery, tractability/safety data, genetics/omics evidence, known drugs, for therapeutic target identification.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-opentrons-integration",
+      "source": "skills/sci-opentrons-integration",
+      "description": "Lab automation platform for Flex/OT-2 robots. Write Protocol API v2 protocols, liquid handling, hardware modules (heater-shaker, thermocycler), labware management, for automated pipetting workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-paper-2-web",
+      "source": "skills/sci-paper-2-web",
+      "description": "This skill should be used when converting academic papers into promotional and presentation formats including interactive websites (Paper2Web), presentation videos (Paper2Video), and conference posters (Paper2Poster). Use this skill for tasks involving paper dissemination, conference preparation, creating explorable academic homepages, generating video abstracts, or producing print-ready posters from LaTeX or PDF sources.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pathml",
+      "source": "skills/sci-pathml",
+      "description": "Computational pathology toolkit for analyzing whole-slide images (WSI) and multiparametric imaging data. Use this skill when working with histopathology slides, H&E stained images, multiplex immunofluorescence (CODEX, Vectra), spatial proteomics, nucleus detection/segmentation, tissue graph construction, or training ML models on pathology data. Supports 160+ slide formats including Aperio SVS, NDPI, DICOM, OME-TIFF for digital pathology workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pdb-database",
+      "source": "skills/sci-pdb-database",
+      "description": "Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure, download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and drug discovery.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-peer-review",
+      "source": "skills/sci-peer-review",
+      "description": "Systematic peer review toolkit. Evaluate methodology, statistics, design, reproducibility, ethics, figure integrity, reporting standards, for manuscript and grant review across disciplines.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pennylane",
+      "source": "skills/sci-pennylane",
+      "description": "Cross-platform Python library for quantum computing, quantum machine learning, and quantum chemistry. Enables building and training quantum circuits with automatic differentiation, seamless integration with PyTorch/JAX/TensorFlow, and device-independent execution across simulators and quantum hardware (IBM, Amazon Braket, Google, Rigetti, IonQ, etc.). Use when working with quantum circuits, variational quantum algorithms (VQE, QAOA), quantum neural networks, hybrid quantum-classical models, molecular simulations, quantum chemistry calculations, or any quantum computing tasks requiring gradient-based optimization, hardware-agnostic programming, or quantum machine learning workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-perplexity-search",
+      "source": "skills/sci-perplexity-search",
+      "description": "Perform AI-powered web searches with real-time information using Perplexity models via LiteLLM and OpenRouter. This skill should be used when conducting web searches for current information, finding recent scientific literature, getting grounded answers with source citations, or accessing information beyond the model's knowledge cutoff. Provides access to multiple Perplexity models including Sonar Pro, Sonar Pro Search (advanced agentic search), and Sonar Reasoning Pro through a single OpenRouter API key.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-plotly",
+      "source": "skills/sci-plotly",
+      "description": "Interactive scientific and statistical data visualization library for Python. Use when creating charts, plots, or visualizations including scatter plots, line charts, bar charts, heatmaps, 3D plots, geographic maps, statistical distributions, financial charts, and dashboards. Supports both quick visualizations (Plotly Express) and fine-grained customization (graph objects). Outputs interactive HTML or static images (PNG, PDF, SVG).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-polars",
+      "source": "skills/sci-polars",
+      "description": "Fast DataFrame library (Apache Arrow). Select, filter, group_by, joins, lazy evaluation, CSV/Parquet I/O, expression API, for high-performance data analysis workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pptx-posters",
+      "source": "skills/sci-pptx-posters",
+      "description": "Skill: sci-pptx-posters",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-protocolsio-integration",
+      "source": "skills/sci-protocolsio-integration",
+      "description": "Integration with protocols.io API for managing scientific protocols. This skill should be used when working with protocols.io to search, create, update, or publish protocols; manage protocol steps and materials; handle discussions and comments; organize workspaces; upload and manage files; or integrate protocols.io functionality into workflows. Applicable for protocol discovery, collaborative protocol development, experiment tracking, lab protocol management, and scientific documentation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pubchem-database",
+      "source": "skills/sci-pubchem-database",
+      "description": "Query PubChem via PUG-REST API/PubChemPy (110M+ compounds). Search by name/CID/SMILES, retrieve properties, similarity/substructure searches, bioactivity, for cheminformatics.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pubmed-database",
+      "source": "skills/sci-pubmed-database",
+      "description": "Direct REST API access to PubMed. Advanced Boolean/MeSH queries, E-utilities API, batch processing, citation management. For Python workflows, prefer biopython (Bio.Entrez). Use this for direct HTTP/REST work or custom API implementations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pufferlib",
+      "source": "skills/sci-pufferlib",
+      "description": "This skill should be used when working with reinforcement learning tasks including high-performance RL training, custom environment development, vectorized parallel simulation, multi-agent systems, or integration with existing RL environments (Gymnasium, PettingZoo, Atari, Procgen, etc.). Use this skill for implementing PPO training, creating PufferEnv environments, optimizing RL performance, or developing policies with CNNs/LSTMs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pydeseq2",
+      "source": "skills/sci-pydeseq2",
+      "description": "Differential gene expression analysis (Python DESeq2). Identify DE genes from bulk RNA-seq counts, Wald tests, FDR correction, volcano/MA plots, for RNA-seq analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pydicom",
+      "source": "skills/sci-pydicom",
+      "description": "Python library for working with DICOM (Digital Imaging and Communications in Medicine) files. Use this skill when reading, writing, or modifying medical imaging data in DICOM format, extracting pixel data from medical images (CT, MRI, X-ray, ultrasound), anonymizing DICOM files, working with DICOM metadata and tags, converting DICOM images to other formats, handling compressed DICOM data, or processing medical imaging datasets. Applies to tasks involving medical image analysis, PACS systems, radiology workflows, and healthcare imaging applications.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pyhealth",
+      "source": "skills/sci-pyhealth",
+      "description": "Comprehensive healthcare AI toolkit for developing, testing, and deploying machine learning models with clinical data. This skill should be used when working with electronic health records (EHR), clinical prediction tasks (mortality, readmission, drug recommendation), medical coding systems (ICD, NDC, ATC), physiological signals (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep learning models for healthcare applications (RETAIN, SafeDrug, Transformer, GNN).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pylabrobot",
+      "source": "skills/sci-pylabrobot",
+      "description": "Laboratory automation toolkit for controlling liquid handlers, plate readers, pumps, heater shakers, incubators, centrifuges, and analytical equipment. Use this skill when automating laboratory workflows, programming liquid handling robots (Hamilton STAR, Opentrons OT-2, Tecan EVO), integrating lab equipment, managing deck layouts and resources (plates, tips, containers), reading plates, or creating reproducible laboratory protocols. Applicable for both simulated protocols and physical hardware control.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pymatgen",
+      "source": "skills/sci-pymatgen",
+      "description": "Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, band structure, DOS, Materials Project integration, format conversion, for computational materials science.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pymc",
+      "source": "skills/sci-pymc",
+      "description": "Bayesian modeling with PyMC. Build hierarchical models, MCMC (NUTS), variational inference, LOO/WAIC comparison, posterior checks, for probabilistic programming and inference.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pymoo",
+      "source": "skills/sci-pymoo",
+      "description": "Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto fronts, constraint handling, benchmarks (ZDT, DTLZ), for engineering design and optimization problems.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pyopenms",
+      "source": "skills/sci-pyopenms",
+      "description": "Python interface to OpenMS for mass spectrometry data analysis. Use for LC-MS/MS proteomics and metabolomics workflows including file handling (mzML, mzXML, mzTab, FASTA, pepXML, protXML, mzIdentML), signal processing, feature detection, peptide identification, and quantitative analysis. Apply when working with mass spectrometry data, analyzing proteomics experiments, or processing metabolomics datasets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pysam",
+      "source": "skills/sci-pysam",
+      "description": "Genomic file toolkit. Read/write SAM/BAM/CRAM alignments, VCF/BCF variants, FASTA/FASTQ sequences, extract regions, calculate coverage, for NGS data processing pipelines.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pytdc",
+      "source": "skills/sci-pytdc",
+      "description": "Therapeutics Data Commons. AI-ready drug discovery datasets (ADME, toxicity, DTI), benchmarks, scaffold splits, molecular oracles, for therapeutic ML and pharmacological prediction.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-pytorch-lightning",
+      "source": "skills/sci-pytorch-lightning",
+      "description": "Deep learning framework (PyTorch Lightning). Organize PyTorch code into LightningModules, configure Trainers for multi-GPU/TPU, implement data pipelines, callbacks, logging (W&B, TensorBoard), distributed training (DDP, FSDP, DeepSpeed), for scalable neural network training.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-qiskit",
+      "source": "skills/sci-qiskit",
+      "description": "Comprehensive quantum computing toolkit for building, optimizing, and executing quantum circuits. Use when working with quantum algorithms, simulations, or quantum hardware including (1) Building quantum circuits with gates and measurements, (2) Running quantum algorithms (VQE, QAOA, Grover), (3) Transpiling/optimizing circuits for hardware, (4) Executing on IBM Quantum or other providers, (5) Quantum chemistry and materials science, (6) Quantum machine learning, (7) Visualizing circuits and results, or (8) Any quantum computing development task.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-qutip",
+      "source": "skills/sci-qutip",
+      "description": "Quantum mechanics simulations and analysis using QuTiP (Quantum Toolbox in Python). Use when working with quantum systems including: (1) quantum states (kets, bras, density matrices), (2) quantum operators and gates, (3) time evolution and dynamics (Schr\u00c3\u00b6dinger, master equations, Monte Carlo), (4) open quantum systems with dissipation, (5) quantum measurements and entanglement, (6) visualization (Bloch sphere, Wigner functions), (7) steady states and correlation functions, or (8) advanced methods (Floquet theory, HEOM, stochastic solvers). Handles both closed and open quantum systems across various domains including quantum optics, quantum computing, and condensed matter physics.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-rdkit",
+      "source": "skills/sci-rdkit",
+      "description": "Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure search, 2D/3D generation, similarity, reactions. For standard workflows with simpler interface, use datamol (wrapper around RDKit). Use rdkit for advanced control, custom sanitization, specialized algorithms.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-reactome-database",
+      "source": "skills/sci-reactome-database",
+      "description": "Query Reactome REST API for pathway analysis, enrichment, gene-pathway mapping, disease pathways, molecular interactions, expression analysis, for systems biology studies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-research-grants",
+      "source": "skills/sci-research-grants",
+      "description": "Skill: sci-research-grants",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-research-lookup",
+      "source": "skills/sci-research-lookup",
+      "description": "Look up current research information using Perplexity's Sonar Pro Search or Sonar Reasoning Pro models through OpenRouter. Automatically selects the best model based on query complexity. Search academic papers, recent studies, technical documentation, and general research information with citations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scanpy",
+      "source": "skills/sci-scanpy",
+      "description": "Single-cell RNA-seq analysis. Load .h5ad/10X data, QC, normalization, PCA/UMAP/t-SNE, Leiden clustering, marker genes, cell type annotation, trajectory, for scRNA-seq analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scholar-evaluation",
+      "source": "skills/sci-scholar-evaluation",
+      "description": "Skill: sci-scholar-evaluation",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-brainstorming",
+      "source": "skills/sci-scientific-brainstorming",
+      "description": "Research ideation partner. Generate hypotheses, explore interdisciplinary connections, challenge assumptions, develop methodologies, identify research gaps, for creative scientific problem-solving.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-critical-thinking",
+      "source": "skills/sci-scientific-critical-thinking",
+      "description": "Evaluate research rigor. Assess methodology, experimental design, statistical validity, biases, confounding, evidence quality (GRADE, Cochrane ROB), for critical analysis of scientific claims.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-schematics",
+      "source": "skills/sci-scientific-schematics",
+      "description": "Skill: sci-scientific-schematics",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-slides",
+      "source": "skills/sci-scientific-slides",
+      "description": "Build slide decks and presentations for research talks. Use this for making PowerPoint slides, conference presentations, seminar talks, research presentations, thesis defense slides, or any scientific talk. Provides slide structure, design templates, timing guidance, and visual validation. Works with PowerPoint and LaTeX Beamer.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-visualization",
+      "source": "skills/sci-scientific-visualization",
+      "description": "Create publication figures with matplotlib/seaborn/plotly. Multi-panel layouts, error bars, significance markers, colorblind-safe, export PDF/EPS/TIFF, for journal-ready scientific plots.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scientific-writing",
+      "source": "skills/sci-scientific-writing",
+      "description": "Skill: sci-scientific-writing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scikit-bio",
+      "source": "skills/sci-scikit-bio",
+      "description": "Biological data toolkit. Sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scikit-learn",
+      "source": "skills/sci-scikit-learn",
+      "description": "Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter tuning, preprocessing, or building ML pipelines. Provides comprehensive reference documentation for algorithms, preprocessing techniques, pipelines, and best practices.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scikit-survival",
+      "source": "skills/sci-scikit-survival",
+      "description": "Comprehensive toolkit for survival analysis and time-to-event modeling in Python using scikit-survival. Use this skill when working with censored survival data, performing time-to-event analysis, fitting Cox models, Random Survival Forests, Gradient Boosting models, or Survival SVMs, evaluating survival predictions with concordance index or Brier score, handling competing risks, or implementing any survival analysis workflow with the scikit-survival library.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-scvi-tools",
+      "source": "skills/sci-scvi-tools",
+      "description": "This skill should be used when working with single-cell omics data analysis using scvi-tools, including scRNA-seq, scATAC-seq, CITE-seq, spatial transcriptomics, and other single-cell modalities. Use this skill for probabilistic modeling, batch correction, dimensionality reduction, differential expression, cell type annotation, multimodal integration, and spatial analysis tasks.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-seaborn",
+      "source": "skills/sci-seaborn",
+      "description": "Statistical visualization. Scatter, box, violin, heatmaps, pair plots, regression, correlation matrices, KDE, faceted plots, for exploratory analysis and publication figures.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-shap",
+      "source": "skills/sci-shap",
+      "description": "Model interpretability and explainability using SHAP (SHapley Additive exPlanations). Use this skill when explaining machine learning model predictions, computing feature importance, generating SHAP plots (waterfall, beeswarm, bar, scatter, force, heatmap), debugging models, analyzing model bias or fairness, comparing models, or implementing explainable AI. Works with tree-based models (XGBoost, LightGBM, Random Forest), deep learning (TensorFlow, PyTorch), linear models, and any black-box model.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-simpy",
+      "source": "skills/sci-simpy",
+      "description": "Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as manufacturing systems, service operations, network traffic, logistics, or any system where entities interact with shared resources over time.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-stable-baselines3",
+      "source": "skills/sci-stable-baselines3",
+      "description": "Use this skill for reinforcement learning tasks including training RL agents (PPO, SAC, DQN, TD3, DDPG, A2C, etc.), creating custom Gym environments, implementing callbacks for monitoring and control, using vectorized environments for parallel training, and integrating with deep RL workflows. This skill should be used when users request RL algorithm implementation, agent training, environment design, or RL experimentation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-statistical-analysis",
+      "source": "skills/sci-statistical-analysis",
+      "description": "Statistical analysis toolkit. Hypothesis tests (t-test, ANOVA, chi-square), regression, correlation, Bayesian stats, power analysis, assumption checks, APA reporting, for academic research.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-statsmodels",
+      "source": "skills/sci-statsmodels",
+      "description": "Statistical modeling toolkit. OLS, GLM, logistic, ARIMA, time series, hypothesis tests, diagnostics, AIC/BIC, for rigorous statistical inference and econometric analysis.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-string-database",
+      "source": "skills/sci-string-database",
+      "description": "Query STRING API for protein-protein interactions (59M proteins, 20B interactions). Network analysis, GO/KEGG enrichment, interaction discovery, 5000+ species, for systems biology.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-sympy",
+      "source": "skills/sci-sympy",
+      "description": "Use this skill when working with symbolic mathematics in Python. This skill should be used for symbolic computation tasks including solving equations algebraically, performing calculus operations (derivatives, integrals, limits), manipulating algebraic expressions, working with matrices symbolically, physics calculations, number theory problems, geometry computations, and generating executable code from mathematical expressions. Apply this skill when the user needs exact symbolic results rather than numerical approximations, or when working with mathematical formulas that contain variables and parameters.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-torch_geometric",
+      "source": "skills/sci-torch_geometric",
+      "description": "Graph Neural Networks (PyG). Node/graph classification, link prediction, GCN, GAT, GraphSAGE, heterogeneous graphs, molecular property prediction, for geometric deep learning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-torchdrug",
+      "source": "skills/sci-torchdrug",
+      "description": "Graph-based drug discovery toolkit. Molecular property prediction (ADMET), protein modeling, knowledge graph reasoning, molecular generation, retrosynthesis, GNNs (GIN, GAT, SchNet), 40+ datasets, for PyTorch-based ML on molecules, proteins, and biomedical graphs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-transformers",
+      "source": "skills/sci-transformers",
+      "description": "This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-treatment-plans",
+      "source": "skills/sci-treatment-plans",
+      "description": "Skill: sci-treatment-plans",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-umap-learn",
+      "source": "skills/sci-umap-learn",
+      "description": "UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-uniprot-database",
+      "source": "skills/sci-uniprot-database",
+      "description": "Direct REST API access to UniProt. Protein searches, FASTA retrieval, ID mapping, Swiss-Prot/TrEMBL. For Python workflows with multiple databases, prefer bioservices (unified interface to 40+ services). Use this for direct HTTP/REST work or UniProt-specific control.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-uspto-database",
+      "source": "skills/sci-uspto-database",
+      "description": "Access USPTO APIs for patent/trademark searches, examination history (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior art searches.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-vaex",
+      "source": "skills/sci-vaex",
+      "description": "Use this skill for processing and analyzing large tabular datasets (billions of rows) that exceed available RAM. Vaex excels at out-of-core DataFrame operations, lazy evaluation, fast aggregations, efficient visualization of big data, and machine learning on large datasets. Apply when users need to work with large CSV/HDF5/Arrow/Parquet files, perform fast statistics on massive datasets, create visualizations of big data, or build ML pipelines that don't fit in memory.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-venue-templates",
+      "source": "skills/sci-venue-templates",
+      "description": "Access comprehensive LaTeX templates, formatting requirements, and submission guidelines for major scientific publication venues (Nature, Science, PLOS, IEEE, ACM), academic conferences (NeurIPS, ICML, CVPR, CHI), research posters, and grant proposals (NSF, NIH, DOE, DARPA). This skill should be used when preparing manuscripts for journal submission, conference papers, research posters, or grant proposals and need venue-specific formatting requirements and templates.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-zarr-python",
+      "source": "skills/sci-zarr-python",
+      "description": "Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sci-zinc-database",
+      "source": "skills/sci-zinc-database",
+      "description": "Access ZINC (230M+ purchasable compounds). Search by ZINC ID/SMILES, similarity searches, 3D-ready structures for docking, analog discovery, for virtual screening and drug discovery.",
       "version": "1.0.0"
     },
     {
@@ -2152,6 +4120,204 @@
       "name": "vscode-extension",
       "source": "agents\\developer-experience\\vscode-extension.md",
       "description": "Develops VS Code extensions with Language Server Protocol integration, custom editors, webview panels, and marketplace publishing",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-advisor-researcher",
+      "source": "agents\\gsd-workflow\\gsd-advisor-researcher.md",
+      "description": "Researches a single gray area decision and returns a structured comparison table with rationale. Spawned by discuss-phase advisor mode.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-ai-researcher",
+      "source": "agents\\gsd-workflow\\gsd-ai-researcher.md",
+      "description": "Researches a chosen AI framework's official docs to produce implementation-ready guidance \u00e2\u20ac\u201d best practices, syntax, core patterns, and pitfalls distilled for the specific use case. Writes the Framework Quick Reference and Implementation Guidance sections of AI-SPEC.md. Spawned by /gsd-ai-integration-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-assumptions-analyzer",
+      "source": "agents\\gsd-workflow\\gsd-assumptions-analyzer.md",
+      "description": "Deeply analyzes codebase for a phase and returns structured assumptions with evidence. Spawned by discuss-phase assumptions mode.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-code-fixer",
+      "source": "agents\\gsd-workflow\\gsd-code-fixer.md",
+      "description": "Applies fixes to code review findings from REVIEW.md. Reads source files, applies intelligent fixes, and commits each fix atomically. Spawned by /gsd-code-review-fix.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-code-reviewer",
+      "source": "agents\\gsd-workflow\\gsd-code-reviewer.md",
+      "description": "Reviews source files for bugs, security issues, and code quality problems. Produces structured REVIEW.md with severity-classified findings. Spawned by /gsd-code-review.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-codebase-mapper",
+      "source": "agents\\gsd-workflow\\gsd-codebase-mapper.md",
+      "description": "Explores codebase and writes structured analysis documents. Spawned by map-codebase with a focus area (tech, arch, quality, concerns). Writes documents directly to reduce orchestrator context load.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-debug-session-manager",
+      "source": "agents\\gsd-workflow\\gsd-debug-session-manager.md",
+      "description": "Manages multi-cycle /gsd-debug checkpoint and continuation loop in isolated context. Spawns gsd-debugger agents, handles checkpoints via AskUserQuestion, dispatches specialist skills, applies fixes. Returns compact summary to main context. Spawned by /gsd-debug command.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-debugger",
+      "source": "agents\\gsd-workflow\\gsd-debugger.md",
+      "description": "Investigates bugs using scientific method, manages debug sessions, handles checkpoints. Spawned by /gsd-debug orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-doc-classifier",
+      "source": "agents\\gsd-workflow\\gsd-doc-classifier.md",
+      "description": "Classifies a single planning document as ADR, PRD, SPEC, DOC, or UNKNOWN. Extracts title, scope summary, and cross-references. Spawned in parallel by /gsd-ingest-docs. Writes a JSON classification file and returns a one-line confirmation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-doc-synthesizer",
+      "source": "agents\\gsd-workflow\\gsd-doc-synthesizer.md",
+      "description": "Synthesizes classified planning docs into a single consolidated context. Applies precedence rules, detects cross-ref cycles, enforces LOCKED-vs-LOCKED hard-blocks, and writes INGEST-CONFLICTS.md with three buckets (auto-resolved, competing-variants, unresolved-blockers). Spawned by /gsd-ingest-docs.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-doc-verifier",
+      "source": "agents\\gsd-workflow\\gsd-doc-verifier.md",
+      "description": "Verifies factual claims in generated docs against the live codebase. Returns structured JSON per doc.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-doc-writer",
+      "source": "agents\\gsd-workflow\\gsd-doc-writer.md",
+      "description": "Writes and updates project documentation. Spawned with a doc_assignment block specifying doc type, mode (create/update/supplement), and project context.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-domain-researcher",
+      "source": "agents\\gsd-workflow\\gsd-domain-researcher.md",
+      "description": "Researches the business domain and real-world application context of the AI system being built. Surfaces domain expert evaluation criteria, industry-specific failure modes, regulatory context, and what \"good\" looks like for practitioners in this field \u00e2\u20ac\u201d before the eval-planner turns it into measurable rubrics. Spawned by /gsd-ai-integration-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-eval-auditor",
+      "source": "agents\\gsd-workflow\\gsd-eval-auditor.md",
+      "description": "Retroactive audit of an implemented AI phase's evaluation coverage. Checks implementation against the AI-SPEC.md evaluation plan. Scores each eval dimension as COVERED/PARTIAL/MISSING. Produces a scored EVAL-REVIEW.md with findings, gaps, and remediation guidance. Spawned by /gsd-eval-review orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-eval-planner",
+      "source": "agents\\gsd-workflow\\gsd-eval-planner.md",
+      "description": "Designs a structured evaluation strategy for an AI phase. Identifies critical failure modes, selects eval dimensions with rubrics, recommends tooling, and specifies the reference dataset. Writes the Evaluation Strategy, Guardrails, and Production Monitoring sections of AI-SPEC.md. Spawned by /gsd-ai-integration-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-executor",
+      "source": "agents\\gsd-workflow\\gsd-executor.md",
+      "description": "Executes GSD plans with atomic commits, deviation handling, checkpoint protocols, and state management. Spawned by execute-phase orchestrator or execute-plan command.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-framework-selector",
+      "source": "agents\\gsd-workflow\\gsd-framework-selector.md",
+      "description": "Agent: gsd-framework-selector",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-integration-checker",
+      "source": "agents\\gsd-workflow\\gsd-integration-checker.md",
+      "description": "Verifies cross-phase integration and E2E flows. Checks that phases connect properly and user workflows complete end-to-end.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-intel-updater",
+      "source": "agents\\gsd-workflow\\gsd-intel-updater.md",
+      "description": "Analyzes codebase and writes structured intel files to .planning/intel/.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-nyquist-auditor",
+      "source": "agents\\gsd-workflow\\gsd-nyquist-auditor.md",
+      "description": "Fills Nyquist validation gaps by generating tests and verifying coverage for phase requirements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-pattern-mapper",
+      "source": "agents\\gsd-workflow\\gsd-pattern-mapper.md",
+      "description": "Analyzes codebase for existing patterns and produces PATTERNS.md mapping new files to closest analogs. Read-only codebase analysis spawned by /gsd-plan-phase orchestrator before planning.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-phase-researcher",
+      "source": "agents\\gsd-workflow\\gsd-phase-researcher.md",
+      "description": "Researches how to implement a phase before planning. Produces RESEARCH.md consumed by gsd-planner. Spawned by /gsd-plan-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-plan-checker",
+      "source": "agents\\gsd-workflow\\gsd-plan-checker.md",
+      "description": "Verifies plans will achieve phase goal before execution. Goal-backward analysis of plan quality. Spawned by /gsd-plan-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-planner",
+      "source": "agents\\gsd-workflow\\gsd-planner.md",
+      "description": "Creates executable phase plans with task breakdown, dependency analysis, and goal-backward verification. Spawned by /gsd-plan-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-project-researcher",
+      "source": "agents\\gsd-workflow\\gsd-project-researcher.md",
+      "description": "Researches domain ecosystem before roadmap creation. Produces files in .planning/research/ consumed during roadmap creation. Spawned by /gsd-new-project or /gsd-new-milestone orchestrators.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-research-synthesizer",
+      "source": "agents\\gsd-workflow\\gsd-research-synthesizer.md",
+      "description": "Synthesizes research outputs from parallel researcher agents into SUMMARY.md. Spawned by /gsd-new-project after 4 researcher agents complete.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-roadmapper",
+      "source": "agents\\gsd-workflow\\gsd-roadmapper.md",
+      "description": "Agent: gsd-roadmapper",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-security-auditor",
+      "source": "agents\\gsd-workflow\\gsd-security-auditor.md",
+      "description": "Verifies threat mitigations from PLAN.md threat model exist in implemented code. Produces SECURITY.md. Spawned by /gsd-secure-phase.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-ui-auditor",
+      "source": "agents\\gsd-workflow\\gsd-ui-auditor.md",
+      "description": "Retroactive 6-pillar visual audit of implemented frontend code. Produces scored UI-REVIEW.md. Spawned by /gsd-ui-review orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-ui-checker",
+      "source": "agents\\gsd-workflow\\gsd-ui-checker.md",
+      "description": "Validates UI-SPEC.md design contracts against 6 quality dimensions. Produces BLOCK/FLAG/PASS verdicts. Spawned by /gsd-ui-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-ui-researcher",
+      "source": "agents\\gsd-workflow\\gsd-ui-researcher.md",
+      "description": "Produces UI-SPEC.md design contract for frontend phases. Reads upstream artifacts, detects design system state, asks only unanswered questions. Spawned by /gsd-ui-phase orchestrator.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-user-profiler",
+      "source": "agents\\gsd-workflow\\gsd-user-profiler.md",
+      "description": "Analyzes extracted session messages across 8 behavioral dimensions to produce a scored developer profile with confidence levels and evidence. Spawned by profile orchestration workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gsd-verifier",
+      "source": "agents\\gsd-workflow\\gsd-verifier.md",
+      "description": "Verifies phase goal achievement through goal-backward analysis. Checks codebase delivers what phase promised, not just that tasks completed. Creates VERIFICATION.md report.",
       "version": "1.0.0"
     },
     {
