@@ -1,270 +1,242 @@
 ---
 name: customer-research
-description: When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.
-metadata:
-  version: 1.0.0
+description: >
+  Plan, run, and synthesize customer interviews — outputs an interview script,
+  a synthesis framework, and a deliverable persona/JTBD doc. Built around
+  The Mom Test rules (talk about their life, not your idea) and Jobs-To-Be-Done
+  (when ___, I want to ___, so I can ___).
+  Use BEFORE building, before pricing, when stuck on positioning, when conversion
+  is low, or when you suspect you've been talking to yourself.
+  Triggers: "customer research", "user research", "customer interviews",
+  "user interviews", "discovery calls", "research questions", "interview script",
+  "talk to customers", "validate this", "JTBD", "jobs to be done", "personas",
+  "synthesize interviews", "customer insights".
+  NOT for quantitative survey work (different methodology — surveys lie, interviews
+  reveal — but a related skill could exist for that).
 ---
 
 # Customer Research
 
-You are an expert customer researcher. Your goal is to help uncover what customers actually think, feel, say, and struggle with — so that everything from positioning to product to copy is grounded in reality rather than assumption.
+Most customer research is broken because founders ask leading questions and customers lie politely. The Mom Test fixes this: talk about their life, not your idea.
 
-## Before Starting
+## Three modes
 
-**Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context to skip questions already answered.
+The skill operates in three modes — pick one or do all three in sequence:
 
----
+### Mode A: Plan
+Output: interview script + recruiting message + screening criteria
 
-## Two Modes of Research
+### Mode B: Execute
+Output: live interview guidance + question reservoir + how to handle common moments
 
-### Mode 1: Analyze Existing Assets
-You have raw research material (transcripts, surveys, reviews, tickets). Your job is to extract signal.
+### Mode C: Synthesize
+Output: themes + JTBD statements + persona doc + go-do list
 
-### Mode 2: Go Find Research
-You need to gather intel from online sources (Reddit, G2, forums, communities, review sites). Your job is to know where to look and what to extract.
-
-Most engagements combine both. Establish which mode applies before proceeding.
+If user just says "customer research", default to A → B → C. Otherwise, target the mode they asked for.
 
 ---
 
-## Mode 1: Analyzing Existing Research Assets
+## Inputs you need
 
-### Asset Types
+- **What you want to learn** — the actual question driving this research (not "everything")
+- **Who you're talking to** — segment + role + life-stage specificity
+- **How many interviews** — minimum 5 per segment to spot patterns; 8-12 ideal
+- **Format** — 30-min Zoom is the default; in-person better when possible
+- **Stage** — pre-product (problem discovery) / pre-launch (solution validation) / post-launch (positioning + retention)
 
-**Customer interview / sales call transcripts**
-- Extract: pains, triggers, desired outcomes, language used, objections, alternatives considered
-- Look for: the moment they decided to look for a solution, what they tried before, what success looks like to them
-
-**Survey results**
-- Segment responses by customer tier, use case, or tenure before drawing conclusions
-- Flag: what open-ended answers say vs. what multiple-choice answers say (they often conflict)
-- Identify: the 20% of responses that contain the most useful signal
-
-**Customer support conversations**
-- Mine for: recurring complaints, confusion points, feature requests, and "I wish it could…" language
-- Categorize tickets before analyzing — don't treat all tickets as equal signal
-- Separate bugs from confusion from missing features from expectation mismatches
-
-**Win/loss interviews and churned customer notes**
-- Wins: what tipped the decision? What almost made them choose a competitor?
-- Losses and churn: was it price, features, fit, timing, or something else?
-- Segment by reason — don't average across different churn causes
-
-**NPS responses**
-- Passives and detractors are higher signal than promoters for improvement work
-- Pair scores with verbatims — a 9 with a specific complaint beats a 10 with no comment
-
-### Extraction Framework
-
-For each asset, extract:
-
-1. **Jobs to Be Done** — what outcome is the customer trying to achieve?
-   - Functional job: the task itself
-   - Emotional job: how they want to feel
-   - Social job: how they want to be perceived
-
-2. **Pain Points** — what's frustrating, broken, or inadequate about their current situation?
-   - Prioritize pains mentioned unprompted and with emotional language
-
-3. **Trigger Events** — what changed that made them seek a solution?
-   - Common triggers: team growth, new hire, missed target, embarrassing incident, competitor doing something
-
-4. **Desired Outcomes** — what does success look like in their words?
-   - Capture exact quotes, not paraphrases
-
-5. **Language and Vocabulary** — exact words and phrases customers use
-   - This is gold for copy. "We were drowning in spreadsheets" > "manual process inefficiency"
-
-6. **Alternatives Considered** — what else did they look at or try?
-   - Includes doing nothing, hiring someone, or building internally
-
-### Synthesis Steps
-
-After extracting from individual assets:
-
-1. **Cluster by theme** — group similar pains, outcomes, and triggers across assets
-2. **Frequency + intensity scoring** — how often does a theme appear, and how strongly is it felt?
-3. **Segment by customer profile** — do patterns differ by company size, role, use case, or tenure?
-4. **Identify the "money quotes"** — 5-10 verbatim quotes that best represent each theme
-5. **Flag contradictions** — where do customers say one thing but do another?
-
-### Research Quality Guardrails
-
-Label every insight with a confidence level before presenting it:
-
-| Confidence | Criteria |
-|------------|----------|
-| **High** | Theme appears in 3+ independent sources; mentioned unprompted; consistent across segments |
-| **Medium** | Theme appears in 2 sources, or only prompted, or limited to one segment |
-| **Low** | Single source; could be an outlier; needs validation |
-
-**Recency window**: Weight sources from the last 12 months more heavily. Markets shift — a 3-year-old transcript may reflect a different product and buyer.
-
-**Sample bias checks**:
-- Online reviewers skew toward power users and people with strong opinions
-- Support tickets skew toward problems, not value
-- Reddit skews technical and skeptical vs. mainstream buyers
-- Factor this in when drawing conclusions about "all customers"
-
-**Minimum viable sample**: Don't build personas or draw messaging conclusions from fewer than 5 independent data points per segment.
+If "what you want to learn" is fuzzy, sharpen it FIRST. Bad research questions produce useless data.
 
 ---
 
-## Mode 2: Digital Watering Hole Research
+## Mode A: Plan
 
-Online communities are where customers speak without a filter. The goal is to find authentic, unmoderated language about the problem space.
+### Sharpen the research question
 
-### Where to Look
+❌ "Do users want feature X?" — leading, asks about future opinions
+✅ "What did users actually do last time they faced [the problem we're targeting]?"
 
-Choose sources based on your ICP type — then read `references/source-guides.md` for detailed playbooks, search operators, and per-platform extraction tips.
+❌ "Would you pay $X for Y?" — hypothetical, will be lied about politely
+✅ "Walk me through the last time you spent money on [adjacent thing]. What made you decide?"
 
-| ICP Type | Primary Sources |
-|----------|----------------|
-| B2B SaaS / technical buyers | Reddit (role-specific subs), G2/Capterra, Hacker News, LinkedIn, Indie Hackers, SparkToro |
-| SMB / founders | Reddit (r/entrepreneur, r/smallbusiness), Indie Hackers, Product Hunt, Facebook Groups, SparkToro |
-| Developer / DevOps | r/devops, r/programming, Hacker News, Stack Overflow, Discord servers |
-| B2C / consumer | App store reviews (1-3 star), Reddit hobby/lifestyle subs, YouTube comments, TikTok/Instagram comments |
-| Enterprise | LinkedIn, industry analyst reports, G2 Enterprise filter, job postings, SparkToro |
+### The Mom Test rules (read every time before drafting)
 
-**Quick decision guide:**
-- Have a product category? → Start with G2/Capterra reviews (yours + competitors)
-- Need to know where your audience spends time? → SparkToro (reveals podcasts, YouTube, subreddits, websites, social accounts)
-- Need raw language? → Reddit and YouTube comments
-- Need trigger events? → LinkedIn posts, job postings, Hacker News "Ask HN" threads
-- Need competitive intel? → Competitor 4-star reviews on G2; Product Hunt discussions; SparkToro competitor audience analysis
+1. **Talk about their life, not your idea.** Don't pitch. Don't even mention what you're building until the very end (and only if necessary).
+2. **Ask about specifics in the past, not opinions about the future.** Past behavior > stated preference.
+3. **Talk less, listen more.** Aim for 80% them, 20% you. Silence is your friend.
 
-### What to Extract from Each Source
+### Question reservoir (steal from these)
 
-For every piece of content you find:
+**Problem discovery (pre-product):**
+- "Walk me through the last time you [did the relevant activity]."
+- "What was the most frustrating part of that?"
+- "What did you do about it? What did you try first? What did you try after that didn't work?"
+- "How much time/money did that cost you?"
+- "Why was that important enough to deal with?"
+- "Who else has this problem? How is theirs different from yours?"
 
-| Field | What to Capture |
-|-------|----------------|
-| Source | Platform, thread URL, date |
-| Verbatim quote | Exact words — don't paraphrase |
-| Context | What prompted the comment? |
-| Sentiment | Positive / negative / neutral / frustrated |
-| Theme tag | Pain / trigger / outcome / alternative / language |
-| Customer profile signals | Role, company size, industry hints from the post |
+**Solution validation (pre-launch):**
+- "When did you first realize you needed something like this?"
+- "What did you almost buy / try instead?"
+- "What stopped you?"
+- "If this didn't exist, what's the hack you'd build?"
 
-### Research Synthesis Template
+**Positioning + retention (post-launch):**
+- "How would you describe what we do to a colleague?"
+- "If we shut down tomorrow, what would you switch to?"
+- "When do you NOT use us, even though you could?"
+- "What did you expect that didn't happen?"
+- "What surprised you about using us?"
 
-After gathering from multiple sources, synthesize into:
+**The unlock questions (use sparingly):**
+- "What's a question I should be asking that I'm not?"
+- "Who else should I talk to about this?"
+- "If I could wave a magic wand and fix one thing about [the broader thing], what would it be?"
+
+### Recruiting message template
 
 ```
-## Top Themes (ranked by frequency × intensity)
+Subject: [specific topic] — would love your perspective
 
-### Theme 1: [Name]
-**Summary**: [1-2 sentences]
-**Frequency**: Appeared in X of Y sources
-**Intensity**: High / Medium / Low (based on emotional language used)
-**Representative quotes**:
-- "[exact quote]" — [source, date]
-- "[exact quote]" — [source, date]
-**Implications**: What this means for messaging / product / positioning
+Hi [name],
 
-### Theme 2: ...
+Working on understanding [specific problem area] for [audience].
+Could I borrow 25 minutes of your time on Zoom this week?
+No pitch — I just want to learn from how you handle [problem].
+
+Happy to share findings if useful.
+
+— [Name]
+```
+
+Why it works: specific, time-bounded, no pitch, mutual benefit.
+
+### Screening criteria
+List 3 criteria for "yes" interviews. Strongly de-prioritize warm friends — they will lie politely. Strangers tell the truth.
+
+---
+
+## Mode B: Execute
+
+### Before the call (5 min)
+- Re-read your research question
+- Re-read the Mom Test rules
+- Have ONE concrete question to open with — never "tell me about yourself"
+
+### Opening (2 min)
+"Thanks for the time. I'm trying to understand how people handle [X] today. I'll ask about your specific experience — there's no wrong answer. Mind if I record?"
+
+### The middle (20 min) — the work
+- Open with the most specific past-behavior question you have
+- For every answer, ask "tell me more" or "what happened next" or just stay quiet
+- When they share an opinion about your idea, redirect to behavior
+- Listen for emotion words — those are the real signal
+
+**Watch-outs:**
+- They start asking YOU questions → answer briefly, redirect with "But I'm curious — when you faced [X]…"
+- They start politely agreeing → they're done telling the truth; ask a contrarian probe ("What about it sucked?")
+- You feel the urge to pitch → don't. The pitch is a different call.
+
+### Closing (3 min)
+- "What's the question I should be asking that I'm not?"
+- "Who else should I talk to?"
+- "Can I follow up if I have one more question?"
+
+### After the call (5 min)
+- Write down 3 most surprising quotes IN THEIR WORDS (verbatim)
+- Write down what you got wrong about your assumption
+- Tag the call with theme labels for synthesis
+
+---
+
+## Mode C: Synthesize
+
+After 5+ interviews, look for patterns. Don't synthesize earlier — small samples lie.
+
+### The synthesis framework
+
+**Step 1: Quote bank**
+Pull every meaningful quote into a single doc. One quote per row.
+Columns: quote / interviewee / theme tag / pain or gain / [field for "is this a fact or interpretation"]
+
+**Step 2: Theme clustering**
+Group quotes by theme. A theme exists when you see it in 3+ interviews. Single-interview "themes" are noise.
+
+**Step 3: JTBD statements**
+For each theme, write a Job-To-Be-Done statement:
+> "When [situation], I want to [motivation], so I can [expected outcome]."
+
+E.g. "When I'm starting a project from scratch, I want to know which design tokens to define first, so I can avoid rebuilding the foundation later."
+
+JTBDs are stable across personas and time — they're better strategic anchors than personas.
+
+**Step 4: Persona (optional, lightweight)**
+Don't write a 5-page persona doc. Write:
+- Name + 1-line role/context
+- 3 quotes that define them
+- 3 jobs they're trying to get done
+- 3 alternatives they've already tried
+- 1 thing that would make them buy today
+
+### Output: the research deliverable
+
+```
+# Customer Research — [Topic]
+Date: [yyyy-mm-dd]
+Interviews: [N], across [segments]
+Research question: [the one you set out to answer]
+
+## TL;DR
+[3 sentences: the answer + the surprise + the implication]
+
+## Top 5 themes
+For each:
+- Theme name
+- Quotes (verbatim, with attribution)
+- How many interviewees said this
+- JTBD statement
+- Implication for [product / pricing / messaging / GTM]
+
+## Patterns we DIDN'T see (and expected to)
+[Negative findings — the absence of expected themes is data]
+
+## Personas (lightweight)
+[1-page max per persona]
+
+## Pricing signals
+[What people actually pay for adjacent things, what their budget process is]
+
+## Alternatives we lose to
+[Top 3 — including "do nothing" if it shows up]
+
+## Open questions for round 2
+[What we'd ask next]
+
+## 5 actions to take this week
+[Concrete moves driven by the research — not "consider..." but "do X by Friday"]
 ```
 
 ---
 
-## Persona Generation
+## Anti-patterns
 
-Personas should be built from research, not invented. Don't create a persona until you have at least 5-10 data points (interviews, reviews, or community posts) from a consistent segment.
-
-### Persona Structure
-
-```
-## [Persona Name] — [Role/Title]
-
-**Profile**
-- Title range: [e.g., "Marketing Manager to VP of Marketing"]
-- Company size: [e.g., "50–500 employees, Series A–C SaaS"]
-- Industry: [if narrow]
-- Reports to: [who]
-- Team size managed: [if relevant]
-
-**Primary Job to Be Done**
-[One sentence: what outcome are they trying to achieve in their role?]
-
-**Trigger Events**
-What causes them to start looking for a solution like yours?
-- [trigger 1]
-- [trigger 2]
-
-**Top Pains**
-1. [Pain — in their words if possible]
-2. [Pain]
-3. [Pain]
-
-**Desired Outcomes**
-- [What success looks like to them]
-- [How they measure it]
-- [How it makes them look to their boss/team]
-
-**Objections and Fears**
-- [What makes them hesitate to buy or switch]
-
-**Alternatives They Consider**
-- [Competitor, DIY, do nothing, hire someone]
-
-**Key Vocabulary**
-Words and phrases they actually use (sourced from research):
-- "[phrase]"
-- "[phrase]"
-
-**How to Reach Them**
-- Channels: [where they spend time]
-- Content they consume: [formats, topics]
-- Influencers/communities they trust: [specific names if known]
-```
-
-### Persona Anti-Patterns
-
-- **Don't name them cutely** ("Marketing Mary") unless your team finds it helpful — it's often a distraction
-- **Don't average across segments** — a persona that represents everyone represents no one
-- **Don't invent details** — if you don't have data on something, leave it blank rather than filling it in
-- **Revisit quarterly** — personas decay as your market and product evolve
+1. **Pitching during the interview** — you're now selling, not learning
+2. **Asking about the future** — "would you pay" is worthless data
+3. **Closed-ended questions** — yes/no kills the signal
+4. **Interviewing only friends/customers** — biased toward yes
+5. **Synthesizing after 2 interviews** — sample size lies
+6. **Filling silence** — silence makes them keep talking; let it sit
+7. **Treating opinions as facts** — "I would totally use that" is opinion; "Last week I paid $X for [adjacent thing]" is fact
+8. **No quote bank** — without verbatim, your synthesis is your projection
+9. **Persona without JTBD** — describes who, doesn't tell you what to ship
+10. **Research with no actions output** — research that doesn't change behavior was the wrong research
 
 ---
 
-## Deliverable Formats
+## Pair with
 
-Depending on what the user needs, offer:
-
-1. **Research synthesis report** — themes, quotes, patterns, and implications
-2. **VOC quote bank** — organized verbatim quotes by theme, for use in copy
-3. **Persona document** — 1-3 personas built from the research
-4. **Jobs-to-be-done map** — functional, emotional, and social jobs by segment
-5. **Competitive intelligence summary** — what customers say about competitors vs. you
-6. **Research gap analysis** — what you still don't know and how to find it
-
-Ask the user which deliverable(s) they need before generating output.
-
----
-
-## Questions to Ask Before Proceeding
-
-If context is unclear:
-
-1. **What's the goal?** Improve messaging? Build personas? Find product gaps? Understand churn?
-2. **What do you already have?** (transcripts, surveys, tickets, G2 reviews, nothing)
-3. **Who is the target segment?** (all customers, a specific tier, churned users, prospects who didn't buy)
-4. **What's your product?** (if not in the product marketing context file)
-5. **What do you want delivered?** (synthesis report, persona, quote bank, competitive intel)
-
-Don't ask all five at once — lead with #1 and #2, then follow up as needed.
-
----
-
-## Related Skills
-
-| When to hand off | Skill |
-|-----------------|-------|
-| Writing copy informed by the research | `copywriting` |
-| Optimizing a page using VOC insights | `page-cro` |
-| Building a competitor comparison page | `competitor-alternatives` |
-| Creating a churn prevention strategy from churn research | `churn-prevention` |
-| Planning paid ads informed by research | `paid-ads` |
-| Writing cold email using research on pain/trigger | `cold-email` |
-| Planning content based on discovered topics | `content-strategy` |
+- `competitor-analysis` — informs which alternatives to probe in interviews
+- `offer-creation` — pricing signals from research feed offer design
+- `landing-page-copy` — verbatim quotes become the most powerful copy you can write
+- `case-study-writer` — interview happy customers → case study output
+- `decision-framework` — when research surfaces a hard decision
+- `growth-strategy` — research drives where to focus the 30-day move
