@@ -2,6 +2,9 @@
   "name": "muk",
   "version": "1.0.0",
   "description": "Mukund Totla's personal Claude Code skill, plugin, and agent pack — orchestrated by the Muk skill.",
-  "author": "Mukund Totla",
+  "author": {
+    "name": "Mukund Totla",
+    "url": "https://github.com/pfmukund"
+  },
   "license": "Apache-2.0"
 }
